@@ -46,11 +46,11 @@ type M = {id: string; w: number; h: number; nombre: string; tag: string};
 /** Orden del roadmap: Lint, Fase 1, 2, 3, 4, 5, 6, 7 y el resto. w×h = tamaño del sprite 1× (px). */
 const MASCOTAS: M[] = [
 	{id: 'lint', w: 21, h: 33, nombre: 'Lint', tag: 'MASCOTA'},
-	{id: 'vee', w: 19, h: 33, nombre: 'Vee', tag: 'FASE 1'},
+	{id: 'vee', w: 17, h: 31, nombre: 'Vee', tag: 'FASE 1'},
 	{id: 'polo', w: 29, h: 33, nombre: 'Polo', tag: 'FASE 2'},
 	{id: 'parserint', w: 18, h: 36, nombre: 'ParserInt', tag: 'FASE 2'},
 	{id: 'velasco', w: 14, h: 31, nombre: 'Velasco', tag: 'FASE 3'},
-	{id: 'ringo', w: 45, h: 33, nombre: 'Ringo', tag: 'FASE 4'},
+	{id: 'ringo', w: 43, h: 31, nombre: 'Ringo', tag: 'FASE 4'},
 	{id: 'marco', w: 26, h: 45, nombre: 'Marco', tag: 'FASE 4'},
 	{id: 'byte', w: 29, h: 34, nombre: 'Byte', tag: 'FASE 5'},
 	{id: 'pypo', w: 22, h: 32, nombre: 'Pypo', tag: 'FASE 5'},

@@ -24,7 +24,7 @@ export const FASES: Fase[] = [
 	{
 		id: 0, nombre: 'BIENVENIDA', titulo: ['BIENVENIDA'], sub: 'Arranque del canal', tags: [],
 		videos: [
-			v(1, 'Tráiler: esto es Goslint', {listo: true}),
+			v(1, 'Tráiler: esto es Goslint'),
 			v(2, '¿Qué es la programación competitiva?'),
 			v(3, 'Cómo usar este roadmap'),
 		],
@@ -37,8 +37,8 @@ export const FASES: Fase[] = [
 			v(5, 'Diagramas de flujo'),
 			v(6, 'Pseudocódigo y PSeInt'),
 			v(7, 'Variables, constantes y tipos'),
-			v(8, 'Entrada, proceso y salida'),
-			v(9, 'Operadores aritméticos'),
+			v(8, 'Operadores aritméticos'),
+			v(9, 'Entrada, proceso y salida'),
 			v(10, 'Operadores relacionales y lógicos'),
 			v(11, 'Condicional simple y doble'),
 			v(12, 'Condicionales anidados y Según'),

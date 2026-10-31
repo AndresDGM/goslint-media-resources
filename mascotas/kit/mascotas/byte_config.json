@@ -1,0 +1,78 @@
+{
+ "nombre": "Byte",
+ "encabezado": "// BYTE · BOSQUEJO · mascota de la Fase 5 · Competitiva II",
+ "subtitulo": "GUÍA · FASE 5 · COMPETITIVA II · PYTHON",
+ "idea_titulo": "EL PIONERO<br>PIXELADO",
+ "idea_texto": "Te acompaña en la Competitiva II a escribir código en Python rápido y limpio. Es una serpiente retro hecha de bloques, como las de los primeros juegos, y le encantan los jueces en línea de siempre.",
+ "nota_referencia": "El código de su cuerpo avanza <b style=\"color:#fff\">un carácter por paso</b>: <b style=\"color:#F2C230\">import</b> sys · <b style=\"color:#F2C230\">for</b> x <b style=\"color:#F2C230\">in</b> graph: · <b style=\"color:#F2C230\">while</b> TLE == False:",
+ "rasgos": [
+  "Cabeza de bloque, ojos grandes y curiosos",
+  "Cuerpo de bloques verdes y amarillos",
+  "Camiseta con la <b style=\"color:#00C063\">«L» de Goslint</b>",
+  "Código de Python corre por su cuerpo",
+  "Se mueve a saltos de un bloque",
+  "Fondo: juez en línea · accesorio: portátil"
+ ],
+ "color_acento": "#00C063",
+ "halo": "rgba(76,208,76,.18)",
+ "especial_titulo": "DESENROLLADO DE RECURSIÓN",
+ "especial_texto": "Byte se divide en copias cada vez más pequeñas que caen por un agujero de recursión. Al llegar al fondo, todas emergen a la vez como una sola serpiente, sin desbordar la pila.",
+ "especial_nota": "cada copia es una llamada · el pozo se cierra en anillos · al salir aparece el «AC»",
+ "especial_pasos": [
+  "1 · TLE",
+  "2 · se divide",
+  "3 · ¡AC!"
+ ],
+ "poses": [
+  [
+   "idle",
+   "reposo"
+  ],
+  [
+   "wave",
+   "saludo"
+  ],
+  [
+   "point",
+   "señalar"
+  ],
+  [
+   "think",
+   "pensar"
+  ],
+  [
+   "prop",
+   "escribir código"
+  ],
+  [
+   "cheer",
+   "¡bien!"
+  ],
+  [
+   "wow",
+   "sorpresa"
+  ],
+  [
+   "wink",
+   "guiño"
+  ]
+ ],
+ "anim_titulo": "REPOSO · EL CÓDIGO AVANZA UN PASO · 4 TIEMPOS",
+ "paleta": [
+  "#4CD04C",
+  "#2E9E3A",
+  "#9BEA7A",
+  "#F2C230",
+  "#C8962A",
+  "#00C063",
+  "#0B1F12",
+  "#141018",
+  "#FFFFFF",
+  "#2E2350",
+  "#1C1636"
+ ],
+ "paleta_top": 790,
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "version": "Byte · reconstruido v1 · sin contorno"
+}

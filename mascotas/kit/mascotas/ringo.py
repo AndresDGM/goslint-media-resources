@@ -1,8 +1,8 @@
 """RINGO · mascota de la Fase 4 · Competitiva I (reconstruido a partir de su hoja de concepto).
 
 El capibara que no se altera: sentado de perfil, pelaje marrón, ojos cerrados y sonrisa tranquila,
-con su coco, la pajilla azul y la sombrilla. A diferencia de las demás, lleva contorno azul oscuro
-de 1 px (así se decidió en su hoja), y nada de borde blanco.
+con su coco, la pajilla azul y la sombrilla. Sin contorno (ni blanco ni oscuro): ojos y fosas en
+marrón oscuro, el mismo del coco.
 Especial: «¡Relax!» (sale «WA», sorbe de su coco y el veredicto pasa a «AC»).
 
     python3 mascotas/ringo.py salida/ringo
@@ -17,7 +17,7 @@ from pixel import Buf, OX, OY, arm
 
 PAL = {
     'fur': '#C98A4E', 'furL': '#D99B5E', 'furD': '#A86E3C', 'snout': '#9C6438',
-    'line': '#2A2350', 'eye': '#2A2350',
+    'eye': '#7A4A2A',
     'coco': '#7A4A2A', 'cocoD': '#5A341C', 'cream': '#F2E6C8', 'straw': '#8ED3F0',
     'red': '#E0453A', 'yellow': '#F2C230', 'green': '#00C063', 'white': '#FFFFFF',
 }
@@ -33,14 +33,6 @@ def text(b, s, x, y, c):
                 if v == '1':
                     b.set(x + i, y + j, c)
         x += 4
-
-
-def outline(b, c):
-    """Contorno de 1 px por fuera de la silueta (Ringo sí lo lleva, oscuro, nunca blanco)."""
-    edge = [(x, y) for y in range(b.h) for x in range(b.w) if b.px[y][x] is None and
-            any(b.get(x + dx, y + dy) not in (None, c) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))]
-    for x, y in edge:
-        b.px[y][x] = c
 
 
 @dataclass
@@ -108,9 +100,7 @@ def draw(p: Pose) -> Buf:
         b.rect(OX + 3, by - 4, 4, 4, PAL['furD'])
         arm(b, (OX + 7, by - 9), p.up, p.lo, 1, PAL['furD'], PAL['furD'], PAL['snout'])
 
-    outline(b, PAL['line'])
-
-    # pajilla al coco (después del contorno, para que se vea fina)
+    # pajilla al coco
     if p.mouth == 'sip' or p.up == 0:
         b.line(mx + 3, my + 2, cx - 1, cy - 4, PAL['straw'], th=1)
 

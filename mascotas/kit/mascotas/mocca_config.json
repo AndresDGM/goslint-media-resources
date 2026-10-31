@@ -1,0 +1,82 @@
+{
+ "nombre": "Mocca",
+ "encabezado": "// MOCCA · BOSQUEJO · mascota de la Fase 6 · Competitiva III",
+ "subtitulo": "GUÍA · FASE 6 · COMPETITIVA III",
+ "idea_titulo": "EL GUÍA DE<br>ESTRUCTURAS Y POO",
+ "idea_texto": "Te acompaña cuando las estructuras de datos se ponen serias y el código se organiza en objetos. Ordena todo en clases y árboles, pero no se queda quieto ni un segundo.",
+ "nota_referencia": "Referencia: solo se toma la idea de la taza, la paleta café y el vapor ondulado de Java, mezclada con el estilo urbano de un estudiante de la UCEVA. El diseño y los colores son propios.",
+ "rasgos": [
+  "Cabeza: peinado alto y ondulado, con un mechón como el vapor de Java",
+  "Gafas cuadradas gruesas de marco café",
+  "Hoodie holgado gris carbón con la <b style=\"color:#00C063\">«L» de Goslint</b>",
+  "Pequeño, con pantalón oscuro y zapatos marrones",
+  "Accesorio: taza con vapor, como la de Java"
+ ],
+ "halo": "rgba(242,176,74,.18)",
+ "color_acento": "#F2B04A",
+ "especial_titulo": "¡GARBAGE COLLECTOR!",
+ "especial_texto": "Mocca saca una escoba de 8 bits y barre en un segundo los píxeles basura que flotan a su alrededor, igual que el recolector de basura libera la memoria que ya nadie usa.",
+ "especial_nota": "la escoba barre de derecha a izquierda · la basura se apaga en chispas verdes",
+ "especial_pasos": [
+  "1 · saca la escoba",
+  "2 · barre",
+  "3 · ¡limpio!"
+ ],
+ "poses": [
+  [
+   "idle",
+   "reposo"
+  ],
+  [
+   "wave",
+   "saludo"
+  ],
+  [
+   "point",
+   "señalar"
+  ],
+  [
+   "think",
+   "pensar"
+  ],
+  [
+   "prop",
+   "con su taza"
+  ],
+  [
+   "cheer",
+   "¡bien!"
+  ],
+  [
+   "wow",
+   "sorpresa"
+  ],
+  [
+   "wink",
+   "¡un sorbo!"
+  ]
+ ],
+ "anim_titulo": "SORBO DE CAFÉ · 4 TIEMPOS",
+ "paleta": [
+  "#E7B08A",
+  "#C88B68",
+  "#8A5A32",
+  "#5E3A1E",
+  "#B07440",
+  "#3A2416",
+  "#141018",
+  "#FFFFFF",
+  "#B23B4A",
+  "#4A4E57",
+  "#35383F",
+  "#6A707C",
+  "#2B3550",
+  "#7A4A2A",
+  "#F2EEE4",
+  "#3E73D8"
+ ],
+ "paleta_top": 790,
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "version": "Mocca · reconstruido v1 · sin contorno"
+}

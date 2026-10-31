@@ -1,0 +1,79 @@
+{
+ "nombre": "ParserInt",
+ "encabezado": "// PARSERINT · BOSQUEJO · mascota de la Fase 2 · Programación básica",
+ "subtitulo": "GUÍA · FASE 2 · PROGRAMACIÓN BÁSICA",
+ "idea_titulo": "LA GUÍA DE LOS<br>PRIMEROS CÓDIGOS",
+ "idea_texto": "Una cabrita tierna y cariñosa que te acompaña cuando empiezas a programar. Siempre quiere ayudar: con su libro mágico te dice cómo mejorar tu código y qué tipo de algoritmo le conviene a tu lógica.",
+ "nota_referencia": "Referencia: de Ralsei (Deltarune) solo se toma la idea de <b style=\"color:#fff\">un guía amable con túnica de mago y gafas</b>. El diseño, la silueta y los colores son propios.",
+ "rasgos": [
+  "Sombrero de mago verde: los cuernitos curvos salen por él",
+  "Cabra de pelaje crema, orejas caídas y patitas con pezuñas",
+  "Gafas verdes grandes, redondas y solo de marco",
+  "Túnica verde de mago con el <b style=\"color:#00C063\">logo de Goslint</b> en negro, al centro",
+  "Accesorio: libro mágico de fuego verde"
+ ],
+ "halo": "rgba(0,192,99,.20)",
+ "especial_titulo": "¡RECOMENDACIÓN!",
+ "especial_texto": "Abre su libro y del fuego verde salen las sugerencias: cómo dejar tu código más limpio y qué tipo de algoritmo (ordenar, buscar, recorrer…) va mejor con la lógica que estás usando.",
+ "especial_nota": "la llama crece · aparece la tarjeta de sugerencias · se marca la mejor con ✓",
+ "especial_pasos": [
+  "1 · abre el libro",
+  "2 · la llama crece",
+  "3 · ✓ sugerencia"
+ ],
+ "poses": [
+  [
+   "idle",
+   "reposo"
+  ],
+  [
+   "wave",
+   "saludo"
+  ],
+  [
+   "point",
+   "señalar"
+  ],
+  [
+   "think",
+   "pensar"
+  ],
+  [
+   "prop",
+   "libro mágico"
+  ],
+  [
+   "cheer",
+   "¡bien!"
+  ],
+  [
+   "wow",
+   "sorpresa"
+  ],
+  [
+   "wink",
+   "guiño"
+  ]
+ ],
+ "anim_titulo": "ANIMACIÓN EN REPOSO · 4 TIEMPOS",
+ "color_acento": "#00C063",
+ "paleta": [
+  "#FBF0D9",
+  "#E2CFA6",
+  "#E8968C",
+  "#B39B74",
+  "#7A5A3A",
+  "#14B864",
+  "#0B8A48",
+  "#7CFFB8",
+  "#141018",
+  "#FFFFFF",
+  "#0A120D",
+  "#7A4A2A",
+  "#F4EEDC"
+ ],
+ "paleta_top": 790,
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "version": "ParserInt · reconstruido v1 · sin contorno"
+}

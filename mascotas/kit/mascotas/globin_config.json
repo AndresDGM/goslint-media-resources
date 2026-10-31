@@ -1,0 +1,80 @@
+{
+ "nombre": "Globín",
+ "encabezado": "// GLOBÍN · BOSQUEJO · mascota del Módulo de Maratones",
+ "subtitulo": "GUÍA · MÓDULO DE MARATONES",
+ "idea_titulo": "EL GUÍA DE<br>LAS MARATONES",
+ "idea_texto": "Un ser de globo que no se rinde. Cada problema resuelto lo infla un poco más, hasta que despega, como los globos de una maratón. Es veloz, concentrado, y cuando se le ocurre algo se le enciende una bombilla.",
+ "nota_referencia": "Referencia: del logo de ICPC solo se toman las ideas de <b style=\"color:#fff\">globo, bombilla y nube de pensamiento</b> y los colores rojo, amarillo y azul, apilados. El diseño es propio.",
+ "rasgos": [
+  "Cabeza: un <b>globo rojo</b> con brillo y cejas de concentración",
+  "Ojos grandes y blancos que miran fijo",
+  "Buzo con capucha oscura que abraza el globo, con la <b style=\"color:#00C063\">«L» de Goslint</b>",
+  "Cordones amarillos y bolsillo azul",
+  "Manos rojas y tenis verdes"
+ ],
+ "halo": "rgba(224,54,44,.20)",
+ "color_acento": "#F2B21C",
+ "especial_titulo": "¡A INFLAR Y DESPEGAR!",
+ "especial_texto": "Sopla aire, se infla la cabeza y, con los brazos arriba, despega del suelo dejando nubecitas. Cada problema resuelto se celebra con un globo que sube.",
+ "especial_nota": "sopla · se infla y abre los ojos · despega con confeti",
+ "especial_pasos": [
+  "1 · sopla",
+  "2 · se infla",
+  "3 · ¡despega!"
+ ],
+ "poses": [
+  [
+   "idle",
+   "reposo"
+  ],
+  [
+   "wave",
+   "saludo"
+  ],
+  [
+   "point",
+   "señalar"
+  ],
+  [
+   "think",
+   "pensar"
+  ],
+  [
+   "prop",
+   "bombilla"
+  ],
+  [
+   "cheer",
+   "¡bien!"
+  ],
+  [
+   "wow",
+   "¡idea!"
+  ],
+  [
+   "wink",
+   "guiño"
+  ]
+ ],
+ "anim_titulo": "RESPIRA Y PARPADEA · 4 TIEMPOS",
+ "paleta": [
+  "#E0362C",
+  "#A82A24",
+  "#FF8A80",
+  "#141018",
+  "#FFFFFF",
+  "#2B3550",
+  "#1E2640",
+  "#4A5A86",
+  "#F2B21C",
+  "#2F6FD6",
+  "#2456A8",
+  "#8FB8FF",
+  "#00C063",
+  "#00864A"
+ ],
+ "paleta_top": 790,
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "version": "Globín · reconstruido v1 · sin contorno"
+}

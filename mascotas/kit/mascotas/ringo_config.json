@@ -1,0 +1,79 @@
+{
+ "nombre": "Ringo",
+ "encabezado": "// RINGO · HOJA DE CONCEPTO · mascota de la Fase 4 · Competitiva I",
+ "subtitulo": "MASCOTA · FASE 4 · COMPETITIVA I",
+ "idea_titulo": "EL CAPIBARA<br>QUE NO SE ALTERA",
+ "idea_texto": "Acompaña a quien empieza a competir en maratones. Cuando todos se ponen nerviosos con el reloj y los veredictos, Ringo no: con la cabeza fría, cualquier problema se resuelve.",
+ "nota_referencia": "Ilustración de referencia: capibara sentado, de ojos cerrados, tomando de un coco con pajilla y sombrilla. De aquí sale la idea. El pixel art es propio.",
+ "rasgos": [
+  "Capibara <b>sentado</b>, de pelaje marrón",
+  "<b>Ojos cerrados</b> y sonrisa tranquila",
+  "Coco con <b>pajilla azul</b> y sombrilla",
+  "Contorno azul oscuro, sin borde blanco",
+  "<b style=\"color:#00C063\">Verde Goslint</b> en los veredictos"
+ ],
+ "halo": "rgba(0,192,99,.18)",
+ "especial_titulo": "¡RELAX!",
+ "especial_texto": "Aparece un «Wrong Answer» y Ringo ni se inmuta. Sorbe de su coco y el veredicto pasa a «Accepted».",
+ "especial_nota": "rastro de píxeles verdes hasta el texto",
+ "especial_pasos": [
+  "1 · error",
+  "2 · sorbo",
+  "3 · Accepted"
+ ],
+ "poses": [
+  [
+   "idle",
+   "reposo"
+  ],
+  [
+   "wave",
+   "saludo"
+  ],
+  [
+   "point",
+   "señalar"
+  ],
+  [
+   "think",
+   "pensar"
+  ],
+  [
+   "prop",
+   "explicar"
+  ],
+  [
+   "cheer",
+   "¡bien!"
+  ],
+  [
+   "wow",
+   "sorpresa"
+  ],
+  [
+   "wink",
+   "guiño"
+  ]
+ ],
+ "anim_titulo": "RESPIRA Y LA SOMBRILLA SE MECE · 4 TIEMPOS",
+ "color_acento": "#00C063",
+ "paleta": [
+  "#C98A4E",
+  "#D99B5E",
+  "#A86E3C",
+  "#9C6438",
+  "#2A2350",
+  "#7A4A2A",
+  "#5A341C",
+  "#F2E6C8",
+  "#8ED3F0",
+  "#E0453A",
+  "#F2C230",
+  "#00C063",
+  "#FFFFFF"
+ ],
+ "paleta_top": 790,
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "version": "Ringo · reconstruido v1 · contorno oscuro"
+}

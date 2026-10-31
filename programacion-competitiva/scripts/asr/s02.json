@@ -1,0 +1,419 @@
+{
+ "text": "La programación competitiva es una disciplina en la que resuelves problemas usando algoritmos y lenguajes de programación. Pero no basta con escribir código y que funcione. La solución tiene que ser correcta, eficiente y aprovechar bien los recursos disponibles. Para lograrlo, necesitas lógica, creatividad, conocimientos de algoritmos y, sobre todo, mucha práctica. Y aunque su nombre diga competitiva, no necesitas participar en una competencia para beneficiarte. Estas habilidades te sirven para desarrollar software, afrontar entrevistas técnicas y resolver problemas de manera estructurada.",
+ "segments": [
+  {
+   "words": [
+    {
+     "word": "La",
+     "start": 0.0,
+     "end": 0.23999999463558197
+    },
+    {
+     "word": "programación",
+     "start": 0.23999999463558197,
+     "end": 0.8799999952316284
+    },
+    {
+     "word": "competitiva",
+     "start": 0.8799999952316284,
+     "end": 1.6799999475479126
+    },
+    {
+     "word": "es",
+     "start": 1.6799999475479126,
+     "end": 1.8399999141693115
+    },
+    {
+     "word": "una",
+     "start": 1.8399999141693115,
+     "end": 2.0799999237060547
+    },
+    {
+     "word": "disciplina",
+     "start": 2.0799999237060547,
+     "end": 2.6399998664855957
+    },
+    {
+     "word": "en",
+     "start": 2.6399998664855957,
+     "end": 2.799999952316284
+    },
+    {
+     "word": "la",
+     "start": 2.799999952316284,
+     "end": 2.9600000381469727
+    },
+    {
+     "word": "que",
+     "start": 2.9600000381469727,
+     "end": 3.1999998092651367
+    },
+    {
+     "word": "resuelves",
+     "start": 3.1999998092651367,
+     "end": 3.8399999141693115
+    },
+    {
+     "word": "problemas",
+     "start": 3.8399999141693115,
+     "end": 4.400000095367432
+    },
+    {
+     "word": "usando",
+     "start": 4.400000095367432,
+     "end": 4.880000114440918
+    },
+    {
+     "word": "algoritmos",
+     "start": 4.880000114440918,
+     "end": 5.679999828338623
+    },
+    {
+     "word": "y",
+     "start": 5.679999828338623,
+     "end": 5.839999675750732
+    },
+    {
+     "word": "lenguajes",
+     "start": 5.839999675750732,
+     "end": 6.399999618530273
+    },
+    {
+     "word": "de",
+     "start": 6.399999618530273,
+     "end": 6.559999942779541
+    },
+    {
+     "word": "programación.",
+     "start": 6.559999942779541,
+     "end": 7.679999828338623
+    },
+    {
+     "word": "Pero",
+     "start": 7.679999828338623,
+     "end": 8.15999984741211
+    },
+    {
+     "word": "no",
+     "start": 8.15999984741211,
+     "end": 8.399999618530273
+    },
+    {
+     "word": "basta",
+     "start": 8.399999618530273,
+     "end": 8.800000190734863
+    },
+    {
+     "word": "con",
+     "start": 8.800000190734863,
+     "end": 9.039999961853027
+    },
+    {
+     "word": "escribir",
+     "start": 9.039999961853027,
+     "end": 9.519999504089355
+    },
+    {
+     "word": "código",
+     "start": 9.519999504089355,
+     "end": 9.920000076293945
+    },
+    {
+     "word": "y",
+     "start": 9.920000076293945,
+     "end": 10.079999923706055
+    },
+    {
+     "word": "que",
+     "start": 10.079999923706055,
+     "end": 10.319999694824219
+    },
+    {
+     "word": "funcione.",
+     "start": 10.319999694824219,
+     "end": 11.199999809265137
+    },
+    {
+     "word": "La",
+     "start": 11.199999809265137,
+     "end": 11.359999656677246
+    },
+    {
+     "word": "solución",
+     "start": 11.359999656677246,
+     "end": 11.920000076293945
+    },
+    {
+     "word": "tiene",
+     "start": 11.920000076293945,
+     "end": 12.239999771118164
+    },
+    {
+     "word": "que",
+     "start": 12.239999771118164,
+     "end": 12.399999618530273
+    },
+    {
+     "word": "ser",
+     "start": 12.399999618530273,
+     "end": 12.639999389648438
+    },
+    {
+     "word": "correcta,",
+     "start": 12.639999389648438,
+     "end": 13.519999504089355
+    },
+    {
+     "word": "eficiente",
+     "start": 13.519999504089355,
+     "end": 14.319999694824219
+    },
+    {
+     "word": "y",
+     "start": 14.319999694824219,
+     "end": 14.559999465942383
+    },
+    {
+     "word": "aprovechar",
+     "start": 14.559999465942383,
+     "end": 15.279999732971191
+    },
+    {
+     "word": "bien",
+     "start": 15.279999732971191,
+     "end": 15.519999504089355
+    },
+    {
+     "word": "los",
+     "start": 15.519999504089355,
+     "end": 15.75999927520752
+    },
+    {
+     "word": "recursos",
+     "start": 15.75999927520752,
+     "end": 16.31999969482422
+    },
+    {
+     "word": "disponibles.",
+     "start": 16.31999969482422,
+     "end": 17.35999870300293
+    },
+    {
+     "word": "Para",
+     "start": 17.35999870300293,
+     "end": 17.68000030517578
+    },
+    {
+     "word": "lograrlo,",
+     "start": 17.68000030517578,
+     "end": 18.31999969482422
+    },
+    {
+     "word": "necesitas",
+     "start": 18.31999969482422,
+     "end": 19.03999900817871
+    },
+    {
+     "word": "lógica,",
+     "start": 19.03999900817871,
+     "end": 19.760000228881836
+    },
+    {
+     "word": "creatividad,",
+     "start": 19.760000228881836,
+     "end": 20.799999237060547
+    },
+    {
+     "word": "conocimientos",
+     "start": 20.799999237060547,
+     "end": 21.520000457763672
+    },
+    {
+     "word": "de",
+     "start": 21.520000457763672,
+     "end": 21.68000030517578
+    },
+    {
+     "word": "algoritmos",
+     "start": 21.68000030517578,
+     "end": 22.399999618530273
+    },
+    {
+     "word": "y,",
+     "start": 22.399999618530273,
+     "end": 22.639999389648438
+    },
+    {
+     "word": "sobre",
+     "start": 22.639999389648438,
+     "end": 22.959999084472656
+    },
+    {
+     "word": "todo,",
+     "start": 22.959999084472656,
+     "end": 23.600000381469727
+    },
+    {
+     "word": "mucha",
+     "start": 23.600000381469727,
+     "end": 24.0
+    },
+    {
+     "word": "práctica.",
+     "start": 24.0,
+     "end": 24.8799991607666
+    },
+    {
+     "word": "Y",
+     "start": 24.8799991607666,
+     "end": 25.119998931884766
+    },
+    {
+     "word": "aunque",
+     "start": 25.119998931884766,
+     "end": 25.51999855041504
+    },
+    {
+     "word": "su",
+     "start": 25.51999855041504,
+     "end": 25.68000030517578
+    },
+    {
+     "word": "nombre",
+     "start": 25.68000030517578,
+     "end": 26.0
+    },
+    {
+     "word": "diga",
+     "start": 26.0,
+     "end": 26.559999465942383
+    },
+    {
+     "word": "competitiva,",
+     "start": 26.559999465942383,
+     "end": 27.920000076293945
+    },
+    {
+     "word": "no",
+     "start": 27.920000076293945,
+     "end": 28.15999984741211
+    },
+    {
+     "word": "necesitas",
+     "start": 28.15999984741211,
+     "end": 28.8799991607666
+    },
+    {
+     "word": "participar",
+     "start": 28.8799991607666,
+     "end": 29.439998626708984
+    },
+    {
+     "word": "en",
+     "start": 29.439998626708984,
+     "end": 29.599998474121094
+    },
+    {
+     "word": "una",
+     "start": 29.599998474121094,
+     "end": 29.84000015258789
+    },
+    {
+     "word": "competencia",
+     "start": 29.84000015258789,
+     "end": 30.399999618530273
+    },
+    {
+     "word": "para",
+     "start": 30.399999618530273,
+     "end": 30.639999389648438
+    },
+    {
+     "word": "beneficiarte.",
+     "start": 30.639999389648438,
+     "end": 31.920000076293945
+    },
+    {
+     "word": "Estas",
+     "start": 31.920000076293945,
+     "end": 32.39999771118164
+    },
+    {
+     "word": "habilidades",
+     "start": 32.39999771118164,
+     "end": 32.959999084472656
+    },
+    {
+     "word": "te",
+     "start": 32.959999084472656,
+     "end": 33.20000076293945
+    },
+    {
+     "word": "sirven",
+     "start": 33.20000076293945,
+     "end": 33.599998474121094
+    },
+    {
+     "word": "para",
+     "start": 33.599998474121094,
+     "end": 33.84000015258789
+    },
+    {
+     "word": "desarrollar",
+     "start": 33.84000015258789,
+     "end": 34.47999954223633
+    },
+    {
+     "word": "software,",
+     "start": 34.47999954223633,
+     "end": 35.20000076293945
+    },
+    {
+     "word": "afrontar",
+     "start": 35.20000076293945,
+     "end": 35.68000030517578
+    },
+    {
+     "word": "entrevistas",
+     "start": 35.68000030517578,
+     "end": 36.39999771118164
+    },
+    {
+     "word": "técnicas",
+     "start": 36.39999771118164,
+     "end": 36.959999084472656
+    },
+    {
+     "word": "y",
+     "start": 36.959999084472656,
+     "end": 37.119998931884766
+    },
+    {
+     "word": "resolver",
+     "start": 37.119998931884766,
+     "end": 37.68000030517578
+    },
+    {
+     "word": "problemas",
+     "start": 37.68000030517578,
+     "end": 38.15999984741211
+    },
+    {
+     "word": "de",
+     "start": 38.15999984741211,
+     "end": 38.31999969482422
+    },
+    {
+     "word": "manera",
+     "start": 38.31999969482422,
+     "end": 38.63999938964844
+    },
+    {
+     "word": "estructurada.",
+     "start": 38.63999938964844,
+     "end": 39.44
+    }
+   ]
+  }
+ ]
+}

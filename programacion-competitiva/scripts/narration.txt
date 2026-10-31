@@ -1,0 +1,36 @@
+# Guion maestro de la narración. Una sección «== id» por archivo de audio (una generación de ElevenLabs).
+#   [etiqueta]  dirección vocal de ElevenLabs v4 (se envía, no se subtitula)
+#   |           corte de subtítulo (no se envía)
+#   {marca}     punto de sincronía para la animación: fotograma en que empieza la palabra siguiente (no se envía)
+# El texto que se envía a ElevenLabs se obtiene con: python3 scripts/narration.py tts <id>
+# (ahí se aplican también las grafías fonéticas: ICPC, C++, UCEVA, ACIS-REDIS…)
+
+== s01
+[excited] ¿Te imaginas tener {cinco}cinco horas para resolver un montón de problemas de programación, | {uno}compartir un solo computador con tus compañeros | y {mundo}competir contra universidades de todo el mundo? | {eso}¡Pues de eso se trata la programación competitiva! | [curious] Pero {que}¿qué es exactamente? {como}¿Cómo funcionan estas competencias? | ¿Y cómo puedes {uceva}participar desde la UCEVA? | [excited] {vamos}¡Vamos a descubrirlo!
+
+== s02
+La programación competitiva es una disciplina | en la que {resolver}resuelves problemas usando {algoritmos}algoritmos y lenguajes de programación. | Pero no basta con escribir código y {funcione}que funcione: | la solución tiene que ser {correcta}correcta, {eficiente}eficiente | y {recursos}aprovechar bien los recursos disponibles. | Para lograrlo necesitas {logica}lógica, {creatividad}creatividad, {conoc}conocimientos de algoritmos | y, sobre todo, {practica}mucha práctica. | [mischievously] Y aunque su nombre diga {nombre}competitiva, | ¡no necesitas participar en una competencia para beneficiarte! | Estas habilidades te sirven para {software}desarrollar software, {entrevistas}afrontar entrevistas técnicas | y {estructurada}resolver problemas de manera estructurada.
+
+== s03
+[curious] ¿Y cómo es uno de estos problemas? | Normalmente recibes un {enunciado}enunciado que describe una situación. | Ahí encuentras {entrada}qué información debes procesar, | {salida}qué resultado debes obtener | y {restricciones}qué restricciones debe cumplir tu solución. | Primero {entender}entiendes el problema, | después {piensas}piensas en un algoritmo | y al final {implementas}lo implementas en un lenguaje como {cpp}C++, {java}Java o {python}Python.
+
+== s04
+[curious] ¿Y cómo sabes si tu solución funciona? | [excited] {jueces}¡Aquí entran los jueces en línea! | {ejecutan}Ejecutan tu programa con diferentes casos de prueba | y {verifican}verifican si produce las respuestas esperadas. | [mischievously] {envio}A ver, envío mi solución… | {wa}Wrong Answer: produjo una respuesta incorrecta. | {tle}Time Limit Exceeded: tardó demasiado en ejecutarse. | {rte}Runtime Error: ocurrió un error durante la ejecución. | [happy] Y cuando todo sale bien… {ac}¡Accepted! | {ejemplo}Así que no basta con resolver el ejemplo del enunciado: | tu solución debe funcionar en {todos}todos los casos de prueba. | [mischievously] {desafio}¡Y ahí está buena parte del desafío!
+
+== s05
+[excited] Ahora hablemos de una de las competencias universitarias más importantes del mundo: {icpc}la ICPC. | Son las siglas de {siglas}International Collegiate Programming Contest, | una competencia internacional para {universitarios}estudiantes universitarios. | Y su formato tiene una particularidad: | {equipos}equipos de tres estudiantes… | {uncomp}¡que comparten un solo computador! | [laughs] {si}Sí: tres personas y un computador. | Así que no solo importa saber programar. | También necesitas {comunicarte}comunicarte, {repartir}distribuir tareas, {decidir}tomar decisiones | y {equipo}trabajar en equipo… | {reloj}todo mientras el reloj sigue avanzando.
+
+== s06
+[curious] ¿Y cómo llega un equipo universitario hasta la final mundial? | {nacional}El camino comienza en la fase nacional. | {regional}Después vienen las competencias regionales, | con los mejores equipos clasificados de cada país. | {latam}Los que consiguen avanzar pueden llegar al ICPC Latin America Championship, | {campeonato}el campeonato latinoamericano. | Y finalmente están {world}las ICPC World Finals, | donde se reúnen algunos de {mejores}los mejores equipos universitarios del planeta. | {recorrido}Un recorrido que exige {preparacion}preparación, {constancia}constancia y {trabajo}mucho trabajo en equipo.
+
+== s07
+[curious] ¿Y qué pasa en {colombia}Colombia? | {maraton}La Maratón Nacional de Programación ACIS-REDIS es {oficial}la fase nacional oficial de la ICPC en el país. | Se realiza {presencial}de forma presencial, en {sedes}distintas sedes universitarias, | con {tres}equipos de tres estudiantes y {uno}un solo computador. | {mejores}Los mejores equipos clasifican a la siguiente etapa: | {regional}la fase regional latinoamericana. | [excited] {asi}Así que sí: ¡desde Colombia también puedes empezar el camino hacia una competencia internacional!
+
+== s08
+[warmly] Y seguramente te preguntas: {empezar}¿cómo puedo empezar? | [excited] {lejos}¡No tienes que irte muy lejos! | En la UCEVA está {goslint}GOSLINT, el semillero de investigación de Ingeniería de Sistemas, | donde {aprender}aprendemos, {entrenar}entrenamos y {participar}participamos en programación competitiva. | Una de nuestras actividades son las {maratones}Maratones de Programación UCEVA: | espacios para {familiar}familiarizarte con los problemas, {practicar}practicar | y {vivir}vivir la dinámica de una competencia. | En {d2024}2024 realizamos nuestra undécima maratón, y en {d2026}2026, la duodécima. | {icpc}También hemos llevado equipos a la Maratón Nacional y a la fase regional de la ICPC, | y entrenado presencialmente en {camp}el Training Camp de Medellín. | [warmly] {nosolo}Pero GOSLINT no se limita a competir: | también desarrollamos {proyectos}proyectos de investigación, | {herramientas}herramientas de entrenamiento | y {tesis}trabajos de grado sobre programación y tecnología.
+
+== s09
+[warmly] La programación competitiva es {mas}mucho más que resolver problemas contra el reloj. | Es una oportunidad para mejorar tu {logica}lógica, aprender {algoritmos}nuevos algoritmos, | desarrollar tu {creatividad}creatividad y {equipo}trabajar en equipo. | No importa si {empiezas}apenas empiezas o si {experiencia}ya tienes experiencia: | {siempre}siempre habrá un nuevo problema que resolver y algo nuevo que aprender. | Así que, si te gusta programar, {retos}disfrutas los retos | o simplemente {diferente}quieres aprender algo diferente… | [excited] {animate}¡anímate a participar!
+
+== s10
+[excited] {gusta}¿Te gusta programar? | {unete}¡Únete a GOSLINT! | [warmly] {nos}Nos vemos en el próximo problema.

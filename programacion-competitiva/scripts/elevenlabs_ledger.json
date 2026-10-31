@@ -1,0 +1,28 @@
+{
+  "nota": "Registro del consumo de ElevenLabs para la narración. 1 crédito por carácter enviado (etiquetas y espacios incluidos). Saldo de partida indicado por el usuario: 9.460. Se generó una sola toma por segmento para cuidar el presupuesto.",
+  "saldo_inicial": 9460,
+  "modelo": "eleven_v4",
+  "voz": {"voice_id": "u36BhA6zuwclwVyAT1Bi", "nombre": "Andres - Social Media Host", "acento": "es-colombian"},
+  "flow_id": "weiVWRHDgsTQuOqCuWOc",
+  "prueba_de_conexion": {"creditos": 60, "generation_id": "qRtSOcxbttbWgwqg4d5f", "flow_id": "pEx9ODJRz0hetjW6JWaj"},
+  "tomas_usadas": [
+    {"segmento": "s01", "creditos": 389, "generation_id": "VVY9F4NILyk7o3pbnEus"},
+    {"segmento": "s02", "creditos": 612, "generation_id": "8TCJIXYKbpTzCtd8DvfX"},
+    {"segmento": "s03", "creditos": 362, "generation_id": "Zpvj2sni7fZ2QMrdy8At"},
+    {"segmento": "s04", "creditos": 599, "generation_id": "qeQ2TV7O56r9vltZSlpJ", "intento": 2},
+    {"segmento": "s05", "creditos": 552, "generation_id": "0s1hmZ1mE3QkZoFFAZdR"},
+    {"segmento": "s06", "creditos": 516, "generation_id": "IasXAWSEAgHoCA6xk2lz"},
+    {"segmento": "s07", "creditos": 454, "generation_id": "wN1zHXMSK9XzJkq4nr8e"},
+    {"segmento": "s08", "creditos": 853, "generation_id": "CFrO3ym8hOQw3lnm2rHu"},
+    {"segmento": "s09", "creditos": 471, "generation_id": "fR5IRK06cdplxw0vl7DE"},
+    {"segmento": "s10", "creditos": 91, "generation_id": "Li5VKQhFHP7GmMlAE7gO"}
+  ],
+  "total_tomas_usadas": 4899,
+  "intentos_fallidos": [
+    {"segmento": "s04", "creditos_cotizados": 599, "generation_id": "TeldLuNWdZwUUclIx9JN", "motivo": "«Unusual activity has been detected on your account, so Free Tier access has been disabled…» (se lanzó en paralelo con otras tomas). No produjo audio."}
+  ],
+  "intentos_que_no_arrancaron": "s03, s05 y s08 (dos veces) devolvieron «Free generations are busy right now»: no se cobraron. Desde entonces todo se generó de uno en uno.",
+  "consumo_minimo": 4959,
+  "consumo_maximo_posible": 5558,
+  "saldo_estimado": "entre 3.902 y 4.501 créditos"
+}

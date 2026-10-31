@@ -1,0 +1,23 @@
+{
+  "name": "goslint-roadmap",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roadmap del canal de Goslint: carrusel de 17 imágenes de 1080×1350 (React + Remotion), editable desde src/data.ts",
+  "scripts": {
+    "studio": "remotion studio",
+    "typecheck": "tsc --noEmit",
+    "render": "node --experimental-strip-types scripts/render_all.ts",
+    "still": "remotion still S01 out/still.png --scale=2"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "@types/node": "22.15.0",
+    "typescript": "5.8.3"
+  }
+}

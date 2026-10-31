@@ -1,0 +1,39 @@
+{
+ "nombre": "DaRu",
+ "encabezado": "// DaRu · BOSQUEJO · arquetipo Master Hacker · fase por definir",
+ "subtitulo": "MASTER HACKER · FASE POR DEFINIR",
+ "idea_titulo": "CÓDIGO QUE<br>SE PUSO TRAJE",
+ "idea_texto": "Una entidad digital vestida de programador. Se presenta como «súper hacker» y exagera cada reacción, pero ante un bug se pone serio y lo resuelve contigo.",
+ "nota_referencia": "Inspiración: de Daru (<i>Steins;Gate</i>) solo se toma la personalidad: hacker brillante, informal y bromista. De la imagen enviada, la idea de <b style=\"color:#fff\">cabeza de código con traje</b>. El diseño, la silueta y los colores son propios.",
+ "rasgos": [
+  "Cabeza de columnas de código que caen",
+  "Ojos verdes con brillo y boca pixelada",
+  "Traje carbón, camisa y corbata roja",
+  "La <b style=\"color:#00C063\">«L» de Goslint</b> en la solapa",
+  "Mide 31 px, como Lint y Vee"
+ ],
+ "paleta": ["#0B2418", "#00864A", "#00C063", "#7CFFB3", "#FFFFFF", "#3A3A46", "#24242C", "#6A6A7A", "#D62B2B", "#93191C", "#E7B08A", "#C88B68"],
+ "paleta_codigos": true,
+ "paleta_top": 700,
+ "color_acento": "#00C063",
+ "halo": "rgba(0,192,99,.22)",
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "especial_titulo": "COMPILANDO LA SOLUCIÓN",
+ "especial_texto": "Invoca fragmentos de código sueltos, los ordena en líneas y los compila en una marca de verificación. Es pasar de un problema desordenado a una solución clara, sin magia: con orden.",
+ "especial_nota": "son los mismos píxeles en los tres tiempos · solo cambia su posición · la cara pasa de concentrada a satisfecha",
+ "especial_pasos": ["1 · invoca", "2 · organiza", "3 · resuelve"],
+ "poses": [["idle","reposo"],["wave","saludo"],["point","señalar"],["think","pensar"],["prop","trabajando"],["cheer","¡bien!"],["wow","sorpresa"],["wink","guiño"]],
+ "anim_titulo": "ANIMACIÓN EN REPOSO · 4 TIEMPOS",
+ "detalles": {
+  "titulo": "DETALLES DE IDENTIDAD",
+  "top": 850,
+  "items": [
+   ["d_rostros.png", "rostro digital expresivo", 2],
+   ["d_corbata.png", "corbata roja de acento", 6],
+   ["d_l.png", "la «L» verde en la solapa", 8],
+   ["d_silueta.png", "silueta legible a 1x", 2]
+  ]
+ },
+ "version": "DaRu · bosquejo v1 · sin contorno"
+}

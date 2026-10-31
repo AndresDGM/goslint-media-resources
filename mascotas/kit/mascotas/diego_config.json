@@ -1,0 +1,82 @@
+{
+ "nombre": "Diego",
+ "encabezado": "// DIEGO · BOSQUEJO · mascota de la Fase 7 · Modo maratón",
+ "subtitulo": "COACH · FASE 7 · MODO MARATÓN",
+ "idea_titulo": "EL COACH QUE<br>TE PONE A PUNTO",
+ "idea_texto": "Te acompaña en la recta final, cuando toca competir de verdad. Fuerte, tranquilo y exigente: se planta con las manos en la cintura y te pide un problema más.",
+ "nota_referencia": "Basado en <b style=\"color:#fff\">Diego, coach de Goslint</b>. De sus fotos se toman el fade, la barba corta, el arete y su camiseta blanca de la maratón ICPC. Caricatura amable, sin exagerar rasgos.",
+ "rasgos": [
+  "Pelo <b>negro</b> con fade y flequillo corto",
+  "Barba corta que enmarca la mandíbula",
+  "Camiseta blanca con el <b style=\"color:#F2C230\">logo del ICPC</b>",
+  "Hombros anchos y cintura en V",
+  "<b>Muñequeras verdes</b> de Goslint"
+ ],
+ "paleta": [
+  "#E0A47E",
+  "#BB7E5C",
+  "#8C624C",
+  "#17110F",
+  "#3A2C26",
+  "#4E3C34",
+  "#F2F2EC",
+  "#BFC5CD",
+  "#2B3550",
+  "#3E73D8",
+  "#F2C230",
+  "#E2463E",
+  "#8FA8C6",
+  "#6984A8",
+  "#4A4A56",
+  "#00C063"
+ ],
+ "paleta_top": 790,
+ "color_acento": "#00C063",
+ "halo": "rgba(62,115,216,.22)",
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "especial_titulo": "¡ORDEN DE ATAQUE!",
+ "especial_texto": "Lee todos los problemas, los ordena de fácil a difícil y arranca por el más fácil: ese cae en «AC». Estrategia de maratón.",
+ "especial_nota": "la barra de cada tarjeta es su dificultad · el más fácil se pone verde",
+ "especial_pasos": [
+  "1 · lee",
+  "2 · ordena",
+  "3 · ¡ataca!"
+ ],
+ "poses": [
+  [
+   "idle",
+   "reposo"
+  ],
+  [
+   "wave",
+   "saludo"
+  ],
+  [
+   "point",
+   "¡tú puedes!"
+  ],
+  [
+   "think",
+   "pensar"
+  ],
+  [
+   "prop",
+   "cronómetro"
+  ],
+  [
+   "cheer",
+   "¡fuerza!"
+  ],
+  [
+   "wow",
+   "sorpresa"
+  ],
+  [
+   "wink",
+   "guiño"
+  ]
+ ],
+ "anim_titulo": "RESPIRA Y PARPADEA · 4 TIEMPOS",
+ "version": "Diego · bosquejo v2 · sin contorno"
+}

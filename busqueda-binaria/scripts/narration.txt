@@ -1,0 +1,50 @@
+# Guion maestro de la narración. Una sección «== id» por archivo de audio (una generación de ElevenLabs).
+#   [etiqueta]  dirección vocal de ElevenLabs v3/v4 (se envía, no se subtitula)
+#   |           corte de subtítulo (no se envía)
+#   {marca}     punto de sincronía para la animación: fotograma en que empieza la palabra siguiente (no se envía)
+# El texto que se envía a ElevenLabs se obtiene con: python3 scripts/narration.py tts <id>
+
+== s01
+[excited] ¡Hola! Soy Lint, la mascota de {goslint}Goslint. | [curious] Hoy quiero encontrar {numero}un número dentro de una colección enorme. | {como}¿Cómo lo harías tú?
+
+== s02
+Lo más obvio es {uno}revisar uno por uno. | [tired] {e1}Este no… {e2}este tampoco… [sighs] {e3}este menos. | {diez}Con diez números, aguanto. | Pero {mil}con mil, o {millon}con un millón… puedo tardar muchísimo. | [curious] {pregunta}¿Y si pudiera encontrarlo sin revisar cada elemento?
+
+== s03
+[excited] ¡Se puede! Se llama {nombre}búsqueda binaria. | Si los datos están {ordenados}ordenados de menor a mayor, miro solo {centro}el elemento del centro. | {igual}Si es el que busco, terminé. | {menor}Si mi número es menor, solo puede estar a la izquierda. | {mayor}Si es mayor, a la derecha. | {otra}Y la otra mitad… ya no me importa.
+
+== s04
+[calm] Para no perderme, uso tres marcas. | {low}low, donde empieza mi zona de búsqueda. | {high}high, donde termina. | Y {mid}mid, justo en el centro. | A esta estrategia la llaman {dyv}divide y vencerás. | [mischievously] Aunque yo prefiero decirle… [pause] {dym}dividir y machetear.
+
+== s05
+[excited] Busco el {busco}16. | En {centro}el centro hay un 12. | {mayor}16 es mayor, así que… {zas1}¡ZAS! | [laughs] {fuera1}Toda la mitad izquierda, descartada. | {porque}Como todo está ordenado, ahí solo hay números menores o iguales a 12. | {metafora}Tranquilo, el machete es pura metáfora: no borro ningún dato, solo dejo de mirar ahí. | {centro2}Nuevo centro: 23. | {menor}16 es menor… {zas2}¡ZAS! Fuera la derecha. | Y {queda}queda uno solo: el 16. | [happy] {found}¡Encontrado!
+
+== s06
+[curious] ¿Y por qué {exijo}exijo que estén ordenados? | Mira {desorden}esta fila desordenada. Busco el 7. | En {centro}el centro hay un 20, y 7 es menor, | así que macheteo la derecha… {zas}[nervous] ¡y el 7 estaba justo ahí! | {error}Acabo de descartar la respuesta. | {sinorden}Sin orden, el centro no me dice nada de sus vecinos. | {conorden}Con orden, sí: todo lo de la izquierda es menor o igual, y todo lo de la derecha, mayor o igual. | {costo}Eso sí: ordenar también cuesta trabajo. | {una}Para una sola búsqueda, quizá no compense. | Pero si los datos {ya}ya vienen ordenados, o voy a {muchas}consultarlos muchas veces, | [happy] vale muchísimo la pena.
+
+== s07
+Ahora, {paso}paso a paso. | {dieciseis}16 números ordenados, y {busco}busco el 43. | {low0}low arranca en la posición 0 y {high15}high en la 15. | {mid7}mid queda en la 7, donde hay un 31. | {cmp1}43 es mayor que 31: {zas1}¡ZAS!, fuera la izquierda, | y {low8}low salta a la posición 8. | {mid11}Nuevo mid, la posición 11: un 47. | {cmp2}43 es menor: {zas2}¡ZAS!, fuera la derecha, | y {high10}high baja a la 10. | Ahora {mid9}mid es la 9, con un 39. | {cmp3}43 es mayor: {zas3}low sube a la 10. | {coinciden}low y high coinciden; mid también es la 10, y ahí está… | [excited] {found}¡el 43! | {cuatro}Cuatro comparaciones para 16 números.
+
+== s08
+¿Y si busco uno que {noexiste}no existe, como el 42? | {camino}El camino es el mismo, hasta llegar {llega}al 43. | {cmp}42 es menor, así que {high9}high baja a la posición 9. | [curious] Pero {low10}low está en la 10. | Cuando low {supera}supera a high, el intervalo queda {vacio}vacío: ya no hay dónde buscar. | El algoritmo termina y responde {menos1}menos uno, que significa: no está.
+
+== s09
+[curious] ¿Qué tan {rapido}rápido es esto? | La {complejidad}complejidad algorítmica describe cómo crece el trabajo de un algoritmo cuando crecen los datos. | Llamemos {n}n a la cantidad de elementos. | La {lineal}búsqueda lineal, la de uno por uno, puede llegar a revisar los n elementos: | es {on}O de n. | La {binaria}binaria parte el problema a la mitad en cada paso, | y el número de veces que puedes {partir}partir n a la mitad hasta llegar a uno | es {log}el logaritmo en base 2 de n. | Por eso es {ologn}O de logaritmo de n.
+
+== s10
+[excited] {competir}Pongámoslas a competir: | la {misma}misma lista ordenada y el mismo objetivo, cerca {tres4}del 75 por ciento. | {cuento}Cuento una comparación por cada elemento examinado. | Con {n16}16 elementos: lineal, 13; binaria, 4. | Y {crece}mira cómo crece… | Con {n1024}1024, la lineal necesita {r769}769 comparaciones… | [surprised] y la binaria, {r10}¡apenas 10! | {ojo}Ojo: son ejecuciones concretas. | En la lineal, el costo depende de dónde esté el objetivo: | en {mejor}el mejor caso, una comparación; en {promedio}promedio, media lista; en {peor}el peor, toda. | La {bin}binaria también puede acertar a la primera, | pero en su peor caso necesita, como mucho, {logn}logaritmo de n más una.
+
+== s11
+[calm] Llevemos esto a {java}Java, primero con un ciclo. | {l1}low empieza en 0 y {l2}high en la última posición. | {l3}Mientras low sea menor o igual que high, todavía hay intervalo. | {l4}Calculo mid como low más la mitad de la distancia entre low y high; | así {desborde}evito que la suma se desborde con arreglos gigantes. | {l5}Si el dato en mid es el objetivo, devuelvo su posición. | {l6}Si es menor, descarto la izquierda: low pasa a ser mid más uno. | {l7}Si no, high pasa a ser mid menos uno. | {clave}Ese más uno y ese menos uno son la clave: sacan a mid del intervalo, | así que en cada vuelta {encoge}se encoge, y el ciclo siempre termina. | Y {l8}si se vacía, devuelvo menos uno.
+
+== s12
+[calm] Ahora, la {version}versión recursiva. | {def}Recursividad es cuando un método se llama a sí mismo | para resolver una versión más pequeña del mismo problema. | Aquí, {params}low y high llegan como parámetros. | {base1}Primer caso base: si low supera a high, el intervalo está vacío y devuelvo menos uno. | {base2}Segundo caso base: si el dato en mid es el objetivo, devuelvo mid. | Y si no, {rec}el método se llama a sí mismo, pero solo con la mitad que importa. | {pila}Cada llamada espera a la siguiente y se apila en memoria: es la pila de llamadas. | {regresa}Cuando una llega a un caso base, la respuesta regresa de llamada en llamada.
+
+== s13
+[curious] ¿Cuál es {mejor}mejor? | Las dos hacen las {mismas}mismas comparaciones. | La {iter}iterativa usa una cantidad fija de memoria extra: espacio {o1}O de 1. | La {recu}recursiva guarda una llamada por cada división: espacio {ologn}O de logaritmo de n. | Y {sincontar}eso, sin contar el arreglo original. | La {v1}iterativa ahorra memoria; la {v2}recursiva expresa la idea de forma muy directa. | {ninguna}Ninguna gana siempre: elige la que deje tu código más claro.
+
+== s14
+[excited] ¿Y {donde}dónde se usa? | {uno}Uno: buscar un número de identificación en una lista ordenada de estudiantes. | {dos}Dos: ubicar una palabra en un diccionario digital, que ya viene en orden alfabético. | {tres}Tres: encontrar un puntaje en una tabla de posiciones ordenada. | Y con {ajuste}un pequeño ajuste, también encuentra límites: | por ejemplo, {limite}el primer puntaje mayor o igual a 80. | Las {cond}condiciones son siempre las mismas: {c1}datos ordenados y {c2}acceso directo a cualquier posición. | {notodas}Si no se cumplen, esta técnica no sirve: no todas las búsquedas la admiten.
+
+== s15
+[warmly] {repaso}Repasemos. | {r1}Uno: los datos deben estar ordenados. | {r2}Dos: miro el punto medio. | {r3}Tres: descarto la mitad que no puede tener la respuesta. | {r4}Cuatro: repito hasta encontrarla, o hasta que el intervalo quede vacío. | {r5}Cinco: el tiempo crece como O de logaritmo de n. | Y {r6}seis: puedo escribirla de forma iterativa o recursiva. | Un {reto}último reto: {millon}un millón de números ordenados, y busco el último. | {zas}¡ZAS, ZAS, ZAS! | {veinte}20 comparaciones, y listo. | [mischievously] Y {recuerda}recuerda: ante un problema grande… {dym}¡divide y machetea! | [warmly] {adios}Nos vemos en el próximo problema. {goslint}Esto es Goslint.

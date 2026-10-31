@@ -1,0 +1,37 @@
+{
+  "id": "S00",
+  "slug": "original",
+  "title": "Original (control)",
+  "intent": "The narration exactly as scripts/narration.json has it, word for word. Control for every comparison.",
+  "locale": "es-CO",
+  "derived_from": "scripts/narration.json",
+  "notes": "Line texts are the literal TTS input of the existing pipeline, including its respellings (\"ce más más\", \"i ce pe ce\", \"Uceva\"). `caption` is the correct spelling shown on screen (src/timeline.ts). No pronunciation hints are applied, so that this script stays the unmodified baseline.",
+  "pronunciation": [],
+  "lines": [
+    {"id": "l01", "text": "Cinco horas. Tres personas. Un solo computador.", "speed": 1.0, "caption": "Cinco horas. Tres personas. Un solo computador."},
+    {"id": "l02", "text": "Y un reloj que no se detiene.", "speed": 1.0, "caption": "Y un reloj que no se detiene."},
+    {"id": "l03", "text": "Esto es Goslint.", "speed": 1.0, "caption": "Esto es Goslint."},
+    {"id": "l04", "text": "El semillero de Ingeniería de Sistemas de la Uceva.", "speed": 1.0, "caption": "El semillero de Ingeniería de Sistemas de la UCEVA."},
+    {"id": "l05", "text": "Aquí entrenamos algoritmos y estructuras de datos, problema tras problema, en ce más más, Python y Java.", "speed": 1.0, "caption": "Aquí entrenamos algoritmos y estructuras de datos, problema tras problema, en C++, Python y Java."},
+    {"id": "l06", "text": "Organizamos maratones internas.", "speed": 1.0, "caption": "Organizamos maratones internas."},
+    {"id": "l07", "text": "Y salimos a competir: en Pereira, en Cali, y en Bogotá, en la Regional del i ce pe ce.", "speed": 1.0, "caption": "Y salimos a competir: en Pereira, en Cali y en Bogotá, en la Regional del ICPC."},
+    {"id": "l08", "text": "Pero lo más valioso no está en el código.", "speed": 1.0, "caption": "Pero lo más valioso no está en el código."},
+    {"id": "l09", "text": "Está en pensar en equipo, equivocarse juntos, y celebrar cada problema resuelto.", "speed": 1.0, "caption": "Está en pensar en equipo, equivocarse juntos y celebrar cada problema resuelto."},
+    {"id": "l10", "text": "También investigamos, y estamos construyendo nuestro propio juez en línea.", "speed": 1.0, "caption": "También investigamos, y estamos construyendo nuestro propio juez en línea."},
+    {"id": "l11", "text": "No necesitas experiencia previa. Solo curiosidad, y ganas de practicar.", "speed": 1.0, "caption": "No necesitas experiencia previa. Solo curiosidad y ganas de practicar."},
+    {"id": "l12", "text": "Tu primer problema ya te está esperando.", "speed": 1.0, "caption": "Tu primer problema ya te está esperando."},
+    {"id": "l13", "text": "Ven, únete a Goslint.", "speed": 0.9, "caption": "Ven, únete a Goslint."}
+  ],
+  "groups": [
+    {"id": "S00-G01", "lines": ["l01"], "pause_after_s": 0.40},
+    {"id": "S00-G02", "lines": ["l02"], "pause_after_s": 0.85},
+    {"id": "S00-G03", "lines": ["l03"], "pause_after_s": 0.50},
+    {"id": "S00-G04", "lines": ["l04", "l05"], "pause_after_s": 0.70},
+    {"id": "S00-G05", "lines": ["l06", "l07"], "pause_after_s": 0.80},
+    {"id": "S00-G06", "lines": ["l08", "l09"], "pause_after_s": 0.70},
+    {"id": "S00-G07", "lines": ["l10"], "pause_after_s": 0.75},
+    {"id": "S00-G08", "lines": ["l11"], "pause_after_s": 0.45},
+    {"id": "S00-G09", "lines": ["l12"], "pause_after_s": 0.55},
+    {"id": "S00-G10", "lines": ["l13"], "speed": 0.9, "pause_after_s": 0.0}
+  ]
+}

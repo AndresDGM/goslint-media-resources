@@ -1,0 +1,80 @@
+{
+ "nombre": "Velasco",
+ "encabezado": "// VELASCO · BOSQUEJO · mascota de la Fase 3 · Estructuras y algoritmos",
+ "subtitulo": "PROFE · FASE 3 · ALGORITMOS",
+ "idea_titulo": "EL PROFE QUE<br>MIDE TU CÓDIGO",
+ "idea_texto": "Te enseña a pensar antes de programar: cuánto crece tu algoritmo, cuándo sirve un greedy y cuándo toca DP. Tranquilo y paciente, lee tu código línea por línea.",
+ "nota_referencia": "Basado en el <b style=\"color:#fff\">profe Andrés Velasco</b>, que enseña análisis de algoritmos y en las primeras maratones revisaba a mano el código. Caricatura amable de sus fotos.",
+ "rasgos": [
+  "Pelo rapado con <b>canas</b> en las sienes",
+  "Cara redonda y sonrisa tranquila",
+  "Camisa de rayas <b style=\"color:#9C8FD8\">lila y blanca</b>",
+  "Celular y <b>bolígrafo verde</b> en el bolsillo",
+  "Pose base: <b>manos juntas</b>, como en la foto"
+ ],
+ "paleta": [
+  "#C98B62",
+  "#A36B48",
+  "#221B19",
+  "#8E8782",
+  "#9C8FD8",
+  "#7468B4",
+  "#F3F1F6",
+  "#C6C2D2",
+  "#34496F",
+  "#24344F",
+  "#6A4430",
+  "#CDB27A",
+  "#00C063",
+  "#8E2A35"
+ ],
+ "paleta_top": 800,
+ "color_acento": "#00C063",
+ "halo": "rgba(156,143,216,.24)",
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "especial_titulo": "¡JUEZ A MANO!",
+ "especial_texto": "Como en las primeras maratones: recibe tu código impreso, lo lee línea por línea, marca en rojo lo que falla y, cuando todo está bien, pone el chulo verde. Un juez de carne y hueso.",
+ "especial_nota": "lee la hoja · marca en rojo la línea que falla · chulo verde de aceptado",
+ "especial_pasos": [
+  "1 · lee",
+  "2 · corrige",
+  "3 · ¡AC!"
+ ],
+ "poses": [
+  [
+   "idle",
+   "reposo"
+  ],
+  [
+   "wave",
+   "saludo"
+  ],
+  [
+   "point",
+   "señalar"
+  ],
+  [
+   "think",
+   "pensar O(n)"
+  ],
+  [
+   "prop",
+   "revisar código"
+  ],
+  [
+   "cheer",
+   "¡bien!"
+  ],
+  [
+   "wow",
+   "sorpresa"
+  ],
+  [
+   "wink",
+   "guiño"
+  ]
+ ],
+ "anim_titulo": "RESPIRA Y PARPADEA · 4 TIEMPOS",
+ "version": "Velasco · bosquejo v2 · sin contorno"
+}

@@ -1,0 +1,54 @@
+{
+  "l01": {
+    "file": "audio/vo/l01.wav",
+    "seconds": 2.948
+  },
+  "l02": {
+    "file": "audio/vo/l02.wav",
+    "seconds": 1.798
+  },
+  "l03": {
+    "file": "audio/vo/l03.wav",
+    "seconds": 1.266
+  },
+  "l04": {
+    "file": "audio/vo/l04.wav",
+    "seconds": 2.863
+  },
+  "l05": {
+    "file": "audio/vo/l05.wav",
+    "seconds": 5.977
+  },
+  "l06": {
+    "file": "audio/vo/l06.wav",
+    "seconds": 2.009
+  },
+  "l07": {
+    "file": "audio/vo/l07.wav",
+    "seconds": 4.804
+  },
+  "l08": {
+    "file": "audio/vo/l08.wav",
+    "seconds": 2.428
+  },
+  "l09": {
+    "file": "audio/vo/l09.wav",
+    "seconds": 4.74
+  },
+  "l10": {
+    "file": "audio/vo/l10.wav",
+    "seconds": 4.099
+  },
+  "l11": {
+    "file": "audio/vo/l11.wav",
+    "seconds": 4.335
+  },
+  "l12": {
+    "file": "audio/vo/l12.wav",
+    "seconds": 2.5
+  },
+  "l13": {
+    "file": "audio/vo/l13.wav",
+    "seconds": 1.542
+  }
+}

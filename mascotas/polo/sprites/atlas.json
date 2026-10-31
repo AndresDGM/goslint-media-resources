@@ -1,0 +1,162 @@
+{
+  "nombre": "Polo",
+  "lienzo": [
+    72,
+    64
+  ],
+  "ancla_pies": {
+    "x": 36,
+    "y": 50,
+    "nota": "los pies tocan la fila y = 49 (línea de base en y = 50); centro horizontal x = 36"
+  },
+  "escala_recomendada_video": 12,
+  "paleta": {
+    "fur": "#D6D6D6",
+    "furL": "#EEEEF0",
+    "furD": "#AEB0BA",
+    "furDD": "#8C8E9A",
+    "ink": "#1C2027",
+    "pink": "#E9A8B4",
+    "cap": "#33423B",
+    "capD": "#222C27",
+    "green": "#00C063",
+    "greenD": "#00864A",
+    "ice": "#A8E6FF",
+    "iceD": "#4FB3E6"
+  },
+  "colores_extra_efectos": {
+    "laptop": "#C9D3DC",
+    "laptopD": "#7F8D99",
+    "screen": "#0A1A12",
+    "hot": "#E2463E",
+    "hotL": "#F2C230"
+  },
+  "poses": [
+    {
+      "nombre": "idle",
+      "archivo": "lienzo_72x64/poses/idle.png",
+      "bbox": [
+        20,
+        17,
+        49,
+        50
+      ]
+    },
+    {
+      "nombre": "wave",
+      "archivo": "lienzo_72x64/poses/wave.png",
+      "bbox": [
+        21,
+        17,
+        49,
+        50
+      ]
+    },
+    {
+      "nombre": "point",
+      "archivo": "lienzo_72x64/poses/point.png",
+      "bbox": [
+        20,
+        17,
+        52,
+        50
+      ]
+    },
+    {
+      "nombre": "think",
+      "archivo": "lienzo_72x64/poses/think.png",
+      "bbox": [
+        20,
+        15,
+        57,
+        50
+      ]
+    },
+    {
+      "nombre": "prog",
+      "archivo": "lienzo_72x64/poses/prog.png",
+      "bbox": [
+        20,
+        17,
+        55,
+        50
+      ]
+    },
+    {
+      "nombre": "cheer",
+      "archivo": "lienzo_72x64/poses/cheer.png",
+      "bbox": [
+        21,
+        16,
+        56,
+        50
+      ]
+    },
+    {
+      "nombre": "wow",
+      "archivo": "lienzo_72x64/poses/wow.png",
+      "bbox": [
+        20,
+        13,
+        52,
+        50
+      ]
+    },
+    {
+      "nombre": "tranqui",
+      "archivo": "lienzo_72x64/poses/tranqui.png",
+      "bbox": [
+        20,
+        12,
+        58,
+        50
+      ]
+    }
+  ],
+  "reposo": [
+    {
+      "fotograma": 0,
+      "archivo": "lienzo_72x64/reposo/reposo_0.png",
+      "ms_sugeridos": 250,
+      "que_cambia": "reposo, cola a la izquierda"
+    },
+    {
+      "fotograma": 1,
+      "archivo": "lienzo_72x64/reposo/reposo_1.png",
+      "ms_sugeridos": 250,
+      "que_cambia": "inhala: cuerpo y cabeza suben 1 px"
+    },
+    {
+      "fotograma": 2,
+      "archivo": "lienzo_72x64/reposo/reposo_2.png",
+      "ms_sugeridos": 250,
+      "que_cambia": "cola a la derecha y parpadeo lento"
+    },
+    {
+      "fotograma": 3,
+      "archivo": "lienzo_72x64/reposo/reposo_3.png",
+      "ms_sugeridos": 250,
+      "que_cambia": "exhala: cuerpo baja 1 px"
+    }
+  ],
+  "especial": [
+    {
+      "fotograma": 0,
+      "archivo": "lienzo_72x64/especial/especial_0.png",
+      "ms_sugeridos": 400,
+      "que_pasa": "toma aire (mejillas infladas, ∞ rojo)"
+    },
+    {
+      "fotograma": 1,
+      "archivo": "lienzo_72x64/especial/especial_1.png",
+      "ms_sugeridos": 400,
+      "que_pasa": "sopla (nube gélida, ∞ medio congelado)"
+    },
+    {
+      "fotograma": 2,
+      "archivo": "lienzo_72x64/especial/especial_2.png",
+      "ms_sugeridos": 400,
+      "que_pasa": "el ∞ queda congelado"
+    }
+  ]
+}

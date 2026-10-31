@@ -1,0 +1,38 @@
+{
+  "id": "S03",
+  "slug": "community",
+  "title": "Cálida y de comunidad",
+  "intent": "Sincere invitation centred on learning together and belonging: nobody faces the clock alone.",
+  "locale": "es-CO",
+  "derived_from": "scripts/narration.json",
+  "notes": "Texts use the correct spelling. `pronunciation` lists the only substitutions made before synthesis; everything else is read as written. `from` points at the original lines whose content each line carries.",
+  "pronunciation": [
+    {"match": "ICPC", "say": "I C P C", "why": "Unhinted, espeak reads the acronym as one word (\"ikpk\"). Spaced letters give the same phonemes as the original respelling \"i ce pe ce\"."},
+    {"match": "Python", "say": "Páiton", "why": "Unhinted it is read with Spanish letter values (\"píton\"). The hint gives the usual Latin American pronunciation."},
+    {"match": "Java", "say": "Yava", "why": "Unhinted it is read with a Spanish jota. The hint gives the usual Latin American pronunciation."}
+  ],
+  "lines": [
+    {"id": "S03-L01", "text": "Cinco horas, tres personas y un solo computador.", "speed": 1.0, "from": ["l01"]},
+    {"id": "S03-L02", "text": "El reloj no se detiene, pero aquí nadie lo enfrenta solo.", "speed": 1.0, "from": ["l02"]},
+    {"id": "S03-L03", "text": "Eso es Goslint, el semillero de Ingeniería de Sistemas de la UCEVA.", "speed": 1.0, "from": ["l03", "l04"]},
+    {"id": "S03-L04", "text": "Aquí aprendemos unos de otros: algoritmos y estructuras de datos, problema tras problema, en C++, Python y Java.", "speed": 1.0, "from": ["l05"]},
+    {"id": "S03-L05", "text": "Organizamos maratones internas y viajamos juntos a competir: a Pereira, a Cali y a Bogotá, a la Regional del ICPC.", "speed": 1.0, "from": ["l06", "l07"]},
+    {"id": "S03-L06", "text": "Y lo más valioso no está en el código.", "speed": 1.0, "from": ["l08"]},
+    {"id": "S03-L07", "text": "Está en pensar en equipo, equivocarnos juntos y celebrar cada problema que resolvemos.", "speed": 1.0, "from": ["l09"]},
+    {"id": "S03-L08", "text": "También investigamos, y entre todos estamos construyendo nuestro propio juez en línea.", "speed": 1.0, "from": ["l10"]},
+    {"id": "S03-L09", "text": "No necesitas experiencia previa. Trae tu curiosidad y tus ganas de practicar.", "speed": 1.0, "from": ["l11"]},
+    {"id": "S03-L10", "text": "Tu primer problema ya te está esperando, y nosotros también.", "speed": 1.0, "from": ["l12"]},
+    {"id": "S03-L11", "text": "Ven, únete a Goslint.", "speed": 0.9, "from": ["l13"]}
+  ],
+  "groups": [
+    {"id": "S03-G01", "lines": ["S03-L01", "S03-L02"], "pause_after_s": 0.75},
+    {"id": "S03-G02", "lines": ["S03-L03"], "pause_after_s": 0.60},
+    {"id": "S03-G03", "lines": ["S03-L04"], "speed": 0.96, "pause_after_s": 0.55},
+    {"id": "S03-G04", "lines": ["S03-L05"], "pause_after_s": 0.80},
+    {"id": "S03-G05", "lines": ["S03-L06", "S03-L07"], "pause_after_s": 0.70},
+    {"id": "S03-G06", "lines": ["S03-L08"], "pause_after_s": 0.75},
+    {"id": "S03-G07", "lines": ["S03-L09"], "pause_after_s": 0.50},
+    {"id": "S03-G08", "lines": ["S03-L10"], "pause_after_s": 0.55},
+    {"id": "S03-G09", "lines": ["S03-L11"], "speed": 0.9, "pause_after_s": 0.0}
+  ]
+}

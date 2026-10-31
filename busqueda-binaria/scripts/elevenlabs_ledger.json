@@ -1,0 +1,37 @@
+{
+  "nota": "Registro del consumo de ElevenLabs para la narración. Métrica real comprobada con estimate_only: 1 crédito por carácter enviado, etiquetas de audio y espacios incluidos (igual para eleven_v3 y eleven_v4).",
+  "presupuesto": 10000,
+  "modelo": "eleven_v4",
+  "voz": {"voice_id": "u36BhA6zuwclwVyAT1Bi", "nombre": "Andres - Social Media Host", "acento": "es-colombian"},
+  "flow_id": "uEh56Piid6CB9xNCdkM1",
+  "tomas_usadas": [
+    {"segmento": "s01", "creditos": 142, "generation_id": "O1vIrWmkZjqRnSuP1iYB"},
+    {"segmento": "s02", "creditos": 232, "generation_id": "6MDiLFw9ndmwMNS2oHOF", "intento": 2},
+    {"segmento": "s03", "creditos": 275, "generation_id": "IGvvZWVXd82fQl4NPJrT", "intento": 2},
+    {"segmento": "s04", "creditos": 249, "generation_id": "pZ2HUUjyz24FOydYBYIp", "nota": "muestra de voz, aprobada y reutilizada como toma final"},
+    {"segmento": "s05", "creditos": 377, "generation_id": "eXM5stxUKYWOZExzSFZ5"},
+    {"segmento": "s06", "creditos": 562, "generation_id": "4AnUTaQMTpGUowHoulqm", "intento": 3},
+    {"segmento": "s07", "creditos": 480, "generation_id": "b7UXIcyELmuWev9joVWO"},
+    {"segmento": "s08", "creditos": 310, "generation_id": "huLwwXQAXPgC71swKS68"},
+    {"segmento": "s09", "creditos": 451, "generation_id": "45PcPkJAFQL16jTrpOLB"},
+    {"segmento": "s10", "creditos": 585, "generation_id": "n4Q31KdEgERP2VJGOeQy"},
+    {"segmento": "s11", "creditos": 610, "generation_id": "7I7fPwuZ9ZNF5bU02DnV"},
+    {"segmento": "s12", "creditos": 575, "generation_id": "YQnKo2mQ1MwGANiX1ULd"},
+    {"segmento": "s13", "creditos": 394, "generation_id": "BwMzzUwVL45gU1xmGXUU", "intento": 2},
+    {"segmento": "s14", "creditos": 527, "generation_id": "rrikvoJOcbpgOJLk9l69"},
+    {"segmento": "s15", "creditos": 561, "generation_id": "4iPKGna5gJ8KmfPfVQKo", "intento": 2}
+  ],
+  "total_tomas_usadas": 6330,
+  "intentos_fallidos": [
+    {"segmento": "s02", "creditos_cotizados": 232, "generation_id": "yekQff0lDdnvEznJYEuF"},
+    {"segmento": "s03", "creditos_cotizados": 275, "generation_id": "KpMBlR2PslWH6ITIQr24"},
+    {"segmento": "s06", "creditos_cotizados": 562, "generation_id": "40S3c8KavKWzZ1Pk5l50"},
+    {"segmento": "s06", "creditos_cotizados": 562, "generation_id": "bQzH4VgOxHr7wQhmSmbt"},
+    {"segmento": "s13", "creditos_cotizados": 394, "generation_id": "1WhJx7dDxBUCrbJ1awzf"},
+    {"segmento": "s15", "creditos_cotizados": 561, "generation_id": "ght0WwCLhPpIJXi36rj6"}
+  ],
+  "total_intentos_fallidos_cotizados": 2586,
+  "motivo_de_los_fallos": "ElevenLabs respondió «Unusual activity has been detected on your account, so Free Tier access has been disabled…». No produjeron audio. No se pudo comprobar desde el conector si esos intentos descuentan créditos.",
+  "consumo_minimo": 6330,
+  "consumo_maximo_posible": 8916
+}

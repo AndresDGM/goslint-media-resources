@@ -1,0 +1,36 @@
+{
+  "name": "goslint-promo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vídeo promocional de Goslint (semillero de programación competitiva, UCEVA) construido con React + Remotion",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render GoslintPromo out/render-raw.mp4 && npm run master",
+    "master": "ffmpeg -y -i out/render-raw.mp4 -c:v copy -af volume=1.5dB -c:a aac -b:a 256k -movflags +faststart out/goslint-promo.mp4",
+    "still": "remotion still GoslintPromo out/still.png",
+    "render:reel": "bash scripts/render_reel.sh",
+    "still:reel": "remotion still GoslintInstagramReel out/still-reel.png",
+    "render:reel:v2": "bash scripts/render_reel_v2.sh",
+    "still:reel:v2": "remotion still GoslintInstagramReelV2 out/still-reel-v2.png --frame=600",
+    "render:promo:v2": "bash scripts/render_promo_v2.sh",
+    "still:promo:v2": "remotion still GoslintPromoV2 out/still-promo-v2.png --frame=600",
+    "assets:photos": "python3 scripts/prepare_photos.py",
+    "assets:audio": "python3 scripts/make_music.py && python3 scripts/make_sfx.py",
+    "assets:audio:reel": "python3 scripts/make_music_reel.py",
+    "assets:audio:reel:v2": "python3 scripts/make_music_reel_v2.py"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@remotion/cli": "4.0.534",
+    "@remotion/media-utils": "4.0.534",
+    "@remotion/transitions": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

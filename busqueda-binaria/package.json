@@ -1,0 +1,32 @@
+{
+  "name": "goslint-busqueda-binaria",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video educativo de Goslint sobre búsqueda binaria (React + Remotion, pixel art, narración ElevenLabs)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "bash scripts/render.sh",
+    "still": "remotion still BusquedaBinaria out/still.png",
+    "typecheck": "tsc --noEmit",
+    "test:algo": "node --experimental-strip-types scripts/verify_algorithms.ts",
+    "assets:audio": "python3 scripts/make_sfx.py && node scripts/dump_timeline.mjs && python3 scripts/make_music.py",
+    "qa": "bash scripts/qa.sh out/goslint-busqueda-binaria.mp4 out/qa",
+    "timeline": "node scripts/dump_timeline.mjs",
+    "subtitles": "node scripts/dump_timeline.mjs && python3 scripts/make_srt.py",
+    "test:java": "python3 scripts/check_java.py"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@remotion/cli": "4.0.534",
+    "@remotion/media-utils": "4.0.534",
+    "@remotion/transitions": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

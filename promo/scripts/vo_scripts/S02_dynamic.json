@@ -1,0 +1,40 @@
+{
+  "id": "S02",
+  "slug": "dynamic",
+  "title": "Dinámica y memorable",
+  "intent": "Confident promotional read built on contrast and rhythm (en casa / afuera, no te pedimos / te pedimos), without trailer exaggeration.",
+  "locale": "es-CO",
+  "derived_from": "scripts/narration.json",
+  "notes": "Texts use the correct spelling. `pronunciation` lists the only substitutions made before synthesis; everything else is read as written. `from` points at the original lines whose content each line carries.",
+  "pronunciation": [
+    {"match": "ICPC", "say": "I C P C", "why": "Unhinted, espeak reads the acronym as one word (\"ikpk\"). Spaced letters give the same phonemes as the original respelling \"i ce pe ce\"."},
+    {"match": "Python", "say": "Páiton", "why": "Unhinted it is read with Spanish letter values (\"píton\"). The hint gives the usual Latin American pronunciation."},
+    {"match": "Java", "say": "Yava", "why": "Unhinted it is read with a Spanish jota. The hint gives the usual Latin American pronunciation."}
+  ],
+  "lines": [
+    {"id": "S02-L01", "text": "Cinco horas. Tres personas. Un solo computador.", "speed": 1.0, "from": ["l01"]},
+    {"id": "S02-L02", "text": "Y el reloj no espera a nadie.", "speed": 1.0, "from": ["l02"]},
+    {"id": "S02-L03", "text": "Esto es Goslint: el semillero de Ingeniería de Sistemas de la UCEVA.", "speed": 1.0, "from": ["l03", "l04"]},
+    {"id": "S02-L04", "text": "Aquí entrenamos algoritmos y estructuras de datos. Problema tras problema. En C++, en Python y en Java.", "speed": 1.0, "from": ["l05"]},
+    {"id": "S02-L05", "text": "Competimos en casa, en nuestras maratones internas.", "speed": 1.0, "from": ["l06"]},
+    {"id": "S02-L06", "text": "Y competimos afuera: en Pereira, en Cali y en Bogotá, en la Regional del ICPC.", "speed": 1.0, "from": ["l07"]},
+    {"id": "S02-L07", "text": "Pero lo más valioso no está en el código.", "speed": 1.0, "from": ["l08"]},
+    {"id": "S02-L08", "text": "Está en el equipo: pensar juntos, equivocarse juntos y celebrar cada problema resuelto.", "speed": 1.0, "from": ["l09"]},
+    {"id": "S02-L09", "text": "También investigamos. Y estamos construyendo nuestro propio juez en línea.", "speed": 1.0, "from": ["l10"]},
+    {"id": "S02-L10", "text": "No te pedimos experiencia. Te pedimos curiosidad y ganas de practicar.", "speed": 1.0, "from": ["l11"]},
+    {"id": "S02-L11", "text": "Tu primer problema ya te está esperando.", "speed": 1.0, "from": ["l12"]},
+    {"id": "S02-L12", "text": "Ven, únete a Goslint.", "speed": 0.9, "from": ["l13"]}
+  ],
+  "groups": [
+    {"id": "S02-G01", "lines": ["S02-L01"], "pause_after_s": 0.40},
+    {"id": "S02-G02", "lines": ["S02-L02"], "pause_after_s": 0.85},
+    {"id": "S02-G03", "lines": ["S02-L03"], "pause_after_s": 0.60},
+    {"id": "S02-G04", "lines": ["S02-L04"], "speed": 0.96, "pause_after_s": 0.70},
+    {"id": "S02-G05", "lines": ["S02-L05", "S02-L06"], "pause_after_s": 0.80},
+    {"id": "S02-G06", "lines": ["S02-L07", "S02-L08"], "pause_after_s": 0.70},
+    {"id": "S02-G07", "lines": ["S02-L09"], "pause_after_s": 0.75},
+    {"id": "S02-G08", "lines": ["S02-L10"], "pause_after_s": 0.50},
+    {"id": "S02-G09", "lines": ["S02-L11"], "pause_after_s": 0.55},
+    {"id": "S02-G10", "lines": ["S02-L12"], "speed": 0.9, "pause_after_s": 0.0}
+  ]
+}

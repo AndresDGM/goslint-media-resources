@@ -1,0 +1,13 @@
+# dependencias y entornos (se reinstalan)
+node_modules/
+.venv*/
+__pycache__/
+*.pyc
+
+# modelos de voz pesados (Kokoro)
+*.onnx
+voices-v1.0.bin
+
+# renders: los vídeos finales superan el límite de GitHub; súbelos como Release
+out/
+*.mp4

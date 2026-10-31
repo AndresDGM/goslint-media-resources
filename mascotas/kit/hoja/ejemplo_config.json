@@ -1,0 +1,26 @@
+{
+ "nombre": "Plantilla",
+ "encabezado": "// PLANTILLA · BOSQUEJO · mascota de la Fase X · Tema",
+ "subtitulo": "GUÍA · FASE X · TEMA",
+ "idea_titulo": "EL GUÍA DE<br>ESTA FASE",
+ "idea_texto": "Una o dos frases sobre quién es, qué enseña y cómo se comporta. Habla en segunda persona del espectador: «te acompaña…», «te enseña…».",
+ "nota_referencia": "Referencia: de la imagen que enviaste solo se toma la idea de <b style=\"color:#fff\">…</b>. El diseño, la silueta y los colores son propios.",
+ "rasgos": [
+  "Cabeza: …",
+  "Ojos y expresión: …",
+  "Ropa: … con la <b style=\"color:#00C063\">«L» de Goslint</b>",
+  "Cuerpo y piernas: …",
+  "Accesorio: …"
+ ],
+ "paleta": ["#E7B08A", "#2B2B38", "#2E3440", "#3C5F8E", "#00C063"],
+ "color_acento": "#00C063",
+ "halo": "rgba(0,192,99,.22)",
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "especial_titulo": "¡NOMBRE DEL MOVIMIENTO!",
+ "especial_texto": "Qué hace, en una o dos frases, y qué idea del tema representa (como el machete de Lint para «divide y vencerás» o el diagrama de Vee para las decisiones).",
+ "especial_nota": "detalles de animación: qué se mueve primero, colores, sonido…",
+ "poses": [["idle","reposo"],["wave","saludo"],["point","señalar"],["think","pensar"],["prop","accesorio"],["cheer","¡bien!"],["wow","sorpresa"],["wink","guiño"]],
+ "anim_titulo": "ANIMACIÓN EN REPOSO · 4 TIEMPOS",
+ "version": "Plantilla · bosquejo v0"
+}

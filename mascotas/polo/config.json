@@ -1,0 +1,26 @@
+{
+ "nombre": "Polo",
+ "encabezado": "// POLO · BOSQUEJO · mascota de la Fase 2 · Programación básica",
+ "subtitulo": "GUÍA · FASE 2 · PROGRAMACIÓN BÁSICA",
+ "idea_titulo": "EL GUÍA DE LA<br>PROGRAMACIÓN BÁSICA",
+ "idea_texto": "Te acompaña en tus primeras líneas de código sin prisa. Es tranquilo y dormilón, y cuando aparece un bug lo mira con calma y hace un chiste. Si tu programa se calienta, sopla y todo se enfría.",
+ "nota_referencia": "Basado en el <b style=\"color:#fff\">zorro ártico</b>: de él se toma el pelaje claro, las orejas pequeñas y la cola esponjosa. El diseño, la gorra y los colores son propios.",
+ "rasgos": [
+  "Pelaje gris claro <b style=\"color:#fff\">#D6D6D6</b> de peluche, esponjoso",
+  "Cabeza grande, ojos semicerrados y hocico corto",
+  "Gorra con la <b style=\"color:#00C063\">«L» de Goslint</b>",
+  "Cuadrúpedo: cuerpo bajo y cola esponjosa",
+  "Mide lo mismo que Lint y Vee"
+ ],
+ "paleta": ["#D6D6D6", "#EEEEF0", "#AEB0BA", "#8C8E9A", "#1C2027", "#E9A8B4", "#33423B", "#222C27", "#00C063", "#00864A", "#A8E6FF", "#4FB3E6"],
+ "color_acento": "#7FD0F5",
+ "halo": "rgba(127,208,245,.18)",
+ "pose_principal": "idle",
+ "escala_principal": 10,
+ "especial_titulo": "¡AIRE FRESCO!",
+ "especial_texto": "Si el código entra en un bucle infinito y el sistema se sobrecalienta, Polo toma aire y sopla un aliento gélido. El ∞ se congela y el programa se enfría. Así se puede depurar con calma.",
+ "especial_nota": "toma aire · sopla · el ∞ se congela de izquierda a derecha",
+ "poses": [["idle","reposo"],["wave","saludo"],["point","señalar"],["think","pensar"],["prog","programar"],["cheer","¡bien!"],["wow","sorpresa"],["tranqui","tranqui"]],
+ "anim_titulo": "RESPIRA Y LA COLA SE MECE · 4 TIEMPOS",
+ "version": "Polo · bosquejo v4 · patas corregidas"
+}

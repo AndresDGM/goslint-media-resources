@@ -7,19 +7,17 @@ Pixel art dibujado **por código** (nada de imágenes de IA ni a mano), con el m
 
 | Carpeta / archivo | Para qué sirve |
 |---|---|
-| `hoja_concepto/polo_concepto.png` | La hoja de concepto aprobada (3840×2160). |
-| `sprites/lienzo_72x64/` | **Lo principal para animar.** PNG transparentes de 72×64, todos con el mismo lienzo y los pies en el mismo sitio (no se desalinean al apilarlos). |
-| `sprites/x12/` | Los mismos ampliados 12× sin suavizar (864×768), listos para video. |
-| `sprites/tiras/` | Tiras horizontales: `poses.png` (8), `reposo.png` (4), `especial.png` (3). |
-| `sprites/gif/` | Vista previa: `reposo.gif` y `especial.gif`. |
-| `sprites/recortados/` | Sprites recortados a la silueta (los usa la hoja de concepto). |
-| `sprites/atlas.json` | Lista de fotogramas, orden, tiempos sugeridos, ancla de los pies y paleta. |
+| `salida/polo_concepto.png` | La hoja de concepto aprobada (3840×2160). |
+| `salida/polo/animacion/lienzo_72x64/` | **Lo principal para animar.** PNG transparentes de 72×64, todos con el mismo lienzo y los pies en el mismo sitio (no se desalinean al apilarlos). |
+| `salida/polo/animacion/x12/` | Los mismos ampliados 12× sin suavizar (864×768), listos para video. |
+| `salida/polo/animacion/tiras/` | Tiras horizontales: `poses.png` (8), `reposo.png` (4), `especial.png` (3). |
+| `salida/polo/animacion/gif/` | Vista previa: `reposo.gif` y `especial.gif`. |
+| `salida/polo/animacion/atlas.json` | Lista de fotogramas, orden, tiempos sugeridos, ancla de los pies y paleta. |
+| `salida/polo/p_*.png` | Sprites recortados a la silueta (los usa la hoja de concepto). |
 | `mascotas/polo.py` | **El código de Polo.** Todo el dibujo, las poses y las animaciones. |
-| `mascotas/exportar_animacion.py` | Regenera la carpeta `sprites/`. |
-| `motor/pixel.py` | Motor de pixel art del kit (lienzo, `arm()`, ruido). |
-| `hoja/` | Generador de la hoja (`hacer_hoja.py`), fuentes y marca. |
-| `config.json` | Textos de la hoja de concepto. |
-| `referencias/sprites/` | Lint, Vee y Marco en reposo (solo para el recuadro de escala de la hoja). |
+| `mascotas/polo_exportar_animacion.py` | Regenera `salida/polo/animacion/`. |
+| `mascotas/polo_config.json` | Textos de la hoja de concepto. |
+| `motor/`, `hoja/`, `referencias/` | Los del kit (motor de pixel art, generador de hojas, fuentes y recuadro de escala). |
 
 ## Medidas (no cambian)
 
@@ -40,9 +38,9 @@ Pixel art dibujado **por código** (nada de imágenes de IA ni a mano), con el m
 Necesitas Python 3 y Pillow (`pip install pillow`). Para la hoja de concepto también Playwright con Chromium.
 
 ```
-python3 mascotas/polo.py sprites/recortados                       # sprites recortados
-python3 mascotas/exportar_animacion.py                            # lienzo 72×64, x12, tiras, GIF y atlas
-python3 hoja/hacer_hoja.py config.json sprites/recortados hoja_concepto/polo_concepto.png
+python3 mascotas/polo.py salida/polo                              # sprites recortados
+python3 mascotas/polo_exportar_animacion.py                       # lienzo 72×64, x12, tiras, GIF y atlas
+python3 hoja/hacer_hoja.py mascotas/polo_config.json salida/polo salida/polo_concepto.png
 ```
 
 Cada fotograma es un `Pose(...)` en `mascotas/polo.py`. Para animar algo nuevo, agrega otro `Pose` (por ejemplo más fotogramas intermedios del reposo o del soplo) y vuelve a exportar. Parámetros:

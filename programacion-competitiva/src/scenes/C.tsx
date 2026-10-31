@@ -237,9 +237,9 @@ export const Colombia: React.FC = () => {
 	const maraton = k('maraton');
 	const asi = k('asi');
 	const shots = [
-		{src: '2024-nacional-icpc-equipo-banner.jpg', tag: 'Maratón Nacional ICPC 2024', from: a, pos: '50% 30%'},
-		{src: '2025-nacional-icpc-equipo1.jpg', tag: 'Maratón Nacional ICPC 2025', from: k('presencial') - 6, pos: '50% 35%'},
-		{src: '2026-nacional-icpc-integrantes.jpg', tag: 'Maratón Nacional ACIS-REDIS 2026', from: k('mejores') - 6, pos: '50% 40%'},
+		{src: '2024-nacional-icpc-equipo-banner.jpg', tag: 'Maratón Nacional ICPC 2024', from: a, pos: '50% 50%', land: true},
+		{src: '2025-nacional-icpc-equipo1.jpg', tag: 'Maratón Nacional ICPC 2025', from: k('presencial') - 6, pos: '50% 35%', land: false},
+		{src: '2026-nacional-icpc-integrantes.jpg', tag: 'Maratón Nacional ACIS-REDIS 2026', from: k('mejores') - 6, pos: '50% 40%', land: false},
 	];
 	const cur = shots.filter((s) => f >= s.from).length - 1;
 	const finalIn = asi - 6;
@@ -250,7 +250,7 @@ export const Colombia: React.FC = () => {
 					i === cur ? (
 						<AbsoluteFill key={i}>
 							<BlurBg src={s.src} from={s.from} dur={200} />
-							<Polaroid src={s.src} at={s.from + 4} x={1060} y={130} w={640} h={700} tilt={i % 2 ? 2.5 : -2} pos={s.pos} caption={s.tag} />
+							<Polaroid src={s.src} at={s.from + 4} x={s.land ? 1030 : 1060} y={s.land ? 230 : 130} w={s.land ? 800 : 640} h={s.land ? 600 : 700} tilt={i % 2 ? 2.5 : -2} pos={s.pos} caption={s.tag} />
 						</AbsoluteFill>
 					) : null,
 				)}

@@ -137,8 +137,8 @@ export const Intro: React.FC = () => {
 				override={f >= 236 && f < V.s01.start + 10 ? {...POSES.wave, armF: Math.floor(f / 5) % 2 ? 124 : 96} : null}
 				light={{dx: -1, dy: -1, color: '#9FB3A8', amt: 0.25}}
 			/>
-			{f >= 250 && f < cinco && (
-				<div style={{position: 'absolute', left: 1500 - 180, width: 360, top: 900, textAlign: 'center', opacity: tween(f, 250, 262) * (1 - tween(f, cinco - 12, cinco))}}>
+			{f >= 244 && f < mundo - 8 && (
+				<div style={{position: 'absolute', left: 1500 - 200, width: 400, top: 420, textAlign: 'center', opacity: tween(f, 244, 256) * (1 - tween(f, mundo - 20, mundo - 8))}}>
 					<Chip size={24} border={C.green}>
 						<span style={{color: C.green}}>LINT</span>
 						<span style={{color: C.dim, fontWeight: 500}}>mascota de Goslint</span>

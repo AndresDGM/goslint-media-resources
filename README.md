@@ -4,8 +4,7 @@ Recursos gráficos y audiovisuales de **Goslint** (Semillero de Investigación �
 
 | Carpeta | Contenido |
 |---|---|
-| [`mascotas/kit/`](mascotas/kit/) | Kit de mascotas: motor de pixel art, generador de hojas de concepto, guía de estilo y referencias (código de Lint, Vee y Marco). En `mascotas/` está el código de DaRu, Diego, Velasco, Ringo, Globín, Pypo, Byte, Mocca y ParserInt; sus sprites, en `salida/` |
-| [`mascotas/polo/`](mascotas/polo/) | Kit de Polo (Fase 2): código, sprites (1x, x12, tiras, GIF, atlas) y hoja de concepto |
+| [`mascotas/kit/`](mascotas/kit/) | Kit de mascotas: motor de pixel art, generador de hojas de concepto, guía de estilo y referencias (código de Lint, Vee y Marco). En `mascotas/` está el código de DaRu, Diego, Velasco, Ringo, Globín, Pypo, Byte, Mocca, ParserInt y Polo; sus sprites, en `salida/`. Polo (Fase 2) trae además su guía [`POLO.md`](mascotas/kit/POLO.md) y su paquete de animación (1x, x12, tiras, GIF, atlas) |
 | [`mascotas/hojas-concepto/`](mascotas/hojas-concepto/) | Hojas de concepto: Vee, Ringo, DaRu, Polo, Globín, Pypo, Byte, Mocca y ParserInt |
 | [`busqueda-binaria/`](busqueda-binaria/) | Vídeo educativo de búsqueda binaria (React + Remotion), con su código Java y subtítulos |
 | [`promo/`](promo/) | Vídeo promocional y reels de Instagram (React + Remotion) |

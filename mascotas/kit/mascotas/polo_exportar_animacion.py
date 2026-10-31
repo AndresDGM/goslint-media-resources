@@ -1,15 +1,15 @@
 """Exporta todo lo que necesitas de Polo para animarlo.
 
-Uso (desde la carpeta raíz del paquete):
-    python3 mascotas/exportar_animacion.py            # escribe en sprites/
+Uso (desde mascotas/kit/):
+    python3 mascotas/polo_exportar_animacion.py     # escribe en salida/polo/animacion/
 
 Genera, para cada pose, fotograma de reposo y fotograma del movimiento especial:
-  · sprites/lienzo_72x64/   PNG transparente 72×64, TODOS con el mismo lienzo y los pies en y = 50
+  · salida/polo/animacion/lienzo_72x64/   PNG transparente 72×64, TODOS con el mismo lienzo y los pies en y = 50
                             (se pueden apilar tal cual en un editor/timeline: no se desalinean)
-  · sprites/x12/            los mismos, ampliados 12× sin suavizar (864×768) listos para video
-  · sprites/tiras/          tiras horizontales (poses, reposo, especial) con fotogramas de 72×64
-  · sprites/gif/            vista previa en GIF del reposo y del movimiento especial
-  · sprites/atlas.json      lista de fotogramas, orden, tiempos sugeridos y ancla de los pies
+  · salida/polo/animacion/x12/            los mismos, ampliados 12× sin suavizar (864×768) listos para video
+  · salida/polo/animacion/tiras/          tiras horizontales (poses, reposo, especial) con fotogramas de 72×64
+  · salida/polo/animacion/gif/            vista previa en GIF del reposo y del movimiento especial
+  · salida/polo/animacion/atlas.json      lista de fotogramas, orden, tiempos sugeridos y ancla de los pies
 """
 from __future__ import annotations
 import json, os, sys
@@ -21,7 +21,7 @@ from pixel import OX, OY, SW, SH  # noqa: E402
 from PIL import Image  # noqa: E402
 
 RAIZ = os.path.dirname(_aqui)
-SALIDA = os.path.join(RAIZ, 'sprites')
+SALIDA = os.path.join(RAIZ, 'salida', 'polo', 'animacion')
 ESCALA = 12
 FONDO = (7, 8, 7)
 

@@ -19,3 +19,10 @@ Ringo, Globín, Pypo, Byte, Mocca y ParserInt se reconstruyeron por código a pa
 - `node_modules/` y entornos de Python: se reinstalan con `npm install` / `pip install`.
 - Modelos de voz Kokoro (`kokoro-v1.0.onnx`, `voices-v1.0.bin`) del promo: hay que descargarlos aparte.
 - Vídeos renderizados (`out/`, `*.mp4`): el de búsqueda binaria pesa más de 500 MB. Se publican como *Release*.
+
+## Documentación
+
+- [`docs/USAR-AGENTES.md`](docs/USAR-AGENTES.md): cómo pedirle trabajo a un agente de IA (Claude Code, Codex…) en este repositorio.
+- [`docs/EDITAR-CON-REMOTION.md`](docs/EDITAR-CON-REMOTION.md): cómo editar los videos a mano con Remotion.
+- [`AGENTS.md`](AGENTS.md) y [`CLAUDE.md`](CLAUDE.md): instrucciones que leen los agentes.
+- [`skills/goslint-videos-v1/SKILL.md`](skills/goslint-videos-v1/SKILL.md): sistema visual y de producción aprobado.

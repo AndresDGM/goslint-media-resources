@@ -3,6 +3,7 @@ import {Composition, continueRender, delayRender, staticFile} from 'remotion';
 import {FPS, H, W} from './theme';
 import {ProgramacionCompetitiva} from './Video';
 import {Thumbnail} from './Thumbnail';
+import {REELS, RH, RW, Reel, reelDuration} from './reels/Reel';
 import {DURATION} from './timeline';
 
 // Las fuentes son locales (public/fonts) y se cargan antes de capturar cualquier fotograma.
@@ -25,5 +26,8 @@ export const Root: React.FC = () => (
 	<>
 		<Composition id="ProgramacionCompetitiva" component={ProgramacionCompetitiva} durationInFrames={DURATION} fps={FPS} width={W} height={H} />
 		<Composition id="Miniatura" component={Thumbnail} durationInFrames={1} fps={FPS} width={W} height={H} />
+		{REELS.map((r) => (
+			<Composition key={r.id} id={r.id} component={() => <Reel r={r} />} durationInFrames={reelDuration(r)} fps={FPS} width={RW} height={RH} />
+		))}
 	</>
 );

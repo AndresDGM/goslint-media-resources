@@ -10,7 +10,7 @@ import {Juez, Problema} from './scenes/B';
 import {Camino, Colombia, Icpc} from './scenes/C';
 import {Cierre, Final, Uceva} from './scenes/D';
 
-const SCENE: Record<SceneId, React.FC> = {
+export const SCENE: Record<SceneId, React.FC> = {
 	intro: Intro,
 	que: Que,
 	problema: Problema,
@@ -21,6 +21,19 @@ const SCENE: Record<SceneId, React.FC> = {
 	uceva: Uceva,
 	cierre: Cierre,
 	final: Final,
+};
+
+/** Solo las escenas (sin HUD, subtítulos ni audio): se reutiliza en los reels. */
+export const Scenes: React.FC = () => {
+	const f = useCurrentFrame();
+	return (
+		<>
+			{(Object.keys(SCENE) as SceneId[]).map((id) => {
+				const S = SCENE[id];
+				return f >= SC[id][0] && f < SC[id][1] ? <S key={id} /> : null;
+			})}
+		</>
+	);
 };
 
 /** Composición principal: escenas por rango → scanlines → viñeta → grano → HUD → subtítulos → audio. */

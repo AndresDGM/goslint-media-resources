@@ -2,6 +2,7 @@
 
   python3 scripts/narration.py count        -> caracteres (= créditos de ElevenLabs) por segmento y total
   python3 scripts/narration.py tts <id>     -> texto exacto que se envía a ElevenLabs para ese segmento
+  python3 scripts/narration.py voces        -> mascota y voice_id de cada segmento
   python3 scripts/narration.py captions     -> subtítulos por segmento
 """
 import os, re, sys
@@ -32,10 +33,23 @@ def segments():
         if line.startswith("#") or not line.strip():
             continue
         if line.startswith("== "):
-            cur = line[3:].strip(); segs[cur] = ""
+            cur = line[3:].split("@")[0].strip(); segs[cur] = ""
         else:
             segs[cur] += (" " if segs[cur] else "") + line.strip()
     return segs
+
+
+def voices():
+    """Mascota que dice cada segmento («== id @Mascota»; Lint por defecto) y su voice_id de ../commons/voces.json."""
+    import json
+    tabla = json.load(open(os.path.join(ROOT, "..", "commons", "voces.json"), encoding="utf-8"))["mascotas"]
+    out = {}
+    for line in open(os.path.join(ROOT, "scripts", "narration.txt"), encoding="utf-8"):
+        if line.startswith("== "):
+            sid, _, who = line[3:].strip().partition("@")
+            who = who.strip() or "Lint"
+            out[sid.strip()] = (who, tabla[who]["voice_id"])
+    return out
 
 
 def tts_text(raw):
@@ -72,6 +86,9 @@ if __name__ == "__main__":
         print(f"TOTAL: {total} caracteres = créditos de ElevenLabs (1 crédito por carácter, etiquetas incluidas)")
     elif cmd == "tts":
         print(tts_text(segs[sys.argv[2]]))
+    elif cmd == "voces":
+        for k, (who, vid) in voices().items():
+            print(f"{k:6s} {who:10s} {vid}  {len(tts_text(segs[k]))} créditos")
     elif cmd == "captions":
         for k, v in segs.items():
             print(k); [print("   ", c) for c in captions(v)]

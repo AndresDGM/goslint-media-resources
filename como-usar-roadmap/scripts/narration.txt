@@ -12,9 +12,66 @@
 == s02
 El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {ocho}ocho fases. | [warmly] Está pensado para que alguien {nunca}que nunca ha programado | entre por {cero}la fase cero | y salga, al final, {lista}lista para entrenar en serio para una maratón. | Por eso no sigue {libro}el orden de un libro de algoritmos, | sino {aprende}el orden en que de verdad se aprende.
 
-# PENDIENTE: falta decidir la mascota de Java en la fase 2 (Mocca queda solo para POO en la fase 3).
-== s03
-[curious] ¿Cómo es ese camino? | [excited] {guias}¡Y cada fase tiene su guía! | {f1}Las fases cero y uno son de lógica pura, | con {pseint}pseudocódigo en PSeInt y {diagramas}diagramas de flujo. | {vee}Ahí te acompaña Vee. | {f2}En la fase dos vuelven los mismos temas, | pero en código real, y cada lenguaje tiene su especialista: | {cpp}ParserInt en C++, {java}PENDIENTE en Java | y {python}los hermanos Pypo y Byte en Python. | {f3}La fase tres trae estructuras de datos y algoritmos clásicos, | {lint}y ahí estamos Polo y yo, Lint, | {mocca}con Mocca en programación orientada a objetos. | {f4}En la fase cuatro arranca la competitiva, | {marco}con Marco y {ringo}Ringo. | {f5}La fase cinco es de grafos, teoría de números y programación dinámica, | {velasco}con el profe Velasco. | {f6}La fase seis es nivel maratón, | {daru}con DaRu. | {f7}Y la fase siete es el modo maratón: | {estrategia}estrategia de equipo, {cuaderno}cuaderno y {simulacros}simulacros, | {diego}con el coach Diego y {globin}Globín.
+# s03: Lint presenta cada fase y cada guía dice, con su voz, en qué nos acompaña (voz por sección: «== id @Mascota», ver ../commons/voces.json).
+== s03a @Lint
+[curious] ¿Cómo es ese camino? | [excited] {guias}¡Cada fase tiene su guía! | {f1}Las fases cero y uno son de lógica pura, con {pseint}PSeInt y diagramas de flujo.
+
+== s03b @Vee
+[warmly] ¡Hola! Te enseño a pensar como un algoritmo, {antes}antes de escribir código.
+
+== s03c @Lint
+{f2}En la fase dos, los mismos temas en código real, con un especialista por lenguaje.
+
+== s03d @ParserInt
+[happy] Yo te acompaño en {cpp}C++.
+
+== s03e @Mocca
+[excited] ¡Y yo en {java}Java!
+
+== s03f @Pypo
+[excited] Nosotros, {python}en Python…
+
+== s03g @Byte
+[happy] …¡corto, limpio y rápido!
+
+== s03h @Lint
+{f3}La fase tres trae estructuras de datos y algoritmos, {polo}y ahí estamos Polo y yo.
+
+== s03i @Polo
+[relaxed] Sin prisa: una estructura a la vez.
+
+== s03j @Mocca
+[excited] ¡Y la programación orientada a objetos va {poo}por mi cuenta!
+
+== s03k @Lint
+{f4}La fase cuatro arranca la competitiva.
+
+== s03l @Marco
+[mischievously] Ya en C++, con los primeros {contest}concursos.
+
+== s03m @Ringo
+[calm] Y con la cabeza fría {reloj}aunque corra el reloj.
+
+== s03n @Lint
+{f5}La fase cinco: grafos, teoría de números y programación dinámica.
+
+== s03o @Velasco
+[calm] Ahí te enseño {dp}cuándo sirve un greedy y cuándo toca DP.
+
+== s03p @Lint
+{f6}La fase seis es nivel maratón.
+
+== s03q @DaRu
+[mischievously] ¡Los problemas más difíciles! {serio}Y los resolvemos en serio.
+
+== s03r @Lint
+{f7}Y la fase siete es el modo maratón.
+
+== s03s @Diego
+[excited] Estrategia de equipo, cuaderno y simulacros. {mas}¡Y un problema más!
+
+== s03t @Globín
+[excited] ¡Hasta que el equipo {despega}despegue!
 
 == s04
 [curious] ¿Y cómo sabes si ya puedes pasar a la siguiente fase? | {hito}Cada fase termina con un video marcado como hito, con una estrella. | Es {reto}un reto o un repaso. | [warmly] {sale}Si te sale, estás listo para seguir. | {repasa}Si no, repasa los videos de esa fase y vuelve a intentarlo.

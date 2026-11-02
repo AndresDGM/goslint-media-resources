@@ -1,8 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, Img, staticFile} from 'remotion';
-import {C, MONO, SANS} from './theme';
-import {GridBg, Grain, LogoMark, Verdict, Vignette} from './components';
-import {BASE, Lint, POSES, Pose} from './mascot';
+import {C, MONO, SANS} from '@commons/theme';
+import {GridBg, Grain, LogoMark, Verdict, Vignette} from '@commons/components';
+import {BASE, Lint, POSES, Pose} from '@commons/mascot';
 
 /** Miniatura del video (1920×1080; se exporta a 1280×720 con scripts/thumbnail.sh). */
 export const Thumbnail: React.FC = () => {

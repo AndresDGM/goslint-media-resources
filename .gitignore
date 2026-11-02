@@ -11,3 +11,12 @@ voices-v1.0.bin
 # renders: los vídeos finales superan el límite de GitHub; súbelos como Release
 out/
 *.mp4
+
+# copias de commons/public dentro de cada proyecto (se generan con commons/scripts/sync-public.mjs)
+*/public/brand/
+*/public/fonts/
+*/public/fx/
+*/public/audio/sfx/
+*/public/mascotas/
+programacion-competitiva/public/photos/
+!commons/public/**

@@ -1,8 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, Img, staticFile} from 'remotion';
-import {C, MONO, SANS} from '../../theme';
-import {GridBg, Grain, LogoMark, Verdict, Vignette} from '../../components';
-import {BASE, Lint, POSES, Pose} from '../../mascot';
+import {C, MONO, SANS} from '@commons/theme';
+import {GridBg, Grain, LogoMark, Verdict, Vignette} from '@commons/components';
+import {BASE, Lint, POSES, Pose} from '@commons/mascot';
 
 /** Portada vertical (1080×1920) de cada reel. Se exporta con scripts/thumbnail.sh. */
 export type CoverDef = {id: string; n: string; title: string; hl: string[]; photo?: string; pos?: string; chips?: ('AC' | 'WA' | 'TLE' | 'RTE')[]; pose: keyof typeof POSES};

@@ -22,6 +22,7 @@ export default {duration: DURATION, fps: 30, scenes: SC, voices: Object.fromEntr
 		loader: 'ts',
 	},
 	bundle: true,
+	alias: {'@commons': join(root, '..', 'commons', 'src')},
 	format: 'esm',
 	platform: 'node',
 	outfile: tmp,

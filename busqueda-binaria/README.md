@@ -49,9 +49,6 @@ pnpm run render                     # render completo + masterizado -> out/gosli
 ```
 src/
   index.ts  Root.tsx  Video.tsx        composición «BusquedaBinaria» (y «HojaDeModelo»)
-  theme.ts  lib.ts  components.tsx     sistema Goslint v1: colores, rejilla, grano, logotipo, transiciones, luces
-  pixel.tsx                            motor de pixel art: lienzo, fuente 5×7, iluminación de contorno, partículas
-  mascot.tsx                           Lint: dibujo por código, poses, caminar, machetazo (anticipación → impacto → recuperación)
   arrayviz.tsx                         celdas, índices, low/mid/high y el escenario de búsqueda con machete
   kit.tsx                              actor, subtítulos, HUD, panel de código con resaltado, notas
   algo/search.ts                       ALGORITMOS REALES que alimentan todas las animaciones y contadores
@@ -60,10 +57,10 @@ src/
   AudioLayer.tsx                       mezcla: música (con ducking), voz y efectos
   scenes/A–E.tsx                       las 11 escenas
 public/
-  brand/      logotipo oficial (extraído del póster) y logo de la UCEVA
   audio/vo/   narración final (wav) y raw/ (los mp3 tal como los entregó ElevenLabs)
-  audio/sfx/  efectos sintetizados · audio/music.mp3 música original
-  fonts/      Inter y JetBrains Mono · fx/ grano
+  audio/music.mp3 música original
+  brand/ fonts/ fx/ audio/sfx/   copias de ../commons/public (commons.json; no se versionan)
+../commons/src   theme, lib, components, pixel, mascot (Lint): se importan con @commons/...
 java/BusquedaBinaria.java              el Java del video, compilable y con pruebas
 subtitulos/                            subtítulos .srt y .vtt
 scripts/                               guion, importación de voz, música, efectos, verificación y QA
@@ -102,7 +99,7 @@ python3 scripts/make_srt.py             # -> subtitulos/
 ## Música, efectos y mezcla
 
 ```bash
-python3 scripts/make_sfx.py             # public/audio/sfx/*.wav
+python3 ../commons/scripts/make_sfx.py   # commons/public/audio/sfx/*.wav (comunes)
 node scripts/dump_timeline.mjs && python3 scripts/make_music.py
 python3 scripts/simulate_mix.py         # mide la mezcla sin renderizar
 ```
@@ -113,7 +110,7 @@ python3 scripts/simulate_mix.py         # mide la mezcla sin renderizar
 ## QA
 
 ```bash
-pnpm run qa                             # scripts/qa.sh out/goslint-busqueda-binaria.mp4 out/qa
+pnpm run qa                             # ../commons/scripts/qa.sh out/goslint-busqueda-binaria.mp4 out/qa
 ```
 
 Comprueba formato, decodificación completa, negros, congelados, sonoridad, recortes y silencios, y genera hojas de contacto en `out/qa/`.

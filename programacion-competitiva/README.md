@@ -65,10 +65,9 @@ src/
   pixel.tsx mascot.tsx kit.tsx           motor de pixel art, Lint, HUD, subtítulos y panel de código (del video anterior)
   sfx.ts  AudioLayer.tsx                 hoja de efectos y mezcla
 public/
-  photos/ (+ blur/)                      fotos preparadas (ver «Fotografías»)
-  mascotas/                              Globín y Marco del kit de mascotas (sprites 1x)
-  brand/ fonts/ fx/                      logotipos oficiales, Inter y JetBrains Mono, grano
-  audio/vo/ (raw/)  audio/sfx/  audio/music.mp3
+  audio/vo/ (raw/)  audio/music.mp3      narración y música de este video
+  brand/ fonts/ fx/ audio/sfx/ mascotas/ photos/   copias de ../commons/public (commons.json; no se versionan)
+../commons/src                           sistema visual, Lint, transiciones (@commons/vertical), tarjetas (@commons/parts)
 soluciones/                              el código de los cuatro envíos
 subtitulos/                              .srt y .vtt
 scripts/                                 guion, voz, ASR, música, efectos, fotos, verificación y QA
@@ -78,15 +77,15 @@ scripts/                                 guion, voz, ASR, música, efectos, foto
 
 - Guion maestro: `scripts/narration.txt` (etiquetas `[excited]`…, cortes de subtítulo `|` y marcas de sincronía `{marca}`). `python3 scripts/narration.py count` cuenta créditos y `python3 scripts/narration.py tts s05` imprime el texto exacto que se envía, con las grafías fonéticas (ICPC → «i ce pe ce», C++ → «ce más más», UCEVA → «Uceva», ACIS-REDIS → «Acis Redis», años en letras).
 - Consumo: 4.899 créditos en las 10 tomas (una toma por segmento) más 60 de la prueba de conexión. Un intento de s04 falló en el servidor sin producir audio (cotizado en 599); si llegara a descontarse, el total sería 5.558. Detalle en `scripts/elevenlabs_ledger.json`.
-- Corrección: en s02 la voz decía «creatinidad». Se regeneró solo la frase «Para lograrlo necesitas lógica, creatividad…» (2 tomas, 206 créditos) y se empalmó en silencio con `scripts/splice_vo.py` (la toma original queda en `raw/s02_original.mp3`; las dos tomas de la frase, en `raw/s02_parche_a.mp3` y `_b.mp3`). La duración del segmento no cambia.
-- Proceso local: `scripts/asr.py` transcribe cada mp3 con marcas por palabra (sherpa-onnx + Parakeet TDT 0.6B v3, porque los modelos de Whisper no se podían descargar en el entorno de producción) y `scripts/import_vo.py` recorta silencios, comprime, iguala a −17,5 LUFS, alinea el guion con lo reconocido y escribe `src/narration.json`. La transcripción coincide con el guion en todos los segmentos (ver `scripts/asr/comparacion.txt`; el reconocedor escribe «UCEBA» y «C» donde la voz dice «UCEVA» y «ce más más», lo que se comprobó escuchando el tramo ralentizado y midiendo su envolvente).
+- Corrección: en s02 la voz decía «creatinidad». Se regeneró solo la frase «Para lograrlo necesitas lógica, creatividad…» (2 tomas, 206 créditos) y se empalmó en silencio con `../commons/scripts/splice_vo.py` (la toma original queda en `raw/s02_original.mp3`; las dos tomas de la frase, en `raw/s02_parche_a.mp3` y `_b.mp3`). La duración del segmento no cambia.
+- Proceso local: `../commons/scripts/asr.py` transcribe cada mp3 con marcas por palabra (sherpa-onnx + Parakeet TDT 0.6B v3, porque los modelos de Whisper no se podían descargar en el entorno de producción) y `scripts/import_vo.py` recorta silencios, comprime, iguala a −17,5 LUFS, alinea el guion con lo reconocido y escribe `src/narration.json`. La transcripción coincide con el guion en todos los segmentos (ver `scripts/asr/comparacion.txt`; el reconocedor escribe «UCEBA» y «C» donde la voz dice «UCEVA» y «ce más más», lo que se comprobó escuchando el tramo ralentizado y midiendo su envolvente).
 
 Para reimportar tras sustituir un mp3 de `public/audio/vo/raw/`:
 
 ```bash
 curl -LO https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2
 tar xjf sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2      # o define PARAKEET_DIR
-python3 scripts/asr.py public/audio/vo/raw/*.mp3                 # -> scripts/asr/*.json
+python3 ../commons/scripts/asr.py public/audio/vo/raw/*.mp3                 # -> scripts/asr/*.json
 python3 scripts/import_vo.py                                     # -> public/audio/vo/*.wav y src/narration.json
 node scripts/dump_timeline.mjs && python3 scripts/make_music.py && python3 scripts/make_srt.py
 ```
@@ -94,12 +93,12 @@ node scripts/dump_timeline.mjs && python3 scripts/make_music.py && python3 scrip
 ## Música, efectos y mezcla
 
 - Música (`scripts/make_music.py`): 120 BPM, la menor, i–VI–III–VII, timbres de 8 bits; la energía cambia por capítulo leyendo `out/timeline.json` (más intensa en el juez, la ICPC y el cierre; calmada en los problemas).
-- Efectos (`scripts/make_sfx.py`, mismos del video anterior) colocados en `src/sfx.ts` a partir de las marcas de la voz.
+- Efectos (comunes: `commons/public/audio/sfx`, generados con `commons/scripts/make_sfx.py`) colocados en `src/sfx.ts` a partir de las marcas de la voz.
 - Mezcla: la música baja bajo la voz; `python3 scripts/simulate_mix.py` mide sin renderizar (voz ≈ 13 dB por encima del fondo). Máster con `scripts/render.sh`.
 
 ## Fotografías
 
-Todas son del semillero. Las de `busqueda-binaria/public/Photos` y doce extraídas de la presentación «GOSLINT_UCEVA_presentacion» (pósteres de la XI y XII Maratón, entrenamientos, más fotos de la Maratón Nacional 2026, de la Regional 2025 y de la Maratón interna 2024 y 2026). Cada foto lleva la etiqueta del evento que indica su nombre de archivo o la presentación. Para regenerar las copias preparadas: `python3 scripts/prepare_photos.py CARPETA_DE_ORIGINALES ...`.
+Todas son del semillero y viven en la biblioteca común `commons/public/photos` (originales en `commons/fotos-originales`): las del semillero y doce extraídas de la presentación «GOSLINT_UCEVA_presentacion» (pósteres de la XI y XII Maratón, entrenamientos, más fotos de la Maratón Nacional 2026, de la Regional 2025 y de la Maratón interna 2024 y 2026). Cada foto lleva la etiqueta del evento que indica su nombre de archivo o la presentación. Para regenerar las copias preparadas, desde la raíz: `python3 commons/scripts/prepare_photos.py commons/fotos-originales`.
 
 ## Licencias y créditos
 

@@ -9,7 +9,36 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "noEmit": true,
-    "lib": ["DOM", "DOM.Iterable", "ES2020"]
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2020"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@commons/*": [
+        "../commons/src/*"
+      ],
+      "react": [
+        "./node_modules/@types/react"
+      ],
+      "react/*": [
+        "./node_modules/@types/react/*"
+      ],
+      "remotion": [
+        "./node_modules/remotion"
+      ],
+      "remotion/*": [
+        "./node_modules/remotion/*"
+      ],
+      "@remotion/*": [
+        "./node_modules/@remotion/*"
+      ]
+    }
   },
-  "include": ["src", "remotion.config.ts"]
+  "include": [
+    "src",
+    "remotion.config.ts",
+    "../commons/src"
+  ]
 }

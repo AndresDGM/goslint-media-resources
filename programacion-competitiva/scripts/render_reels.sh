@@ -2,6 +2,7 @@
 # Renderiza los 5 reels verticales (1080×1920) -> out/reels/goslint-reel-0N.mp4 (con masterizado de audio)
 set -euo pipefail
 cd "$(dirname "$0")/.."
+node ../commons/scripts/sync-public.mjs   # recursos comunes -> public/
 mkdir -p out/reels
 i=0
 for id in Reel1QueEs Reel2Jueces Reel3Icpc Reel4Colombia Reel5Uceva; do

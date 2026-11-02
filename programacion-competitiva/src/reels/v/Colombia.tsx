@@ -1,8 +1,9 @@
 import React from 'react';
-import {C, MONO} from '../../theme';
+import {C, MONO} from '@commons/theme';
 import {M, SC} from '../../timeline';
-import {POSES} from '../../mascot';
-import {Big, FINAL, voiceParts, Hit, In, Kicker, Panel, PhotoV, VReelDef} from './frame';
+import {POSES} from '@commons/mascot';
+import {FINAL, voiceParts, VReelDef} from './frame';
+import {Big, Hit, In, Kicker, Panel, PhotoV} from '@commons/vertical';
 
 /** Reel 04 · Programación competitiva en Colombia (segmento s07). */
 const k = (m: string) => M('s07', m);

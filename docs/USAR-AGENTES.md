@@ -29,7 +29,7 @@ Sé concreto: qué video, qué momento (minuto:segundo) y qué quieres. Ejemplos
 - «Prepara los guiones de los ganchos en el formato de ElevenLabs; los genero yo y los subo.»
 - «Usa subagentes Haiku para hacer los reels 3 y 5 en paralelo.»
 
-Para material nuevo (fotos, una presentación, un póster), **súbelo en la conversación** y di qué es: el agente lo usa como fuente de datos y no inventa lo que no esté ahí.
+Para material nuevo (fotos, una presentación, un póster), **súbelo en la conversación** y di qué es: el agente lo usa como fuente de datos y no inventa lo que no esté ahí. Las fotos y recursos que sirvan a más de un video van a `commons/` (ver [`commons/README.md`](../commons/README.md)); pídele al agente que no duplique recursos entre proyectos.
 
 ## 4. Narración: dos caminos
 

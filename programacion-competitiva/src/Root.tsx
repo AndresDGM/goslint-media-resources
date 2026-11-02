@@ -1,6 +1,6 @@
 import React from 'react';
 import {Composition, continueRender, delayRender, staticFile} from 'remotion';
-import {FPS, H, W} from './theme';
+import {FPS, H, W} from '@commons/theme';
 import {ProgramacionCompetitiva} from './Video';
 import {Thumbnail} from './Thumbnail';
 import {RH, RW, VReel, reelDuration} from './reels/v/frame';

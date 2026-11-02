@@ -1,12 +1,12 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {inCubic, inOutCubic, pop, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {inCubic, inOutCubic, pop, tween} from '@commons/lib';
 import {M, SC} from '../timeline';
-import {ChapterTitle, Chip, GlitchBurst, GridBg, Label, Spot, Verdict, Window, WipeBar, shake} from '../components';
+import {ChapterTitle, Chip, GlitchBurst, GridBg, Label, Spot, Verdict, Window, WipeBar, shake} from '@commons/components';
 import {Actor, CodePanel} from '../kit';
-import {Emote, POSES} from '../mascot';
-import {PixelBurst} from '../pixel';
+import {Emote, POSES} from '@commons/mascot';
+import {PixelBurst} from '@commons/pixel';
 import {CASES, SUBS} from '../solutions';
 
 /* ================================================================== el problema de ejemplo */

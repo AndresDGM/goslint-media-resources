@@ -1,14 +1,15 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../../theme';
-import {tween} from '../../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {tween} from '@commons/lib';
 import {M, SC} from '../../timeline';
-import {Chip, Verdict} from '../../components';
+import {Chip, Verdict} from '@commons/components';
 import {CodePanel} from '../../kit';
-import {POSES} from '../../mascot';
+import {POSES} from '@commons/mascot';
 import {CASES, SUBS} from '../../solutions';
 import {ProblemCard} from '../../scenes/B';
-import {Big, FINAL, voiceParts, Hit, In, Kicker, Panel, VReelDef} from './frame';
+import {FINAL, voiceParts, VReelDef} from './frame';
+import {Big, Hit, In, Kicker, Panel} from '@commons/vertical';
 
 /** Reel 02 · ¿Cómo funcionan los jueces en línea? (segmentos s03 y s04). */
 const k3 = (m: string) => M('s03', m);

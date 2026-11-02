@@ -1,11 +1,12 @@
 import React from 'react';
 import {Img, staticFile, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../../theme';
-import {outExpo, pop, tween} from '../../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {outExpo, pop, tween} from '@commons/lib';
 import {M, SC} from '../../timeline';
-import {Chip, LogoMark, RiseWords, Wordmark} from '../../components';
-import {POSES} from '../../mascot';
-import {Big, FINAL, voiceParts, Hit, In, Kicker, PhotoV, VReelDef} from './frame';
+import {Chip, LogoMark, RiseWords, Wordmark} from '@commons/components';
+import {POSES} from '@commons/mascot';
+import {FINAL, voiceParts, VReelDef} from './frame';
+import {Big, Hit, In, Kicker, PhotoV} from '@commons/vertical';
 
 /** Reel 05 · Programación competitiva en la UCEVA (segmento s08). Maquetación vertical 1080×1920. */
 const k = (m: string) => M('s08', m);

@@ -1,13 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, Img, staticFile, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {inCubic, outExpo, pop, rnd, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {inCubic, outExpo, pop, rnd, tween} from '@commons/lib';
 import {M, SC, V} from '../timeline';
-import {BlurBg, ChapterTitle, Chip, CutFlash, EventTag, GlitchBurst, GridBg, Label, LogoMark, Photo, Polaroid, RiseWords, Shockwave, Spot, Typer, Wordmark, WipeBar} from '../components';
+import {BlurBg, ChapterTitle, Chip, CutFlash, EventTag, GlitchBurst, GridBg, Label, LogoMark, Photo, Polaroid, RiseWords, Shockwave, Spot, Typer, Wordmark, WipeBar} from '@commons/components';
 import {Actor} from '../kit';
-import {Emote, POSES} from '../mascot';
-import {PixelBurst} from '../pixel';
-import {Fact} from './parts';
+import {Emote, POSES} from '@commons/mascot';
+import {PixelBurst} from '@commons/pixel';
+import {Fact} from '@commons/parts';
 
 /* ================================================================== 07 · en la UCEVA */
 

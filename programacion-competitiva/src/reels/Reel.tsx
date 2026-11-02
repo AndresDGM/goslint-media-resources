@@ -1,9 +1,9 @@
 import React from 'react';
 import {AbsoluteFill, Sequence, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {pop, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {pop, tween} from '@commons/lib';
 import {CUES, SC, V} from '../timeline';
-import {GridBg, Grain, Label, LogoMark, Scanlines, Vignette} from '../components';
+import {GridBg, Grain, Label, LogoMark, Scanlines, Vignette} from '@commons/components';
 import {AudioLayer} from '../AudioLayer';
 import {Scenes} from '../Video';
 import {camera} from './camera';

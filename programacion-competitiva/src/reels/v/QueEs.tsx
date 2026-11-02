@@ -1,11 +1,12 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../../theme';
-import {tween} from '../../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {tween} from '@commons/lib';
 import {M, SC} from '../../timeline';
-import {POSES} from '../../mascot';
-import {Verdict} from '../../components';
-import {Big, FINAL, voiceParts, Hit, In, Kicker, Panel, VReelDef} from './frame';
+import {POSES} from '@commons/mascot';
+import {Verdict} from '@commons/components';
+import {FINAL, voiceParts, VReelDef} from './frame';
+import {Big, Hit, In, Kicker, Panel} from '@commons/vertical';
 
 /** Reel 01 · ¿Qué es la programación competitiva? (segmento s02, maquetación vertical). */
 const k = (m: string) => M('s02', m);

@@ -1,12 +1,13 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../../theme';
-import {outCubic, tween} from '../../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {outCubic, tween} from '@commons/lib';
 import {M, SC} from '../../timeline';
-import {Chip, Label, Sprite} from '../../components';
-import {ContestClock, PixelComputer} from '../../scenes/parts';
-import {Key, POSES} from '../../mascot';
-import {Big, FINAL, voiceParts, Hit, In, Kicker, PhotoV, VReelDef} from './frame';
+import {Chip, Label, Sprite} from '@commons/components';
+import {ContestClock, PixelComputer} from '@commons/parts';
+import {Key, POSES} from '@commons/mascot';
+import {FINAL, voiceParts, VReelDef} from './frame';
+import {Big, Hit, In, Kicker, PhotoV} from '@commons/vertical';
 
 /** Reel 03 · La ICPC (segmentos s05 y s06). Maquetación vertical: todo dentro del escenario (x 60–1020, y 430–1190). */
 const k5 = (m: string) => M('s05', m);

@@ -1,9 +1,9 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from './theme';
-import {pop, tween} from './lib';
-import {BASE, Key, Lint, Pose, Stop, alive, hop, poseTrack, walk, walkTo} from './mascot';
-import type {Light} from './pixel';
+import {C, MONO, SANS} from '@commons/theme';
+import {pop, tween} from '@commons/lib';
+import {BASE, Key, Lint, Pose, Stop, alive, hop, poseTrack, walk, walkTo} from '@commons/mascot';
+import type {Light} from '@commons/pixel';
 import {CHAPTERS, CHAPTER_COUNT, CUES, DURATION, M, SC, talkLevel} from './timeline';
 
 /* ================================================================== actor: la mascota con pista de poses */

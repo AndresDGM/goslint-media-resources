@@ -3,6 +3,7 @@
 # Uso: scripts/stills.sh 2603 3161 ...   -> out/stills/f02603.png ...
 set -euo pipefail
 cd "$(dirname "$0")/.."
+node ../commons/scripts/sync-public.mjs   # recursos comunes -> public/
 mkdir -p out/stills
 BUNDLE=out/bundle
 pnpm exec remotion bundle src/index.ts --out-dir "$BUNDLE" >/dev/null 2>&1

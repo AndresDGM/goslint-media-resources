@@ -1,14 +1,14 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {inCubic, inOutCubic, outCubic, pop, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {inCubic, inOutCubic, outCubic, pop, tween} from '@commons/lib';
 import {M, SC} from '../timeline';
-import {BlurBg, ChapterTitle, Chip, CutFlash, EventTag, GlitchBurst, GridBg, Label, Photo, Polaroid, Spot, Sprite, WipeBar} from '../components';
+import {BlurBg, ChapterTitle, Chip, CutFlash, EventTag, GlitchBurst, GridBg, Label, Photo, Polaroid, Spot, Sprite, WipeBar} from '@commons/components';
 import {Actor} from '../kit';
-import {Emote, POSES} from '../mascot';
-import {PixelBurst} from '../pixel';
-import {Fact, PixelComputer} from './parts';
-import {ContestClock} from './parts';
+import {Emote, POSES} from '@commons/mascot';
+import {PixelBurst} from '@commons/pixel';
+import {Fact, PixelComputer} from '@commons/parts';
+import {ContestClock} from '@commons/parts';
 
 /* ================================================================== 04 · la ICPC */
 

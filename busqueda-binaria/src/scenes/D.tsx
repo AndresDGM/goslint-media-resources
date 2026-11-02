@@ -1,13 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {outCubic, pop, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {outCubic, pop, tween} from '@commons/lib';
 import {M, SC, V} from '../timeline';
 import {DEMO, binarySearch, binarySearchRecursive} from '../algo/search';
 import {Cell, MARK, Marker} from '../arrayviz';
-import {Chip, CutFlash, GlitchBurst, GridBg, Label, RiseWords, Verdict, Window} from '../components';
+import {Chip, CutFlash, GlitchBurst, GridBg, Label, RiseWords, Verdict, Window} from '@commons/components';
 import {Actor, CodePanel, Mono, Note} from '../kit';
-import {POSES} from '../mascot';
+import {POSES} from '@commons/mascot';
 
 /* ================================================================== código Java que se muestra y se explica */
 

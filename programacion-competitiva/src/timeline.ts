@@ -1,5 +1,5 @@
 import narration from './narration.json';
-import {BAR, BEAT, FPS} from './theme';
+import {BAR, BEAT, FPS} from '@commons/theme';
 
 /**
  * Línea de tiempo derivada de la narración real (src/narration.json, generado por

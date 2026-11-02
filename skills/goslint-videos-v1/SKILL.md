@@ -286,9 +286,21 @@ Aprobado por el usuario en los reels de «¿Qué es la programación competitiva
 ### Reels verticales (1080×1920)
 - Zonas: 0–220 interfaz de la app (solo fondo) · 230–400 cabecera (marca + título del reel) · 430–1190 escenario · 1210–1600 **Lint siempre visible** (abajo a la izquierda, boca sincronizada con la voz) con un **bocadillo** que muestra el subtítulo · 1620–1920 interfaz (solo fondo). Sin barras de progreso ni pies con información de relleno.
 - Cada reel se siente independiente: abre con un gancho propio (frase corta de Lint + título que entra palabra a palabra con impactos) y cierra con «¿Te gusta programar? ¡Únete a GOSLINT!» en vertical. Si no hay audio para el gancho, se omite (no se deja un arranque mudo).
-- Implementación de referencia: marco común `src/reels/v/frame.tsx` (`In`, `Hit`, `Big`, `Panel`, `PhotoV`, `voiceParts`, `FINAL`) y un archivo por reel; cada reel reutiliza la narración, la música y los efectos del video principal sin volver a sintetizar.
+- Implementación de referencia: piezas de transición en `commons/src/vertical.tsx` (`In`, `Hit`, `Big`, `Panel`, `PhotoV`), marco de reels en `programacion-competitiva/src/reels/v/frame.tsx` (`VReel`, `voiceParts`, `FINAL`) y un archivo por reel; cada reel reutiliza la narración, la música y los efectos del video principal sin volver a sintetizar.
 
 ### ElevenLabs
 - Generar **de una en una** (las llamadas en paralelo disparan «Unusual activity… Free Tier disabled» o «busy»).
 - Los audios pueden servirse desde `elevenlabsusercontent.com`: comprobar que el entorno permite ese dominio **antes** de gastar créditos.
 - Revisar la pronunciación escuchando (el reconocimiento de voz corrige solo palabras mal dichas, p. ej. «creatinidad»); corregir regenerando solo la frase y empalmándola en un silencio.
+
+## 12. Recursos comunes: `commons/` (noviembre 2026)
+
+En el repositorio `goslint-media-resources`, todo lo que usan o es probable que usen **dos o más videos** vive en `commons/` y se **importa desde ahí**; nunca se copia ni se duplica.
+
+- **Código** (`commons/src`, alias `@commons/...`): `theme` (colores, fuentes, BEAT/BAR), `lib` (tween, pop, rnd), `components` (rejilla, grano, logo, transiciones, `Photo`, `BlurBg`, `Polaroid`, `EventTag`, `Sprite`), `vertical` (**estilo de transiciones aprobado**: `In`, `Hit`, `Big`, `Kicker`, `Panel`, `PhotoV`), `parts` (`Card`, `ContestClock`, `Globe`, `PixelComputer`, `Fact`…), `pixel` (motor pixel art), `mascot` (Lint).
+- **Recursos** (`commons/public`): `brand/`, `fonts/`, `fx/`, `audio/sfx/`, `mascotas/`, `photos/` (biblioteca de fotos preparadas + `blur/`; originales en `commons/fotos-originales`, nombres `AAAA-evento-detalle.jpg`). Cada proyecto declara en `commons.json` qué carpetas necesita y `commons/scripts/sync-public.mjs` las copia a su `public/` (copias en `.gitignore`; los scripts `studio`, `still`, `render` y `reels` lo hacen solos).
+- **Scripts comunes** (`commons/scripts`): `sync-public.mjs`, `asr.py` (marcas por palabra), `splice_vo.py`, `prepare_photos.py`, `prepare_fx.py`, `make_sfx.py`, `qa.sh`.
+- **Regla:** si un recurso no existe y es probable que otro video lo use (animación, transición, marco de foto, tarjeta, sprite, efecto, foto, script), **créalo en `commons/`** e impórtalo con `@commons/...`. Solo lo específico del video (escenas, `timeline.ts`, guion, música, `kit.tsx`) va en su carpeta.
+- Al cambiar algo de `commons/`, mantén la API compatible (props opcionales) y comprueba **todos** los proyectos que lo usan (`pnpm exec tsc --noEmit` y un fotograma de cada uno).
+- Un proyecto nuevo copia de `programacion-competitiva/` la configuración del alias (`remotion.config.ts`: `overrideWebpackConfig` con alias y `resolve.modules` del proyecto; `tsconfig.json`: `paths`; `scripts/dump_timeline.mjs`: `alias` de esbuild) y su `commons.json`. Detalle en `commons/README.md`.
+- Fuera de ese repositorio (proyecto suelto o zip), las secciones 2–8 siguen valiendo: reconstruye las piezas a partir de esta skill.

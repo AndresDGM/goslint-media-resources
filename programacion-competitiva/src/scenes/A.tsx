@@ -1,13 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {inCubic, inOutCubic, outExpo, pop, rnd, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {inCubic, inOutCubic, outExpo, pop, rnd, tween} from '@commons/lib';
 import {M, SC, V} from '../timeline';
-import {ChapterTitle, Chip, CutFlash, GlitchBurst, GridBg, Label, LogoMark, RiseWords, Shockwave, Spot, Typer, Verdict, WipeBar, Wordmark} from '../components';
+import {ChapterTitle, Chip, CutFlash, GlitchBurst, GridBg, Label, LogoMark, RiseWords, Shockwave, Spot, Typer, Verdict, WipeBar, Wordmark} from '@commons/components';
 import {Actor} from '../kit';
-import {Emote, POSES} from '../mascot';
-import {PixelBurst} from '../pixel';
-import {Card, ContestClock, Globe, PixelComputer, Seats} from './parts';
+import {Emote, POSES} from '@commons/mascot';
+import {PixelBurst} from '@commons/pixel';
+import {Card, ContestClock, Globe, PixelComputer, Seats} from '@commons/parts';
 
 /* ================================================================== 00 · apertura */
 

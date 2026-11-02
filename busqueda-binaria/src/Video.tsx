@@ -1,8 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {C} from './theme';
+import {C} from '@commons/theme';
 import {SC, SceneId} from './timeline';
-import {Grain, Scanlines, Vignette} from './components';
+import {Grain, Scanlines, Vignette} from '@commons/components';
 import {Hud, Subtitles} from './kit';
 import {AudioLayer} from './AudioLayer';
 import {Idea, Intro, Lineal} from './scenes/A';

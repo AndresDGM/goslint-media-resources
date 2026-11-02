@@ -38,3 +38,23 @@ ASR    : La programación competitiva es mucho más que resolver problemas contr
 GUION  : ¿Te gusta programar? ¡Únete a Goslint! Nos vemos en el próximo problema.
 ASR    : ¿Te gusta programar? ¡Unete a Goslint! Nos vemos en el próximo problema.
 
+== h1  (16/16 palabras casadas)
+GUION  : ¿Sabías que resolver problemas también puede ser un deporte? Te cuento qué es la programación competitiva.
+ASR    : ¿Sabías que resolver problemas también puede ser un deporte? Te cuento qué es la programación competitiva.
+
+== h2  (17/17 palabras casadas)
+GUION  : Escribes tu código, lo envías… ¿y quién decide si está bien? Así funcionan los jueces en línea.
+ASR    : Escribes tu código, lo envías. ¿y quién decide si está bien? Así funcionan los jueces en línea.
+
+== h3  (17/17 palabras casadas)
+GUION  : Tres estudiantes, un computador y cinco horas. Así es la i ce pe ce, la gran competencia universitaria de programación.
+ASR    : Tres estudiantes, un computador y cinco horas. Así es la ICPC, la gran competencia universitaria de programación.
+
+== h4  (10/10 palabras casadas)
+GUION  : ¿Se puede competir en programación desde Colombia? ¡Claro que sí!
+ASR    : ¿Se puede competir en programación desde Colombia? ¡Claro que sí!
+
+== h5  (11/11 palabras casadas)
+GUION  : ¿Estudias en la Uceva y te gusta programar? Esto te interesa.
+ASR    : ¿Estudias en la Uceva y te gusta programar? Esto te interesa.
+

@@ -5,6 +5,7 @@ import {ProgramacionCompetitiva} from './Video';
 import {Thumbnail} from './Thumbnail';
 import {RH, RW, VReel, reelDuration} from './reels/v/frame';
 import {VREELS} from './reels/v';
+import {COVERS, Cover} from './reels/v/Cover';
 import {DURATION} from './timeline';
 
 // Las fuentes son locales (public/fonts) y se cargan antes de capturar cualquier fotograma.
@@ -27,6 +28,9 @@ export const Root: React.FC = () => (
 	<>
 		<Composition id="ProgramacionCompetitiva" component={ProgramacionCompetitiva} durationInFrames={DURATION} fps={FPS} width={W} height={H} />
 		<Composition id="Miniatura" component={Thumbnail} durationInFrames={1} fps={FPS} width={W} height={H} />
+		{COVERS.map((c) => (
+			<Composition key={c.id} id={c.id} component={() => <Cover c={c} />} durationInFrames={1} fps={FPS} width={RW} height={RH} />
+		))}
 		{VREELS.map((r) => (
 			<Composition key={r.id} id={r.id} component={() => <VReel r={r} />} durationInFrames={reelDuration(r)} fps={FPS} width={RW} height={RH} />
 		))}

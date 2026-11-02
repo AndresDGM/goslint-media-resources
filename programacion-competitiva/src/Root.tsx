@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, continueRender, delayRender, staticFile} from 'remotion';
 import {FPS, H, W} from './theme';
 import {ProgramacionCompetitiva} from './Video';
+import {Thumbnail} from './Thumbnail';
 import {DURATION} from './timeline';
 
 // Las fuentes son locales (public/fonts) y se cargan antes de capturar cualquier fotograma.
@@ -23,5 +24,6 @@ Promise.all(faces.map((ff) => ff.load()))
 export const Root: React.FC = () => (
 	<>
 		<Composition id="ProgramacionCompetitiva" component={ProgramacionCompetitiva} durationInFrames={DURATION} fps={FPS} width={W} height={H} />
+		<Composition id="Miniatura" component={Thumbnail} durationInFrames={1} fps={FPS} width={W} height={H} />
 	</>
 );

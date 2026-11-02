@@ -2,7 +2,7 @@ import React from 'react';
 import {C, MONO} from '../../theme';
 import {M, SC} from '../../timeline';
 import {POSES} from '../../mascot';
-import {Big, FINAL, Hit, In, Kicker, Panel, PhotoV, VReelDef} from './frame';
+import {Big, FINAL, voiceParts, Hit, In, Kicker, Panel, PhotoV, VReelDef} from './frame';
 
 /** Reel 04 · Programación competitiva en Colombia (segmento s07). */
 const k = (m: string) => M('s07', m);
@@ -79,7 +79,7 @@ export const ColombiaReel: VReelDef = {
 	n: 'en colombia',
 	title: 'Programación competitiva en Colombia',
 	hl: ['Colombia'],
-	parts: [SC.colombia, FINAL],
+	parts: [...voiceParts(['s07']), FINAL],
 	Body,
 	hook: 'h4',
 	lint: [

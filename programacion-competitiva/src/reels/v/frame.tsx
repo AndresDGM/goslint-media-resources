@@ -44,14 +44,21 @@ export type VReelDef = {
 };
 
 /** Cierre corto común: logotipo, «¿Te gusta programar?», «¡Únete a GOSLINT!» y «Nos vemos…». */
-export const FINAL: [number, number] = [SC.final[0], V.s10.end + 45];
+export const FINAL: [number, number] = [V.s10.start - 28, V.s10.end + 45];
+
+/**
+ * Tramos ajustados a la voz: de cada segmento se toma [inicio − pre, fin + post], así que ninguna
+ * pausa del reel supera ~1,2 s (los respiros largos del video horizontal se recortan).
+ */
+export const voiceParts = (ids: SegId[], pre = 18, post = 18): [number, number][] =>
+	ids.map((id) => [V[id].start - pre, V[id].end + post] as [number, number]);
 
 type HookSeg = {file: string | null; seconds: number; cues: {t0: number; t1: number; text: string}[]; env: string};
 const hookSeg = (id?: string): HookSeg | null => (id ? (seg(id as SegId) as unknown as HookSeg) ?? null : null);
 /** Duración del gancho en fotogramas (voz + respiro). */
 export const hookLen = (r: VReelDef) => {
 	const h = hookSeg(r.hook);
-	return h ? Math.ceil(h.seconds * 30) + 18 : 0;
+	return h && h.file ? Math.ceil(h.seconds * 30) + 18 : 0; // sin audio del gancho, no hay gancho
 };
 export const reelDuration = (r: VReelDef) => hookLen(r) + r.parts.reduce((s, [a, b]) => s + b - a, 0);
 
@@ -259,7 +266,7 @@ export const VReel: React.FC<{r: VReelDef}> = ({r}) => {
 			</Sequence>
 		);
 	});
-	const hookPart = h ? (
+	const hookPart = h && hl > 0 ? (
 		<Sequence from={0} durationInFrames={hl} layout="none">
 			<HookV r={r} len={hl} />
 			<LintV keys={[{at: 0, pose: POSES.wave}, {at: Math.floor(hl * 0.5), pose: POSES.pointUp}]} talk={Number(h.env[f] ?? 0)} />

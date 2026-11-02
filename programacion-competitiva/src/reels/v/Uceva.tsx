@@ -5,7 +5,7 @@ import {outExpo, pop, tween} from '../../lib';
 import {M, SC} from '../../timeline';
 import {Chip, LogoMark, RiseWords, Wordmark} from '../../components';
 import {POSES} from '../../mascot';
-import {Big, FINAL, Hit, In, Kicker, PhotoV, VReelDef} from './frame';
+import {Big, FINAL, voiceParts, Hit, In, Kicker, PhotoV, VReelDef} from './frame';
 
 /** Reel 05 · Programación competitiva en la UCEVA (segmento s08). Maquetación vertical 1080×1920. */
 const k = (m: string) => M('s08', m);
@@ -58,7 +58,7 @@ const Body: React.FC = () => {
 	return (
 		<>
 			{/* 1 · ¿cómo puedo empezar? */}
-			<In at={empezar} out={lejos - 2} x={60} y={450} w={960} from="up" exit="up">
+			<In at={empezar} out={lejos - 2} x={60} y={450} w={960} from="zoom" exit="left">
 				<Kicker>{'// en la uceva'}</Kicker>
 				<Big size={100} style={{marginTop: 18, textAlign: 'center'}}>
 					¿Cómo puedo empezar?
@@ -101,8 +101,8 @@ const Body: React.FC = () => {
 								style={{
 									fontFamily: SANS,
 									fontWeight: 840,
-									fontSize: 100,
-									lineHeight: 1.1,
+									fontSize: 84,
+									lineHeight: 1.05,
 									letterSpacing: '-0.045em',
 									color: i === activeVerb ? C.green : 'rgba(255,255,255,0.5)',
 									opacity: f >= v.at - 4 ? 1 : 0,
@@ -114,8 +114,8 @@ const Body: React.FC = () => {
 						))}
 					</div>
 					{verbs.map((v, i) => (
-						<In key={i} at={v.at - 4} out={i + 1 < verbs.length ? verbs[i + 1].at - 6 : maratones - 12} x={140} y={800} from="zoom" exit="left">
-							<PhotoV src={v.src} w={800} h={300} pos={v.pos} />
+						<In key={i} at={v.at - 4} out={maratones - 12} x={60 + i * 270} y={760 + (i % 2) * 40} from="zoom" exit="left">
+							<PhotoV src={v.src} w={420} h={300} pos={v.pos} tilt={[-3, 2, -1.5][i]} />
 						</In>
 					))}
 				</>
@@ -210,7 +210,7 @@ export const UcevaReel: VReelDef = {
 	n: 'en la uceva',
 	title: 'Programación competitiva en la UCEVA',
 	hl: ['UCEVA'],
-	parts: [SC.uceva, FINAL],
+	parts: [...voiceParts(['s08']), FINAL],
 	Body,
 	hook: 'h5',
 	lint: [

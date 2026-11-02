@@ -6,7 +6,7 @@ import {M, SC} from '../../timeline';
 import {Chip, Label, Sprite} from '../../components';
 import {ContestClock, PixelComputer} from '../../scenes/parts';
 import {Key, POSES} from '../../mascot';
-import {Big, FINAL, Hit, In, Kicker, PhotoV, VReelDef} from './frame';
+import {Big, FINAL, voiceParts, Hit, In, Kicker, PhotoV, VReelDef} from './frame';
 
 /** Reel 03 · La ICPC (segmentos s05 y s06). Maquetación vertical: todo dentro del escenario (x 60–1020, y 430–1190). */
 const k5 = (m: string) => M('s05', m);
@@ -152,7 +152,7 @@ const Body: React.FC = () => {
 			<In at={rec} out={k6('preparacion') - 4} x={60} y={470} w={960} from="up" exit="up" impact={false}>
 				<Kicker>{'// un recorrido que exige'}</Kicker>
 			</In>
-			{f < rec && (
+			{f >= at6[0] - 2 && f < rec && (
 				<>
 					<div style={{position: 'absolute', left: 118, top: 509, width: 4, height: 552, background: 'rgba(255,255,255,0.12)', opacity: 1 - tween(f, rec - 12, rec)}} />
 					<div style={{position: 'absolute', left: 118, top: 509, width: 4, height: fill, background: C.green, opacity: 1 - tween(f, rec - 12, rec)}} />
@@ -207,7 +207,7 @@ export const IcpcReel: VReelDef = {
 	n: 'la icpc',
 	title: 'La ICPC: de tu país a la final mundial',
 	hl: ['ICPC:'],
-	parts: [[SC.icpc[0], SC.camino[1]], FINAL],
+	parts: [...voiceParts(['s05', 's06']), FINAL],
 	Body,
 	hook: 'h3',
 	lint: LINT_KEYS,

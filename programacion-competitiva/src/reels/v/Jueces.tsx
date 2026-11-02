@@ -8,7 +8,7 @@ import {CodePanel} from '../../kit';
 import {POSES} from '../../mascot';
 import {CASES, SUBS} from '../../solutions';
 import {ProblemCard} from '../../scenes/B';
-import {Big, FINAL, Hit, In, Kicker, Panel, VReelDef} from './frame';
+import {Big, FINAL, voiceParts, Hit, In, Kicker, Panel, VReelDef} from './frame';
 
 /** Reel 02 · ¿Cómo funcionan los jueces en línea? (segmentos s03 y s04). */
 const k3 = (m: string) => M('s03', m);
@@ -161,7 +161,7 @@ export const JuecesReel: VReelDef = {
 	n: 'jueces en línea',
 	title: '¿Cómo funcionan los jueces en línea?',
 	hl: ['jueces'],
-	parts: [[SC.problema[0], SC.juez[1]], FINAL],
+	parts: [...voiceParts(['s03', 's04']), FINAL],
 	Body,
 	hook: 'h2',
 	lint: [

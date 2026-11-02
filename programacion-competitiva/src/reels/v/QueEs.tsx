@@ -5,7 +5,7 @@ import {tween} from '../../lib';
 import {M, SC} from '../../timeline';
 import {POSES} from '../../mascot';
 import {Verdict} from '../../components';
-import {Big, FINAL, Hit, In, Kicker, Panel, VReelDef} from './frame';
+import {Big, FINAL, voiceParts, Hit, In, Kicker, Panel, VReelDef} from './frame';
 
 /** Reel 01 · ¿Qué es la programación competitiva? (segmento s02, maquetación vertical). */
 const k = (m: string) => M('s02', m);
@@ -128,7 +128,7 @@ const Body: React.FC = () => {
 			{uses.map((u, i) => (
 				<In key={`use-${i}`} at={u.at} x={60} y={u.y} w={960} from="right" exit="left">
 					<Panel pad={24} style={{height: 220, boxSizing: 'border-box', display: 'flex', alignItems: 'center', gap: 40}}>
-						<div style={{fontFamily: MONO, fontWeight: 800, fontSize: 96, color: C.green, width: 200, flexShrink: 0}}>{u.g}</div>
+						<div style={{fontFamily: MONO, fontWeight: 800, fontSize: 70, color: C.green, width: 240, flexShrink: 0, whiteSpace: 'nowrap'}}>{u.g}</div>
 						<div style={{fontFamily: SANS, fontWeight: 760, fontSize: 56, color: C.white, letterSpacing: '-0.03em', lineHeight: 1.1}}>{u.t}</div>
 					</Panel>
 				</In>
@@ -143,7 +143,7 @@ export const QueEsReel: VReelDef = {
 	n: 'qué es',
 	title: '¿Qué es la programación competitiva?',
 	hl: ['competitiva?'],
-	parts: [SC.que, FINAL],
+	parts: [...voiceParts(['s02']), FINAL],
 	Body,
 	hook: 'h1',
 	lint: [

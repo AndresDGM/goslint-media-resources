@@ -1,0 +1,19 @@
+{
+  "nota": "Voces de ElevenLabs de cada mascota. «confirmada» = elegida por el usuario tras escucharla; «propuesta» = pendiente de escuchar y aprobar.",
+  "modelo": "eleven_v4",
+  "mascotas": {
+    "Lint":      {"estado": "confirmada", "voz": "Andres - Social Media Host", "voice_id": "u36BhA6zuwclwVyAT1Bi"},
+    "DaRu":      {"estado": "confirmada", "voz": "DRAKU", "voice_id": "Xnh22ooxCd2PB5Lf28Bv", "prueba": "[angry] ¡Ríndanse ya, mortales, [laughing] porque ante mi poder ni las montañas se atreven a temblar!"},
+    "Vee":       {"estado": "propuesta", "voz": "Ivonny", "voice_id": "dMeBcNV5QVbfDqzti5Jl"},
+    "Velasco":   {"estado": "propuesta", "voz": "Jhonatan - Narrador premium", "voice_id": "DNC14bkMKrUa9gLhndyk"},
+    "Diego":     {"estado": "propuesta", "voz": "Robert- Colombian-Paisa", "voice_id": "AQkGeuTY47dqKKfZBMOO"},
+    "Marco":     {"estado": "propuesta", "voz": "Juan Pablo", "voice_id": "JmwppWx5vSX4FtbIik4Z"},
+    "Ringo":     {"estado": "propuesta", "voz": "Juanpa", "voice_id": "eiBGX6sNyy93U47Mf8jI"},
+    "ParserInt": {"estado": "propuesta", "voz": "Laura", "voice_id": "Pl8gaBI339vz0ZMPYu2b"},
+    "Polo":      {"estado": "propuesta", "voz": "edumurmos", "voice_id": "Ht3jAMJxZ5lYNKSZzZnS"},
+    "Mocca":     {"estado": "propuesta", "voz": "Herduin", "voice_id": "1uVtI2cicnbE8Ur3YzmS"},
+    "Pypo":      {"estado": "propuesta", "voz": "carlos", "voice_id": "zSPJ694fdnzmEKl5n9wI"},
+    "Byte":      {"estado": "propuesta", "voz": "carlos (otro tono) o diseño", "voice_id": null},
+    "Globín":    {"estado": "propuesta", "voz": "Alejandro-Energic & Friendly", "voice_id": "I1n8B4pOly0qmOu46LFX"}
+  }
+}

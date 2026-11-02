@@ -4,10 +4,11 @@
   "private": true,
   "description": "Roadmap del canal de Goslint: carrusel de 17 imágenes de 1080×1350 (React + Remotion), editable desde src/data.ts",
   "scripts": {
-    "studio": "remotion studio",
+    "studio": "node ../commons/scripts/sync-public.mjs && remotion studio",
     "typecheck": "tsc --noEmit",
-    "render": "node --experimental-strip-types scripts/render_all.ts",
-    "still": "remotion still S01 out/still.png --scale=2"
+    "render": "node ../commons/scripts/sync-public.mjs && node --experimental-strip-types scripts/render_all.ts",
+    "still": "node ../commons/scripts/sync-public.mjs && remotion still S01 out/still.png --scale=2",
+    "commons": "node ../commons/scripts/sync-public.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.534",

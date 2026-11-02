@@ -15,7 +15,7 @@ const fmtN = (n: number) => n.toLocaleString('es-CO').replace(/,/g, '.');
 const expected = (n: number) => fmtN(n * (n + 1) / 2);
 
 /** Tarjeta de problema estilo juez: cabecera, límites, enunciado, entrada, salida y ejemplo. */
-const ProblemCard: React.FC<{x: number; y: number; at: number; hl: (k: string) => number; compact?: number}> = ({x, y, at, hl, compact = 0}) => {
+export const ProblemCard: React.FC<{x: number; y: number; at: number; hl: (k: string) => number; compact?: number}> = ({x, y, at, hl, compact = 0}) => {
 	const f = useCurrentFrame();
 	const p = pop(f, at, 16, 170, 0.8);
 	const sec = (k: string, title: string, body: React.ReactNode) => {

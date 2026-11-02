@@ -34,3 +34,20 @@ La programación competitiva es una disciplina | en la que {resolver}resuelves p
 
 == s10
 [excited] {gusta}¿Te gusta programar? | {unete}¡Únete a GOSLINT! | [warmly] {nos}Nos vemos en el próximo problema.
+
+# ---- Ganchos de apertura de los reels (solo se usan en los reels verticales)
+
+== h1
+[excited] ¿Sabías que {deporte}resolver problemas también puede ser un deporte? | [curious] Te cuento {que}qué es la programación competitiva.
+
+== h2
+[curious] Escribes tu código, {envias}lo envías… | ¿y {quien}quién decide si está bien? | [excited] Así funcionan {jueces}los jueces en línea.
+
+== h3
+[excited] {tres}Tres estudiantes, {uno}un computador {cinco}y cinco horas. | Así es {icpc}la ICPC, la gran competencia universitaria de programación.
+
+== h4
+[curious] ¿Se puede {competir}competir en programación {desde}desde Colombia? | [excited] {claro}¡Claro que sí!
+
+== h5
+[excited] ¿Estudias en {uceva}la UCEVA | y {gusta}te gusta programar? | [mischievously] {interesa}Esto te interesa.

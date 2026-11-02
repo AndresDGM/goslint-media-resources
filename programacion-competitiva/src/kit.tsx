@@ -27,14 +27,16 @@ export const Actor: React.FC<{
 	hops?: number[];
 	carrying?: boolean;
 	override?: Partial<Pose> | null;
-}> = ({x, y, scale = 8, keys = [], stops = [], facing = 1, light = null, enter, leave, hops = [], carrying = false, override = null}) => {
+	/** nivel de voz (0–3) si no es la narración del video principal (ganchos de los reels) */
+	talk?: number;
+}> = ({x, y, scale = 8, keys = [], stops = [], facing = 1, light = null, enter, leave, hops = [], carrying = false, override = null, talk}) => {
 	const f = useCurrentFrame();
 	if (enter !== undefined && f < enter) return null;
 	if (leave !== undefined && f >= leave) return null;
 	const w = walkTo(f, x, stops);
 	let pose: Pose = w.walking ? {...BASE, ...walk(f, carrying)} : poseTrack(f, keys);
 	if (override && !w.walking) pose = {...BASE, ...override};
-	pose = alive(pose, f, talkLevel(f));
+	pose = alive(pose, f, talk ?? talkLevel(f));
 	const drop = enter !== undefined ? tween(f, enter, enter + 12, 1, 0, (t) => 1 - (1 - t) * (1 - t)) : 0;
 	let jump = enter !== undefined ? hop(f, enter + 12, 8, 20) : 0;
 	for (const h of hops) jump += hop(f, h, 14, 64);

@@ -1,0 +1,28 @@
+# Guion maestro · Bienvenida 03 · «Cómo usar este roadmap» (#003 del temario).
+# Fuente única del contenido: ../roadmap/temario_canal_goslint.md (no se añade nada que no esté ahí).
+# Una sección «== id» por archivo de audio (una generación de ElevenLabs).
+#   [etiqueta]  dirección vocal de ElevenLabs v4 (se envía, no se subtitula)
+#   |           corte de subtítulo (no se envía)
+#   {marca}     punto de sincronía: fotograma en que empieza la palabra siguiente (no se envía)
+# Texto exacto a enviar: python3 scripts/narration.py tts <id>   ·   créditos: python3 scripts/narration.py count
+
+== s01
+[excited] ¿Quieres aprender a programar | y {llegar}llegar algún día a una maratón de programación? | [curious] ¿Pero {donde}no sabes por dónde empezar? | [warmly] {tranquilo}Tranquilo: para eso hicimos {mapa}este mapa. | En este video te cuento {como}cómo está organizado el canal, | {entrar}dónde entrar según lo que ya sepas | y {practicar}cómo avanzar de una fase a la siguiente.
+
+== s02
+El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {ocho}ocho fases. | [warmly] Está pensado para que alguien {nunca}que nunca ha programado | entre por {cero}la fase cero | y salga, al final, {lista}lista para entrenar en serio para una maratón. | Por eso no sigue {libro}el orden de un libro de algoritmos, | sino {aprende}el orden en que de verdad se aprende.
+
+== s03
+[curious] ¿Cómo es ese camino? | {f01}Las fases cero y uno son de lógica pura, | con {pseint}pseudocódigo en PSeInt y {diagramas}diagramas de flujo: | todavía nada de sintaxis. | {f2}En la fase dos vuelven los mismos temas, | pero ahora en código real, con {cpp}C++, {java}Java y {python}Python. | {f3}La fase tres trae estructuras de datos y algoritmos clásicos, | todavía en los tres lenguajes. | [excited] {f456}Las fases cuatro, cinco y seis son programación competitiva por niveles, | ya centrada en {cpp2}C++. | {f7}Y la fase siete es el modo maratón: | {estrategia}estrategia de equipo, {cuaderno}cuaderno y {simulacros}simulacros.
+
+== s04
+[curious] ¿Y cómo sabes si ya puedes pasar a la siguiente fase? | {hito}Cada fase termina con un video marcado como hito, con una estrella. | Es {reto}un reto o un repaso. | [warmly] {sale}Si te sale, estás listo para seguir. | {repasa}Si no, repasa los videos de esa fase y vuelve a intentarlo.
+
+== s05
+[warmly] Ahora, {entras}¿por dónde entras tú? | {cero}Si nunca has programado, | empieza en {fase0}la fase cero y sigue el orden. | [excited] {programas}Si ya programas, | {saltar}puedes saltarte fases: | {checkpoint}mira el hito de la fase dos, «Checkpoint: ya sabes programar», | con {cinco}cinco problemas que juntan todo lo básico. | {salen}Si te salen, ya tienes las bases | y puedes {pasar}pasar a estructuras y algoritmos. | [mischievously] Y si ya dominas eso, {mismo}haz lo mismo con el hito de cada fase | hasta encontrar {tuya}la tuya.
+
+== s06
+[curious] ¿Y mientras salen los videos del roadmap? | Hay {series}series cortas que van en paralelo: | {semana}el problema de la semana, | {upsolving}upsolving en vivo después de los concursos | y {shorts}shorts con datos rápidos | [happy] {lint}explicados por mí, Lint.
+
+== s07
+[excited] {mapa}Guarda el mapa, | {elige}elige tu fase de entrada | y {nos}nos vemos en el primer video. | [warmly] {unete}¿Te gusta programar? ¡Únete a GOSLINT!

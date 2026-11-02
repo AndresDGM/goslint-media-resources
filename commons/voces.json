@@ -14,7 +14,7 @@
       "prueba": "[angry] ¡Ríndanse ya, mortales, [laughing] porque ante mi poder ni las montañas se atreven a temblar!"
     },
     "Vee": {
-      "estado": "propuesta",
+      "estado": "confirmada",
       "voz": "Ivonny",
       "voice_id": "dMeBcNV5QVbfDqzti5Jl"
     },
@@ -24,7 +24,7 @@
       "voice_id": "4KQWtkoGpDvh2OtQLfMN"
     },
     "Diego": {
-      "estado": "propuesta",
+      "estado": "confirmada",
       "voz": "Robert- Colombian-Paisa",
       "voice_id": "AQkGeuTY47dqKKfZBMOO"
     },
@@ -34,12 +34,12 @@
       "voice_id": "OLmSqlYzB06EIKJRy5b0"
     },
     "Ringo": {
-      "estado": "propuesta",
-      "voz": "Juanpa",
-      "voice_id": "eiBGX6sNyy93U47Mf8jI"
+      "estado": "confirmada",
+      "voz": "Fruna",
+      "voice_id": "2CGcaXd1E04jesxY7nfq"
     },
     "ParserInt": {
-      "estado": "propuesta",
+      "estado": "confirmada",
       "voz": "Laura",
       "voice_id": "Pl8gaBI339vz0ZMPYu2b"
     },
@@ -49,7 +49,7 @@
       "voice_id": "ihKwLOjVUMG4lgUI6meZ"
     },
     "Mocca": {
-      "estado": "propuesta",
+      "estado": "confirmada",
       "voz": "Herduin",
       "voice_id": "1uVtI2cicnbE8Ur3YzmS"
     },
@@ -64,7 +64,7 @@
       "voice_id": "U9tZtg3uJtVgXPkvosWR"
     },
     "Globín": {
-      "estado": "propuesta",
+      "estado": "confirmada",
       "voz": "Alejandro-Energic & Friendly",
       "voice_id": "I1n8B4pOly0qmOu46LFX"
     }

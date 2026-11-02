@@ -20,6 +20,8 @@ PHONETIC = [
     ("UCEVA", "Uceva"),
     ("GOSLINT", "Goslint"),
     ("PSeInt", "pe se int"),
+    ("ParserInt", "Parser Int"),
+    ("DaRu", "Daru"),
 ]
 
 

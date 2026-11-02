@@ -1,6 +1,6 @@
 import React from 'react';
 import {Audio, Sequence, interpolate, staticFile} from 'remotion';
-import {clamp} from './lib';
+import {clamp} from '@commons/lib';
 import {SFX} from './sfx';
 import {SEG_IDS, V, seg, voFrames} from './timeline';
 

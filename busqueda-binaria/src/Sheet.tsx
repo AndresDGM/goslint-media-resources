@@ -1,8 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {C, MONO} from './theme';
-import {BASE, Lint, POSES, Pose, chop, walk} from './mascot';
-import {PixelText} from './pixel';
+import {C, MONO} from '@commons/theme';
+import {BASE, Lint, POSES, Pose, chop, walk} from '@commons/mascot';
+import {PixelText} from '@commons/pixel';
 
 /** Hoja de modelo de Lint: todas las poses con la misma silueta, paleta y proporciones (QA de consistencia). */
 export const Sheet: React.FC = () => {

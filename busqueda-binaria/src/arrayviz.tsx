@@ -1,10 +1,10 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {C, MONO} from './theme';
-import {inOutCubic, outCubic, pop, tween} from './lib';
-import {PixelBurst, PixelText, textWidth} from './pixel';
-import {BASE, Lint, POSES, Pose, alive, chop, hop, walk} from './mascot';
-import {LightCone, Spot, shake} from './components';
+import {C, MONO} from '@commons/theme';
+import {inOutCubic, outCubic, pop, tween} from '@commons/lib';
+import {PixelBurst, PixelText, textWidth} from '@commons/pixel';
+import {BASE, Lint, POSES, Pose, alive, chop, hop, walk} from '@commons/mascot';
+import {LightCone, Spot, shake} from '@commons/components';
 import type {BinaryRun, Step} from './algo/search';
 import {talkLevel} from './timeline';
 

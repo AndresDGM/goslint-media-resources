@@ -1,14 +1,14 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {inOutCubic, outCubic, pop, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {inOutCubic, outCubic, pop, tween} from '@commons/lib';
 import {M, SC} from '../timeline';
 import {DEMO, SMALL, UNSORTED, binarySearch} from '../algo/search';
 import {Cell, SearchStage, StepTiming} from '../arrayviz';
 import {DRAW_AT, demoA, demoB, demoSwap, macheteTiming, ordenHit} from '../beats';
-import {Chip, CutFlash, GlitchBurst, GridBg, Label, Verdict} from '../components';
+import {Chip, CutFlash, GlitchBurst, GridBg, Label, Verdict} from '@commons/components';
 import {Actor, Mono, Note} from '../kit';
-import {Emote, POSES} from '../mascot';
+import {Emote, POSES} from '@commons/mascot';
 
 /** Chip del objetivo: siempre visible mientras se busca. */
 export const Target: React.FC<{at: number; value: number | string; x?: number; y?: number; out?: number}> = ({at, value, x = 1560, y = 96, out}) => {

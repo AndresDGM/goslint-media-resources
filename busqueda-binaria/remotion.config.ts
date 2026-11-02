@@ -1,4 +1,5 @@
 import {Config} from '@remotion/cli/config';
+import path from 'node:path';
 
 Config.setOverwriteOutput(true);
 Config.setVideoImageFormat('jpeg');
@@ -26,3 +27,14 @@ if (process.env.REMOTION_BROWSER) {
 if (process.env.REMOTION_CONCURRENCY) {
 	Config.setConcurrency(Number(process.env.REMOTION_CONCURRENCY));
 }
+
+// Recursos comunes: `@commons/...` apunta a ../commons/src. Los paquetes (react, remotion…) que
+// importan esos archivos se resuelven siempre con los node_modules de ESTE proyecto (una sola copia).
+Config.overrideWebpackConfig((config) => ({
+	...config,
+	resolve: {
+		...config.resolve,
+		alias: {...(config.resolve?.alias ?? {}), '@commons': path.resolve(process.cwd(), '..', 'commons', 'src')},
+		modules: [path.resolve(process.cwd(), 'node_modules'), 'node_modules'],
+	},
+}));

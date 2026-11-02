@@ -1,6 +1,6 @@
 import React from 'react';
 import {Composition, continueRender, delayRender, staticFile} from 'remotion';
-import {FPS, H, W} from './theme';
+import {FPS, H, W} from '@commons/theme';
 import {Sheet} from './Sheet';
 import {BusquedaBinaria} from './Video';
 import {DURATION} from './timeline';

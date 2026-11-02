@@ -4,6 +4,7 @@
 #   REMOTION_GL=vulkan REMOTION_CONCURRENCY=6 bash scripts/render.sh   (GPU con Vulkan)
 set -euo pipefail
 cd "$(dirname "$0")/.."
+node ../commons/scripts/sync-public.mjs   # recursos comunes -> public/
 if command -v pnpm >/dev/null 2>&1; then RUN="pnpm exec"; else RUN="npx"; fi
 mkdir -p out
 $RUN remotion render BusquedaBinaria out/render-raw.mp4 "$@"

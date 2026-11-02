@@ -1,14 +1,14 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {clamp, inCubic, inOutCubic, outCubic, outExpo, pop, rnd, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {clamp, inCubic, inOutCubic, outCubic, outExpo, pop, rnd, tween} from '@commons/lib';
 import {M, SC, talkLevel} from '../timeline';
 import {LIN, LOGO_AT, ROW, linealChecks} from '../beats';
 import {Cell} from '../arrayviz';
-import {Chip, CutFlash, GlitchBurst, GridBg, Label, LightCone, LogoMark, RiseWords, Shockwave, Spot, Typer, Verdict, Wordmark, fmt} from '../components';
+import {Chip, CutFlash, GlitchBurst, GridBg, Label, LightCone, LogoMark, RiseWords, Shockwave, Spot, Typer, Verdict, Wordmark, fmt} from '@commons/components';
 import {Actor} from '../kit';
-import {BASE, Emote, Lint, POSES, alive, walk} from '../mascot';
-import {PixelBurst, PixelText} from '../pixel';
+import {BASE, Emote, Lint, POSES, alive, walk} from '@commons/mascot';
+import {PixelBurst, PixelText} from '@commons/pixel';
 
 /* ================================================================== 00 · apertura: terminal → logotipo → Lint */
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import {AbsoluteFill, Img, staticFile, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {inCubic, outCubic, outExpo, pop, rnd, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {inCubic, outCubic, outExpo, pop, rnd, tween} from '@commons/lib';
 import {DURATION, M, SC, talkLevel} from '../timeline';
 import {binarySearch, lowerBound, probe, sortedData} from '../algo/search';
 import {BIG_COMPARISONS, cierreBeats} from '../beats';
-import {Chip, CutFlash, GlitchBurst, GridBg, Label, LogoMark, RiseWords, Shockwave, Spot, Verdict, Wordmark, fmt, shake} from '../components';
+import {Chip, CutFlash, GlitchBurst, GridBg, Label, LogoMark, RiseWords, Shockwave, Spot, Verdict, Wordmark, fmt, shake} from '@commons/components';
 import {Actor} from '../kit';
-import {BASE, Lint, POSES, alive, chop} from '../mascot';
-import {PixelBurst, PixelText} from '../pixel';
+import {BASE, Lint, POSES, alive, chop} from '@commons/mascot';
+import {PixelBurst, PixelText} from '@commons/pixel';
 
 /* ================================================================== 09 · dónde se usa */
 

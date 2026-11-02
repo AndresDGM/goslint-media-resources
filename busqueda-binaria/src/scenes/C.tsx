@@ -1,13 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {C, MONO, SANS} from '../theme';
-import {clamp, outCubic, pop, tween} from '../lib';
+import {C, MONO, SANS} from '@commons/theme';
+import {clamp, outCubic, pop, tween} from '@commons/lib';
 import {M, SC, V} from '../timeline';
 import {race} from '../algo/search';
-import {Chip, CutFlash, GlitchBurst, GridBg, Label, RiseWords, Spot, fmt} from '../components';
+import {Chip, CutFlash, GlitchBurst, GridBg, Label, RiseWords, Spot, fmt} from '@commons/components';
 import {Actor, Mono, Note} from '../kit';
-import {POSES} from '../mascot';
-import {PixelBurst, PixelText} from '../pixel';
+import {POSES} from '@commons/mascot';
+import {PixelBurst, PixelText} from '@commons/pixel';
 
 /** Resultados REALES: ambos algoritmos sobre la misma colección ordenada y el mismo objetivo (posición ⌊0,75·n⌋). */
 const RACE = race();

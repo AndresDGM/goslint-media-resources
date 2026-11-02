@@ -9,6 +9,7 @@ Recursos gráficos y audiovisuales de **Goslint** (Semillero de Investigación �
 | [`mascotas/hojas-concepto/`](mascotas/hojas-concepto/) | Hojas de concepto: Vee, Ringo, DaRu, Polo, Globín, Pypo, Byte, Mocca y ParserInt |
 | [`busqueda-binaria/`](busqueda-binaria/) | Vídeo educativo de búsqueda binaria (React + Remotion), con su código Java y subtítulos |
 | [`programacion-competitiva/`](programacion-competitiva/) | Bienvenida 02 · ¿Qué es la programación competitiva? (React + Remotion), con el código de los envíos del juez y subtítulos |
+| [`roadmap/`](roadmap/) | Roadmap del canal: carrusel de 17 imágenes (React + Remotion) editable desde `src/data.ts` |
 | [`promo/`](promo/) | Vídeo promocional y reels de Instagram (React + Remotion) |
 
 Cada carpeta tiene su propio README con los pasos para generar o renderizar.

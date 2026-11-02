@@ -2,8 +2,8 @@
 
 Se construye con la misma gramática que Lint (src/mascot.tsx del proyecto de búsqueda binaria):
 lienzo lógico de 72×64, pies en OY=50, centro en OX=36, cabeza grande y cuerpo pequeño, brazos de
-2 px que salen de los hombros, paleta plana con una sombra por color y contorno exterior blanco de
-1 px (el «borde de sticker» que hace legible a Lint sobre fondo negro).
+2 px que salen de los hombros y paleta plana con una sombra por color. Sin contorno exterior (Lint
+lleva el «borde de sticker» blanco; Vee ya no).
 
 Rasgos tomados de la profe Vivian Orejuela (fotos de referencia): cabello castaño largo con raya
 al medio, gafas, sonrisa amplia, camiseta gris de «Regionals» con los tres bloques azul-amarillo-rojo,
@@ -273,7 +273,6 @@ def draw_vee(p: Pose, facing: int = 1) -> Buf:
         b.set(hx_ + 2, hy_ - 3, PAL['card'])
         b.rect(hx_ - 1, hy_ - 4, 3, 1, PAL['green'])
 
-    b.outline()
     return b
 
 

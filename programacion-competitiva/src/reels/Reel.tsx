@@ -6,6 +6,7 @@ import {CUES, SC, V} from '../timeline';
 import {GridBg, Grain, Label, LogoMark, Scanlines, Vignette} from '../components';
 import {AudioLayer} from '../AudioLayer';
 import {Scenes} from '../Video';
+import {camera} from './camera';
 
 /**
  * Reels verticales (1080×1920) hechos con los mismos fotogramas del video principal: cada reel
@@ -14,8 +15,8 @@ import {Scenes} from '../Video';
  */
 export const RW = 1080;
 export const RH = 1920;
-const K = RW / 1920; // escala del cuadro 16:9 dentro del reel
-const FRAME_Y = 600;
+const VP_Y = 500; // ventana de la cámara: y de 500 a 1440
+const VP_H = 940;
 
 /** Cierre corto: logotipo, «¿Te gusta programar?», «Únete a GOSLINT» y «Nos vemos…». */
 const FINAL: [number, number] = [SC.final[0], V.s10.end + 45];
@@ -42,13 +43,26 @@ const sourceFrame = (r: ReelDef, f: number) => {
 	return r.parts[r.parts.length - 1][1] - 1;
 };
 
+/** Ventana que muestra la escena 16:9 a través de la cámara virtual. */
+const CamView: React.FC<{children: React.ReactNode}> = ({children}) => {
+	const f = useCurrentFrame(); // fotograma del video principal (dentro de la secuencia desplazada)
+	const c = camera(f);
+	const x = RW / 2 - c.cx * c.z;
+	const y = VP_H / 2 - c.cy * c.z;
+	return (
+		<div style={{position: 'absolute', left: 0, top: VP_Y, width: RW, height: VP_H, overflow: 'hidden', background: C.bg}}>
+			<div style={{position: 'absolute', left: 0, top: 0, width: 1920, height: 1080, transform: `translate(${x}px, ${y}px) scale(${c.z})`, transformOrigin: '0 0'}}>{children}</div>
+		</div>
+	);
+};
+
 const ReelSubtitles: React.FC<{src: number}> = ({src}) => {
 	const cue = CUES.find((c) => src >= c.from - 2 && src < c.to);
 	if (!cue) return null;
 	const o = Math.min(tween(src, cue.from - 2, cue.from + 3), 1 - tween(src, cue.to - 3, cue.to));
 	return (
-		<div style={{position: 'absolute', left: 60, right: 60, top: FRAME_Y + 608 + 70, display: 'flex', justifyContent: 'center', opacity: o}}>
-			<div style={{textAlign: 'center', fontFamily: SANS, fontWeight: 700, fontSize: 50, lineHeight: 1.25, color: C.white, background: 'rgba(0,0,0,0.7)', padding: '16px 28px', borderRadius: 10}}>{cue.text}</div>
+		<div style={{position: 'absolute', left: 60, right: 60, top: VP_Y + VP_H + 24, display: 'flex', justifyContent: 'center', opacity: o}}>
+			<div style={{textAlign: 'center', fontFamily: SANS, fontWeight: 700, fontSize: 46, lineHeight: 1.25, color: C.white, background: 'rgba(0,0,0,0.7)', padding: '16px 28px', borderRadius: 10}}>{cue.text}</div>
 		</div>
 	);
 };
@@ -65,10 +79,10 @@ export const Reel: React.FC<{r: ReelDef}> = ({r}) => {
 		return (
 			<Sequence key={i} from={from} durationInFrames={b - a} layout="none">
 				<Sequence from={-a} layout="none">
-					<AbsoluteFill style={{left: 0, top: FRAME_Y, width: 1920, height: 1080, transform: `scale(${K})`, transformOrigin: 'top left', overflow: 'hidden', background: C.bg}}>
+					<CamView>
 						<Scenes />
 						<Scanlines opacity={0.035} />
-					</AbsoluteFill>
+					</CamView>
 					<AudioLayer />
 				</Sequence>
 			</Sequence>
@@ -78,12 +92,12 @@ export const Reel: React.FC<{r: ReelDef}> = ({r}) => {
 		<AbsoluteFill style={{background: C.bg}}>
 			<GridBg opacity={0.45} size={80} />
 			{/* zona superior (la interfaz de la app ocupa ~220 px): marca + título del reel */}
-			<div style={{position: 'absolute', left: 70, right: 70, top: 230}}>
+			<div style={{position: 'absolute', left: 70, right: 70, top: 215}}>
 				<div style={{display: 'flex', alignItems: 'center', gap: 18}}>
 					<LogoMark height={64} />
 					<Label size={26} color={C.green}>{`goslint · reel ${r.n}`}</Label>
 				</div>
-				<div style={{fontFamily: SANS, fontWeight: 860, fontSize: 82, lineHeight: 1.0, letterSpacing: '-0.045em', color: C.white, marginTop: 26}}>
+				<div style={{fontFamily: SANS, fontWeight: 860, fontSize: 72, lineHeight: 1.0, letterSpacing: '-0.045em', color: C.white, marginTop: 18}}>
 					{words.map((w, i) => {
 						const p = pop(f, 4 + i * 3, 16, 200, 0.7);
 						return (
@@ -94,14 +108,14 @@ export const Reel: React.FC<{r: ReelDef}> = ({r}) => {
 					})}
 				</div>
 			</div>
-			<div style={{position: 'absolute', left: -2, top: FRAME_Y - 2, width: RW + 4, height: 608 + 4, border: `2px solid ${C.line2}`}} />
+			
 			{parts}
 			<ReelSubtitles src={src} />
 			{/* barra de progreso sobre la zona inferior de la interfaz */}
-			<div style={{position: 'absolute', left: 70, right: 70, top: 1600, height: 6, background: 'rgba(255,255,255,0.14)'}}>
+			<div style={{position: 'absolute', left: 70, right: 70, top: 1655, height: 6, background: 'rgba(255,255,255,0.14)'}}>
 				<div style={{height: 6, width: `${(f / total) * 100}%`, background: C.green}} />
 			</div>
-			<div style={{position: 'absolute', left: 70, top: 1630, fontFamily: MONO, fontSize: 24, color: C.dim, letterSpacing: '0.08em'}}>
+			<div style={{position: 'absolute', left: 70, top: 1680, fontFamily: MONO, fontSize: 24, color: C.dim, letterSpacing: '0.08em'}}>
 				<span style={{color: C.green}}>●</span> goslint@uceva
 			</div>
 			<Vignette strength={0.5} />

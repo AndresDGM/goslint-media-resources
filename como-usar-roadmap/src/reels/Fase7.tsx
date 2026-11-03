@@ -56,20 +56,20 @@ const Body: React.FC = () => {
 
 			{/* Los videos de la fase: 096–098 entran al nombrarse en la presentación de Diego */}
 			{FA.videos.slice(0, 3).map((v, i) => (
-				<In key={v.n} at={dieg + 8 + i * 14} x={60} y={880 + i * 92} w={560} from="left" impact={false}>
+				<In key={v.n} at={dieg + 8 + i * 14} x={60} y={856 + i * 84} w={560} from="left" impact={false}>
 					<VideoTile n={v.n} t={v.t} w={560} size={0.85} />
 				</In>
 			))}
 
 			{/* Diego (coach) entra al empezar su locución */}
-			<Mascota id="diego" x={800} y={1180} scale={6} at={dieg - 6} talk={talkLevel(f, 'diego')} />
+			<Mascota id="diego" x={760} y={1180} scale={8} at={dieg - 6} talk={talkLevel(f, 'diego')} />
 			<Hit at={dieg - 4} x={800} y={1000} />
 
 			{/* Globín entra con su locución; sube un poco en «despega» */}
-			<Mascota id="globin" x={940} y={1180 - rise} scale={5} at={V.s03t.start} talk={talkLevel(f, 'globin')} />
+			<Mascota id="globin" x={945} y={1180 - rise} scale={7} at={V.s03t.start} talk={talkLevel(f, 'globin')} />
 
 			{/* Hito #099 al pronunciarse «despega» */}
-			<In at={despega} x={60} y={1102} w={560} from="left">
+			<In at={despega} x={60} y={1112} w={560} from="left">
 				<VideoTile n={hito.n} t={hito.t} hito w={560} size={0.85} />
 			</In>
 			<Hit at={despega + 2} x={540} y={1100} big />

@@ -80,7 +80,7 @@ El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {och
 [warmly] Ahora, {entras}¿por dónde entras tú? | {cero}Si nunca has programado, | empieza en {fase0}la fase cero y sigue el orden. | [excited] {programas}Si ya programas, | {saltar}puedes saltarte fases: | {checkpoint}mira el hito de la fase dos, «Checkpoint: ya sabes programar», | con {cinco}cinco problemas que juntan todo lo básico. | {salen}Si te salen, ya tienes las bases | y puedes {pasar}pasar a estructuras y algoritmos. | [mischievously] Y si ya dominas eso, {mismo}haz lo mismo con el hito de cada fase | hasta encontrar {tuya}la tuya.
 
 == s06
-[curious] ¿Y mientras salen los videos del roadmap? | Hay {series}series cortas que van en paralelo: | {semana}el problema de la semana, | {upsolving}upsolving en vivo después de los concursos | y {shorts}shorts con datos rápidos | [happy] {lint}explicados por mí, Lint.
+[warmly] Una última cosa: {definitivo}este roadmap no es definitivo. | {cambios}Con el tiempo puede cambiar: | {ajustar}podemos agregar, mover o ajustar videos | {mejor}según lo que funcione mejor para aprender.
 
 == s07
 [excited] {mapa}Guarda el mapa, | {elige}elige tu fase de entrada | y {nos}nos vemos en el primer video. | [warmly] {unete}¿Te gusta programar? ¡Únete a GOSLINT!

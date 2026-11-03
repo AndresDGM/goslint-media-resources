@@ -165,7 +165,21 @@
       "creditos": 170,
       "generation_id": "ETlzBBp9XTK8I7DxaIlM",
       "nota": "corrección: la fase 0 es la bienvenida; la toma anterior queda en raw/s03a_original.mp3"
+    },
+    {
+      "segmento": "s03b",
+      "voz": "Vee",
+      "creditos": 78,
+      "generation_id": "cZsyIZhrUBImFmbB0Nu2",
+      "nota": "corrección: la toma anterior decía «corigo»; queda en raw/s03b_original.mp3"
+    },
+    {
+      "segmento": "s06",
+      "voz": "Lint",
+      "creditos": 168,
+      "generation_id": "BRv15ViXzKnirfmR1vKm",
+      "nota": "nuevo s06: el roadmap no es definitivo; el s06 de series paralelas se descartó (raw/s06_series_descartado.mp3)"
     }
   ],
-  "total": 3087
+  "total": 3333
 }

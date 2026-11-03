@@ -980,24 +980,16 @@
    }
   },
   "scuba": {
-   "descripcion": "baile «scuba»: una mano a la cara y la otra al lado, se turnan a golpe de ritmo con rebotito y pasitos",
+   "descripcion": "baile «scuba»: una mano tapa la boca y la otra se sacude rápido al frente, de lado a lado",
    "bucle": true,
    "tira": "scuba.png",
    "gif": "scuba.gif",
    "celda": [
-    35,
+    33,
     41
    ],
-   "fotogramas": 40,
+   "fotogramas": 32,
    "ms": [
-    83,
-    83,
-    83,
-    83,
-    83,
-    83,
-    83,
-    83,
     83,
     83,
     83,
@@ -1031,9 +1023,9 @@
     83,
     83
    ],
-   "duracion_ms": 3320,
+   "duracion_ms": 2656,
    "ancla_pies_en_celda": {
-    "x": 17,
+    "x": 16,
     "y": 39
    }
   }

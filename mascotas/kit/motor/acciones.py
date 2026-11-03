@@ -49,7 +49,8 @@ class Mascota:
     salto: int = 7           # altura del salto al celebrar
     pies: bool = True        # si tiene pies que se levanten al caminar
     largo: tuple = (4, 4)    # largo del brazo y del antebrazo de arm()
-    manita: tuple | None = None  # (mano, manga[, punta]) para dibujar las manitas del gesto «gatito»
+    manita: tuple | None = None  # (mano, manga[, punta]) para dibujar las manos del baile «scuba»
+    boca: tuple = (0, 3)     # dónde está la boca respecto al centro de la cabeza
 
 
 def mano(M: Mascota, brazo, dy=0):
@@ -351,9 +352,10 @@ def salir(M: Mascota) -> Clip:
     return c
 
 
-# baile «scuba»: una mano sube a la cara (como sujetando el tubo de buceo) y la otra sale al lado
-SCUBA_CARA = (-35, -178)      # codo hacia adentro, antebrazo arriba: la mano queda bajo el mentón
-SCUBA_AFUERA = (80, 100)      # brazo afuera, antebrazo horizontal: la mano sale al lado del pecho
+# baile «scuba»: la mano de atrás tapa la boca; la delantera se sacude frente al pecho de lado a lado
+SCUBA_IZQ = (-40, -140)       # mano delantera hacia el centro del pecho
+SCUBA_DER = (20, -205)        # mano delantera hacia su lado (-205 = 155: el antebrazo no pasa por abajo)
+SCUBA_ATRAS = (-35, -178)     # brazo de atrás recogido detrás del pecho (la mano la dibuja la animación)
 
 
 def _mano_en(sh, brazo, side, largo):
@@ -365,51 +367,57 @@ def _mano_en(sh, brazo, side, largo):
 
 
 def scuba(M: Mascota) -> Clip:
-    """Baile «scuba» (el de TikTok): a golpe de ritmo, una mano sube a la cara y la otra sale hacia el
-    lado, y se turnan (unas 2,4 veces por segundo). En cada tiempo el cuerpo da un rebotito, se inclina
-    hacia el brazo que sale y pisa con un pie y luego con el otro. Ojos muy abiertos. Bucle."""
-    c = Clip('scuba', 'baile «scuba»: una mano a la cara y la otra al lado, se turnan a golpe de ritmo con rebotito y pasitos', bucle=True)
-    P = 5                                            # fotogramas por tiempo
-    N = P * 8
+    """Baile «scuba» (el de TikTok): con una mano se tapa la boca y con la otra se sacude rápido
+    frente al pecho, de lado a lado (unas 3 sacudidas por segundo). El cuerpo rebota en cada tiempo y
+    se bambolea despacio; ojos muy abiertos. Bucle."""
+    c = Clip('scuba', 'baile «scuba»: una mano tapa la boca y la otra se sacude rápido al frente, de lado a lado', bucle=True)
+    N = 32
     shB = (2 * OX - M.hombro[0] - 1, M.hombro[1])
+    hx, hy = M.cabeza
+    bx, by = hx + M.boca[0], hy + M.boca[1]
+    prev = None
     for f in range(N):
-        t, k = divmod(f, P)
-        k_cambio = back(seg(k, 0, 2), 2.2)           # el cambio de manos es seco, con rebote
-        lado = 1 if t % 2 == 0 else -1               # qué mano sale (1 = la delantera)
-        if lado == 1:
-            brazo = mezcla(SCUBA_CARA, SCUBA_AFUERA, k_cambio)
-            brazoB = mezcla(SCUBA_AFUERA, SCUBA_CARA, k_cambio)
-        else:
-            brazo = mezcla(SCUBA_AFUERA, SCUBA_CARA, k_cambio)
-            brazoB = mezcla(SCUBA_CARA, SCUBA_AFUERA, k_cambio)
-        b = M.dibujar(brazo=brazo, brazoB=brazoB, gesto='puño',
-                      ojos='cerrados' if f in (26, 27) else 'sorpresa',
-                      boca='media' if k == 1 else 'cerrada', cejas='arriba', cabeza=1 if k == 0 else 0, f=f)
-        if M.manita:                                 # manos y antebrazos visibles encima de la ropa
+        sac = (math.sin(2 * math.pi * f / 4 - math.pi / 2) + 1) / 2     # 0 → 1 → 0 cada 4 fotogramas
+        brazo = mezcla(SCUBA_IZQ, SCUBA_DER, sac)
+        b = M.dibujar(brazo=brazo, brazoB=SCUBA_ATRAS, gesto='puño',
+                      ojos='cerrados' if f in (20, 21) else 'sorpresa', boca='cerrada', cejas='arriba',
+                      cabeza=1 if f % 8 == 0 else 0, f=f)
+        el, hd = _mano_en(M.hombro, brazo, 1, M.largo)
+        if M.manita:
             mano, manga = M.manita[0], M.manita[1]
             punta = M.manita[2] if len(M.manita) > 2 else None
-            for sh, br, side in ((M.hombro, brazo, 1), (shB, brazoB, -1)):
-                el, hd = _mano_en(sh, br, side, M.largo)
-                b.line(el[0], el[1], hd[0], hd[1], manga)
-                x, y = round(hd[0]) - 1, round(hd[1]) - 1
-                b.rect(x, y, 2, 2, mano)
-                b.set(x + (2 if side > 0 else -1), y, mano)              # deditos
-                if punta:
-                    b.rect(x, y + 1, 2, 1, punta)
-        if k == 0:
-            b = stretch(b, -1, M.cintura)            # rebotito en el tiempo
-        if M.pies and k in (1, 2):
-            b = paso(b, t % 2)                       # pasito: un pie, luego el otro
-        b = lean(b, lado if k >= 1 else -lado)       # se inclina hacia el brazo que sale
-        b = shift(b, 0, -1 if k in (1, 2) else 0)
-        hx, hy = M.cabeza
-        if k in (1, 2):                              # rayitas en la mano que sale
-            x = hx + lado * 13
-            y = hy + 10
-            b.set(x, y, FX['white']); b.set(x + lado, y - 2, FX['white']); b.set(x + lado, y + 2, FX['white'])
-        if k == 0 and t % 4 == 0:
+            # mano que tapa la boca: antebrazo desde el codo de atrás hasta la boca
+            elB, _ = _mano_en(shB, SCUBA_ATRAS, -1, M.largo)
+            b.line(elB[0], elB[1], bx - 1, by + 3, manga)
+            b.rect(bx - 3, by - 2, 6, 5, manga)                         # borde: se recorta sobre la cara
+            b.rect(bx - 2, by - 1, 4, 3, mano)
+            b.set(bx - 3, by - 2, None if b.get(bx - 3, by - 3) is None else b.get(bx - 3, by - 3))
+            if punta:
+                b.rect(bx - 2, by + 1, 4, 1, punta)
+            # mano que se sacude
+            if prev is not None:                                           # estela del movimiento
+                b.set(round(prev[0]), round(prev[1]) - 1, FX['white'])
+            b.line(el[0], el[1], hd[0], hd[1], manga)
+            x, y = round(hd[0]) - 1, round(hd[1]) - 1
+            b.rect(x - 1, y - 1, 5, 4, manga)
+            b.rect(x, y, 3, 2, mano)
+            if punta:
+                b.rect(x, y + 1, 3, 1, punta)
+        prev = hd
+        if f % 8 == 0:
+            b = stretch(b, -1, M.cintura)            # rebotito en cada tiempo
+        if M.pies and f % 8 in (2, 3):
+            b = paso(b, (f // 8) % 2)
+        b = lean(b, round(osc(f, 16, 1.4)))
+        b = shift(b, 0, -1 if f % 8 in (1, 2, 3) else 0)
+        if sac > 0.9 or sac < 0.1:                   # rayitas a los lados de la mano que se sacude
+            side = 1 if sac > 0.5 else -1
+            x = round(hd[0]) + side * 3
+            y = round(hd[1]) - 1
+            b.set(x, y - 1, FX['white']); b.set(x + side, y, FX['white']); b.set(x, y + 1, FX['white'])
+        if f % 16 == 0:
             from animar import note
-            note(b, hx - 14 + (t // 4) * 26, hy - 12, M.acento)
+            note(b, hx - 14 if f == 0 else hx + 11, hy - 12, M.acento)
         c.add(b)
     return c
 

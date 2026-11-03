@@ -163,7 +163,7 @@ def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerr
 
 
 MASCOTA = Mascota('parserint', _dibujar, cabeza=(HX, HY), hombro=(OX + 4, OY - 13), cintura=CUT,
-                  entrada='saltos', acento=PAL['robeL'], manita=(PAL['fur'], PAL['robeD'], PAL['hoof']))
+                  entrada='saltos', acento=PAL['robeL'], manita=(PAL['fur'], PAL['robeD'], PAL['hoof']), boca=(0, 4))
 
 
 def clips():

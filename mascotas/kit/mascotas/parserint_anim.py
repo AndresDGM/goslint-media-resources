@@ -153,7 +153,7 @@ def nam() -> Clip:
 
 # ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
 
-from acciones import Mascota, OJOS, BOCAS, MANOS, todas, gatito  # noqa: E402
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas, scuba  # noqa: E402
 
 
 def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
@@ -167,4 +167,4 @@ MASCOTA = Mascota('parserint', _dibujar, cabeza=(HX, HY), hombro=(OX + 4, OY - 1
 
 
 def clips():
-    return [reposo(), especial(), nam()] + todas(MASCOTA) + [gatito(MASCOTA)]
+    return [reposo(), especial(), nam()] + todas(MASCOTA) + [scuba(MASCOTA)]

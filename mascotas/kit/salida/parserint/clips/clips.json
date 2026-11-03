@@ -979,17 +979,25 @@
     "y": 44
    }
   },
-  "gatito": {
-   "descripcion": "saltitos de gatito: manitas recogidas frente al pecho que se mueven por turnos mientras da saltitos",
+  "scuba": {
+   "descripcion": "baile «scuba»: una mano a la cara y la otra al lado, se turnan a golpe de ritmo con rebotito y pasitos",
    "bucle": true,
-   "tira": "gatito.png",
-   "gif": "gatito.gif",
+   "tira": "scuba.png",
+   "gif": "scuba.gif",
    "celda": [
-    24,
-    46
+    35,
+    41
    ],
-   "fotogramas": 32,
+   "fotogramas": 40,
    "ms": [
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
     83,
     83,
     83,
@@ -1023,10 +1031,10 @@
     83,
     83
    ],
-   "duracion_ms": 2656,
+   "duracion_ms": 3320,
    "ancla_pies_en_celda": {
-    "x": 12,
-    "y": 44
+    "x": 17,
+    "y": 39
    }
   }
  }

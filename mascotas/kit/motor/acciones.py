@@ -351,59 +351,65 @@ def salir(M: Mascota) -> Clip:
     return c
 
 
-# manitas recogidas frente al pecho, juntas bajo el mentón: arriba (codo hacia adentro) · abajo (codo afuera)
-MANITA_ARRIBA = (-35, -178)
-MANITA_ABAJO = (15, -100)
+# baile «scuba»: una mano sube a la cara (como sujetando el tubo de buceo) y la otra sale al lado
+SCUBA_CARA = (-35, -178)      # codo hacia adentro, antebrazo arriba: la mano queda bajo el mentón
+SCUBA_AFUERA = (80, 100)      # brazo afuera, antebrazo horizontal: la mano sale al lado del pecho
 
 
-def gatito(M: Mascota) -> Clip:
-    """Saltitos de gatito: de pie, con las dos manitas recogidas frente al pecho, da saltitos rápidos
-    mientras mueve las manitas por turnos (una sube y la otra baja, como amasando el aire), se
-    bambolea de lado a lado y mira con los ojos muy abiertos. Bucle de 4 saltitos."""
-    c = Clip('gatito', 'saltitos de gatito: manitas recogidas frente al pecho que se mueven por turnos mientras da saltitos', bucle=True)
-    P = 8                                           # fotogramas por saltito
-    N = P * 4
-    alto = [0, -2, -4, -5, -4, -2, 0, 0]
+def _mano_en(sh, brazo, side, largo):
+    up, lo = brazo
+    ex, ey = dirv(up, side)
+    el = (sh[0] + ex * largo[0], sh[1] + ey * largo[0])
+    ux, uy = dirv(lo, side)
+    return el, (el[0] + ux * largo[1], el[1] + uy * largo[1])
+
+
+def scuba(M: Mascota) -> Clip:
+    """Baile «scuba» (el de TikTok): a golpe de ritmo, una mano sube a la cara y la otra sale hacia el
+    lado, y se turnan (unas 2,4 veces por segundo). En cada tiempo el cuerpo da un rebotito, se inclina
+    hacia el brazo que sale y pisa con un pie y luego con el otro. Ojos muy abiertos. Bucle."""
+    c = Clip('scuba', 'baile «scuba»: una mano a la cara y la otra al lado, se turnan a golpe de ritmo con rebotito y pasitos', bucle=True)
+    P = 5                                            # fotogramas por tiempo
+    N = P * 8
+    shB = (2 * OX - M.hombro[0] - 1, M.hombro[1])
     for f in range(N):
-        k, hop = f % P, f // P
-        fase = (math.sin((k / P) * 2 * math.pi) + 1) / 2   # 0..1 dentro del saltito
-        a, b_ = (fase, 1 - fase) if hop % 2 == 0 else (1 - fase, fase)
-        brazo = mezcla(MANITA_ABAJO, MANITA_ARRIBA, a)
-        brazoB = mezcla(MANITA_ABAJO, MANITA_ARRIBA, b_)
+        t, k = divmod(f, P)
+        k_cambio = back(seg(k, 0, 2), 2.2)           # el cambio de manos es seco, con rebote
+        lado = 1 if t % 2 == 0 else -1               # qué mano sale (1 = la delantera)
+        if lado == 1:
+            brazo = mezcla(SCUBA_CARA, SCUBA_AFUERA, k_cambio)
+            brazoB = mezcla(SCUBA_AFUERA, SCUBA_CARA, k_cambio)
+        else:
+            brazo = mezcla(SCUBA_AFUERA, SCUBA_CARA, k_cambio)
+            brazoB = mezcla(SCUBA_CARA, SCUBA_AFUERA, k_cambio)
         b = M.dibujar(brazo=brazo, brazoB=brazoB, gesto='puño',
-                      ojos='cerrados' if f in (20, 21) else 'sorpresa',
-                      boca='abierta' if k in (2, 3, 4) else 'cerrada',
-                      cejas='arriba', cabeza=1 if k in (1, 6) else 0, f=f)
-        if k == 0 or k == 6:
-            b = stretch(b, -1, M.cintura)           # se agacha / aterriza
-        elif k in (2, 3):
-            b = stretch(b, 1, M.cintura)            # se estira en el aire
-        b = lean(b, 1 if hop % 2 == 0 else -1)
-        b = shift(b, 0, alto[k])
-        hx, hy = M.cabeza
-        chin = hy + 7 + alto[k]
-        if M.manita:                                # las dos manitas bien visibles frente al pecho
+                      ojos='cerrados' if f in (26, 27) else 'sorpresa',
+                      boca='media' if k == 1 else 'cerrada', cejas='arriba', cabeza=1 if k == 0 else 0, f=f)
+        if M.manita:                                 # manos y antebrazos visibles encima de la ropa
             mano, manga = M.manita[0], M.manita[1]
             punta = M.manita[2] if len(M.manita) > 2 else None
-            for side, kk in ((1, a), (-1, b_)):
-                px = OX + (1 if side > 0 else -3)
-                py = chin + 1 + round((1 - kk) * 4)
-                ex, ey = OX + side * 5 - (1 if side > 0 else 0), chin + 8
-                b.line(ex, ey, px + 1, py + 1, manga)
-                b.rect(px, py, 3, 2, mano)
-                b.set(px + (2 if side > 0 else 0), py - 1, mano)        # deditos doblados
+            for sh, br, side in ((M.hombro, brazo, 1), (shB, brazoB, -1)):
+                el, hd = _mano_en(sh, br, side, M.largo)
+                b.line(el[0], el[1], hd[0], hd[1], manga)
+                x, y = round(hd[0]) - 1, round(hd[1]) - 1
+                b.rect(x, y, 2, 2, mano)
+                b.set(x + (2 if side > 0 else -1), y, mano)              # deditos
                 if punta:
-                    b.rect(px, py + 1, 3, 1, punta)
-        # rayitas de movimiento junto a las manitas (que se note el gesto)
-        if k in (1, 2, 4, 5):
-            for side, kk in ((1, a), (-1, b_)):
-                x = OX + side * 6 - (1 if side < 0 else 0)
-                y = chin + 1 + round((1 - kk) * 4)
-                b.set(x, y, FX['white']); b.set(x + side, y - 1, FX['white'])
-        if k == 6:
-            dust(b, OX, OY, 0.35)
-        if k == 7:
-            dust(b, OX, OY, 0.6)
+                    b.rect(x, y + 1, 2, 1, punta)
+        if k == 0:
+            b = stretch(b, -1, M.cintura)            # rebotito en el tiempo
+        if M.pies and k in (1, 2):
+            b = paso(b, t % 2)                       # pasito: un pie, luego el otro
+        b = lean(b, lado if k >= 1 else -lado)       # se inclina hacia el brazo que sale
+        b = shift(b, 0, -1 if k in (1, 2) else 0)
+        hx, hy = M.cabeza
+        if k in (1, 2):                              # rayitas en la mano que sale
+            x = hx + lado * 13
+            y = hy + 10
+            b.set(x, y, FX['white']); b.set(x + lado, y - 2, FX['white']); b.set(x + lado, y + 2, FX['white'])
+        if k == 0 and t % 4 == 0:
+            from animar import note
+            note(b, hx - 14 + (t // 4) * 26, hy - 12, M.acento)
         c.add(b)
     return c
 

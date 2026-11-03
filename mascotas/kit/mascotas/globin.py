@@ -34,16 +34,19 @@ class Pose:
     t: float = 0.0
     prop: str | None = None # bulb · cloud
     special: float = 0.0
+    headDx: int = 0         # vaivén lateral del globo (animación)
+    inflate: float = 0.0    # se suma al inflado del especial (negativo = se desinfla)
+    lift: int = 0           # px que despega del suelo (animación)
 
 
 def draw(p: Pose) -> Buf:
     b = Buf()
     by = OY + p.bodyDy
     s = p.special
-    inflate = min(1.0, s * 1.6)                # el globo crece en la primera parte
-    lift = round(max(0.0, s - 0.6) * 15)       # y despega al final
+    inflate = min(1.0, s * 1.6) + p.inflate    # el globo crece en la primera parte
+    lift = round(max(0.0, s - 0.6) * 15) + p.lift  # y despega al final
     by -= lift
-    hx, hy = OX, by - 23 + p.headDy - round(inflate * 2)
+    hx, hy = OX + p.headDx, by - 23 + p.headDy - round(inflate * 2)
     shF, shB = (OX + 4, by - 12), (OX - 5, by - 12)
 
     arm(b, shB, p.upB, p.loB, -1, PAL['hood'], PAL['hood'], PAL['red'])

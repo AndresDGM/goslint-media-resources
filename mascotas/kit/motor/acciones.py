@@ -388,21 +388,19 @@ def scuba(M: Mascota) -> Clip:
             punta = M.manita[2] if len(M.manita) > 2 else None
             # mano que tapa la boca: antebrazo desde el codo de atrás hasta la boca
             elB, _ = _mano_en(shB, SCUBA_ATRAS, -1, M.largo)
-            b.line(elB[0], elB[1], bx - 1, by + 3, manga)
-            b.rect(bx - 3, by - 2, 6, 5, manga)                         # borde: se recorta sobre la cara
-            b.rect(bx - 2, by - 1, 4, 3, mano)
-            b.set(bx - 3, by - 2, None if b.get(bx - 3, by - 3) is None else b.get(bx - 3, by - 3))
+            b.line(elB[0], elB[1], bx - 1, by + 2, manga)
+            b.rect(bx - 2, by - 1, 4, 4, manga)                         # borde de 1 px: se recorta sobre la cara
+            b.rect(bx - 1, by, 2, 2, mano)                              # mano de 2 × 2, como las de arm()
             if punta:
-                b.rect(bx - 2, by + 1, 4, 1, punta)
+                b.rect(bx - 1, by + 1, 2, 1, punta)
             # mano que se sacude
             if prev is not None:                                           # estela del movimiento
                 b.set(round(prev[0]), round(prev[1]) - 1, FX['white'])
             b.line(el[0], el[1], hd[0], hd[1], manga)
             x, y = round(hd[0]) - 1, round(hd[1]) - 1
-            b.rect(x - 1, y - 1, 5, 4, manga)
-            b.rect(x, y, 3, 2, mano)
+            b.rect(x, y, 2, 2, mano)
             if punta:
-                b.rect(x, y + 1, 3, 1, punta)
+                b.rect(x, y + 1, 2, 1, punta)
         prev = hd
         if f % 8 == 0:
             b = stretch(b, -1, M.cintura)            # rebotito en cada tiempo
@@ -412,7 +410,7 @@ def scuba(M: Mascota) -> Clip:
         b = shift(b, 0, -1 if f % 8 in (1, 2, 3) else 0)
         if sac > 0.9 or sac < 0.1:                   # rayitas a los lados de la mano que se sacude
             side = 1 if sac > 0.5 else -1
-            x = round(hd[0]) + side * 3
+            x = round(hd[0]) + side * 2
             y = round(hd[1]) - 1
             b.set(x, y - 1, FX['white']); b.set(x + side, y, FX['white']); b.set(x, y + 1, FX['white'])
         if f % 16 == 0:

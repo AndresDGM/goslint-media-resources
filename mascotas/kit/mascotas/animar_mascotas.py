@@ -17,7 +17,7 @@ sys.path.insert(0, _aqui)
 sys.path.insert(0, os.path.join(os.path.dirname(_aqui), 'motor'))
 import animar  # noqa: E402
 
-MASCOTAS = ['byte', 'daru', 'diego', 'globin', 'mocca', 'parserint', 'polo', 'pypo', 'ringo', 'velasco']
+MASCOTAS = ['byte', 'daru', 'diego', 'globin', 'marco', 'mocca', 'parserint', 'polo', 'pypo', 'ringo', 'velasco', 'vee']
 
 
 def main(argv):

@@ -10,6 +10,7 @@ Sirve para crear una mascota nueva, del mismo universo que Lint, Vee y Marco, y 
 | `GUIA-MASCOTAS.md` | Reglas de estilo, escala, proporciones y correcciones frecuentes |
 | `motor/pixel.py` | Motor de pixel art: lienzo, rectángulos, elipses, líneas, brazos, ruido, luz de contorno |
 | `motor/animar.py` | Motor de animación: curvas (easing), estirar/aplastar, inclinar, efectos cómicos y exportación de clips |
+| `motor/acciones.py` | Acciones generales comunes a todas: hablar, explicar, saludar, señalar, pensar, celebrar, sorpresa, entrar y salir |
 | `motor/plantilla_mascota.py` | Mascota de ejemplo que ya funciona. Se copia y se modifica |
 | `hoja/hacer_hoja.py` | Genera la hoja de concepto a partir de un JSON y los sprites |
 | `hoja/ejemplo_config.json` | Todos los campos de texto de la hoja |
@@ -45,7 +46,7 @@ Los archivos de `mascotas/` importan el motor con `sys.path`. Si los mueves, aju
 
 ## Animaciones (todas las mascotas menos Lint)
 
-Cada mascota tiene, además de sus 8 poses, un archivo `mascotas/<nombre>_anim.py` con tres clips a 12 fps:
+Cada mascota tiene, además de sus 8 poses, un archivo `mascotas/<nombre>_anim.py` con sus clips a 12 fps: tres propios (reposo, especial y gag) y las acciones generales.
 
 | Mascota | Reposo (bucle) | Movimiento especial | Gag cómico |
 |---|---|---|---|
@@ -59,6 +60,24 @@ Cada mascota tiene, además de sus 8 poses, un archivo `mascotas/<nombre>_anim.p
 | Pypo | se mece como serpiente y saca la lengüita | toma impulso, engancha el muro con la cola «@» y salta hasta «AC» | `mosca`: la atrapa con la lengua y el bulto baja por su cuerpo |
 | Ringo | zen: respira lento y sorbe de su coco | cae un «WA» temblando, ni se inmuta, sorbe y pasa a «AC» | `mandarina`: le cae una mandarina en la cabeza y un pajarito se posa encima |
 | Velasco | manos juntas, asiente («ajá») | lee línea por línea, marca en rojo y traza el chulo verde | `complejidad`: «O(n²)» da «TLE», suda, piensa y queda «O(n)» |
+
+### Acciones generales (las 10 mascotas)
+
+Salen de `motor/acciones.py`. Cada mascota solo aporta un adaptador (`MASCOTA` al final de su `_anim.py`) que traduce un vocabulario común (brazo, gesto de la mano, ojos, boca, cejas) a sus propios parámetros.
+
+| Clip | Qué hace |
+|---|---|
+| `hablar` | Bucle de habla: la boca sigue sílabas, asiente en los acentos, sube las cejas y parpadea |
+| `bocas` | Tres fotogramas quietos: boca `cerrada`, `media` y `abierta`, para sincronizar con la voz |
+| `explicar` | Bucle: habla gesticulando (palma abierta → señala a un lado → índice arriba para enumerar) |
+| `saludar` | Anticipa, da un saltito y agita la mano |
+| `senalar` | Toma impulso hacia atrás, señala de golpe a la derecha y lo comenta |
+| `pensar` | Mano al mentón, puntos suspensivos… y «!» cuando le llega la idea |
+| `celebrar` | Se agacha, salta con los brazos arriba, aterriza con aplastón y confeti |
+| `sorpresa` | Respingo, ojos muy abiertos, «!» y gota de sudor |
+| `entrar` / `salir` | Entra por la izquierda y sale por la derecha (tras despedirse) a su manera: Diego, Velasco y Polo caminan; Globín flota; Byte y ParserInt van a saltos; Mocca llega disparada y derrapa; Pypo y Ringo se deslizan; DaRu se materializa y se desintegra en código |
+
+**Sincronizar la boca con la voz.** En `clips.json`, `hablar` y `explicar` traen `etiquetas` con la boca de cada fotograma, y `bocas` trae las tres bocas sueltas. Para un video, lo más fiel es elegir el fotograma de `bocas` según el volumen de la voz en cada momento (silencio → `cerrada`, medio → `media`, fuerte → `abierta`); `hablar` sirve cuando basta con que «hable» en bucle.
 
 Para exportarlas (solo necesita Pillow):
 

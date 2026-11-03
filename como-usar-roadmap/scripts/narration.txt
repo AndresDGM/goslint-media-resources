@@ -83,4 +83,4 @@ El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {och
 [warmly] Una última cosa: {definitivo}este roadmap no es definitivo. | {cambios}Con el tiempo puede cambiar: | {ajustar}podemos agregar, mover o ajustar videos | {mejor}según lo que funcione mejor para aprender.
 
 == s07
-[excited] {mapa}Guarda el mapa, | {elige}elige tu fase de entrada | y {nos}nos vemos en el primer video. | [warmly] {unete}¿Te gusta programar? ¡Únete a GOSLINT!
+[excited] {mapa}Guarda el mapa, | {elige}elige tu fase de entrada | y {nos}nos vemos en el primer video. | [warmly] {gusta}¿Te gusta programar? {unete}¡Únete a GOSLINT!

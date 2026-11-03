@@ -1,0 +1,561 @@
+[
+ {
+  "n": 0,
+  "name": "Bienvenida",
+  "sub": "Arranque del canal",
+  "langs": "",
+  "videos": [
+   {
+    "n": "001",
+    "t": "Tráiler: esto es Goslint",
+    "hito": false
+   },
+   {
+    "n": "002",
+    "t": "¿Qué es la programación competitiva?",
+    "hito": false
+   },
+   {
+    "n": "003",
+    "t": "Cómo usar este roadmap",
+    "hito": false
+   }
+  ]
+ },
+ {
+  "n": 1,
+  "name": "Lógica desde cero",
+  "sub": "Pseudocódigo y diagramas de flujo",
+  "langs": "PSeInt · diagramas",
+  "videos": [
+   {
+    "n": "004",
+    "t": "¿Qué es un algoritmo?",
+    "hito": false
+   },
+   {
+    "n": "005",
+    "t": "Diagramas de flujo",
+    "hito": false
+   },
+   {
+    "n": "006",
+    "t": "Pseudocódigo y PSeInt",
+    "hito": false
+   },
+   {
+    "n": "007",
+    "t": "Variables, constantes y tipos",
+    "hito": false
+   },
+   {
+    "n": "008",
+    "t": "Entrada, proceso y salida",
+    "hito": false
+   },
+   {
+    "n": "009",
+    "t": "Operadores aritméticos",
+    "hito": false
+   },
+   {
+    "n": "010",
+    "t": "Operadores relacionales y lógicos",
+    "hito": false
+   },
+   {
+    "n": "011",
+    "t": "Condicional simple y doble",
+    "hito": false
+   },
+   {
+    "n": "012",
+    "t": "Condicionales anidados y Según",
+    "hito": false
+   },
+   {
+    "n": "013",
+    "t": "Ciclo Mientras",
+    "hito": false
+   },
+   {
+    "n": "014",
+    "t": "Ciclo Repetir-Hasta",
+    "hito": false
+   },
+   {
+    "n": "015",
+    "t": "Ciclo Para",
+    "hito": false
+   },
+   {
+    "n": "016",
+    "t": "Contadores, acumuladores y banderas",
+    "hito": false
+   },
+   {
+    "n": "017",
+    "t": "Ciclos anidados",
+    "hito": false
+   },
+   {
+    "n": "018",
+    "t": "Arreglos (vectores)",
+    "hito": false
+   },
+   {
+    "n": "019",
+    "t": "Matrices",
+    "hito": false
+   },
+   {
+    "n": "020",
+    "t": "Funciones y subprocesos",
+    "hito": false
+   },
+   {
+    "n": "021",
+    "t": "Prueba de escritorio",
+    "hito": false
+   },
+   {
+    "n": "022",
+    "t": "Reto final: mini cajero",
+    "hito": true
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "name": "Programación básica",
+  "sub": "Lo mismo, ahora en código real",
+  "langs": "C++ · Java · Python",
+  "videos": [
+   {
+    "n": "023",
+    "t": "Preparando el entorno",
+    "hito": false
+   },
+   {
+    "n": "024",
+    "t": "Hola mundo en 3 lenguajes",
+    "hito": false
+   },
+   {
+    "n": "025",
+    "t": "Variables y tipos de datos",
+    "hito": false
+   },
+   {
+    "n": "026",
+    "t": "Entrada y salida por consola",
+    "hito": false
+   },
+   {
+    "n": "027",
+    "t": "Operadores y expresiones",
+    "hito": false
+   },
+   {
+    "n": "028",
+    "t": "Condicionales",
+    "hito": false
+   },
+   {
+    "n": "029",
+    "t": "Ciclos while y do-while",
+    "hito": false
+   },
+   {
+    "n": "030",
+    "t": "Ciclo for",
+    "hito": false
+   },
+   {
+    "n": "031",
+    "t": "Arreglos, vectores y listas",
+    "hito": false
+   },
+   {
+    "n": "032",
+    "t": "Matrices en código",
+    "hito": false
+   },
+   {
+    "n": "033",
+    "t": "Strings y caracteres",
+    "hito": false
+   },
+   {
+    "n": "034",
+    "t": "Funciones",
+    "hito": false
+   },
+   {
+    "n": "035",
+    "t": "Recursión básica",
+    "hito": false
+   },
+   {
+    "n": "036",
+    "t": "Depurar y errores comunes",
+    "hito": false
+   },
+   {
+    "n": "037",
+    "t": "Tu primer juez en línea",
+    "hito": false
+   },
+   {
+    "n": "038",
+    "t": "Checkpoint: ya sabes programar",
+    "hito": true
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "name": "Estructuras y algoritmos",
+  "sub": "Las herramientas de verdad",
+  "langs": "C++ · Java · Python",
+  "videos": [
+   {
+    "n": "039",
+    "t": "Complejidad y notación Big O",
+    "hito": false
+   },
+   {
+    "n": "040",
+    "t": "Structs, clases y pares",
+    "hito": false
+   },
+   {
+    "n": "041",
+    "t": "Ordenamientos básicos",
+    "hito": false
+   },
+   {
+    "n": "042",
+    "t": "Merge sort y quick sort",
+    "hito": false
+   },
+   {
+    "n": "043",
+    "t": "Ordenar con la librería",
+    "hito": false
+   },
+   {
+    "n": "044",
+    "t": "Búsqueda lineal y binaria",
+    "hito": false
+   },
+   {
+    "n": "045",
+    "t": "Pilas",
+    "hito": false
+   },
+   {
+    "n": "046",
+    "t": "Colas y deques",
+    "hito": false
+   },
+   {
+    "n": "047",
+    "t": "Listas enlazadas",
+    "hito": false
+   },
+   {
+    "n": "048",
+    "t": "Conjuntos",
+    "hito": false
+   },
+   {
+    "n": "049",
+    "t": "Mapas y diccionarios",
+    "hito": false
+   },
+   {
+    "n": "050",
+    "t": "Colas de prioridad y heaps",
+    "hito": false
+   },
+   {
+    "n": "051",
+    "t": "Árboles binarios",
+    "hito": false
+   },
+   {
+    "n": "052",
+    "t": "Introducción a grafos",
+    "hito": true
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "name": "Competitiva I",
+  "sub": "Arranque en competitiva",
+  "langs": "C++ (notas para Java y Python)",
+  "videos": [
+   {
+    "n": "053",
+    "t": "El mundo de la competitiva",
+    "hito": false
+   },
+   {
+    "n": "054",
+    "t": "Plantilla de C++ y E/S rápida",
+    "hito": false
+   },
+   {
+    "n": "055",
+    "t": "Leer restricciones",
+    "hito": false
+   },
+   {
+    "n": "056",
+    "t": "Ad hoc y simulación",
+    "hito": false
+   },
+   {
+    "n": "057",
+    "t": "Matemática básica para competir",
+    "hito": false
+   },
+   {
+    "n": "058",
+    "t": "Sumas de prefijos",
+    "hito": false
+   },
+   {
+    "n": "059",
+    "t": "Dos punteros",
+    "hito": false
+   },
+   {
+    "n": "060",
+    "t": "Ventana deslizante",
+    "hito": false
+   },
+   {
+    "n": "061",
+    "t": "Búsqueda binaria en la respuesta",
+    "hito": false
+   },
+   {
+    "n": "062",
+    "t": "Búsqueda completa",
+    "hito": false
+   },
+   {
+    "n": "063",
+    "t": "Backtracking",
+    "hito": false
+   },
+   {
+    "n": "064",
+    "t": "Algoritmos voraces",
+    "hito": false
+   },
+   {
+    "n": "065",
+    "t": "Primer contest en vivo",
+    "hito": true
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "name": "Competitiva II",
+  "sub": "Grafos, teoría de números y DP",
+  "langs": "C++",
+  "videos": [
+   {
+    "n": "066",
+    "t": "Primos y criba de Eratóstenes",
+    "hito": false
+   },
+   {
+    "n": "067",
+    "t": "Exponenciación rápida e inverso",
+    "hito": false
+   },
+   {
+    "n": "068",
+    "t": "Combinatoria",
+    "hito": false
+   },
+   {
+    "n": "069",
+    "t": "BFS",
+    "hito": false
+   },
+   {
+    "n": "070",
+    "t": "DFS y componentes conexas",
+    "hito": false
+   },
+   {
+    "n": "071",
+    "t": "Grafos en grillas",
+    "hito": false
+   },
+   {
+    "n": "072",
+    "t": "Orden topológico",
+    "hito": false
+   },
+   {
+    "n": "073",
+    "t": "Dijkstra",
+    "hito": false
+   },
+   {
+    "n": "074",
+    "t": "Bellman-Ford y Floyd-Warshall",
+    "hito": false
+   },
+   {
+    "n": "075",
+    "t": "Union-Find (DSU)",
+    "hito": false
+   },
+   {
+    "n": "076",
+    "t": "Árbol de expansión mínima",
+    "hito": false
+   },
+   {
+    "n": "077",
+    "t": "Intro a programación dinámica",
+    "hito": false
+   },
+   {
+    "n": "078",
+    "t": "DP clásica: mochila",
+    "hito": false
+   },
+   {
+    "n": "079",
+    "t": "DP clásica: LIS y LCS",
+    "hito": false
+   },
+   {
+    "n": "080",
+    "t": "DP en grillas y conteo",
+    "hito": true
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "name": "Competitiva III",
+  "sub": "Nivel maratón y más allá",
+  "langs": "C++",
+  "videos": [
+   {
+    "n": "081",
+    "t": "Árboles: diámetro y LCA",
+    "hito": false
+   },
+   {
+    "n": "082",
+    "t": "Sparse table",
+    "hito": false
+   },
+   {
+    "n": "083",
+    "t": "Fenwick tree (BIT)",
+    "hito": false
+   },
+   {
+    "n": "084",
+    "t": "Segment tree",
+    "hito": false
+   },
+   {
+    "n": "085",
+    "t": "Segment tree con lazy",
+    "hito": false
+   },
+   {
+    "n": "086",
+    "t": "DP con máscaras de bits",
+    "hito": false
+   },
+   {
+    "n": "087",
+    "t": "DP en árboles",
+    "hito": false
+   },
+   {
+    "n": "088",
+    "t": "DP de dígitos",
+    "hito": false
+   },
+   {
+    "n": "089",
+    "t": "Strings: hashing",
+    "hito": false
+   },
+   {
+    "n": "090",
+    "t": "KMP y función Z",
+    "hito": false
+   },
+   {
+    "n": "091",
+    "t": "Trie",
+    "hito": false
+   },
+   {
+    "n": "092",
+    "t": "Componentes fuertemente conexas",
+    "hito": false
+   },
+   {
+    "n": "093",
+    "t": "Geometría computacional",
+    "hito": false
+   },
+   {
+    "n": "094",
+    "t": "Teoría de juegos",
+    "hito": false
+   },
+   {
+    "n": "095",
+    "t": "Flujo máximo",
+    "hito": true
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "name": "Modo maratón",
+  "sub": "Competir en equipo",
+  "langs": "",
+  "videos": [
+   {
+    "n": "096",
+    "t": "Estrategia en equipo",
+    "hito": false
+   },
+   {
+    "n": "097",
+    "t": "Armar tu cuaderno de equipo",
+    "hito": false
+   },
+   {
+    "n": "098",
+    "t": "Simulacro de maratón",
+    "hito": false
+   },
+   {
+    "n": "099",
+    "t": "Cómo seguir entrenando",
+    "hito": true
+   }
+  ]
+ }
+]

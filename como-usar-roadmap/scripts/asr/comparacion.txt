@@ -1,0 +1,104 @@
+== s01  (51/51 palabras casadas)
+GUION  : ¿Quieres aprender a programar y llegar algún día a una maratón de programación? ¿Pero no sabes por dónde empezar? Tranquilo: para eso hicimos este mapa. En este video te cuento cómo está organizado el canal, dónde entrar según lo que ya sepas y cómo avanzar de una fase a la siguiente.
+ASR    : ¿Quieres aprender a programar y llegar algún día a una maratón de programación? ¿Pero no sabes por dónde empezar? ¡Tranquilo! Para eso hicimos este mapa. En este video te cuento cómo está organizado el canal, dónde entrar según lo que ya sepas y cómo avanzar de una fase a la siguiente.
+
+== s02  (55/60 palabras casadas)
+GUION  : El roadmap de Goslint tiene noventa y nueve videos repartidos en ocho fases. Está pensado para que una persona que nunca ha programado entre por la fase cero y salga, al final, lista para entrenar en serio para una maratón. Por eso no sigue el orden de un libro de algoritmos, sino el orden en que de verdad se aprende.
+ASR    : El roadmap de Goslind tiene 99 videos repartidos en 8 fases. Está pensado para que una persona que nunca ha programado entre por la fase cero y salga, al final, lista para entrenar en serio para una maratón. Por eso no sigue el orden de un libro de algoritmos, sino el orden en que de verdad se aprende.
+
+== s03a  (28/29 palabras casadas)
+GUION  : ¿Cómo es ese camino? ¡Cada fase tiene su guía! La fase cero es esta, la bienvenida. La fase uno es de lógica pura, con pe se int y diagramas de flujo.
+ASR    : ¿Cómo es ese camino? Cada fase tiene su guía. La fase 0 es esta. La bienvenida. La fase 1 es de lógica pura, con PC int y diagramas de flujo.
+
+== s03b  (10/10 palabras casadas)
+GUION  : ¡Hola! Te enseño a pensar algorítmicamente, antes de escribir código.
+ASR    : ¡Hola! Te enseño a pensar algorítmicamente, antes de escribir código.
+
+== s03c  (15/15 palabras casadas)
+GUION  : En la fase dos, los mismos temas en código real, con un especialista por lenguaje.
+ASR    : En la fase 2, los mismos temas en código real, con un especialista por lenguaje.
+
+== s03d  (5/5 palabras casadas)
+GUION  : Yo te acompaño en ce más más.
+ASR    : Yo te acompaño en C más más.
+
+== s03e  (0/4 palabras casadas)
+GUION  : ¡Y yo en Java!
+ASR    : He joining Hava!
+
+== s03f  (3/3 palabras casadas)
+GUION  : Nosotros, en Python…
+ASR    : Nosotros, en Python...
+
+== s03g  (4/4 palabras casadas)
+GUION  : …¡corto, limpio y rápido!
+ASR    : Corto, limpio y rápido.
+
+== s03h  (15/15 palabras casadas)
+GUION  : La fase tres trae estructuras de datos y algoritmos, y ahí estamos Polo y yo.
+ASR    : La fase 3 trae estructuras de datos y algoritmos, y ahí estamos Polo y yo.
+
+== s03i  (7/7 palabras casadas)
+GUION  : Sin prisa: una estructura a la vez.
+ASR    : Sin prisa. Una estructura a la vez.
+
+== s03j  (10/10 palabras casadas)
+GUION  : ¡Y la programación orientada a objetos va por mi cuenta!
+ASR    : Y la programación orientada a objetos va por mi cuenta.
+
+== s03k  (5/6 palabras casadas)
+GUION  : La fase cuatro arranca la competitiva.
+ASR    : La fase 4 arranca la competitiva.
+
+== s03l  (6/7 palabras casadas)
+GUION  : Ya en ce más más, con los primeros concursos.
+ASR    : Ya en S, con los primeros concursos.
+
+== s03m  (9/9 palabras casadas)
+GUION  : Y con la cabeza fría aunque corra el reloj.
+ASR    : Y con la cabeza fría, aunque corra el reloj.
+
+== s03n  (10/10 palabras casadas)
+GUION  : La fase cinco es Competitiva Dos, con el profe Velasco.
+ASR    : La fase 5 es competitiva 2, con el profe Velasco.
+
+== s03o  (13/13 palabras casadas)
+GUION  : Conmigo recorres grafos, teoría de números y programación dinámica, pensando antes de programar.
+ASR    : Conmigo recorres grafos, teoría de números y programación dinámica, pensando antes de programar.
+
+== s03p  (5/6 palabras casadas)
+GUION  : La fase seis es nivel maratón.
+ASR    : La fase 6 es nivel maratón.
+
+== s03q  (17/17 palabras casadas)
+GUION  : ¡Árboles, segment trees, strings y geometría! Lo que necesitas para pelear los problemas difíciles de una maratón.
+ASR    : Árboles, segment trees, strings y geometría. Lo que necesitas para pelear los problemas difíciles de una maratón.
+
+== s03r  (7/8 palabras casadas)
+GUION  : Y la fase siete es el modo maratón.
+ASR    : Y la fase 7 es el modo maratón.
+
+== s03s  (10/10 palabras casadas)
+GUION  : Estrategia de equipo, cuaderno y simulacros. ¡Y un problema más!
+ASR    : Estrategia de equipo, cuaderno y simulacros. Y un problema más.
+
+== s03t  (5/5 palabras casadas)
+GUION  : ¡Hasta que el equipo despegue!
+ASR    : ¡Hasta que el equipo despegue!
+
+== s04  (48/48 palabras casadas)
+GUION  : ¿Y cómo sabes si ya puedes pasar a la siguiente fase? Cada fase termina con un video marcado como hito, con una estrella. Es un reto o un repaso. Si te sale, estás listo para seguir. Si no, repasa los videos de esa fase y vuelve a intentarlo.
+ASR    : ¿Y cómo sabes si ya puedes pasar a la siguiente fase? Cada fase termina con un video marcado como hito, con una estrella. ¿Es un reto o un repaso? Si te sale, estás listo para seguir. Si no, repasa los videos de esa fase y vuelve a intentarlo.
+
+== s05  (74/75 palabras casadas)
+GUION  : Ahora, ¿por dónde entras tú? Si nunca has programado, empieza en la fase cero y sigue el orden. Si ya programas, puedes saltarte fases: mira el hito de la fase dos, «Checkpoint: ya sabes programar», con cinco problemas que juntan todo lo básico. Si te salen, ya tienes las bases y puedes pasar a estructuras y algoritmos. Y si ya dominas eso, haz lo mismo con el hito de cada fase hasta encontrar la tuya.
+ASR    : Ahora, ¿por dónde entras tú? Si nunca has programado, empieza en la fase 0 y sigue el orden. Si ya programas, puedes saltarte fases. Mira el hito de la fase 2. Checkpoint. Ya sabes programar, con 5 problemas que juntan todo lo básico. Si te salen, ya tienes las bases y puedes pasar estructuras y algoritmos. Y si ya dominas eso, haz lo mismo con el hito de cada fase hasta encontrar la tuya.
+
+== s06  (26/26 palabras casadas)
+GUION  : Una última cosa: este roadmap no es definitivo. Con el tiempo puede cambiar: podemos agregar, mover o ajustar videos según lo que funcione mejor para aprender.
+ASR    : Una última cosa. Este roadmap no es definitivo. Con el tiempo puede cambiar. Podemos agregar, mover o ajustar videos según lo que funcione mejor para aprender.
+
+== s07  (21/21 palabras casadas)
+GUION  : Guarda el mapa, elige tu fase de entrada y nos vemos en el primer video. ¿Te gusta programar? ¡Únete a Goslint!
+ASR    : Guarda el mapa, elige tu fase de entrada y nos vemos en el primer video. ¿Te gusta programar? Únete a Goslint!
+

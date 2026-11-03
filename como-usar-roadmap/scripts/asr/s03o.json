@@ -1,0 +1,74 @@
+{
+ "text": "Conmigo recorres grafos, teoría de números y programación dinámica, pensando antes de programar.",
+ "segments": [
+  {
+   "words": [
+    {
+     "word": "Conmigo",
+     "start": 0.0,
+     "end": 0.5600000023841858
+    },
+    {
+     "word": "recorres",
+     "start": 0.5600000023841858,
+     "end": 1.1999999284744263
+    },
+    {
+     "word": "grafos,",
+     "start": 1.1999999284744263,
+     "end": 1.9199999570846558
+    },
+    {
+     "word": "teoría",
+     "start": 1.9199999570846558,
+     "end": 2.3999998569488525
+    },
+    {
+     "word": "de",
+     "start": 2.3999998569488525,
+     "end": 2.559999942779541
+    },
+    {
+     "word": "números",
+     "start": 2.559999942779541,
+     "end": 3.0399999618530273
+    },
+    {
+     "word": "y",
+     "start": 3.0399999618530273,
+     "end": 3.2799999713897705
+    },
+    {
+     "word": "programación",
+     "start": 3.2799999713897705,
+     "end": 3.8399999141693115
+    },
+    {
+     "word": "dinámica,",
+     "start": 3.8399999141693115,
+     "end": 4.880000114440918
+    },
+    {
+     "word": "pensando",
+     "start": 4.880000114440918,
+     "end": 5.599999904632568
+    },
+    {
+     "word": "antes",
+     "start": 5.599999904632568,
+     "end": 6.079999923706055
+    },
+    {
+     "word": "de",
+     "start": 6.079999923706055,
+     "end": 6.239999771118164
+    },
+    {
+     "word": "programar.",
+     "start": 6.239999771118164,
+     "end": 6.96
+    }
+   ]
+  }
+ ]
+}

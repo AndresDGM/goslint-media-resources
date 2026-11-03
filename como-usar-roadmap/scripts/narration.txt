@@ -53,7 +53,7 @@ El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {och
 [calm] Y con la cabeza fría {reloj}aunque corra el reloj.
 
 == s03n @Lint
-{f5}La fase cinco: grafos, teoría de números y programación dinámica.
+{f5}La fase cinco es Competitiva Dos, con el profe Velasco.
 
 == s03o @Velasco
 [calm] Conmigo recorres {grafos}grafos, {numeros}teoría de números | y {dp}programación dinámica, pensando antes de programar.

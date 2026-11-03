@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, continueRender, delayRender, staticFile} from 'remotion';
 import {FPS, H, W} from '@commons/theme';
 import {ComoUsarRoadmap} from './Video';
+import {PORTADAS, Portada, Thumbnail} from './Thumbnail';
 import {RH, RW, VReel, reelDuration} from './reels/frame';
 import {VREELS} from './reels';
 import {DURATION} from './timeline';
@@ -25,6 +26,10 @@ Promise.all(faces.map((ff) => ff.load()))
 export const Root: React.FC = () => (
 	<>
 		<Composition id="ComoUsarRoadmap" component={ComoUsarRoadmap} durationInFrames={DURATION} fps={FPS} width={W} height={H} />
+		<Composition id="Miniatura" component={Thumbnail} durationInFrames={1} fps={FPS} width={W} height={H} />
+		{PORTADAS.map((c) => (
+			<Composition key={c.id} id={c.id} component={() => <Portada n={c.n} />} durationInFrames={1} fps={FPS} width={RW} height={RH} />
+		))}
 		{VREELS.map((r) => (
 			<Composition key={r.id} id={r.id} component={() => <VReel r={r} />} durationInFrames={reelDuration(r)} fps={FPS} width={RW} height={RH} />
 		))}

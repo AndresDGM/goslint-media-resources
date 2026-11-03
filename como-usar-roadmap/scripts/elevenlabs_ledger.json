@@ -158,7 +158,14 @@
       "voz": "Lint",
       "creditos": 130,
       "generation_id": "PTZE0GLMpqlQcYjmTiVu"
+    },
+    {
+      "segmento": "s03a",
+      "voz": "Lint",
+      "creditos": 170,
+      "generation_id": "ETlzBBp9XTK8I7DxaIlM",
+      "nota": "corrección: la fase 0 es la bienvenida; la toma anterior queda en raw/s03a_original.mp3"
     }
   ],
-  "total": 2917
+  "total": 3087
 }

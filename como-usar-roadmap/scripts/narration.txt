@@ -14,7 +14,7 @@ El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {och
 
 # s03: Lint presenta cada fase y cada guía dice, con su voz, en qué nos acompaña (voz por sección: «== id @Mascota», ver ../commons/voces.json).
 == s03a @Lint
-[curious] ¿Cómo es ese camino? | [excited] {guias}¡Cada fase tiene su guía! | {f1}Las fases cero y uno son de lógica pura, con {pseint}PSeInt y diagramas de flujo.
+[curious] ¿Cómo es ese camino? | [excited] {guias}¡Cada fase tiene su guía! | {f0}La fase cero es esta, la bienvenida. | {f1}La fase uno es de lógica pura, con {pseint}PSeInt y diagramas de flujo.
 
 == s03b @Vee
 [warmly] ¡Hola! Te enseño a pensar algorítmicamente, {antes}antes de escribir código.

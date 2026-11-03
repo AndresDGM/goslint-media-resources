@@ -1,0 +1,210 @@
+{
+"byte_cheer": [
+29,
+34
+],
+"byte_idle": [
+29,
+34
+],
+"byte_point": [
+29,
+34
+],
+"byte_think": [
+29,
+34
+],
+"byte_wave": [
+29,
+34
+],
+"daru_cheer": [
+23,
+33
+],
+"daru_idle": [
+21,
+32
+],
+"daru_point": [
+35,
+32
+],
+"daru_think": [
+23,
+35
+],
+"daru_wave": [
+21,
+32
+],
+"diego_cheer": [
+23,
+32
+],
+"diego_idle": [
+21,
+31
+],
+"diego_point": [
+27,
+31
+],
+"diego_think": [
+20,
+31
+],
+"diego_wave": [
+22,
+31
+],
+"globin_cheer": [
+19,
+30
+],
+"globin_idle": [
+14,
+30
+],
+"globin_point": [
+20,
+30
+],
+"globin_think": [
+24,
+35
+],
+"globin_wave": [
+16,
+30
+],
+"marco_idle": [
+26,
+45
+],
+"mocca_cheer": [
+19,
+34
+],
+"mocca_idle": [
+24,
+34
+],
+"mocca_point": [
+20,
+34
+],
+"mocca_think": [
+14,
+34
+],
+"mocca_wave": [
+16,
+34
+],
+"parserint_cheer": [
+19,
+36
+],
+"parserint_idle": [
+18,
+36
+],
+"parserint_point": [
+22,
+36
+],
+"parserint_think": [
+18,
+36
+],
+"parserint_wave": [
+18,
+36
+],
+"polo_cheer": [
+35,
+34
+],
+"polo_idle": [
+29,
+33
+],
+"polo_point": [
+32,
+33
+],
+"polo_think": [
+37,
+35
+],
+"polo_wave": [
+28,
+33
+],
+"pypo_cheer": [
+22,
+32
+],
+"pypo_idle": [
+22,
+32
+],
+"pypo_point": [
+25,
+32
+],
+"pypo_think": [
+22,
+32
+],
+"pypo_wave": [
+22,
+32
+],
+"ringo_cheer": [
+43,
+36
+],
+"ringo_idle": [
+43,
+31
+],
+"ringo_point": [
+43,
+31
+],
+"ringo_think": [
+43,
+36
+],
+"ringo_wave": [
+43,
+31
+],
+"vee_idle": [
+17,
+31
+],
+"velasco_cheer": [
+19,
+32
+],
+"velasco_idle": [
+14,
+31
+],
+"velasco_point": [
+21,
+31
+],
+"velasco_think": [
+26,
+38
+],
+"velasco_wave": [
+16,
+31
+]
+}

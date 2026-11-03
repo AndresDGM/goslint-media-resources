@@ -1,0 +1,191 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:07.433
+¿Quieres aprender a programar
+
+00:00:07.433 --> 00:00:10.733
+y llegar algún día a una maratón de programación?
+
+00:00:10.733 --> 00:00:12.967
+¿Pero no sabes por dónde empezar?
+
+00:00:12.967 --> 00:00:16.567
+Tranquilo: para eso hicimos este mapa.
+
+00:00:16.567 --> 00:00:19.933
+En este video te cuento cómo está organizado el canal,
+
+00:00:19.933 --> 00:00:22.000
+dónde entrar según lo que ya sepas
+
+00:00:22.000 --> 00:00:25.200
+y cómo avanzar de una fase a la siguiente.
+
+00:00:27.000 --> 00:00:30.400
+El roadmap de GOSLINT tiene noventa y nueve videos
+
+00:00:30.400 --> 00:00:32.667
+repartidos en ocho fases.
+
+00:00:32.667 --> 00:00:36.100
+Está pensado para que una persona que nunca ha programado
+
+00:00:36.100 --> 00:00:37.600
+entre por la fase cero
+
+00:00:37.600 --> 00:00:42.333
+y salga, al final, lista para entrenar en serio para una maratón.
+
+00:00:42.333 --> 00:00:45.367
+Por eso no sigue el orden de un libro de algoritmos,
+
+00:00:45.367 --> 00:00:48.367
+sino el orden en que de verdad se aprende.
+
+00:00:51.000 --> 00:00:52.467
+¿Cómo es ese camino?
+
+00:00:52.467 --> 00:00:54.467
+¡Cada fase tiene su guía!
+
+00:00:54.467 --> 00:00:57.267
+La fase cero es esta, la bienvenida.
+
+00:00:57.267 --> 00:01:02.433
+La fase uno es de lógica pura, con PSeInt y diagramas de flujo.
+
+00:01:02.867 --> 00:01:08.133
+¡Hola! Te enseño a pensar algorítmicamente, antes de escribir código.
+
+00:01:08.500 --> 00:01:14.367
+En la fase dos, los mismos temas en código real, con un especialista por lenguaje.
+
+00:01:14.567 --> 00:01:16.600
+Yo te acompaño en C++.
+
+00:01:17.633 --> 00:01:19.167
+¡Y yo en Java!
+
+00:01:19.333 --> 00:01:21.700
+Nosotros, en Python…
+
+00:01:21.700 --> 00:01:24.367
+…¡corto, limpio y rápido!
+
+00:01:24.700 --> 00:01:30.633
+La fase tres trae estructuras de datos y algoritmos, y ahí estamos Polo y yo.
+
+00:01:30.833 --> 00:01:33.967
+Sin prisa: una estructura a la vez.
+
+00:01:34.167 --> 00:01:37.500
+¡Y la programación orientada a objetos va por mi cuenta!
+
+00:01:37.933 --> 00:01:41.233
+La fase cuatro arranca la competitiva.
+
+00:01:41.433 --> 00:01:45.300
+Ya en C++, con los primeros concursos.
+
+00:01:45.467 --> 00:01:49.067
+Y con la cabeza fría aunque corra el reloj.
+
+00:01:49.500 --> 00:01:54.167
+La fase cinco es Competitiva Dos, con el profe Velasco.
+
+00:01:54.400 --> 00:01:57.333
+Conmigo recorres grafos, teoría de números
+
+00:01:57.333 --> 00:02:01.467
+y programación dinámica, pensando antes de programar.
+
+00:02:01.900 --> 00:02:05.033
+La fase seis es nivel maratón.
+
+00:02:05.233 --> 00:02:08.767
+¡Árboles, segment trees, strings y geometría!
+
+00:02:08.767 --> 00:02:13.033
+Lo que necesitas para pelear los problemas difíciles de una maratón.
+
+00:02:13.433 --> 00:02:16.533
+Y la fase siete es el modo maratón.
+
+00:02:16.767 --> 00:02:21.167
+Estrategia de equipo, cuaderno y simulacros. ¡Y un problema más!
+
+00:02:21.233 --> 00:02:23.300
+¡Hasta que el equipo despegue!
+
+00:02:27.000 --> 00:02:30.333
+¿Y cómo sabes si ya puedes pasar a la siguiente fase?
+
+00:02:30.333 --> 00:02:34.733
+Cada fase termina con un video marcado como hito, con una estrella.
+
+00:02:34.733 --> 00:02:36.900
+Es un reto o un repaso.
+
+00:02:36.900 --> 00:02:39.867
+Si te sale, estás listo para seguir.
+
+00:02:39.867 --> 00:02:44.133
+Si no, repasa los videos de esa fase y vuelve a intentarlo.
+
+00:02:47.000 --> 00:02:49.067
+Ahora, ¿por dónde entras tú?
+
+00:02:49.067 --> 00:02:50.667
+Si nunca has programado,
+
+00:02:50.667 --> 00:02:53.400
+empieza en la fase cero y sigue el orden.
+
+00:02:53.400 --> 00:02:54.600
+Si ya programas,
+
+00:02:54.600 --> 00:02:56.033
+puedes saltarte fases:
+
+00:02:56.033 --> 00:03:00.267
+mira el hito de la fase dos, «Checkpoint: ya sabes programar»,
+
+00:03:00.267 --> 00:03:03.300
+con cinco problemas que juntan todo lo básico.
+
+00:03:03.300 --> 00:03:05.467
+Si te salen, ya tienes las bases
+
+00:03:05.467 --> 00:03:07.967
+y puedes pasar a estructuras y algoritmos.
+
+00:03:07.967 --> 00:03:11.967
+Y si ya dominas eso, haz lo mismo con el hito de cada fase
+
+00:03:11.967 --> 00:03:13.767
+hasta encontrar la tuya.
+
+00:03:17.000 --> 00:03:20.900
+Una última cosa: este roadmap no es definitivo.
+
+00:03:20.900 --> 00:03:22.733
+Con el tiempo puede cambiar:
+
+00:03:22.733 --> 00:03:25.767
+podemos agregar, mover o ajustar videos
+
+00:03:25.767 --> 00:03:28.467
+según lo que funcione mejor para aprender.
+
+00:03:31.000 --> 00:03:32.000
+Guarda el mapa,
+
+00:03:32.000 --> 00:03:33.600
+elige tu fase de entrada
+
+00:03:33.600 --> 00:03:35.600
+y nos vemos en el primer video.
+
+00:03:35.600 --> 00:03:38.733
+¿Te gusta programar? ¡Únete a GOSLINT!
+

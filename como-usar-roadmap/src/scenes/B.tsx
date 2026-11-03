@@ -159,7 +159,7 @@ export const Guias: React.FC = () => {
 							const scale = b.guides.length >= 4 ? 6 : 7;
 							return (
 								<React.Fragment key={gd.id + i}>
-									<Mascota id={gd.id} pose={gd.pose} x={x} y={900} scale={scale} at={gd.at} out={b.to} talk={talk} />
+									<Mascota id={gd.id} pose={gd.pose} x={x} y={900} scale={scale} at={gd.at} out={b.to} talk={talk} speaking={!!(gd.seg && f >= V[gd.seg].start && f < V[gd.seg].end)} />
 									<div style={{position: 'absolute', left: x - 120, width: 240, top: 930, textAlign: 'center', opacity: Math.min(1, pn * 2), transform: `translateY(${(1 - pn) * 20}px)`}}>
 										<div style={{fontFamily: SANS, fontWeight: 860, fontSize: 34, color: talk > 0 ? m.color : C.white, letterSpacing: '-0.02em'}}>{m.name}</div>
 									</div>

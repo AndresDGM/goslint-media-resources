@@ -4,6 +4,7 @@ import {C, MONO, SANS} from '@commons/theme';
 import {inCubic, inOutCubic, outCubic, pop, tween} from '@commons/lib';
 import {M, SC} from '../timeline';
 import {BlurBg, ChapterTitle, Chip, CutFlash, EventTag, GlitchBurst, GridBg, Label, Photo, Polaroid, Spot, Sprite, WipeBar} from '@commons/components';
+import {Mascota} from '@commons/mascotas';
 import {Actor} from '../kit';
 import {Emote, POSES} from '@commons/mascot';
 import {PixelBurst} from '@commons/pixel';
@@ -95,8 +96,8 @@ export const Icpc: React.FC = () => {
 					<Spot x={960} y={720} r={420} amt={0.18} squash={0.5} />
 					<div style={{position: 'absolute', left: 520, top: teamY, width: 1060, height: 12, background: '#2A322D'}} />
 					<PixelComputer x={960} y={teamY} scale={8} at={uncomp} />
-					{f >= team[1].at && <Sprite src={cheer ? 'globin_cheer.png' : f >= k('repartir') ? 'globin_point.png' : 'globin_idle.png'} x={team[1].x} y={teamY + drop(team[1].at)} w={cheer ? 19 : f >= k('repartir') ? 20 : 14} h={30} scale={8} bob={cheer ? Math.max(0, bob(1)) : 0} />}
-					{f >= team[2].at && <Sprite src="marco_idle.png" x={team[2].x} y={teamY - 10 + drop(team[2].at) - bob(2)} w={26} h={45} scale={7} flip />}
+					<Mascota id="globin" x={team[1].x} y={teamY} scale={8} at={team[1].at} clip={cheer ? 'celebrar' : f >= k('repartir') ? 'senalar' : undefined} clipAt={cheer ? k('equipo') : k('repartir')} />
+					<Mascota id="marco" x={team[2].x} y={teamY - 10} scale={7} at={team[2].at} flip clip={cheer ? 'celebrar' : undefined} clipAt={k('equipo')} />
 					<Actor x={team[0].x} y={teamY} scale={8} enter={team[0].at - 12} keys={[{at: team[0].at, pose: POSES.wow}, {at: si, pose: POSES.cheer}, {at: k('comunicarte'), pose: POSES.point}, {at: k('decidir'), pose: POSES.think}, {at: k('equipo'), pose: POSES.cheer}, {at: reloj, pose: POSES.oops}]} hops={[k('equipo') + 2]} />
 					{tasks.map((t, i) => {
 						if (f < t.at - 2 || f >= reloj) return null;

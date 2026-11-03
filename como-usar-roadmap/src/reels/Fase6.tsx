@@ -6,7 +6,7 @@ import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
 import {Ilustracion} from '@commons/ilustraciones';
 import {Big, Hit, In} from '@commons/vertical';
-import {M, V, talkLevel} from '../timeline';
+import {M, V, talkLevel, speakingNow} from '../timeline';
 import {FASES, hitoDe} from '../fases';
 import {PhaseCard, VideoTile} from '../parts';
 import {FINAL, VReelDef} from './frame';
@@ -50,7 +50,7 @@ const Body: React.FC = () => {
 				<PhaseCard fa={FA} w={960} />
 			</In>
 			{/* DaRu entra cuando empieza su frase */}
-			<Mascota id="daru" x={540} y={812} scale={10} at={q} talk={talkLevel(f, 'daru')} />
+			<Mascota id="daru" x={540} y={812} scale={10} at={q} talk={talkLevel(f, 'daru')} speaking={speakingNow(f, 'daru')} />
 			{TEMAS.map((t, i) => {
 				const v = FA.videos.find((x) => x.n === t.n)!;
 				return (

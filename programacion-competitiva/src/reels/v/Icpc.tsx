@@ -6,6 +6,7 @@ import {M, SC} from '../../timeline';
 import {Chip, Label, Sprite} from '@commons/components';
 import {ContestClock, PixelComputer} from '@commons/parts';
 import {Key, POSES} from '@commons/mascot';
+import {Mascota} from '@commons/mascotas';
 import {FINAL, voiceParts, VReelDef} from './frame';
 import {Big, Hit, In, Kicker, PhotoV} from '@commons/vertical';
 
@@ -94,18 +95,8 @@ const Body: React.FC = () => {
 			</In>
 			{teamOn && <div style={{position: 'absolute', left: 120, top: floorY, width: 840, height: 8, background: '#2A322D'}} />}
 			{teamOn && <PixelComputer x={540} y={floorY} scale={8} at={uncomp} />}
-			{teamOn && f >= equipos + 10 && (
-				<Sprite
-					src={cheer ? 'globin_cheer.png' : f >= repartir ? 'globin_point.png' : 'globin_idle.png'}
-					x={230}
-					y={floorY + drop(equipos + 10)}
-					w={cheer ? 19 : f >= repartir ? 20 : 14}
-					h={30}
-					scale={8}
-					bob={cheer ? Math.max(0, bob(1)) : 0}
-				/>
-			)}
-			{teamOn && f >= equipos + 18 && <Sprite src="marco_idle.png" x={830} y={floorY + drop(equipos + 18)} w={26} h={45} scale={7} flip bob={cheer ? Math.max(0, bob(2)) : 0} />}
+			{teamOn && <Mascota id="globin" x={230} y={floorY} scale={8} at={equipos + 10} clip={cheer ? 'celebrar' : f >= repartir ? 'senalar' : undefined} clipAt={cheer ? equipo : repartir} />}
+			{teamOn && <Mascota id="marco" x={830} y={floorY} scale={7} at={equipos + 18} flip clip={cheer ? 'celebrar' : undefined} clipAt={equipo} />}
 			<In at={comunicarte} out={reloj - 8} x={110} y={640} from="up" exit="up" impact={false}>
 				<Bubble>¿Quién toma el B?</Bubble>
 			</In>

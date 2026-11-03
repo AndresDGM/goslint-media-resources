@@ -17,7 +17,7 @@ Todo lo que usan (o es probable que usen) **dos o más** videos vive aquí, una 
 | `public/fonts/` | Inter Var y JetBrains Mono | se cargan en el `Root.tsx` de cada proyecto |
 | `public/fx/` | texturas de grano | `<Grain />` |
 | `public/audio/sfx/` | efectos sintetizados (`ac`, `wa`, `hit`, `whoosh`, `glitch`, `pop`…) | `staticFile('audio/sfx/hit.wav')` |
-| `public/mascotas/` | sprites 1x de otras mascotas (Globín, Marco) | `<Sprite src="globin_idle.png" …/>` |
+| `public/mascotas/` | sprites 1x de las otras mascotas y sus animaciones en `clips/<id>/` (de `scripts/import_clips.py`) | `<Mascota id="velasco" pose="wave" …/>` (`src/mascotas.tsx`) |
 | `public/photos/` (+ `blur/`) | biblioteca de fotos del semillero, preparadas, con fondo desenfocado | `staticFile('photos/2024-nacional-icpc-grupal.jpg')` |
 | `fotos-originales/` | originales de las fotos (no se sirven) | `python3 commons/scripts/prepare_photos.py commons/fotos-originales` |
 | `scripts/sync-public.mjs` | copia `public/` común al proyecto (Remotion solo sirve su propia carpeta `public/`) | se ejecuta solo en `pnpm run studio/render/still/reels` |

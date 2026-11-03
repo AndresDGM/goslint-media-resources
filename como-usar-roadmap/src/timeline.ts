@@ -99,6 +99,9 @@ export const talkLevel = (f: number, who = 'lint'): number => {
 	return 0;
 };
 
+/** ¿Está `who` dentro de una de sus locuciones en el fotograma f? (aunque sea un silencio entre palabras) */
+export const speakingNow = (f: number, who: string): boolean => SEG_IDS.some((id) => speakerOf(id) === who && f >= V[id].start && f < V[id].end);
+
 /** Capítulos para el HUD. */
 export const CHAPTERS: {scene: SceneId; n: string; label: string}[] = [
 	{scene: 'intro', n: '00', label: 'goslint'},

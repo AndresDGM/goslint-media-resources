@@ -6,7 +6,7 @@ import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
 import {Ilustracion} from '@commons/ilustraciones';
 import {Big, Hit, In} from '@commons/vertical';
-import {M, V, talkLevel} from '../timeline';
+import {M, V, talkLevel, speakingNow} from '../timeline';
 import {FASES, hitoDe} from '../fases';
 import {PhaseCard, VideoTile} from '../parts';
 import {FINAL, VReelDef} from './frame';
@@ -46,7 +46,7 @@ const Body: React.FC = () => {
 			</In>
 			<Hit at={k('f1') + 2} x={540} y={560} />
 			{/* Vee entra cuando empieza su frase */}
-			<Mascota id="vee" x={800} y={1180} scale={11} at={vee} talk={talkLevel(f, 'vee')} />
+			<Mascota id="vee" x={800} y={1180} scale={11} at={vee} talk={talkLevel(f, 'vee')} speaking={speakingNow(f, 'vee')} />
 			<Hit at={vee + 2} x={800} y={950} big />
 			<In at={vee} x={60} y={450} w={960} from="up" impact={false}>
 				<Big size={64}>

@@ -46,21 +46,21 @@ const Body: React.FC = () => {
 			<Hit at={k('f2') + 2} x={540} y={560} />
 
 			{/* ParserInt (C++) entra cuando empieza su frase */}
-			<Mascota id="parserint" pose="wave" x={c0} y={FEET} scale={6} at={V.s03d.start - 4} talk={talkLevel(f, 'parserint')} speaking={speakingNow(f, 'parserint')} />
+			<Mascota id="parserint" pose="wave" x={c0} y={FEET} scale={6} at={V.s03d.start - 4} entra talk={talkLevel(f, 'parserint')} speaking={speakingNow(f, 'parserint')} />
 			<Hit at={V.s03d.start - 2} x={c0} y={600} />
 			<Etiqueta at={V.s03d.start - 4} cx={c0} id="parserint" lang="C++" />
 
 			{/* Mocca (Java) */}
-			<Mascota id="mocca" pose="wave" x={c1} y={FEET} scale={6} at={V.s03e.start - 4} talk={talkLevel(f, 'mocca')} speaking={speakingNow(f, 'mocca')} />
+			<Mascota id="mocca" pose="wave" x={c1} y={FEET} scale={6} at={V.s03e.start - 4} entra talk={talkLevel(f, 'mocca')} speaking={speakingNow(f, 'mocca')} />
 			<Hit at={V.s03e.start - 2} x={c1} y={600} />
 			<Etiqueta at={V.s03e.start - 4} cx={c1} id="mocca" lang="Java" />
 
 			{/* Pypo y Byte (hermanos, Python) */}
-			<Mascota id="pypo" pose="wave" x={c2} y={FEET} scale={6} at={V.s03f.start - 4} talk={talkLevel(f, 'pypo')} speaking={speakingNow(f, 'pypo')} />
+			<Mascota id="pypo" pose="wave" x={c2} y={FEET} scale={6} at={V.s03f.start - 4} entra talk={talkLevel(f, 'pypo')} speaking={speakingNow(f, 'pypo')} />
 			<Hit at={V.s03f.start - 2} x={c2} y={600} />
 			<Etiqueta at={V.s03f.start - 4} cx={c2} id="pypo" lang="Python" />
 
-			<Mascota id="byte" pose="wave" x={c3} y={FEET} scale={6} at={V.s03g.start - 4} talk={talkLevel(f, 'byte')} speaking={speakingNow(f, 'byte')} />
+			<Mascota id="byte" pose="wave" x={c3} y={FEET} scale={6} at={V.s03g.start - 4} entra talk={talkLevel(f, 'byte')} speaking={speakingNow(f, 'byte')} />
 			<Hit at={V.s03g.start - 2} x={c3} y={600} />
 			<Etiqueta at={V.s03g.start - 4} cx={c3} id="byte" lang="Python" />
 

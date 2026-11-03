@@ -54,7 +54,7 @@ const Body: React.FC = () => {
 			))}
 
 			{/* s03l · Marco: «Ya en C++, con los primeros concursos.» */}
-			<Mascota id="marco" x={230} y={1190} scale={9} at={V.s03l.start} out={marcoOut} talk={talkLevel(f, 'marco')} speaking={speakingNow(f, 'marco')} />
+			<Mascota id="marco" x={230} y={1190} scale={9} at={V.s03l.start} out={marcoOut} entra sale talk={talkLevel(f, 'marco')} speaking={speakingNow(f, 'marco')} />
 			<In at={V.s03l.start} out={marcoOut} x={360} y={770} w={660} from="left" exit="up" impact={false}>
 				<Tag at={V.s03l.start}>C++</Tag>
 				<br />
@@ -66,7 +66,7 @@ const Body: React.FC = () => {
 			<Hit at={contest + 2} x={710} y={1040} />
 
 			{/* s03m · Ringo: «Y con la cabeza fría aunque corra el reloj.» */}
-			<Mascota id="ringo" pose="think" x={800} y={1190} scale={9} at={V.s03m.start} talk={talkLevel(f, 'ringo')} speaking={speakingNow(f, 'ringo')} />
+			<Mascota id="ringo" pose="think" x={800} y={1190} scale={9} at={V.s03m.start} entra talk={talkLevel(f, 'ringo')} speaking={speakingNow(f, 'ringo')} />
 			<In at={V.s03m.start} x={60} y={470} w={960} from="up">
 				<Big size={96}>
 					Cabeza <span style={{color: C.green}}>fría</span>

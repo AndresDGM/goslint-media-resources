@@ -63,11 +63,11 @@ const Body: React.FC = () => {
 			))}
 
 			{/* Diego (coach) entra al empezar su locución */}
-			<Mascota id="diego" x={760} y={1180} scale={8} at={dieg - 6} talk={talkLevel(f, 'diego')} speaking={speakingNow(f, 'diego')} />
+			<Mascota id="diego" x={760} y={1180} scale={8} at={dieg - 6} entra talk={talkLevel(f, 'diego')} speaking={speakingNow(f, 'diego')} />
 			<Hit at={dieg - 4} x={800} y={1000} />
 
 			{/* Globín entra con su locución; sube un poco en «despega» */}
-			<Mascota id="globin" x={945} y={1180 - rise} scale={7} at={V.s03t.start} talk={talkLevel(f, 'globin')} speaking={speakingNow(f, 'globin')} />
+			<Mascota id="globin" x={945} y={1180 - rise} scale={7} at={V.s03t.start} entra talk={talkLevel(f, 'globin')} speaking={speakingNow(f, 'globin')} />
 
 			{/* Hito #099 al pronunciarse «despega» */}
 			<In at={despega} x={60} y={1112} w={560} from="left">

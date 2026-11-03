@@ -40,6 +40,10 @@ const CLIPS = CLIPS_JSON as unknown as Record<string, Record<string, Clip>>;
 /** Clip que dispara cada pose al entrar la mascota (después vuelve al reposo). */
 const ACCION: Partial<Record<MascotaPose, string>> = {wave: 'saludar', cheer: 'celebrar', point: 'senalar', think: 'pensar'};
 
+/** Las entradas y salidas se reproducen al doble de velocidad para no frenar el montaje. */
+const PASO = 2;
+const clipFrames = (c: Clip) => Math.ceil((c.ms.reduce((a, b) => a + b, 0) / 1000) * 30 / PASO);
+
 /** Fotograma del clip a `t` fotogramas de video (30 fps) de su inicio; null si ya terminó (y no es bucle). */
 const clipIndex = (c: Clip, t: number): number | null => {
 	const total = c.ms.reduce((a, b) => a + b, 0);
@@ -94,14 +98,25 @@ export const Mascota: React.FC<{
 	speaking?: boolean;
 	clip?: string;
 	clipAt?: number;
+	/** entra con su clip `entrar` (llega a su sitio justo en `at`) en vez de caer con rebote */
+	entra?: boolean;
+	/** sale con su clip `salir` a partir de `out` (se despide y se va) en vez de desvanecerse */
+	sale?: boolean;
 	flip?: boolean;
 	opacity?: number;
-}> = ({id, pose = 'idle', x, y, scale = 8, at, out, talk = 0, speaking, clip, clipAt, flip, opacity = 1}) => {
+}> = ({id, pose = 'idle', x, y, scale = 8, at, out, talk = 0, speaking, clip, clipAt, entra, sale, flip, opacity = 1}) => {
 	const f = useCurrentFrame();
-	if (at !== undefined && f < at - 1) return null;
-	if (out !== undefined && f >= out) return null;
-	const p = at !== undefined ? pop(f, at, 11, 220, 0.6) : 1;
-	const o = out !== undefined ? 1 - tween(f, out - 8, out) : 1;
+	const set0 = CLIPS[id];
+	const useIn = !!(entra && set0?.entrar && at !== undefined);
+	const useOut = !!(sale && set0?.salir && out !== undefined);
+	const dIn = useIn ? clipFrames(set0.entrar) : 0;
+	const dOut = useOut ? clipFrames(set0.salir) : 0;
+	if (at !== undefined && f < at - 1 - dIn) return null;
+	if (out !== undefined && f >= out + dOut) return null;
+	if (useIn && f < at!) return <ClipFrame id={id} name="entrar" i={clipIndex(set0.entrar, (f - (at! - dIn)) * PASO) ?? set0.entrar.n - 1} x={x} y={y} scale={scale} flip={flip} style={{opacity, filter: 'drop-shadow(0 18px 24px rgba(0,0,0,0.55))'}} />;
+	if (useOut && f >= out!) return <ClipFrame id={id} name="salir" i={clipIndex(set0.salir, (f - out!) * PASO) ?? set0.salir.n - 1} x={x} y={y} scale={scale} flip={flip} style={{opacity, filter: 'drop-shadow(0 18px 24px rgba(0,0,0,0.55))'}} />;
+	const p = at !== undefined && !useIn ? pop(f, at, 11, 220, 0.6) : 1;
+	const o = out !== undefined && !useOut ? 1 - tween(f, out - 8, out) : 1;
 	const style: React.CSSProperties = {
 		transform: `scale(${0.6 + 0.4 * p}) translateY(${-(1 - p) * 160}px)`,
 		transformOrigin: '50% 100%',

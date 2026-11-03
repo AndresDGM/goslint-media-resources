@@ -151,7 +151,8 @@ export const Guias: React.FC = () => {
 						</In>
 						<Hit at={b.from + 2} x={800} y={420} />
 						{b.guides.map((gd, i) => {
-							if (f < gd.at - 1 || f >= b.to) return null;
+							if (f >= b.to + 60) return null;
+							const tag = f >= gd.at && f < b.to;
 							const x = slots[i];
 							const m = MASCOTAS[gd.id];
 							const talk = gd.seg && f >= V[gd.seg].start && f < V[gd.seg].end ? talkLevel(f, gd.id) : 0;
@@ -159,11 +160,11 @@ export const Guias: React.FC = () => {
 							const scale = b.guides.length >= 4 ? 6 : 7;
 							return (
 								<React.Fragment key={gd.id + i}>
-									<Mascota id={gd.id} pose={gd.pose} x={x} y={900} scale={scale} at={gd.at} out={b.to} talk={talk} speaking={!!(gd.seg && f >= V[gd.seg].start && f < V[gd.seg].end)} />
-									<div style={{position: 'absolute', left: x - 120, width: 240, top: 930, textAlign: 'center', opacity: Math.min(1, pn * 2), transform: `translateY(${(1 - pn) * 20}px)`}}>
+									<Mascota id={gd.id} pose={gd.pose} x={x} y={900} scale={scale} at={gd.at} out={b.to} entra sale talk={talk} speaking={!!(gd.seg && f >= V[gd.seg].start && f < V[gd.seg].end)} />
+									<div style={{position: 'absolute', left: x - 120, width: 240, top: 930, textAlign: 'center', opacity: tag ? Math.min(1, pn * 2) : 0, transform: `translateY(${(1 - pn) * 20}px)`}}>
 										<div style={{fontFamily: SANS, fontWeight: 860, fontSize: 34, color: talk > 0 ? m.color : C.white, letterSpacing: '-0.02em'}}>{m.name}</div>
 									</div>
-									<Hit at={gd.at + 2} x={x} y={760} />
+									
 								</React.Fragment>
 							);
 						})}

@@ -49,6 +49,7 @@ class Mascota:
     salto: int = 7           # altura del salto al celebrar
     pies: bool = True        # si tiene pies que se levanten al caminar
     largo: tuple = (4, 4)    # largo del brazo y del antebrazo de arm()
+    manita: tuple | None = None  # (mano, manga[, punta]) para dibujar las manitas del gesto «gatito»
 
 
 def mano(M: Mascota, brazo, dy=0):
@@ -346,6 +347,63 @@ def salir(M: Mascota) -> Clip:
         vacio = not any(any(r) for r in b.px)
         if vacio and c.frames and not any(any(r) for r in c.frames[-1][0].px):
             break                                      # ya salió: un solo fotograma vacío al final basta
+        c.add(b)
+    return c
+
+
+# manitas recogidas frente al pecho, juntas bajo el mentón: arriba (codo hacia adentro) · abajo (codo afuera)
+MANITA_ARRIBA = (-35, -178)
+MANITA_ABAJO = (15, -100)
+
+
+def gatito(M: Mascota) -> Clip:
+    """Saltitos de gatito: de pie, con las dos manitas recogidas frente al pecho, da saltitos rápidos
+    mientras mueve las manitas por turnos (una sube y la otra baja, como amasando el aire), se
+    bambolea de lado a lado y mira con los ojos muy abiertos. Bucle de 4 saltitos."""
+    c = Clip('gatito', 'saltitos de gatito: manitas recogidas frente al pecho que se mueven por turnos mientras da saltitos', bucle=True)
+    P = 8                                           # fotogramas por saltito
+    N = P * 4
+    alto = [0, -2, -4, -5, -4, -2, 0, 0]
+    for f in range(N):
+        k, hop = f % P, f // P
+        fase = (math.sin((k / P) * 2 * math.pi) + 1) / 2   # 0..1 dentro del saltito
+        a, b_ = (fase, 1 - fase) if hop % 2 == 0 else (1 - fase, fase)
+        brazo = mezcla(MANITA_ABAJO, MANITA_ARRIBA, a)
+        brazoB = mezcla(MANITA_ABAJO, MANITA_ARRIBA, b_)
+        b = M.dibujar(brazo=brazo, brazoB=brazoB, gesto='puño',
+                      ojos='cerrados' if f in (20, 21) else 'sorpresa',
+                      boca='abierta' if k in (2, 3, 4) else 'cerrada',
+                      cejas='arriba', cabeza=1 if k in (1, 6) else 0, f=f)
+        if k == 0 or k == 6:
+            b = stretch(b, -1, M.cintura)           # se agacha / aterriza
+        elif k in (2, 3):
+            b = stretch(b, 1, M.cintura)            # se estira en el aire
+        b = lean(b, 1 if hop % 2 == 0 else -1)
+        b = shift(b, 0, alto[k])
+        hx, hy = M.cabeza
+        chin = hy + 7 + alto[k]
+        if M.manita:                                # las dos manitas bien visibles frente al pecho
+            mano, manga = M.manita[0], M.manita[1]
+            punta = M.manita[2] if len(M.manita) > 2 else None
+            for side, kk in ((1, a), (-1, b_)):
+                px = OX + (1 if side > 0 else -3)
+                py = chin + 1 + round((1 - kk) * 4)
+                ex, ey = OX + side * 5 - (1 if side > 0 else 0), chin + 8
+                b.line(ex, ey, px + 1, py + 1, manga)
+                b.rect(px, py, 3, 2, mano)
+                b.set(px + (2 if side > 0 else 0), py - 1, mano)        # deditos doblados
+                if punta:
+                    b.rect(px, py + 1, 3, 1, punta)
+        # rayitas de movimiento junto a las manitas (que se note el gesto)
+        if k in (1, 2, 4, 5):
+            for side, kk in ((1, a), (-1, b_)):
+                x = OX + side * 6 - (1 if side < 0 else 0)
+                y = chin + 1 + round((1 - kk) * 4)
+                b.set(x, y, FX['white']); b.set(x + side, y - 1, FX['white'])
+        if k == 6:
+            dust(b, OX, OY, 0.35)
+        if k == 7:
+            dust(b, OX, OY, 0.6)
         c.add(b)
     return c
 

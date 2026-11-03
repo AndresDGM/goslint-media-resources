@@ -978,6 +978,56 @@
     "x": 11,
     "y": 44
    }
+  },
+  "gatito": {
+   "descripcion": "saltitos de gatito: manitas recogidas frente al pecho que se mueven por turnos mientras da saltitos",
+   "bucle": true,
+   "tira": "gatito.png",
+   "gif": "gatito.gif",
+   "celda": [
+    24,
+    46
+   ],
+   "fotogramas": 32,
+   "ms": [
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83
+   ],
+   "duracion_ms": 2656,
+   "ancla_pies_en_celda": {
+    "x": 12,
+    "y": 44
+   }
   }
  }
 }

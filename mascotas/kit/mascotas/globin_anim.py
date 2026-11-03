@@ -190,7 +190,7 @@ def pinchazo() -> Clip:
 
 # ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
 
-from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas, gatito  # noqa: E402
 
 
 def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
@@ -201,8 +201,8 @@ def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerr
 
 
 MASCOTA = Mascota('globin', _dibujar, cabeza=(OX, OY - 23), hombro=(OX + 4, OY - 12), cintura=CUT,
-                  entrada='flotar', acento='#F2C230')
+                  entrada='flotar', acento='#F2C230', manita=(PAL['red'], PAL['hoodL']))
 
 
 def clips():
-    return [reposo(), especial(), pinchazo()] + todas(MASCOTA)
+    return [reposo(), especial(), pinchazo()] + todas(MASCOTA) + [gatito(MASCOTA)]

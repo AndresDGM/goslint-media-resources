@@ -1,0 +1,164 @@
+{
+  "nota": "Registro del consumo de ElevenLabs (cuenta de pago). 1 crédito por carácter, etiquetas incluidas. Una toma por segmento.",
+  "modelo": "eleven_v4",
+  "flow_id": "LWiNGRjpwE62Dyon6Afg",
+  "tomas": [
+    {
+      "segmento": "s01",
+      "voz": "Lint",
+      "creditos": 314,
+      "generation_id": "1heebhj3EVDHcqbwgwFd"
+    },
+    {
+      "segmento": "s02",
+      "voz": "Lint",
+      "creditos": 328,
+      "generation_id": "L6ThlwqFKWPupLDmjZrH"
+    },
+    {
+      "segmento": "s03a",
+      "voz": "Lint",
+      "creditos": 143,
+      "generation_id": "CJMGD236I8UZ8zK9JGxK"
+    },
+    {
+      "segmento": "s03b",
+      "voz": "Vee",
+      "creditos": 78,
+      "generation_id": "LtJTlXOfF0vKZAy7yDAP"
+    },
+    {
+      "segmento": "s03c",
+      "voz": "Lint",
+      "creditos": 82,
+      "generation_id": "4LxG750CrtTYgWCC5TBm"
+    },
+    {
+      "segmento": "s03d",
+      "voz": "ParserInt",
+      "creditos": 37,
+      "generation_id": "EqprRPOkjva4OekKH5Wn"
+    },
+    {
+      "segmento": "s03e",
+      "voz": "Mocca",
+      "creditos": 24,
+      "generation_id": "jE2xFN915a13oMKBetjo"
+    },
+    {
+      "segmento": "s03f",
+      "voz": "Pypo",
+      "creditos": 30,
+      "generation_id": "aPZCJ0qP0SnK2AaWyWMJ"
+    },
+    {
+      "segmento": "s03g",
+      "voz": "Byte",
+      "creditos": 33,
+      "generation_id": "a9KCf3mfV7jCiN920zTo"
+    },
+    {
+      "segmento": "s03h",
+      "voz": "Lint",
+      "creditos": 77,
+      "generation_id": "I799zSQhKcXKvnXI6kiJ"
+    },
+    {
+      "segmento": "s03i",
+      "voz": "Polo",
+      "creditos": 45,
+      "generation_id": "8EkAWgnsbK9hG3Sqmvnt"
+    },
+    {
+      "segmento": "s03j",
+      "voz": "Mocca",
+      "creditos": 66,
+      "generation_id": "DQnPei9EnMjCvTUNR7IW"
+    },
+    {
+      "segmento": "s03k",
+      "voz": "Lint",
+      "creditos": 38,
+      "generation_id": "Nh04ca8ApYTw7GgHBOts"
+    },
+    {
+      "segmento": "s03l",
+      "voz": "Marco",
+      "creditos": 61,
+      "generation_id": "VUmTuJLvknTQtBGgpvyc"
+    },
+    {
+      "segmento": "s03m",
+      "voz": "Ringo",
+      "creditos": 50,
+      "generation_id": "9WX3zTlacuZ92JQFPH7s"
+    },
+    {
+      "segmento": "s03n",
+      "voz": "Lint",
+      "creditos": 55,
+      "generation_id": "CfvowD412bL9iEp43hXA"
+    },
+    {
+      "segmento": "s03o",
+      "voz": "Velasco",
+      "creditos": 103,
+      "generation_id": "G8aDnv7hvztqdK328uDU"
+    },
+    {
+      "segmento": "s03p",
+      "voz": "Lint",
+      "creditos": 30,
+      "generation_id": "f0dG81aYLzSUeqxu7ouG"
+    },
+    {
+      "segmento": "s03q",
+      "voz": "DaRu",
+      "creditos": 124,
+      "generation_id": "45Cj7Ni04sJTr2x4ncZD"
+    },
+    {
+      "segmento": "s03r",
+      "voz": "Lint",
+      "creditos": 35,
+      "generation_id": "8vNSZTajS1RbvdU0IOXY"
+    },
+    {
+      "segmento": "s03s",
+      "voz": "Diego",
+      "creditos": 74,
+      "generation_id": "5ZF5CT0dzAyhaR1vjzJh"
+    },
+    {
+      "segmento": "s03t",
+      "voz": "Globín",
+      "creditos": 40,
+      "generation_id": "x3wce4smHdEprYVylIob"
+    },
+    {
+      "segmento": "s04",
+      "voz": "Lint",
+      "creditos": 261,
+      "generation_id": "7H5Ki5ne7EAYs8xHCpnl"
+    },
+    {
+      "segmento": "s05",
+      "voz": "Lint",
+      "creditos": 440,
+      "generation_id": "DhSC3Zv9kZ5WWujOZ3jP"
+    },
+    {
+      "segmento": "s06",
+      "voz": "Lint",
+      "creditos": 219,
+      "generation_id": "m5YMkVQeLJucEH7tNeph"
+    },
+    {
+      "segmento": "s07",
+      "voz": "Lint",
+      "creditos": 130,
+      "generation_id": "PTZE0GLMpqlQcYjmTiVu"
+    }
+  ],
+  "total": 2917
+}

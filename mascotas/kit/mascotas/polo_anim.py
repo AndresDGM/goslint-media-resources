@@ -133,5 +133,28 @@ def siesta() -> Clip:
     return c
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+POLO_OJOS = {'abiertos': 'sleepy', 'cerrados': 'closed', 'felices': 'happy', 'sorpresa': 'wide', 'guiño': 'wink',
+             'concentrado': 'sleepy'}
+POLO_BOCAS = {'cerrada': 'smile', 'media': 'flat', 'abierta': 'open', 'sonrisa': 'smile', 'plana': 'flat'}
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    kw = dict(eyes=POLO_OJOS[ojos], mouth=POLO_BOCAS[boca], headDy=cabeza, tail=osc(f, 30, 1.0),
+              capDy=-2 if ojos == 'sorpresa' else 0)
+    if brazo is not None:                           # levanta la pata delantera
+        kw.update(sy=39, upF=brazo[0], loF=brazo[1])
+    return draw(Pose(**kw))
+
+
+MASCOTA = Mascota('polo', _dibujar, cabeza=(HX, HY), hombro=(HX + 3, OY - 11), cintura=OY - 6,
+                  entrada='caminar', acento=C['ice'])
+
+
 def clips():
-    return [reposo(), especial(), siesta()]
+    return [reposo(), especial(), siesta()] + todas(MASCOTA)

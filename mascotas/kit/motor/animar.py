@@ -417,6 +417,57 @@ def ring(b: Buf, cx, cy, k, r1=9, col=FX['white']):
             b.set(round(cx + math.cos(a) * r), round(cy + math.sin(a) * r * 0.8), col)
 
 
+CONFETI = ('#F2C230', '#00C063', '#3E73D8', '#E0362C', '#FFFFFF')
+
+
+def confetti(b: Buf, cx, cy, k, n=10, spread=14, colors=CONFETI):
+    """Confeti que estalla hacia arriba y cae girando (k 0..1)."""
+    if k <= 0 or k >= 1:
+        return
+    for i in range(n):
+        a = -math.pi / 2 + (i / (n - 1) - 0.5) * 2.6
+        v = 6 + (i * 7 % 5)
+        x = cx + math.cos(a) * v * ease_out(k) * spread / 10
+        y = cy + math.sin(a) * v * ease_out(k) + k * k * 14
+        c = colors[i % len(colors)]
+        b.set(round(x), round(y), c)
+        if (i + int(k * 12)) % 2:
+            b.set(round(x) + 1, round(y), c)
+
+
+def paso(b: Buf, fase: int, cx: int = OX, alto: int = 4) -> Buf:
+    """Levanta 1 px el pie izquierdo (fase 0) o el derecho (fase 1): da la ilusión de caminar sin
+    tener que dibujar piernas nuevas."""
+    out = copy(b)
+    xs = range(0, cx) if fase == 0 else range(cx, b.w)
+    for x in xs:
+        for y in range(OY - alto, OY):
+            c = b.px[y][x]
+            if y == OY - alto:
+                if c:
+                    out.px[y - 1][x] = c
+            else:
+                out.px[y - 1][x] = c
+        out.px[OY - 1][x] = None
+    return out
+
+
+def materialize(b: Buf, k: float, seed: int = 0, col='#00C063', col2='#7CFFB3') -> Buf:
+    """Aparece píxel a píxel (k 0..1): lo que aún no llega se ve como chispas de código."""
+    out = Buf(b.w, b.h)
+    for y in range(b.h):
+        for x in range(b.w):
+            c = b.px[y][x]
+            if not c:
+                continue
+            r = rnd(x, y, seed + 13)
+            if r < k:
+                out.px[y][x] = c
+            elif r < k + 0.12 and (x + y) % 2 == 0:
+                out.px[y][x] = col2 if r < k + 0.05 else col
+    return out
+
+
 def heart(b: Buf, x, y, col=FX['pink']):
     glyph(b, x, y, ['XX.XX', 'XXXXX', '.XXX.', '..X..'], col)
     b.set(x + 1, y, FX['white'])
@@ -478,9 +529,12 @@ class Clip:
     descripcion: str = ''
     bucle: bool = True
     frames: list = field(default_factory=list)   # [(Buf, ms)]
+    etiquetas: list = field(default_factory=list)  # opcional: una etiqueta por fotograma (p. ej. la boca)
 
-    def add(self, b: Buf, ms: int = MS):
+    def add(self, b: Buf, ms: int = MS, etiqueta: str | None = None):
         self.frames.append((b, ms))
+        if etiqueta is not None:
+            self.etiquetas.append(etiqueta)
         return self
 
     def hold(self, ms: int):
@@ -540,6 +594,8 @@ def exportar(mascota: str, clips: list[Clip], carpeta: str, escala: int = 8, mar
             'celda': [cw, ch], 'fotogramas': len(celdas), 'ms': durs, 'duracion_ms': sum(durs),
             'ancla_pies_en_celda': {'x': OX - x0, 'y': OY - y0},
         }
+        if c.etiquetas:
+            atlas['clips'][c.nombre]['etiquetas'] = c.etiquetas
     with open(os.path.join(carpeta, 'clips.json'), 'w', encoding='utf-8') as f:
         json.dump(atlas, f, ensure_ascii=False, indent=1)
     return atlas

@@ -152,5 +152,26 @@ def mandarina() -> Clip:
     return c
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+RINGO_OJOS = {'abiertos': 'calm', 'cerrados': 'calm', 'felices': 'calm', 'sorpresa': 'wide', 'guiño': 'line',
+              'concentrado': 'open'}
+RINGO_BOCAS = {'cerrada': 'smile', 'media': 'grin', 'abierta': 'o', 'sonrisa': 'grin', 'plana': 'smile'}
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    up, lo = brazo or (0, 0)                        # (0, 0) = la pata apoyada en el suelo
+    b = draw(Pose(up=up, lo=lo, eyes=RINGO_OJOS[ojos], mouth=RINGO_BOCAS[boca], t=f / 30))
+    return stretch(b, -cabeza, OY - 14) if cabeza else b
+
+
+MASCOTA = Mascota('ringo', _dibujar, cabeza=(HX, HY), hombro=(OX + 7, OY - 9), cintura=CUT,
+                  entrada='deslizar', acento=PAL['green'], salto=3, pies=False)
+
+
 def clips():
-    return [reposo(), especial(), mandarina()]
+    return [reposo(), especial(), mandarina()] + todas(MASCOTA)

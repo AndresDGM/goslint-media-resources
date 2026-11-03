@@ -143,5 +143,26 @@ def complejidad() -> Clip:
     return c
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    ojo = {'concentrado': 'focus'}.get(ojos, OJOS[ojos])
+    ceja = {'arriba': 'up', 'concentrado': 'focus'}.get(cejas, 'flat')
+    if brazo is None and brazoB is None:            # su pose de la foto: manos juntas
+        return draw(Pose(clasp=True, eyes=ojo, mouth=BOCAS[boca], brows=ceja, headDy=cabeza))
+    up, lo = brazo or (12, 6)
+    ub, lb = brazoB or (12, 6)
+    return draw(Pose(upF=up, loF=lo, upB=ub, loB=lb, eyes=ojo, mouth=BOCAS[boca], brows=ceja,
+                     hand=MANOS[gesto], handB=MANOS[gesto] if brazoB else 'fist', headDy=cabeza))
+
+
+MASCOTA = Mascota('velasco', _dibujar, cabeza=(HX, HY), hombro=(OX + 4, OY - 12), cintura=OY - 6,
+                  entrada='caminar', acento=PAL['green'])
+
+
 def clips():
-    return [reposo(), especial(), complejidad()]
+    return [reposo(), especial(), complejidad()] + todas(MASCOTA)

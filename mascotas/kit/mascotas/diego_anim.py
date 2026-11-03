@@ -168,5 +168,25 @@ def lerp(a, b_, t):
     return a + (b_ - a) * t
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    up, lo = brazo or (40, -55)                     # en reposo, manos en la cintura
+    ub, lb = brazoB or (40, -55)
+    ojo = {'concentrado': 'focus'}.get(ojos, OJOS[ojos])
+    boc = {'cerrada': 'smirk'}.get(boca, BOCAS[boca])
+    ceja = {'arriba': 'up', 'concentrado': 'focus'}.get(cejas, 'flat')
+    return draw(Pose(upF=up, loF=lo, upB=ub, loB=lb, eyes=ojo, mouth=boc, brows=ceja, hand=MANOS[gesto],
+                     headDy=cabeza))
+
+
+MASCOTA = Mascota('diego', _dibujar, cabeza=(HX, HY), hombro=(OX + 6, OY - 12), cintura=OY - 6,
+                  entrada='caminar', acento=PAL['green'])
+
+
 def clips():
-    return [reposo(), especial(), uno_mas()]
+    return [reposo(), especial(), uno_mas()] + todas(MASCOTA)

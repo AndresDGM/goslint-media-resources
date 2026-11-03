@@ -142,5 +142,22 @@ def mosca() -> Clip:
     return c
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    up, lo = brazo or (20, 10)
+    ub, lb = brazoB or (20, 10)
+    return draw(Pose(upF=up, loF=lo, upB=ub, loB=lb, eyes=OJOS[ojos], mouth=BOCAS[boca], headDy=cabeza,
+                     tail=round(osc(f, 20, 1.2))))
+
+
+MASCOTA = Mascota('pypo', _dibujar, cabeza=(HX, HY), hombro=(OX + 4, OY - 15), cintura=CUT,
+                  entrada='deslizar', acento=PAL['yellow'], pies=False)
+
+
 def clips():
-    return [reposo(), especial(), mosca()]
+    return [reposo(), especial(), mosca()] + todas(MASCOTA)

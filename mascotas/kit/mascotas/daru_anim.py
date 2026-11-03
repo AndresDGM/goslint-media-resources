@@ -145,5 +145,25 @@ def bug() -> Clip:
     return c
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    up, lo = brazo or (8, 4)
+    ub, lb = brazoB or (8, 4)
+    ojo = {'concentrado': 'focus'}.get(ojos, OJOS[ojos])
+    boc = {'cerrada': 'smirk'}.get(boca, BOCAS[boca])
+    ceja = {'arriba': 'up', 'concentrado': 'focus'}.get(cejas, 'smug')
+    return draw(Pose(upF=up, loF=lo, upB=ub, loB=lb, eyes=ojo, mouth=boc, brows=ceja, hand=MANOS[gesto],
+                     headDy=cabeza, t=f / 2, shine=(f // 16) % 2))
+
+
+MASCOTA = Mascota('daru', _dibujar, cabeza=(HX, HY), hombro=(OX + 4, OY - 12), cintura=OY - 6,
+                  entrada='materializar', acento=PAL['glow'])
+
+
 def clips():
-    return [reposo(), especial(), bug()]
+    return [reposo(), especial(), bug()] + todas(MASCOTA)

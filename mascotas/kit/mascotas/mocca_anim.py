@@ -176,5 +176,21 @@ def cafe() -> Clip:
     return c
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    up, lo = brazo or (12, 6)
+    ub, lb = brazoB or (12, 6)
+    return draw(Pose(upF=up, loF=lo, upB=ub, loB=lb, eyes=OJOS[ojos], mouth=BOCAS[boca], headDy=cabeza, t=f * 0.12))
+
+
+MASCOTA = Mascota('mocca', _dibujar, cabeza=(HX, HY), hombro=(OX + 4, OY - 12), cintura=CUT,
+                  entrada='disparado', acento=PAL['steam'])
+
+
 def clips():
-    return [reposo(), especial(), cafe()]
+    return [reposo(), especial(), cafe()] + todas(MASCOTA)

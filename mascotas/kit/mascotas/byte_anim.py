@@ -195,5 +195,22 @@ def culebrita() -> Clip:
     return c
 
 
+
+# ---------------------------------------------------------------- acciones generales (hablar, explicar, saludar…)
+
+from acciones import Mascota, OJOS, BOCAS, MANOS, todas  # noqa: E402
+
+
+def _dibujar(brazo=None, brazoB=None, gesto='puño', ojos='abiertos', boca='cerrada', cejas=None, cabeza=0, f=0):
+    up, lo = brazo or (20, 10)
+    ub, lb = brazoB or (20, 10)
+    return stretch(draw(Pose(upF=up, loF=lo, upB=ub, loB=lb, eyes=OJOS[ojos], mouth=BOCAS[boca], code=code_at(f))),
+                   -cabeza, OY - 18)
+
+
+MASCOTA = Mascota('byte', _dibujar, cabeza=(HX, HY), hombro=(OX + 5, OY - 16), cintura=OY - 9,
+                  entrada='saltos', acento=PAL['y'], pies=False)
+
+
 def clips():
-    return [reposo(), especial(), culebrita()]
+    return [reposo(), especial(), culebrita()] + todas(MASCOTA)

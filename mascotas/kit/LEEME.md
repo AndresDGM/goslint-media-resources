@@ -77,6 +77,7 @@ Salen de `motor/acciones.py` y las tienen las 12 mascotas (todas menos Lint). Ca
 | `pensar` | Mano al mentón, puntos suspensivos… y «!» cuando le llega la idea |
 | `celebrar` | Se agacha, salta con los brazos arriba, aterriza con aplastón y confeti |
 | `sorpresa` | Respingo, ojos muy abiertos, «!» y gota de sudor |
+| `scuba` (solo Globín y ParserInt) | El baile «scuba» de TikTok: con una mano se tapa la boca y con la otra se sacude rápido al frente, de lado a lado, con rebotito, pasitos y bamboleo (bucle) |
 | `entrar` / `salir` | Entra por la izquierda y sale por la derecha (tras despedirse) a su manera: Diego, Velasco y Polo caminan; Globín flota; Byte y ParserInt van a saltos; Mocca llega disparada y derrapa; Pypo y Ringo se deslizan; DaRu se materializa y se desintegra en código |
 
 **Sincronizar la boca con la voz.** En `clips.json`, `hablar` y `explicar` traen `etiquetas` con la boca de cada fotograma, y `bocas` trae las tres bocas sueltas. Para un video, lo más fiel es elegir el fotograma de `bocas` según el volumen de la voz en cada momento (silencio → `cerrada`, medio → `media`, fuerte → `abierta`); `hablar` sirve cuando basta con que «hable» en bucle.

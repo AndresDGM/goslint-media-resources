@@ -6,6 +6,7 @@ import {GridBg, Label} from '@commons/components';
 import {POSES} from '@commons/mascot';
 import {MASCOTAS, Mascota, MascotaId, MascotaPose} from '@commons/mascotas';
 import {Hit, In} from '@commons/vertical';
+import {Ilustracion} from '@commons/ilustraciones';
 import {Actor} from '../kit';
 import {M, SC, SegId, V, talkLevel} from '../timeline';
 import {FASES} from '../fases';
@@ -103,6 +104,30 @@ const Chip: React.FC<{at: number; text: string; color?: string}> = ({at, text, c
 	);
 };
 
+/** Ejemplos en pixel art de cada fase (arriba a la derecha), sincronizados con la voz. */
+const IX = 1290;
+const IY = 250;
+const Ilustraciones: React.FC = () => {
+	const f = useCurrentFrame();
+	const s = (id: SegId) => V[id].start;
+	const hl = f >= s('s03f') ? 2 : f >= s('s03e') ? 1 : f >= s('s03d') ? 0 : -1;
+	return (
+		<>
+			<Ilustracion kind="pseint" at={M('s03a', 'pseint') - 4} out={s('s03b') - 2} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="diagrama" at={s('s03b')} out={s('s03c')} x={IX} y={IY - 20} scale={5} />
+			<Ilustracion kind="codigo" at={s('s03c') + 30} out={s('s03h')} x={IX} y={IY} scale={5} hl={hl} />
+			<Ilustracion kind="pila" at={M('s03h', 'f3') + 20} out={s('s03j') - 2} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="clase" at={s('s03j')} out={s('s03k')} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="concurso" at={s('s03k') + 10} out={s('s03n')} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="grafo" at={s('s03n') + 20} out={M('s03o', 'dp') - 2} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="dp" at={M('s03o', 'dp')} out={s('s03p')} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="segtree" at={s('s03q') + 20} out={s('s03q') + 60} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="geometria" at={s('s03q') + 62} out={s('s03r')} x={IX} y={IY} scale={5} />
+			<Ilustracion kind="equipo" at={s('s03r') + 10} out={SC.guias[1]} x={IX} y={IY} scale={5} />
+		</>
+	);
+};
+
 export const Guias: React.FC = () => {
 	const f = useCurrentFrame();
 	const a = SC.guias[0];
@@ -145,6 +170,7 @@ export const Guias: React.FC = () => {
 					</React.Fragment>
 				);
 			})}
+			<Ilustraciones />
 			{cur && cur.phase === 0 && (
 				<div style={{position: 'absolute', left: 1300, top: 520, width: 480}}>
 					<Label size={30} color={C.green}>{'// guía: Lint'}</Label>

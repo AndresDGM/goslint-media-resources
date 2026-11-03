@@ -40,6 +40,7 @@ Las hojas aprobadas están en `referencias/hojas/` y el código de cada una en `
 - **Poses (8):** reposo, saludo, señalar, pensar, una con su accesorio, ¡bien!, sorpresa y una más con personalidad (guiño, ups…).
 - **Animación en reposo en 4 tiempos:** respirar, flotar, pelo o humo moviéndose.
 - **Movimiento especial:** una acción visual que represente una idea del tema de su fase, como el machete de Lint (divide y vencerás) o el diagrama de Vee (decisiones). Se muestra en 3 fotogramas.
+- **Animaciones en `<nombre>_anim.py`:** un reposo en bucle, el movimiento especial completo (anticipación, acción y remate) y al menos un gag cómico ligado a su personalidad, y el adaptador `MASCOTA` para las acciones generales de `motor/acciones.py` (hablar, explicar, saludar…). Reglas y exportación en `LEEME.md`.
 - **Nombre y rol:** «guía de…», ligado a la fase.
 
 ## Hoja de concepto

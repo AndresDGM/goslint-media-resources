@@ -35,6 +35,8 @@ class Pose:
     t: float = 0.0
     prop: str | None = None   # cup · broom
     special: float = 0.0
+    sweep: float | None = None   # animación: posición libre de la escoba (0 derecha · 1 izquierda)
+    trash: bool = True           # animación: False = los píxeles basura los dibuja la animación
 
 
 def draw(p: Pose) -> Buf:
@@ -109,15 +111,15 @@ def draw(p: Pose) -> Buf:
             off = round(math.sin(i * 1.6 + p.t * 2))
             b.set(x + 2 + off, y - 5 - i, PAL['steam'])
     if p.prop == 'broom' or p.special > 0:  # escoba de 8 bits y los píxeles basura
-        sw = round((1 - p.special) * 6)   # la escoba barre de derecha a izquierda
+        sw = round((1 - (p.special if p.sweep is None else p.sweep)) * 6)   # la escoba barre de derecha a izquierda
         bx = x + sw - 3
         b.line(x, y, bx, by - 1, PAL['shoe'], th=1)
         b.rect(bx - 2, by - 2, 5, 2, PAL['steam']); b.rect(bx - 2, by - 1, 5, 1, '#C8902E')
-        for i in range(5):
+        for i in range(5 if p.trash else 0):
             tx, ty = OX + 8 + i * 3, by - 1 - (i % 3) * 3
             if tx > bx + 3:
                 b.set(tx, ty, PAL['trash'] if p.special < 1 else PAL['green'])
-        if p.special >= 1:
+        if p.special >= 1 and p.trash:
             for i in range(3):
                 b.set(OX + 10 + i * 4, by - 8 - (i % 2) * 2, PAL['green'])
     return b

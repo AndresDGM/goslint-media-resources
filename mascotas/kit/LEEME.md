@@ -53,6 +53,8 @@ Cada mascota tiene, además de sus 8 poses, un archivo `mascotas/<nombre>_anim.p
 | Byte | el código corre por su franja; saltito de un bloque | copias cada vez más pequeñas caen al pozo, emergen juntas y sube «AC» | `culebrita`: se come dos bugs, le crece la cola y eructa |
 | DaRu | lluvia de código y ceja de «sé algo que tú no» | invoca fragmentos, los ordena y los compila en un chulo | `bug`: presume, sale «¡BUG!», glitch dramático, se pone serio y lo arregla |
 | Diego | manos en la cintura, se balancea, «¿listo?» | las tarjetas salen de la tabla, se ordenan y la más fácil cae en «AC» | `uno_mas`: flexiones contando, el cronómetro pita: «¡UNO MÁS!» |
+| Vee | manos en la cintura, mira a los lados | dibuja en el aire un diagrama de flujo (inicio, decisión, sí ✓ / no ✗) | `bucle`: sigue una flecha que gira en un bucle hasta marearse y lo corta con «BREAK» |
+| Marco | flota: el humo y la llama se mecen | se deshace en humo, viaja y se rearma en otro lugar | `detector`: el detector de humo pita por su culpa; abanica, estornuda humo y vuelve a pitar |
 | Globín | flota: el globo se mece con retraso | sopla tres veces, se infla con rebote, despega con confeti y aterriza | `pinchazo`: un «WA» lo pincha, sale disparado desinflándose y se reinfla |
 | Mocca | inquieto: cabecea al ritmo y da un sorbo | barre los píxeles basura avanzando; se vuelven memoria «LIBRE» | `cafe`: tres sorbos, vibra, sale disparado y vuelve derrapando |
 | ParserInt | punta del sombrero al viento y saltito de cabra | crece la llama verde y aparece la tarjeta con su ✓ | `nam`: arranca una página del libro y se la come |
@@ -61,9 +63,9 @@ Cada mascota tiene, además de sus 8 poses, un archivo `mascotas/<nombre>_anim.p
 | Ringo | zen: respira lento y sorbe de su coco | cae un «WA» temblando, ni se inmuta, sorbe y pasa a «AC» | `mandarina`: le cae una mandarina en la cabeza y un pajarito se posa encima |
 | Velasco | manos juntas, asiente («ajá») | lee línea por línea, marca en rojo y traza el chulo verde | `complejidad`: «O(n²)» da «TLE», suda, piensa y queda «O(n)» |
 
-### Acciones generales (las 10 mascotas)
+### Acciones generales (las 12 mascotas)
 
-Salen de `motor/acciones.py`. Cada mascota solo aporta un adaptador (`MASCOTA` al final de su `_anim.py`) que traduce un vocabulario común (brazo, gesto de la mano, ojos, boca, cejas) a sus propios parámetros.
+Salen de `motor/acciones.py` y las tienen las 12 mascotas (todas menos Lint). Cada mascota solo aporta un adaptador (`MASCOTA` al final de su `_anim.py`) que traduce un vocabulario común (brazo, gesto de la mano, ojos, boca, cejas) a sus propios parámetros.
 
 | Clip | Qué hace |
 |---|---|
@@ -103,3 +105,7 @@ Con `--contactos <carpeta>` también escribe hojas de contactos con cada fotogra
 - **Rótulos en español y con tildes:** el texto de 3 × 5 de `animar.text` admite `¡ ¿ Á É Í Ó Ú Ñ`.
 - **Determinista:** todo depende del número de fotograma; nada de azar sin semilla.
 - **No se cambian las poses aprobadas:** si una animación necesita un parámetro nuevo, se añade con un valor por defecto que no altere los sprites existentes.
+
+### Vee y Marco
+
+Su código sigue en `referencias/codigo/` y no se modifica; sus animaciones están en `mascotas/vee_anim.py` y `mascotas/marco_anim.py`, que lo importan desde ahí. Marco se dibuja **sin contorno blanco** (`OUTLINE = False`), como su sprite aprobado. Marco no tiene boca: cuando habla se enciende bajo sus ojos una rendija de luz del mismo amarillo, que crece con la voz (boca `media` y `abierta`).

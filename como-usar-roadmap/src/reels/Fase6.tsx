@@ -50,7 +50,7 @@ const Body: React.FC = () => {
 				<PhaseCard fa={FA} w={960} />
 			</In>
 			{/* DaRu entra cuando empieza su frase */}
-			<Mascota id="daru" x={540} y={812} scale={10} at={q} entra talk={talkLevel(f, 'daru')} speaking={speakingNow(f, 'daru')} />
+			<Mascota id="daru" x={540} y={812} scale={10} at={q} talk={talkLevel(f, 'daru')} speaking={speakingNow(f, 'daru')} />
 			{TEMAS.map((t, i) => {
 				const v = FA.videos.find((x) => x.n === t.n)!;
 				return (

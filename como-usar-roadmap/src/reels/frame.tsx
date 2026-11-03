@@ -42,8 +42,9 @@ export type VReelDef = {
 	lint: Key[];
 };
 
-/** Cierre corto común: logotipo, «¿Te gusta programar?» y «¡Únete a GOSLINT!» (final de s07). */
-export const FINAL: [number, number] = [M('s07', 'gusta') - 34, V.s07.end + 45];
+/** Cierre corto común: logotipo, «¿Te gusta programar?» y «¡Únete a GOSLINT!» (final de s07).
+ * Empieza justo en «¿Te gusta…» para no arrastrar «…nos vemos en el primer video», que solo tiene sentido en el video largo. */
+export const FINAL: [number, number] = [M('s07', 'gusta') - 3, V.s07.end + 45];
 
 /**
  * Tramos ajustados a la voz: de cada segmento se toma [inicio − pre, fin + post], así que ninguna
@@ -95,7 +96,7 @@ export const FinalV: React.FC = () => {
 	const gusta = M('s07', 'gusta');
 	const unete = M('s07', 'unete');
 	const nos = M('s07', 'unete') + 30;
-	const logoAt = gusta - 30;
+	const logoAt = FINAL[0];
 	const p = tween(f, logoAt, logoAt + 40, 0, 1, outExpo);
 	return (
 		<>

@@ -36,7 +36,7 @@ const Body: React.FC = () => {
 			<Hit at={k('f3') + 2} x={540} y={560} />
 
 			{/* Polo entra en la palabra «Polo» y habla de una estructura a la vez */}
-			<Mascota id="polo" x={800} y={1180} scale={11} at={polo} out={moca - 2} entra sale talk={talkLevel(f, 'polo')} speaking={speakingNow(f, 'polo')} />
+			<Mascota id="polo" x={800} y={1180} scale={11} at={polo} out={moca - 2} talk={talkLevel(f, 'polo')} speaking={speakingNow(f, 'polo')} />
 			<Hit at={polo + 2} x={800} y={950} big />
 			<In at={sinPrisa - 6} out={moca - 2} x={60} y={450} w={960} from="up" exit="left">
 				<Big size={64}>
@@ -50,7 +50,7 @@ const Body: React.FC = () => {
 			))}
 
 			{/* Mocca entra en su frase: la programación orientada a objetos */}
-			<Mascota id="mocca" x={260} y={1180} scale={11} at={moca} entra talk={talkLevel(f, 'mocca')} speaking={speakingNow(f, 'mocca')} />
+			<Mascota id="mocca" x={260} y={1180} scale={11} at={moca} talk={talkLevel(f, 'mocca')} speaking={speakingNow(f, 'mocca')} />
 			<Hit at={moca + 2} x={260} y={950} big />
 			<In at={moca} x={60} y={450} w={960} from="up" impact={false}>
 				<Big size={64}>

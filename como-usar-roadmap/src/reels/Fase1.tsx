@@ -46,7 +46,7 @@ const Body: React.FC = () => {
 			</In>
 			<Hit at={k('f1') + 2} x={540} y={560} />
 			{/* Vee entra cuando empieza su frase */}
-			<Mascota id="vee" x={800} y={1180} scale={11} at={vee} entra talk={talkLevel(f, 'vee')} speaking={speakingNow(f, 'vee')} />
+			<Mascota id="vee" x={800} y={1180} scale={11} at={vee} talk={talkLevel(f, 'vee')} speaking={speakingNow(f, 'vee')} />
 			<Hit at={vee + 2} x={800} y={950} big />
 			<In at={vee} x={60} y={450} w={960} from="up" impact={false}>
 				<Big size={64}>

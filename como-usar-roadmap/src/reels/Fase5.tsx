@@ -50,7 +50,7 @@ const Body: React.FC = () => {
 			<Hit at={k('f5') + 2} x={360} y={560} />
 
 			{/* Velasco entra al final de la frase de Lint */}
-			<Mascota id="velasco" pose="wave" x={860} y={720} scale={9} at={velasco} entra talk={talkLevel(f, 'velasco')} speaking={speakingNow(f, 'velasco')} />
+			<Mascota id="velasco" pose="wave" x={860} y={720} scale={9} at={velasco} talk={talkLevel(f, 'velasco')} speaking={speakingNow(f, 'velasco')} />
 			<Hit at={velasco + 2} x={860} y={520} big />
 
 			{/* Tres bloques, cada uno en su marca de voz */}

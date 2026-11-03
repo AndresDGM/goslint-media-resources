@@ -5,8 +5,8 @@ import {SFX} from './sfx';
 import {SEG_IDS, V, seg, voFrames} from './timeline';
 
 /** Niveles de mezcla (scripts/simulate_mix.py los lee de aquí para medir sin renderizar). */
-const MUSIC = 0.5;
-const DUCKED = 0.07;
+const MUSIC = 0.425; // −15 % respecto al nivel original (0,5)
+const DUCKED = 0.0595; // −15 % (0,07)
 const VOICE = 1;
 const SFX_GAIN = 0.8;
 

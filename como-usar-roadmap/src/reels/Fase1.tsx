@@ -4,6 +4,7 @@ import {C, MONO} from '@commons/theme';
 import {pop} from '@commons/lib';
 import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
+import {Ilustracion} from '@commons/ilustraciones';
 import {Big, Hit, In} from '@commons/vertical';
 import {M, V, talkLevel} from '../timeline';
 import {FASES, hitoDe} from '../fases';
@@ -52,14 +53,17 @@ const Body: React.FC = () => {
 					Con <span style={{color: '#4F8BE8'}}>Vee</span>: pensar algorítmicamente
 				</Big>
 			</In>
-			{FA.videos.slice(0, 3).map((v, i) => (
-				<In key={v.n} at={k('pseint') + 30 + i * 6} x={60} y={820 + i * 96} w={560} from="left" impact={false}>
+			{FA.videos.slice(0, 1).map((v, i) => (
+				<In key={v.n} at={vee + 24 + i * 6} x={60} y={990 + i * 96} w={560} from="left" impact={false}>
 					<VideoTile n={v.n} t={v.t} w={560} size={0.85} />
 				</In>
 			))}
-			<In at={M('s03b', 'antes')} x={60} y={1108} w={560} from="left">
+			<In at={M('s03b', 'antes')} x={60} y={1090} w={560} from="left">
 				<VideoTile n={hito.n} t={hito.t} hito w={560} size={0.85} />
 			</In>
+			{/* ejemplos: PSeInt mientras Lint lo nombra; diagrama de flujo con Vee */}
+			<Ilustracion kind="pseint" at={k('pseint') - 4} out={vee - 2} x={265} y={870} scale={5.4} />
+			<Ilustracion kind="diagrama" at={vee + 4} out={V.s03b.end + 18} x={60} y={640} scale={4.6} />
 		</>
 	);
 };

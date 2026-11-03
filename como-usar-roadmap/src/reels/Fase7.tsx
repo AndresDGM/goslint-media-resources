@@ -4,6 +4,7 @@ import {C, MONO} from '@commons/theme';
 import {pop, tween} from '@commons/lib';
 import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
+import {Ilustracion} from '@commons/ilustraciones';
 import {Hit, In} from '@commons/vertical';
 import {M, V, talkLevel} from '../timeline';
 import {FASES, hitoDe} from '../fases';
@@ -73,6 +74,8 @@ const Body: React.FC = () => {
 				<VideoTile n={hito.n} t={hito.t} hito w={560} size={0.85} />
 			</In>
 			<Hit at={despega + 2} x={540} y={1100} big />
+			{/* ejemplo: tres personas, un computador y globos mientras Lint presenta la fase */}
+			<Ilustracion kind="equipo" at={k('f7') + 10} out={dieg - 6} x={183} y={765} scale={7} />
 		</>
 	);
 };

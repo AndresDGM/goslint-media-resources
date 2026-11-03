@@ -4,6 +4,7 @@ import {C, MONO} from '@commons/theme';
 import {pop} from '@commons/lib';
 import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
+import {Ilustracion} from '@commons/ilustraciones';
 import {Big, Hit, In} from '@commons/vertical';
 import {M, V, talkLevel} from '../timeline';
 import {FASES, hitoDe} from '../fases';
@@ -71,6 +72,8 @@ const Body: React.FC = () => {
 			<In at={pelear} x={60} y={1080} w={960} from="left" impact={false}>
 				<VideoTile n={hito.n} t={hito.t} hito w={960} size={1} />
 			</In>
+			{/* ejemplo: segment tree mientras Lint presenta la fase */}
+			<Ilustracion kind="segtree" at={M('s03p', 'f6') + 12} out={q - 2} x={183} y={765} scale={7} />
 		</>
 	);
 };

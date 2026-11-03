@@ -2,6 +2,7 @@ import React from 'react';
 import {useCurrentFrame} from 'remotion';
 import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
+import {Ilustracion} from '@commons/ilustraciones';
 import {Big, Hit, In} from '@commons/vertical';
 import {M, V, talkLevel} from '../timeline';
 import {FASES, hitoDe} from '../fases';
@@ -43,7 +44,7 @@ const Body: React.FC = () => {
 				</Big>
 			</In>
 			{estructuras.map((v, i) => (
-				<In key={v.n} at={sinPrisa + 30 + i * 12} out={moca - 2} x={60} y={820 + i * 96} w={560} from="left" exit="left" impact={false}>
+				<In key={v.n} at={sinPrisa + 30 + i * 12} out={moca - 2} x={60} y={850 + i * 96} w={560} from="left" exit="left" impact={false}>
 					<VideoTile n={v.n} t={v.t} w={560} size={0.85} />
 				</In>
 			))}
@@ -56,12 +57,15 @@ const Body: React.FC = () => {
 					La <span style={{color: '#F2B04A'}}>programación orientada a objetos</span>
 				</Big>
 			</In>
-			<In at={poo} x={60} y={700} w={960} from="left" impact={false}>
-				<VideoTile n={pooVideo.n} t={pooVideo.t} w={960} size={1} />
+			<In at={poo} x={440} y={960} w={580} from="left" impact={false}>
+				<VideoTile n={pooVideo.n} t={pooVideo.t} w={580} size={0.85} />
 			</In>
-			<In at={poo + 10} x={440} y={1000} w={580} from="left" impact={false}>
+			<In at={poo + 10} x={440} y={1060} w={580} from="left" impact={false}>
 				<VideoTile n={hito.n} t={hito.t} hito w={580} size={0.85} />
 			</In>
+			{/* ejemplos: pila, cola y árbol con Polo; una clase con Mocca */}
+			<Ilustracion kind="pila" at={sinPrisa} out={moca - 2} x={60} y={560} scale={4.4} />
+			<Ilustracion kind="clase" at={poo - 10} out={V.s03j.end + 18} x={440} y={650} scale={4.6} />
 		</>
 	);
 };

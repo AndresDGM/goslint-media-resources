@@ -4,6 +4,7 @@ import {C, MONO} from '@commons/theme';
 import {pop} from '@commons/lib';
 import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
+import {Ilustracion} from '@commons/ilustraciones';
 import {ContestClock} from '@commons/parts';
 import {Big, Hit, In} from '@commons/vertical';
 import {M, V, talkLevel} from '../timeline';
@@ -77,6 +78,8 @@ const Body: React.FC = () => {
 					<ContestClock at={reloj} x={540} y={70} size={110} />
 				</div>
 			</In>
+			{/* ejemplo: marcador de concurso mientras habla Marco */}
+			<Ilustracion kind="concurso" at={V.s03l.start + 6} out={marcoOut} x={450} y={460} scale={4.6} />
 		</>
 	);
 };

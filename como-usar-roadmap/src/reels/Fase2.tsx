@@ -1,3 +1,4 @@
+import {Ilustracion} from '@commons/ilustraciones';
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
 import {C, MONO, SANS} from '@commons/theme';
@@ -74,6 +75,8 @@ const Body: React.FC = () => {
 				<VideoTile n={hito.n} t={hito.t} hito w={960} />
 			</In>
 			<Hit at={V.s03g.start + 6} x={540} y={1000} big />
+			{/* ejemplo: el mismo código en C++, Java y Python mientras Lint presenta la fase */}
+			<Ilustracion kind="codigo" at={k('f2') + 24} out={V.s03d.start - 10} x={230} y={800} scale={4.4} />
 		</>
 	);
 };

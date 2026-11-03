@@ -3,6 +3,7 @@ import {useCurrentFrame} from 'remotion';
 import {C} from '@commons/theme';
 import {POSES} from '@commons/mascot';
 import {Mascota} from '@commons/mascotas';
+import {Ilustracion} from '@commons/ilustraciones';
 import {Big, Hit, In} from '@commons/vertical';
 import {M, V, talkLevel} from '../timeline';
 import {FASES, hitoDe} from '../fases';
@@ -49,7 +50,7 @@ const Body: React.FC = () => {
 			<Hit at={k('f5') + 2} x={360} y={560} />
 
 			{/* Velasco entra al final de la frase de Lint */}
-			<Mascota id="velasco" pose="wave" x={860} y={660} scale={9} at={velasco} talk={talkLevel(f, 'velasco')} />
+			<Mascota id="velasco" pose="wave" x={860} y={720} scale={9} at={velasco} talk={talkLevel(f, 'velasco')} />
 			<Hit at={velasco + 2} x={860} y={520} big />
 
 			{/* Tres bloques, cada uno en su marca de voz */}
@@ -59,6 +60,8 @@ const Body: React.FC = () => {
 			<In at={o('dp') + 20} x={380} y={990 + 82} w={640} from="left" impact={false}>
 				<VideoTile n={hito.n} t={hito.t} hito w={640} size={0.9} />
 			</In>
+			{/* ejemplo: grafo recorrido por niveles mientras Lint presenta la fase */}
+			<Ilustracion kind="grafo" at={k('f5') + 20} out={o('grafos') - 2} x={60} y={730} scale={5} />
 		</>
 	);
 };

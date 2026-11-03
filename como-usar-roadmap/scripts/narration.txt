@@ -10,7 +10,7 @@
 [excited] ¿Quieres aprender a programar | y {llegar}llegar algún día a una maratón de programación? | [curious] ¿Pero {donde}no sabes por dónde empezar? | [warmly] {tranquilo}Tranquilo: para eso hicimos {mapa}este mapa. | En este video te cuento {como}cómo está organizado el canal, | {entrar}dónde entrar según lo que ya sepas | y {practicar}cómo avanzar de una fase a la siguiente.
 
 == s02
-El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {ocho}ocho fases. | [warmly] Está pensado para que alguien {nunca}que nunca ha programado | entre por {cero}la fase cero | y salga, al final, {lista}lista para entrenar en serio para una maratón. | Por eso no sigue {libro}el orden de un libro de algoritmos, | sino {aprende}el orden en que de verdad se aprende.
+El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {ocho}ocho fases. | [warmly] Está pensado para que una persona {nunca}que nunca ha programado | entre por {cero}la fase cero | y salga, al final, {lista}lista para entrenar en serio para una maratón. | Por eso no sigue {libro}el orden de un libro de algoritmos, | sino {aprende}el orden en que de verdad se aprende.
 
 # s03: Lint presenta cada fase y cada guía dice, con su voz, en qué nos acompaña (voz por sección: «== id @Mascota», ver ../commons/voces.json).
 == s03a @Lint

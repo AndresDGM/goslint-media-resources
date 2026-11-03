@@ -17,7 +17,7 @@ El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {och
 [curious] ¿Cómo es ese camino? | [excited] {guias}¡Cada fase tiene su guía! | {f1}Las fases cero y uno son de lógica pura, con {pseint}PSeInt y diagramas de flujo.
 
 == s03b @Vee
-[warmly] ¡Hola! Te enseño a pensar como un algoritmo, {antes}antes de escribir código.
+[warmly] ¡Hola! Te enseño a pensar algorítmicamente, {antes}antes de escribir código.
 
 == s03c @Lint
 {f2}En la fase dos, los mismos temas en código real, con un especialista por lenguaje.
@@ -56,13 +56,13 @@ El roadmap de GOSLINT tiene {noventa}noventa y nueve videos | repartidos en {och
 {f5}La fase cinco: grafos, teoría de números y programación dinámica.
 
 == s03o @Velasco
-[calm] Ahí te enseño {dp}cuándo sirve un greedy y cuándo toca DP.
+[calm] Conmigo recorres {grafos}grafos, {numeros}teoría de números | y {dp}programación dinámica, pensando antes de programar.
 
 == s03p @Lint
 {f6}La fase seis es nivel maratón.
 
 == s03q @DaRu
-[mischievously] ¡Los problemas más difíciles! {serio}Y los resolvemos en serio.
+[excited] ¡Árboles, segment trees, strings y geometría! | {pelear}Lo que necesitas para pelear los problemas difíciles de una maratón.
 
 == s03r @Lint
 {f7}Y la fase siete es el modo maratón.

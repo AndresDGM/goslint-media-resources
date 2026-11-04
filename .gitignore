@@ -22,3 +22,9 @@ programacion-competitiva/public/photos/
 como-usar-roadmap/public/photos/
 !commons/public/**
 que-es-un-algoritmo/public/photos/
+
+# basura local de macOS y de pnpm (no se versiona)
+.DS_Store
+.pnpm-store/
+*.log
+

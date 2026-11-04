@@ -57,13 +57,13 @@ const SHOTS: [string, number, number, number][] = [
 	['2:53', 2.3, 960, 900], // PD del charco
 	['2:57', 2.8, 440, 690], // PP de Vee (gota)
 	['2:59', 1.6, 1560, 350], // la tarjeta
-	['3:01', 1.7, RX, 700], // el robot presenta
+	['3:01', 1.25, 1150, 560], // el robot presenta
 	['3:03', 1, 960, 540], // pull-back a 2P
 	['3:05', 1.8, VX, 640], // PM de Vee (congelado)
 	['3:07', 1, 960, 540], // fija
 	['3:12', 1.3, 960, 560], // zoom a la línea «Mezclar»
 	['3:14', 1, 960, 540],
-	['3:30', 2.1, 1090, 480], // zoom a la marca del robot
+	['3:30', 1.12, 960, 520], // zoom a la marca del robot
 	['3:33', 1, 960, 540],
 ];
 const CAM: CamKey[] = [];
@@ -409,8 +409,8 @@ export const sfxB4: Sfx[] = [
 	s(t('2:15'), 'hit', 0.4),
 	s(t('2:17'), 'draw', 0.3),
 	...tm(['2:19', '2:20', '2:20.7', '2:21.4', '2:22', '2:22.6'], 'typing', 0.22),
-	...tm(['2:22.8', '2:23.5'], 'blip', 0.3),
-	s(t('2:24'), 'ticks', 0.3),
+	...tm(['2:23', '2:23.8'], 'blip', 0.3),
+	s(t('2:24.3'), 'ticks', 0.3),
 	// 4.2
 	s(t('2:27'), 'blip', 0.3),
 	s(t('2:29'), 'whoosh', 0.3),
@@ -450,5 +450,5 @@ export const sfxB4: Sfx[] = [
 	s(t('3:27'), 'ticks', 0.25),
 	s(t('3:30'), 'ac', 0.35),
 	s(t('3:33'), 'whoosh', 0.35),
-	s(t('3:33.2'), 'slide', 0.3),
+	s(t('3:33.5'), 'slide', 0.3),
 ];

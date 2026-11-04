@@ -1,0 +1,28 @@
+{
+  "name": "goslint-que-es-un-algoritmo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video educativo de Goslint: ¿qué es un algoritmo? (React + Remotion, pixel art, narración de Vee)",
+  "scripts": {
+    "studio": "node ../commons/scripts/sync-public.mjs && remotion studio",
+    "still": "node ../commons/scripts/sync-public.mjs && remotion still QueEsUnAlgoritmo out/still.png",
+    "render": "node ../commons/scripts/sync-public.mjs && remotion render QueEsUnAlgoritmo out/goslint-que-es-un-algoritmo.mp4",
+    "typecheck": "tsc --noEmit",
+    "commons": "node ../commons/scripts/sync-public.mjs",
+    "qa": "bash ../commons/scripts/qa.sh out/goslint-que-es-un-algoritmo.mp4 out/qa"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@remotion/cli": "4.0.534",
+    "@remotion/media-utils": "4.0.534",
+    "@remotion/transitions": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

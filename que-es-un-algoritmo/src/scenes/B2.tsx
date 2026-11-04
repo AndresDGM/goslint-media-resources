@@ -206,10 +206,10 @@ const RobotTram: React.FC = () => {
 	const f = useCurrentFrame();
 	const jump = lin(f, t('1:05'), t('1:05.4'));
 	let x = ROBOT_X;
-	let y = TABLE_Y;
+	let y = FLOOR;
 	if (f >= t('1:05')) {
 		x = ROBOT_X + (1220 - ROBOT_X) * jump;
-		y = TABLE_Y + (FLOOR - TABLE_Y) * jump;
+		y = FLOOR;
 	}
 	if (f >= BOARD_AT) {
 		x = FORM_X[2] + trainShift(f);
@@ -324,7 +324,7 @@ const KitchenLayer: React.FC = () => {
 
 			<RobotTram />
 			<Robot
-				x={ROBOT_X} y={TABLE_Y} at={t('1:08.9')} pose={pose} face={face} holdF={holdF}
+				x={ROBOT_X} y={FLOOR} at={t('1:08.9')} pose={pose} face={face} holdF={holdF}
 				chest={chest} chestColor={chest === '∞' || chest === '@' ? C.amber : C.green} spin={spin} tilt={tilt}
 			/>
 		</div>
@@ -377,7 +377,7 @@ const Birds: React.FC = () => {
 const Hud: React.FC = () => {
 	const f = useCurrentFrame();
 	if (f < t('1:00') || f >= t('1:31.2')) return null;
-	const op = tween(f, t('1:00'), t('1:00.5')) * (1 - tween(f, t('1:30.5'), t('1:31.2')));
+	const op = tween(f, t('1:00'), t('1:00.5')) * (1 - tween(f, t('1:30.5'), t('1:31.2'))) * (1 - Math.min(tween(f, t('1:09.6'), t('1:10')), 1 - tween(f, t('1:18.6'), t('1:19'))));
 	return (
 		<>
 			{CARDS.map((c, i) => (

@@ -412,6 +412,7 @@ export const Cam: React.FC<{keys: CamKey[]; children: React.ReactNode; shakeAt?:
 			z = za + (zb - za) * k; cx = xa + (xb - xa) * k; cy = ya + (yb - ya) * k;
 		}
 	}
+	if (z >= 1) { cx = Math.min(1920 - 960 / z, Math.max(960 / z, cx)); cy = Math.min(1080 - 540 / z, Math.max(540 / z, cy)); }
 	let sx = 0, sy = 0;
 	for (const s of shakeAt) if (f >= s && f < s + 9) { const d = 1 - (f - s) / 9; sx += Math.sin(f * 3.1) * 12 * d; sy += Math.cos(f * 2.7) * 9 * d; }
 	return (

@@ -420,10 +420,10 @@ const COLS = [344, 452, 560];
 const ROWS = [190, 294];
 const PKG_CX = 496; // columna B: centro del paquete en el marco
 const PKG_TOP = 324; // su posición al caer desde B2
-const PKG_HAND = 540; // altura de las manos del robot (en el marco)
+const PKG_HAND = 564; // centro de las manos del robot (en el marco)
 /** Robot que sube desde abajo y recoge el paquete (coordenadas del mundo). */
-const RB_X = 3300 + PKG_CX - 59;
-const RB_FEET = 612;
+const RB_X = 3300 + PKG_CX - 44;
+const RB_FEET = 600;
 
 const Maquina: React.FC = () => {
 	const f = useCurrentFrame();
@@ -488,7 +488,6 @@ const Maquina: React.FC = () => {
 					</div>
 				)}
 			</Show>
-			<Tag x={560} y={470} at={t('1:58')} out={t('2:02.6')} color={C.white} size={28}>B2</Tag>
 			<Checklist
 				x={720}
 				y={180}
@@ -548,7 +547,7 @@ const CarryRobot: React.FC = () => {
 		pose = 'walk';
 		face = 'happy';
 	}
-	return <Robot x={x} y={y} scale={4} pose={pose} face={face} holdF={hold ? <Pkg /> : undefined} chest={hold ? '✓' : undefined} />;
+	return <Robot x={x} y={y} scale={3} pose={pose} face={face} holdF={hold ? <Pkg /> : undefined} chest={hold ? '✓' : undefined} />;
 };
 
 /** Monitor pixelado con la ficha «ALGORITMO»; Vee la empuja fuera de cuadro. */

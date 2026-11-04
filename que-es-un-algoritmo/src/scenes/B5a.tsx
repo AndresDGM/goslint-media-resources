@@ -194,7 +194,7 @@ export const B5a: React.FC = () => {
 	const kettleTip = f >= t('4:06.4') ? 40 * tween(f, t('4:06.4'), t('4:06.9')) : 0;
 	const kettleBoil = between(f, '4:02', '4:04.8');
 
-	const panelOut = f < t('4:36.8') ? 1 : 1 - tween(f, t('4:36.8'), t('4:37.6'));
+	const panelOut = f < t('4:30') ? 1 : 1 - tween(f, t('4:30'), t('4:30.6'));
 	const showQuestion = f < t('4:25');
 
 	return (
@@ -258,7 +258,7 @@ export const B5a: React.FC = () => {
 					)}
 
 					{/* interfaz de decisión: pregunta, botones y teclado */}
-					{f >= t('4:15') && f < t('4:38') && (
+					{f >= t('4:15') && f < t('4:30.6') && (
 						<div style={{position: 'absolute', left: 1010, top: 120, width: 600, height: 430, background: 'rgba(8,12,10,0.94)', border: `3px solid ${C.green}`, boxShadow: `0 0 40px ${C.green}55`, transform: `scale(${0.3 + 0.7 * pop(f, t('4:15'), 12, 220, 0.6)})`, opacity: panelOut}}>
 							<div style={{position: 'absolute', left: 0, right: 0, top: 26, textAlign: 'center', fontFamily: MONO, fontWeight: 800, fontSize: 34, color: C.white}}>
 								{showQuestion ? '¿DESEA AGREGAR AZÚCAR?' : '¿CUÁNTAS?'}

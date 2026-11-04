@@ -293,7 +293,7 @@ const Comparison: React.FC = () => {
 			</div>
 
 			{f < T.shrink && <Stamp x={700} y={345} at={t('5:30')} size={30} />}
-			{f < T.shrink && <Stamp x={1700} y={705} at={t('5:31')} size={30} />}
+			{f < T.shrink && <Stamp x={1720} y={160} at={t('5:31')} size={30} />}
 			{f < T.shrink && <Tag x={1460} y={800} size={44} at={t('5:33')} out={t('5:35')}>QUÉ</Tag>}
 			{f < T.shrink && <Tag x={1460} y={800} size={44} at={t('5:35')} out={t('5:36')}>CUÁNTO</Tag>}
 			{f < T.shrink && <Tag x={1460} y={800} size={44} at={t('5:36')} out={t('5:37')}>DÓNDE</Tag>}

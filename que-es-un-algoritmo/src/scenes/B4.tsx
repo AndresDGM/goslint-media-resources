@@ -166,13 +166,13 @@ const WaterDrop: React.FC = () => {
 	const b = t('3:19.5');
 	const e = t('3:21');
 	if (f < a || f > e) return null;
-	let x = 1600;
+	let x = 1800;
 	let y: number;
 	if (f < b) y = lerp(260, 720, tween(f, a, b, 0, 1, inCubic));
 	else {
 		const k = tween(f, b, e, 0, 1);
 		y = 720 - 70 * Math.abs(Math.sin(k * Math.PI * 1.5));
-		x = lerp(1600, 1760, k);
+		x = lerp(1800, 1880, k);
 	}
 	return <div style={{position: 'absolute', left: x, top: y, width: 18, height: 24, background: '#5AA9FF', transform: 'translate(-50%, -50%)', boxShadow: '0 0 12px #5AA9FF88'}} />;
 };
@@ -284,6 +284,7 @@ const world = (f: number) => (
 		<div style={{position: 'absolute', left: -1400, top: FLOOR, width: 1400, height: 1080 - FLOOR, background: '#2A2A26'}} />
 		<div style={{position: 'absolute', left: 1920, top: 0, width: 1400, height: FLOOR, background: '#18201C'}} />
 		<div style={{position: 'absolute', left: 1920, top: FLOOR, width: 1400, height: 1080 - FLOOR, background: '#2A2A26'}} />
+		<div style={{position: 'absolute', left: -1400, top: 1080, width: 4720, height: 800, background: '#2A2A26'}} />
 		{f < t('2:45') && <div style={{position: 'absolute', left: 1120, top: TABLE_Y - 13 * PX}}><CoffeeBag /></div>}
 		{f < t('2:45') && <div style={{position: 'absolute', left: 1260, top: TABLE_Y - 12 * PX}}><MilkJug /></div>}
 		<Memoria />
@@ -338,7 +339,6 @@ export const B4: React.FC = () => {
 
 	/* Mini-tarjetas del bloque 2 (3:09–3:14) y etiquetas de preguntas (3:14–3:21). */
 	const minis: [string, string, number][] = [['👣', 'PASOS', t('3:09')], ['1-2-3', 'ORDEN', t('3:10')], ['🏁', 'TERMINA', t('3:11')]];
-	const TAG_Y = 770;
 
 	return (
 		<Cam keys={CAM} shakeAt={[t('2:50.5')]}>
@@ -368,26 +368,26 @@ export const B4: React.FC = () => {
 			{/* 4.4: sello, mini-tarjetas, línea flotante, etiquetas, gota y confeti */}
 			{f < t('3:21') && <Stamp x={940} y={420} at={t('3:07')} />}
 			{f >= t('3:09') && f < t('3:14') && minis.map(([icon, label, at], i) => (
-				<div key={label} style={{position: 'absolute', left: 585 + i * 260, top: 690}}>
-					<ConceptCard icon={icon} label={label} on={f >= at} />
+				<div key={label} style={{position: 'absolute', left: 1290 + i * 204, top: CARD_Y}}>
+					<ConceptCard icon={icon} label={label} on={f >= at} size={0.8} />
 				</div>
 			))}
 			<FloatLine />
-			<Tag x={640} y={TAG_Y} at={t('3:14')} out={t('3:21')}>
+			<Tag x={1480} y={610} at={t('3:14')} out={t('3:21')}>
 				<span style={{display: 'inline-block', width: 40, height: 14, background: '#8A6446', marginRight: 12, position: 'relative', verticalAlign: 'middle'}}>
 					<span style={{position: 'absolute', left: -4, right: -4, top: 5, height: 4, background: C.red, transform: 'rotate(-20deg)'}} />
 				</span>
 				¿DÓNDE?
 			</Tag>
-			<Tag x={960} y={TAG_Y} at={t('3:16')} out={t('3:21')}>
+			<Tag x={1480} y={690} at={t('3:16')} out={t('3:21')}>
 				<span style={{display: 'inline-block', verticalAlign: 'middle', marginRight: 12}}><Cup fill="black" scale={3} /></span>
 				¿RECIPIENTE?
 			</Tag>
-			<Tag x={1330} y={TAG_Y} at={t('3:17')} out={t('3:21')}>
+			<Tag x={1480} y={770} at={t('3:17')} out={t('3:21')}>
 				<span style={{display: 'inline-block', verticalAlign: 'middle', marginRight: 12}}><Spoon scale={3} load="coffee" /></span>
 				¿CON QUÉ?
 			</Tag>
-			<Tag x={1640} y={TAG_Y} at={t('3:18')} out={t('3:21')}>¿AGUA?</Tag>
+			<Tag x={1480} y={850} at={t('3:18')} out={t('3:21')}>¿AGUA?</Tag>
 			<WaterDrop />
 			<Confetti />
 

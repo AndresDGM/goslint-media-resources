@@ -1,0 +1,400 @@
+{
+ "nota": "Tomas crudas de ElevenLabs para la narración de Vee, tal como las entregó la API (sin recortar ni normalizar).",
+ "voz": {
+  "nombre": "Ivonny",
+  "voice_id": "dMeBcNV5QVbfDqzti5Jl",
+  "estado": "confirmada"
+ },
+ "modelo": "eleven_v4",
+ "formato": "mp3_44100_128",
+ "carpeta": "public/audio/vo/raw",
+ "intervenciones": 64,
+ "caracteres": 5138,
+ "duracion_total_s": 360.78,
+ "tomas": [
+  {
+   "id": "V01",
+   "caracteres": 76,
+   "duracion_s": 4.519,
+   "bytes": 72767
+  },
+  {
+   "id": "V02",
+   "caracteres": 32,
+   "duracion_s": 2.769,
+   "bytes": 44764
+  },
+  {
+   "id": "V03",
+   "caracteres": 34,
+   "duracion_s": 1.724,
+   "bytes": 28046
+  },
+  {
+   "id": "V04",
+   "caracteres": 40,
+   "duracion_s": 3.553,
+   "bytes": 57303
+  },
+  {
+   "id": "V05",
+   "caracteres": 54,
+   "duracion_s": 3.866,
+   "bytes": 62318
+  },
+  {
+   "id": "V06",
+   "caracteres": 46,
+   "duracion_s": 4.676,
+   "bytes": 75275
+  },
+  {
+   "id": "V07",
+   "caracteres": 161,
+   "duracion_s": 10.762,
+   "bytes": 172660
+  },
+  {
+   "id": "V08",
+   "caracteres": 112,
+   "duracion_s": 7.471,
+   "bytes": 119997
+  },
+  {
+   "id": "V09",
+   "caracteres": 56,
+   "duracion_s": 3.553,
+   "bytes": 57303
+  },
+  {
+   "id": "V10",
+   "caracteres": 70,
+   "duracion_s": 7.158,
+   "bytes": 114981
+  },
+  {
+   "id": "V11",
+   "caracteres": 85,
+   "duracion_s": 5.799,
+   "bytes": 93247
+  },
+  {
+   "id": "V12",
+   "caracteres": 100,
+   "duracion_s": 7.079,
+   "bytes": 113727
+  },
+  {
+   "id": "V13",
+   "caracteres": 17,
+   "duracion_s": 1.228,
+   "bytes": 20105
+  },
+  {
+   "id": "V14",
+   "caracteres": 112,
+   "duracion_s": 8.281,
+   "bytes": 132954
+  },
+  {
+   "id": "V15",
+   "caracteres": 29,
+   "duracion_s": 3.161,
+   "bytes": 51034
+  },
+  {
+   "id": "V16",
+   "caracteres": 66,
+   "duracion_s": 5.564,
+   "bytes": 89486
+  },
+  {
+   "id": "V17",
+   "caracteres": 76,
+   "duracion_s": 4.911,
+   "bytes": 79037
+  },
+  {
+   "id": "V18",
+   "caracteres": 76,
+   "duracion_s": 5.721,
+   "bytes": 91994
+  },
+  {
+   "id": "V19",
+   "caracteres": 116,
+   "duracion_s": 7.236,
+   "bytes": 116235
+  },
+  {
+   "id": "V20",
+   "caracteres": 106,
+   "duracion_s": 6.766,
+   "bytes": 108712
+  },
+  {
+   "id": "V21",
+   "caracteres": 102,
+   "duracion_s": 7.967,
+   "bytes": 127938
+  },
+  {
+   "id": "V22",
+   "caracteres": 85,
+   "duracion_s": 5.407,
+   "bytes": 86978
+  },
+  {
+   "id": "V23",
+   "caracteres": 63,
+   "duracion_s": 4.519,
+   "bytes": 72767
+  },
+  {
+   "id": "V24",
+   "caracteres": 78,
+   "duracion_s": 6.113,
+   "bytes": 98263
+  },
+  {
+   "id": "V25",
+   "caracteres": 15,
+   "duracion_s": 1.411,
+   "bytes": 23030
+  },
+  {
+   "id": "V26",
+   "caracteres": 16,
+   "duracion_s": 1.489,
+   "bytes": 24284
+  },
+  {
+   "id": "V27",
+   "caracteres": 31,
+   "duracion_s": 2.586,
+   "bytes": 41838
+  },
+  {
+   "id": "V28",
+   "caracteres": 65,
+   "duracion_s": 4.519,
+   "bytes": 72767
+  },
+  {
+   "id": "V29",
+   "caracteres": 39,
+   "duracion_s": 3.866,
+   "bytes": 62318
+  },
+  {
+   "id": "V30",
+   "caracteres": 87,
+   "duracion_s": 7.314,
+   "bytes": 117489
+  },
+  {
+   "id": "V31",
+   "caracteres": 170,
+   "duracion_s": 11.807,
+   "bytes": 189378
+  },
+  {
+   "id": "V32",
+   "caracteres": 144,
+   "duracion_s": 8.751,
+   "bytes": 140477
+  },
+  {
+   "id": "V33",
+   "caracteres": 123,
+   "duracion_s": 7.967,
+   "bytes": 127938
+  },
+  {
+   "id": "V34",
+   "caracteres": 67,
+   "duracion_s": 4.284,
+   "bytes": 69006
+  },
+  {
+   "id": "V35",
+   "caracteres": 53,
+   "duracion_s": 4.911,
+   "bytes": 79037
+  },
+  {
+   "id": "V36",
+   "caracteres": 51,
+   "duracion_s": 5.146,
+   "bytes": 82798
+  },
+  {
+   "id": "V37",
+   "caracteres": 56,
+   "duracion_s": 3.239,
+   "bytes": 52287
+  },
+  {
+   "id": "V38",
+   "caracteres": 65,
+   "duracion_s": 3.971,
+   "bytes": 63990
+  },
+  {
+   "id": "V39",
+   "caracteres": 63,
+   "duracion_s": 4.284,
+   "bytes": 69006
+  },
+  {
+   "id": "V40",
+   "caracteres": 69,
+   "duracion_s": 4.754,
+   "bytes": 76529
+  },
+  {
+   "id": "V41",
+   "caracteres": 15,
+   "duracion_s": 1.567,
+   "bytes": 25538
+  },
+  {
+   "id": "V42",
+   "caracteres": 54,
+   "duracion_s": 5.721,
+   "bytes": 91994
+  },
+  {
+   "id": "V43",
+   "caracteres": 82,
+   "duracion_s": 4.989,
+   "bytes": 80291
+  },
+  {
+   "id": "V44",
+   "caracteres": 64,
+   "duracion_s": 4.206,
+   "bytes": 67752
+  },
+  {
+   "id": "V45",
+   "caracteres": 70,
+   "duracion_s": 5.407,
+   "bytes": 86978
+  },
+  {
+   "id": "V46",
+   "caracteres": 66,
+   "duracion_s": 4.598,
+   "bytes": 74021
+  },
+  {
+   "id": "V47",
+   "caracteres": 31,
+   "duracion_s": 2.586,
+   "bytes": 41838
+  },
+  {
+   "id": "V48",
+   "caracteres": 144,
+   "duracion_s": 8.594,
+   "bytes": 137969
+  },
+  {
+   "id": "V49",
+   "caracteres": 32,
+   "duracion_s": 2.769,
+   "bytes": 44764
+  },
+  {
+   "id": "V50",
+   "caracteres": 25,
+   "duracion_s": 2.691,
+   "bytes": 43510
+  },
+  {
+   "id": "V51",
+   "caracteres": 112,
+   "duracion_s": 8.438,
+   "bytes": 135461
+  },
+  {
+   "id": "V52",
+   "caracteres": 162,
+   "duracion_s": 10.031,
+   "bytes": 160957
+  },
+  {
+   "id": "V53",
+   "caracteres": 92,
+   "duracion_s": 5.721,
+   "bytes": 91994
+  },
+  {
+   "id": "V54",
+   "caracteres": 109,
+   "duracion_s": 6.426,
+   "bytes": 103278
+  },
+  {
+   "id": "V55",
+   "caracteres": 114,
+   "duracion_s": 8.124,
+   "bytes": 130446
+  },
+  {
+   "id": "V56",
+   "caracteres": 130,
+   "duracion_s": 8.124,
+   "bytes": 130446
+  },
+  {
+   "id": "V57",
+   "caracteres": 88,
+   "duracion_s": 5.956,
+   "bytes": 95755
+  },
+  {
+   "id": "V58",
+   "caracteres": 158,
+   "duracion_s": 9.561,
+   "bytes": 153434
+  },
+  {
+   "id": "V59",
+   "caracteres": 165,
+   "duracion_s": 12.748,
+   "bytes": 204425
+  },
+  {
+   "id": "V60",
+   "caracteres": 57,
+   "duracion_s": 3.004,
+   "bytes": 48526
+  },
+  {
+   "id": "V61",
+   "caracteres": 94,
+   "duracion_s": 6.687,
+   "bytes": 107458
+  },
+  {
+   "id": "V62",
+   "caracteres": 119,
+   "duracion_s": 7.549,
+   "bytes": 121251
+  },
+  {
+   "id": "V63",
+   "caracteres": 134,
+   "duracion_s": 8.829,
+   "bytes": 141731
+  },
+  {
+   "id": "V64",
+   "caracteres": 115,
+   "duracion_s": 6.348,
+   "bytes": 102025
+  }
+ ]
+}

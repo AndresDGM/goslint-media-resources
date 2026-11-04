@@ -1,0 +1,25 @@
+{
+ "nota": "Registro de la generación de la voz de Vee para «¿Qué es un algoritmo?». Tomas crudas, una por intervención, en serie, sin reintentos. 1 crédito por carácter enviado (etiquetas incluidas), según la métrica de los proyectos anteriores.",
+ "fecha": "2026-11-04",
+ "modelo": "eleven_v4",
+ "formato": "mp3_44100_128",
+ "voz": {
+  "nombre": "Ivonny",
+  "voice_id": "dMeBcNV5QVbfDqzti5Jl",
+  "estado": "confirmada"
+ },
+ "intervenciones": 64,
+ "caracteres_enviados": 5138,
+ "caracteres_sin_etiquetas": 4939,
+ "creditos_estimados": 5138,
+ "duracion_total_audio_s": 360.78,
+ "cuenta": {
+  "tier": "starter",
+  "limite_caracteres": 40000,
+  "contador_antes": 3335,
+  "contador_despues": 5391
+ },
+ "nota_consumo": "El contador de la suscripción no reflejó de inmediato los 5.138 caracteres enviados; el gasto real debe confirmarse en el panel. El límite de 40.000 no se agotó.",
+ "archivos": "public/audio/vo/raw/V01.mp3 … V64.mp3",
+ "manifiesto": "scripts/vo_manifest.json"
+}

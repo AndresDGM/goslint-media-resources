@@ -23,8 +23,18 @@ const STEP = 1100;
 const CX0 = 1180;
 
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
-const lin = (f: number, ks: [number, number][]) =>
-	interpolate(f, ks.map((k) => k[0]), ks.map((k) => k[1]), {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+const lin = (f: number, ks: [number, number][]) => {
+	// El re-mapeo a la voz puede juntar dos claves en el mismo fotograma; se conserva la última.
+	const safe: [number, number][] = [];
+	for (const k of ks) {
+		const last = safe[safe.length - 1];
+		if (last && k[0] <= last[0]) safe[safe.length - 1] = [last[0], k[1]];
+		else safe.push(k);
+	}
+	if (safe.length === 0) return 0;
+	if (safe.length === 1) return safe[0][1];
+	return interpolate(f, safe.map((k) => k[0]), safe.map((k) => k[1]), {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+};
 
 /* ================================================================== cámara del mundo */
 

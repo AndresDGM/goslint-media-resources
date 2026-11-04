@@ -8,7 +8,7 @@ export const outCubic = Easing.out(Easing.cubic);
 export const inOutCubic = Easing.inOut(Easing.cubic);
 export const inCubic = Easing.in(Easing.cubic);
 
-/** Clamped interpolation over [a, b] frames. */
+/** Clamped interpolation over [a, b] frames. Si el tramo mide 0, salta al valor final. */
 export const tween = (
 	f: number,
 	a: number,
@@ -16,7 +16,7 @@ export const tween = (
 	from = 0,
 	to = 1,
 	easing: (t: number) => number = outCubic,
-) => interpolate(f, [a, b], [from, to], {...clamp, easing});
+) => (b <= a ? (f < a ? from : to) : interpolate(f, [a, b], [from, to], {...clamp, easing}));
 
 /** Snappy spring that starts at frame `start`. */
 export const pop = (f: number, start: number, damping = 14, stiffness = 180, mass = 0.6) =>

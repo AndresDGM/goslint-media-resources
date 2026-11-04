@@ -61,7 +61,7 @@ const Scroll: React.FC = () => {
 	const h = 40 + 380 * tween(f, t('3:37'), t('3:39'));
 	const o = 1 - tween(f, t('3:39.2'), t('3:40.5'));
 	return (
-		<div style={{position: 'absolute', left: 1080, top: 150, width: 420, height: h, background: '#E9DFC4', border: '6px solid #8A6446', opacity: o, overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)'}}>
+		<div style={{position: 'absolute', left: 1260, top: 150, width: 420, height: h, background: '#E9DFC4', border: '6px solid #8A6446', opacity: o, overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)'}}>
 			<div style={{fontFamily: MONO, fontWeight: 800, fontSize: 32, color: '#2A160C', padding: '20px 24px'}}>ALGORITMO 2</div>
 			{Array.from({length: 9}).map((_, i) => (
 				<div key={i} style={{position: 'absolute', left: 28, top: 100 + i * 36, width: 364 - (i % 3) * 60, height: 6, background: '#B9A77E'}} />
@@ -95,7 +95,7 @@ const LINES: Line[] = [
 /** Línea activa (▶) del algoritmo. Índice = número de paso (L1 = índice 1). */
 const ACTIVE: [string, number][] = [
 	['3:41', 1], ['3:43.5', -1], ['3:45', 2], ['3:55', 3], ['4:05', 4], ['4:11.2', 5],
-	['4:25', 7], ['4:28.5', 8], ['4:30', 9], ['4:38', 10],
+	['4:25', 7], ['4:28.5', 8], ['4:30', 9], ['4:36', -1], ['4:38', 10],
 ];
 /** Líneas ya ejecutadas (✓). */
 const DONE: [string, number][] = [
@@ -151,14 +151,14 @@ const CAM: CamKey[] = [
 	[t('4:03.8'), 1, 960, 540],
 	[t('4:04.1'), 1.08, 1000, 540],   // zoom-punch del silbido
 	[t('4:04.6'), 1, 960, 540],
-	[t('4:05.6'), 1.3, 1250, 650],    // PD de la taza
-	[t('4:09.6'), 1.3, 1250, 650],
+	[t('4:05.6'), 1.3, 1180, 650],    // PD de la taza
+	[t('4:09.6'), 1.3, 1180, 650],
 	[t('4:10.6'), 1, 960, 540],
 	[t('4:22.6'), 1, 960, 540],
 	[t('4:23.2'), 1.06, 1100, 500],   // zoom-punch al pulsar SÍ
 	[t('4:24.0'), 1, 960, 540],
-	[t('4:29.8'), 1.3, 1300, 680],    // PD del azucarero y la taza
-	[t('4:34.0'), 1.3, 1300, 680],
+	[t('4:29.8'), 1.3, 1180, 650],    // PD del azucarero y la taza
+	[t('4:34.0'), 1.3, 1180, 650],
 	[t('4:35.0'), 1, 960, 540],
 ];
 

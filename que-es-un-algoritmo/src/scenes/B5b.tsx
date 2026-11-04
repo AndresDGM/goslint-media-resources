@@ -168,9 +168,9 @@ const KitchenScene: React.FC = () => {
 			{/* flecha que rodea el bloque SI (camino B) */}
 			{f >= t('4:46') && f < t('4:49') && (
 				<svg width={1920} height={1080} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
-					<path d="M 700 345 C 770 345, 770 470, 700 470" fill="none" stroke={C.blue} strokeWidth={6}
+					<path d="M 728 300 C 800 300, 800 470, 728 470" fill="none" stroke={C.blue} strokeWidth={6}
 						strokeDasharray={320} strokeDashoffset={(1 - ramp(f, t('4:46'), t('4:46.8'))) * 320} />
-					<polygon points="684,470 706,456 706,484" fill={C.blue} opacity={ramp(f, t('4:46.6'), t('4:46.9'))} />
+					<polygon points="712,470 732,456 732,484" fill={C.blue} opacity={ramp(f, t('4:46.6'), t('4:46.9'))} />
 				</svg>
 			)}
 		</>
@@ -184,7 +184,7 @@ const SingleCard: React.FC = () => {
 	if (f >= T.cmp || (f >= T.split && f < T.mergeEnd)) return null;
 	const st = cardState(f);
 	return (
-		<InstrCard x={40} y={60} w={640} lines={ALGO2} size={22} active={st.active} done={st.done} dim={st.dim}
+		<InstrCard x={30} y={60} w={680} lines={ALGO2} size={20} active={st.active} done={st.done} dim={st.dim}
 			blockHl={[6, 10]} title="algoritmo2.txt" />
 	);
 };
@@ -228,11 +228,11 @@ const SplitLayer: React.FC = () => {
 			<Tag x={480} y={100} at={T.split} out={T.merge} color={C.green}>CAMINO A</Tag>
 			<Tag x={1440} y={100} at={T.split} out={T.merge} color={C.blue}>CAMINO B</Tag>
 
-			<div style={{position: 'absolute', left: lerp(230, 40, m), top: lerp(150, 60, m), transform: `scale(${lerp(1, 1.375, m)})`, transformOrigin: '0 0'}}>
-				<InstrCard x={0} y={0} w={500} lines={ALGO2} size={16} active={cardA.active} done={cardA.done} title="algoritmo2.txt" blockHl={[6, 10]} />
+			<div style={{position: 'absolute', left: lerp(210, 30, m), top: lerp(150, 60, m), transform: `scale(${lerp(1, 1.26, m)})`, transformOrigin: '0 0'}}>
+				<InstrCard x={0} y={0} w={540} lines={ALGO2} size={16} active={cardA.active} done={cardA.done} title="algoritmo2.txt" blockHl={[6, 10]} />
 			</div>
-			<div style={{position: 'absolute', left: 1190 + 900 * m, top: 150, opacity: sa}}>
-				<InstrCard x={0} y={0} w={500} lines={ALGO2} size={16} active={cardB.active} done={cardB.done} dim={cardB.dim} title="algoritmo2.txt" accent={C.blue} blockHl={[6, 10]} />
+			<div style={{position: 'absolute', left: 1170 + 900 * m, top: 150, opacity: sa}}>
+				<InstrCard x={0} y={0} w={540} lines={ALGO2} size={16} active={cardB.active} done={cardB.done} dim={cardB.dim} title="algoritmo2.txt" accent={C.blue} blockHl={[6, 10]} />
 			</div>
 
 			{/* icono de la taza de cada camino */}
@@ -294,10 +294,10 @@ const Comparison: React.FC = () => {
 
 			{f < T.shrink && <Stamp x={700} y={345} at={t('5:30')} size={30} />}
 			{f < T.shrink && <Stamp x={1700} y={705} at={t('5:31')} size={30} />}
-			{f < T.shrink && <Tag x={1460} y={800} at={t('5:33')} out={t('5:35')}>QUÉ</Tag>}
-			{f < T.shrink && <Tag x={1460} y={800} at={t('5:35')} out={t('5:36')}>CUÁNTO</Tag>}
-			{f < T.shrink && <Tag x={1460} y={800} at={t('5:36')} out={t('5:37')}>DÓNDE</Tag>}
-			{f < T.shrink && <Tag x={1460} y={800} at={t('5:37')} out={T.shrink}>ORDEN</Tag>}
+			{f < T.shrink && <Tag x={1460} y={800} size={44} at={t('5:33')} out={t('5:35')}>QUÉ</Tag>}
+			{f < T.shrink && <Tag x={1460} y={800} size={44} at={t('5:35')} out={t('5:36')}>CUÁNTO</Tag>}
+			{f < T.shrink && <Tag x={1460} y={800} size={44} at={t('5:36')} out={t('5:37')}>DÓNDE</Tag>}
+			{f < T.shrink && <Tag x={1460} y={800} size={44} at={t('5:37')} out={T.shrink}>ORDEN</Tag>}
 			{f >= t('5:37') && f < T.shrink && range(0, 16).map((i) => (
 				<Counter key={i} x={1030} y={176 + i * 34.1} value={i + 1} at={t('5:37') + i * 2} size={24} color={C.amber} />
 			))}
@@ -351,7 +351,7 @@ const VeeTop: React.FC = () => {
 	const cur = [...ACTS].reverse().find(([, a]) => f >= a);
 	return (
 		<>
-			<Vee x={veeX(f)} act={cur?.[0]} actAt={cur?.[1]} />
+			<Vee x={veeX(f)} scale={f >= T.cmp ? 6 : undefined} act={cur?.[0]} actAt={cur?.[1]} />
 			<ThoughtBubble />
 		</>
 	);

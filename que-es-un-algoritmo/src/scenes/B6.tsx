@@ -50,8 +50,8 @@ const LINES: Line[] = [
 	{text: 'Verter 200 ml de agua caliente'},
 	{text: 'Añadir 100 ml de leche'},
 	{text: 'Revolver con la cuchara'},
-	{text: 'Dejar reposar un minuto'},
-	{text: 'Servir en la mesa'},
+	{text: 'Dejar la cuchara en la mesa'},
+	{text: 'Servir el café'},
 	{text: 'FIN'},
 ];
 const LINE_SHOWN = LINES.map((_, i) => t('5:52.6') + i * 4);
@@ -212,7 +212,7 @@ const PCScene: React.FC = () => {
 	const dim = tween(f, t('6:12'), t('6:14'), 0, 0.84);
 	const chatIn = f >= t('6:21.5');
 	const CHAT_X = 1300;
-	const CHAT_Y = 520;
+	const CHAT_Y = 720;
 
 	return (
 		<>
@@ -301,13 +301,13 @@ const Frase: React.FC = () => {
 	if (f < t('6:13.6')) return null;
 	const p = pop(f, t('6:13.6'), 14, 200, 0.6);
 	const y = tween(f, t('6:21'), t('6:22.5'), 360, 120);
-	const ulW = tween(f, t('6:16.8'), t('6:17.4'), 0, 337);
+	const ulW = tween(f, t('6:16.8'), t('6:17.4'), 0, 346);
 	const breathe = 1 + 0.004 * Math.sin((f - t('6:18')) / 12);
 	return (
 		<div style={{position: 'absolute', left: 660, top: y, width: 1040, height: 270, background: 'rgba(8,12,10,0.94)', border: `3px solid ${C.green}`, boxShadow: `0 0 40px ${C.green}44`, opacity: Math.min(1, p * 1.5), transform: `scale(${(0.92 + 0.08 * p) * breathe})`}}>
-			<TypeLine text="NO HACE LO QUE QUEREMOS." at={t('6:14.2')} x={520} y={80} size={64} color={C.white} cps={22} font={MONO} weight={800} />
-			<TypeLine text="HACE LO QUE LE INDICAMOS." at={t('6:15.4')} x={520} y={180} size={64} color={C.white} cps={22} font={MONO} weight={800} />
-			<div style={{position: 'absolute', left: 613, top: 226, width: ulW, height: 6, background: C.green, boxShadow: `0 0 16px ${C.green}`}} />
+			<TypeLine text="NO HACE LO QUE QUEREMOS." at={t('6:14.2')} x={60} y={45} center={false} size={64} color={C.white} cps={22} font={MONO} weight={800} />
+			<TypeLine text="HACE LO QUE LE INDICAMOS." at={t('6:15.4')} x={60} y={145} center={false} size={64} color={C.white} cps={22} font={MONO} weight={800} />
+			<div style={{position: 'absolute', left: 636, top: 232, width: ulW, height: 6, background: C.green, boxShadow: `0 0 16px ${C.green}`}} />
 		</div>
 	);
 };

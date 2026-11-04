@@ -184,7 +184,7 @@ const FloatLine: React.FC = () => {
 	if (f < a || f >= t('3:21')) return null;
 	const p = pop(f, a, 12, 220, 0.6);
 	return (
-		<div style={{position: 'absolute', left: 960, top: 600, transform: `translate(-50%, -50%) scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 2), fontFamily: MONO, fontWeight: 800, fontSize: 52, color: C.green, whiteSpace: 'nowrap', textShadow: `0 0 18px ${C.green}66`}}>
+		<div style={{position: 'absolute', left: 960, top: 555, transform: `translate(-50%, -50%) scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 2), fontFamily: MONO, fontWeight: 800, fontSize: 52, color: C.green, whiteSpace: 'nowrap', textShadow: `0 0 18px ${C.green}66`}}>
 			Mezclar los ingredientes
 		</div>
 	);
@@ -225,8 +225,8 @@ const SplitView: React.FC = () => {
 	const sil = '#3A4541';
 	return (
 		<>
-			<div style={{position: 'absolute', left: 0, top: 0, width: 960, height: 1080, background: C.panel, opacity: 0.97 * vis}} />
-			<div style={{position: 'absolute', left: 960, top: 0, width: 960, height: 1080, background: C.panel2, opacity: 0.97 * vis}} />
+			<div style={{position: 'absolute', left: 0, top: 0, width: 960, height: 1080, background: C.panel, opacity: vis}} />
+			<div style={{position: 'absolute', left: 960, top: 0, width: 960, height: 1080, background: C.panel2, opacity: vis}} />
 			<div style={{position: 'absolute', left: 958, top: 0, width: 4, height: 1080, background: C.green, opacity: vis}} />
 			<div style={{position: 'absolute', left: 40, top: 60, fontFamily: MONO, fontSize: 26, color: C.dim, opacity: vis}}>PERSONA</div>
 			<div style={{position: 'absolute', left: 1000, top: 60, fontFamily: MONO, fontSize: 26, color: C.dim, opacity: vis}}>ROBOT</div>
@@ -279,6 +279,11 @@ const Roller: React.FC = () => {
 const world = (f: number) => (
 	<>
 		<Kitchen cupOnShelf light={1} />
+		{/* extensión de la cocina fuera del encuadre (la cámara puede asomarse) */}
+		<div style={{position: 'absolute', left: -1400, top: 0, width: 1400, height: FLOOR, background: '#18201C'}} />
+		<div style={{position: 'absolute', left: -1400, top: FLOOR, width: 1400, height: 1080 - FLOOR, background: '#2A2A26'}} />
+		<div style={{position: 'absolute', left: 1920, top: 0, width: 1400, height: FLOOR, background: '#18201C'}} />
+		<div style={{position: 'absolute', left: 1920, top: FLOOR, width: 1400, height: 1080 - FLOOR, background: '#2A2A26'}} />
 		{f < t('2:45') && <div style={{position: 'absolute', left: 1120, top: TABLE_Y - 13 * PX}}><CoffeeBag /></div>}
 		{f < t('2:45') && <div style={{position: 'absolute', left: 1260, top: TABLE_Y - 12 * PX}}><MilkJug /></div>}
 		<Memoria />
@@ -357,32 +362,32 @@ export const B4: React.FC = () => {
 			<InstrCard
 				x={cardX} y={CARD_Y} w={CARD_W} lines={lines} title="algoritmo.txt" at={t('2:18')}
 				shownAt={[t('2:19'), t('2:20'), t('2:20.7'), t('2:21.4'), t('2:22'), t('2:22.6')]}
-				active={active} done={done} dim={dim} marks={marks}
+				active={active} done={done} dim={dim} marks={marks} out={t('3:21')}
 			/>
 
 			{/* 4.4: sello, mini-tarjetas, línea flotante, etiquetas, gota y confeti */}
-			<Stamp x={940} y={420} at={t('3:07')} />
+			{f < t('3:21') && <Stamp x={940} y={420} at={t('3:07')} />}
 			{f >= t('3:09') && f < t('3:14') && minis.map(([icon, label, at], i) => (
 				<div key={label} style={{position: 'absolute', left: 585 + i * 260, top: 690}}>
 					<ConceptCard icon={icon} label={label} on={f >= at} />
 				</div>
 			))}
 			<FloatLine />
-			<Tag x={640} y={TAG_Y} at={t('3:14')}>
+			<Tag x={640} y={TAG_Y} at={t('3:14')} out={t('3:21')}>
 				<span style={{display: 'inline-block', width: 40, height: 14, background: '#8A6446', marginRight: 12, position: 'relative', verticalAlign: 'middle'}}>
 					<span style={{position: 'absolute', left: -4, right: -4, top: 5, height: 4, background: C.red, transform: 'rotate(-20deg)'}} />
 				</span>
 				¿DÓNDE?
 			</Tag>
-			<Tag x={960} y={TAG_Y} at={t('3:16')}>
+			<Tag x={960} y={TAG_Y} at={t('3:16')} out={t('3:21')}>
 				<span style={{display: 'inline-block', verticalAlign: 'middle', marginRight: 12}}><Cup fill="black" scale={3} /></span>
 				¿RECIPIENTE?
 			</Tag>
-			<Tag x={1330} y={TAG_Y} at={t('3:17')}>
+			<Tag x={1330} y={TAG_Y} at={t('3:17')} out={t('3:21')}>
 				<span style={{display: 'inline-block', verticalAlign: 'middle', marginRight: 12}}><Spoon scale={3} load="coffee" /></span>
 				¿CON QUÉ?
 			</Tag>
-			<Tag x={1640} y={TAG_Y} at={t('3:18')}>¿AGUA?</Tag>
+			<Tag x={1640} y={TAG_Y} at={t('3:18')} out={t('3:21')}>¿AGUA?</Tag>
 			<WaterDrop />
 			<Confetti />
 

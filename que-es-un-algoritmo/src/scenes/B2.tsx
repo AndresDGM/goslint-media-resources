@@ -42,8 +42,8 @@ const CAR_W = 250;
 const CAR_H = 110;
 const FORM_X = [1100, 1380, 1660];   // posición de los vagones enganchados
 const TOP_X = [1080, 1360, 1640];    // posición de las mini-tarjetas en la fila superior
-const TOP_Y = 250;
-const PILL_X = [1025, 1385];         // dos mini-tarjetas del orden (1:08–1:19)
+const TOP_Y = 300;
+const PILL_X = [930, 1430];         // dos mini-tarjetas del orden (1:08–1:19)
 const HUD_X = 1268;                  // índice de conceptos (esquina superior derecha)
 const HUD_ON = ['1:00', '1:03', '1:08', '1:19'];
 /** Shift del tren (px) a partir de 1:05, a 300 px/s hacia la izquierda. */
@@ -312,7 +312,7 @@ const KitchenLayer: React.FC = () => {
 			<Pour x={CUP_X} y0={545} y1={TABLE_Y} on={f >= t('1:12.6') && f < t('1:13.1')} />
 
 			{/* Charco de agua (2.3) y salpicadura */}
-			<Puddle size={puddleSize} x={CUP_X} color="#5AA9FF" />
+			<Puddle size={puddleSize} x={CUP_X} y={TABLE_Y} color="#5AA9FF" />
 			<Falling x={CUP_X} y0={700} y1={650} at={t('1:13')} dur={12} color="#5AA9FF" n={16} spread={180} />
 
 			{/* Mini-tarjetas del orden: «1. Tomar taza» / «2. Verter agua» y el intercambio */}
@@ -341,7 +341,7 @@ const Pills: React.FC = () => {
 	const xT = PILL_X[0] + (PILL_X[1] - PILL_X[0]) * sw;
 	const xV = PILL_X[1] - (PILL_X[1] - PILL_X[0]) * sw;
 	const pill = (x: number, label: string) => (
-		<div style={{position: 'absolute', left: x - 165, top: TOP_Y - 55, width: 330, height: 110, boxSizing: 'border-box', border: `4px solid ${wrong ? C.amber : C.green}`, background: wrong ? 'rgba(255,181,71,0.14)' : 'rgba(0,192,99,0.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: MONO, fontWeight: 800, fontSize: 38, color: C.white, whiteSpace: 'nowrap', opacity: Math.min(1, p * 2), transform: `scale(${0.6 + 0.4 * p})`}}>
+		<div style={{position: 'absolute', left: x - 190, top: TOP_Y - 55, width: 380, height: 110, boxSizing: 'border-box', border: `4px solid ${wrong ? C.amber : C.green}`, background: wrong ? 'rgba(255,181,71,0.14)' : 'rgba(0,192,99,0.14)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: MONO, fontWeight: 800, fontSize: 34, color: C.white, whiteSpace: 'nowrap', opacity: Math.min(1, p * 2), transform: `scale(${0.6 + 0.4 * p})`}}>
 			{label}
 		</div>
 	);

@@ -2,7 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {C} from '@commons/theme';
 import {Grain, Scanlines, Vignette} from '@commons/components';
-import {BLOCKS, BlockId} from './timeline';
+import {BLOCKS, BlockId, VO} from './timeline';
 import {B1, sfxB1} from './scenes/B1';
 import {B2, sfxB2} from './scenes/B2';
 import {B3, sfxB3} from './scenes/B3';
@@ -28,9 +28,16 @@ export const QueEsUnAlgoritmo: React.FC = () => (
 		<Vignette strength={0.55} />
 		<Scanlines opacity={0.04} />
 		<Grain opacity={0.05} />
+		{/* Voz de Vee: una toma por intervención, en su ventana real. */}
+		{Object.entries(VO).map(([id, v]) => (
+			<Sequence key={id} from={v.start} durationInFrames={v.end - v.start} layout="none">
+				<Audio src={staticFile(`audio/vo/raw/${id}.mp3`)} volume={0.9} />
+			</Sequence>
+		))}
+		{/* SFX por debajo de la voz (−12 dB aproximadamente) para que no compitan con la locución. */}
 		{SFX.map((x, i) => (
 			<Sequence key={i} from={x.at} durationInFrames={x.dur ?? 80} layout="none">
-				<Audio src={staticFile(`audio/sfx/${x.file}.wav`)} volume={x.vol * 0.8} />
+				<Audio src={staticFile(`audio/sfx/${x.file}.wav`)} volume={x.vol * 0.6} />
 			</Sequence>
 		))}
 	</AbsoluteFill>

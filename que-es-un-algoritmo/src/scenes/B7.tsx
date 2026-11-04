@@ -12,7 +12,7 @@ import {Sfx, s} from '../sfx';
 const VEE_X = 420;
 const ROBOT_X = 1250;
 const CARD_Y = 380;
-const SLOT_X = [560, 840, 1120, 1400];
+const SLOT_X = [960 - 435, 960 - 145, 960 + 145, 960 + 435];
 const CARDS: [string, string][] = [['👣', 'PASOS'], ['🚃', 'SECUENCIA'], ['1-2-3', 'ORDEN'], ['🏁', 'FIN']];
 const TILES: [string, string][] = [['🥣', 'RECETA'], ['2+3', 'SUMA'], ['🗺️', 'MAPA'], ['🥤', 'MÁQUINA']];
 
@@ -145,16 +145,16 @@ export const B7: React.FC = () => {
 					{/* Carrusel en miniatura */}
 					{f >= t('7:02') && f < t('7:04.1') && (
 						<div style={{position: 'absolute', left: 760, top: 330, width: 1000, height: 260, overflow: 'hidden', opacity: carouselOpacity}}>
-							<div style={{position: 'absolute', left: 20 - carouselK * 400, top: 0, display: 'flex', gap: 40}}>
-								{TILES.map(([icon, label]) => (
+							<div style={{position: 'absolute', left: 0, top: 20, display: 'flex', gap: 30}}>
+								{TILES.map(([icon, label], i) => (
 									<div
 										key={label}
 										style={{
-											width: 360, height: 260, flexShrink: 0, background: '#0E110F', border: `4px solid ${C.green}`,
+											width: 220, height: 220, flexShrink: 0, transform: `scale(${pop(f, t('7:02') + i * 4, 12, 240, 0.6)})`, background: '#0E110F', border: `4px solid ${C.green}`,
 											display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 18,
 										}}
 									>
-										<div style={{fontSize: 120, lineHeight: 1, fontFamily: MONO, fontWeight: 800, color: C.white}}>{icon}</div>
+										<div style={{fontSize: 84, lineHeight: 1, fontFamily: MONO, fontWeight: 800, color: C.white}}>{icon}</div>
 										<div style={{fontFamily: MONO, fontWeight: 800, fontSize: 34, color: C.green}}>{label}</div>
 									</div>
 								))}

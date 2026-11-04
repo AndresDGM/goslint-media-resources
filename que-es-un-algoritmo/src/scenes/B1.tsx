@@ -33,8 +33,9 @@ const CAM: CamKey[] = [
 	[t('0:25'), 1.5, 1230, 520], // tilt-up con el trofeo
 	[t('0:27'), 1.5, 1230, 520],
 	[t('0:27.1'), 1.5, 700, 540], // corte a PM de Vee
-	[t('0:31.8'), 1.5, 700, 540],
-	[t('0:32.2'), 1.1, 960, 560], // vuelta a 2P
+	[t('0:28.6'), 1.5, 700, 540],
+	[t('0:29.2'), 1.1, 960, 560], // vuelta a 2P
+	[t('0:32.2'), 1.1, 960, 560],
 	[t('0:36'), 1.1, 960, 560],
 	[t('0:38'), 1.4, 686, 600], // zoom lento a Vee
 ];
@@ -241,7 +242,7 @@ export const B1: React.FC = () => {
 					tilt={robotTilt(f)}
 					chest={chest.glyph}
 					chestColor={chest.color}
-					holdF={f >= t('0:23.5') && f < t('0:33') ? <CoffeeBag /> : undefined}
+					holdF={f >= t('0:23.5') && f < t('0:33') ? <div style={{transform: f >= t('0:25') && f < t('0:32') ? 'translate(-6px, -70px)' : undefined}}><CoffeeBag /></div> : undefined}
 				/>
 
 				{/* 1.2 · «Prepara café» */}

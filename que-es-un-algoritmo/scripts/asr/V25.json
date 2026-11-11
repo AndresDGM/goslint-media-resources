@@ -1,0 +1,19 @@
+{
+ "text": "Dos cucharadas.",
+ "segments": [
+  {
+   "words": [
+    {
+     "word": "Dos",
+     "start": 0.0,
+     "end": 0.3199999928474426
+    },
+    {
+     "word": "cucharadas.",
+     "start": 0.3199999928474426,
+     "end": 1.36
+    }
+   ]
+  }
+ ]
+}

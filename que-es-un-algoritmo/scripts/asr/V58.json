@@ -1,0 +1,124 @@
+{
+ "text": "Hoy existen sistemas que interpretan lo que escribimos con mucha más flexibilidad, pero incluso ellos funcionan con instrucción y reglas que alguien diseñó.",
+ "segments": [
+  {
+   "words": [
+    {
+     "word": "Hoy",
+     "start": 0.0,
+     "end": 0.3199999928474426
+    },
+    {
+     "word": "existen",
+     "start": 0.3199999928474426,
+     "end": 0.7999999523162842
+    },
+    {
+     "word": "sistemas",
+     "start": 0.7999999523162842,
+     "end": 1.1999999284744263
+    },
+    {
+     "word": "que",
+     "start": 1.1999999284744263,
+     "end": 1.3600000143051147
+    },
+    {
+     "word": "interpretan",
+     "start": 1.3600000143051147,
+     "end": 2.0
+    },
+    {
+     "word": "lo",
+     "start": 2.0,
+     "end": 2.0799999237060547
+    },
+    {
+     "word": "que",
+     "start": 2.0799999237060547,
+     "end": 2.240000009536743
+    },
+    {
+     "word": "escribimos",
+     "start": 2.240000009536743,
+     "end": 2.9600000381469727
+    },
+    {
+     "word": "con",
+     "start": 2.9600000381469727,
+     "end": 3.1999998092651367
+    },
+    {
+     "word": "mucha",
+     "start": 3.1999998092651367,
+     "end": 3.5199999809265137
+    },
+    {
+     "word": "más",
+     "start": 3.5199999809265137,
+     "end": 3.759999990463257
+    },
+    {
+     "word": "flexibilidad,",
+     "start": 3.759999990463257,
+     "end": 4.960000038146973
+    },
+    {
+     "word": "pero",
+     "start": 4.960000038146973,
+     "end": 5.199999809265137
+    },
+    {
+     "word": "incluso",
+     "start": 5.199999809265137,
+     "end": 5.679999828338623
+    },
+    {
+     "word": "ellos",
+     "start": 5.679999828338623,
+     "end": 6.159999847412109
+    },
+    {
+     "word": "funcionan",
+     "start": 6.159999847412109,
+     "end": 6.639999866485596
+    },
+    {
+     "word": "con",
+     "start": 6.639999866485596,
+     "end": 6.87999963760376
+    },
+    {
+     "word": "instrucción",
+     "start": 6.87999963760376,
+     "end": 7.519999980926514
+    },
+    {
+     "word": "y",
+     "start": 7.519999980926514,
+     "end": 7.679999828338623
+    },
+    {
+     "word": "reglas",
+     "start": 7.679999828338623,
+     "end": 8.15999984741211
+    },
+    {
+     "word": "que",
+     "start": 8.15999984741211,
+     "end": 8.399999618530273
+    },
+    {
+     "word": "alguien",
+     "start": 8.399999618530273,
+     "end": 8.800000190734863
+    },
+    {
+     "word": "diseñó.",
+     "start": 8.800000190734863,
+     "end": 9.52
+    }
+   ]
+  }
+ ]
+}

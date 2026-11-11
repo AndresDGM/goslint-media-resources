@@ -1,0 +1,19 @@
+{
+ "text": "Cien mililitros.",
+ "segments": [
+  {
+   "words": [
+    {
+     "word": "Cien",
+     "start": 0.07999999821186066,
+     "end": 0.47999998927116394
+    },
+    {
+     "word": "mililitros.",
+     "start": 0.47999998927116394,
+     "end": 1.44
+    }
+   ]
+  }
+ ]
+}

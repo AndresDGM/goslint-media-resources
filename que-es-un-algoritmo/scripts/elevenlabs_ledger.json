@@ -21,5 +21,31 @@
  },
  "nota_consumo": "El contador de la suscripción no reflejó de inmediato los 5.138 caracteres enviados; el gasto real debe confirmarse en el panel. El límite de 40.000 no se agotó.",
  "archivos": "public/audio/vo/raw/V01.mp3 … V64.mp3",
- "manifiesto": "scripts/vo_manifest.json"
+ "manifiesto": "scripts/vo_manifest.json",
+ "ampliaciones": [
+  {
+   "fecha": "2026-11-11",
+   "motivo": "Frases nuevas: anuncio del reto (N01) y reto final del sándwich (N02, N03). Una toma por frase, en serie, sin reintentos.",
+   "modelo": "eleven_v4",
+   "tomas": [
+    {
+     "id": "N01",
+     "caracteres": 70,
+     "creditos": 70
+    },
+    {
+     "id": "N02",
+     "caracteres": 99,
+     "creditos": 99
+    },
+    {
+     "id": "N03",
+     "caracteres": 86,
+     "creditos": 86
+    }
+   ],
+   "creditos": 255,
+   "archivos": "public/audio/vo/raw/N01.mp3 … N03.mp3"
+  }
+ ]
 }

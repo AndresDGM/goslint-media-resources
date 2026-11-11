@@ -1,0 +1,287 @@
+Marcas de la narración: tiempos de VIDEO (m:ss.s), con la velocidad de voz aplicada. Generado por scripts/dump_timeline.mjs; no editar.
+En las escenas se usan por nombre: at('V12') inicio · at('V12', 'taza') cuando dice «taza» · end('V12') · after('V12', 0.5).
+Cada palabra aparece como palabra@m:ss.s (tiempo absoluto del video).
+
+===== B1 · 0:00.0 → 0:40.0 (40.0 s) =====
+
+V01  0:00.5 → 0:04.6  (4.1 s)   silencio después: 0.2 s (hasta 0:04.8)
+    «Imagina que tienes un robot que hace todo lo que le pides… Todo.»
+    Imagina@0:00.5  que@0:01.0  tienes@0:01.2  un@0:01.5  robot@0:01.6  que@0:02.0  hace@0:02.1  todo@0:02.6  lo@0:02.8  que@0:02.9  le@0:03.1  pides.@0:03.2  Todo.@0:04.0
+
+V02  0:04.8 → 0:07.2  (2.4 s)   silencio después: 0.2 s (hasta 0:07.4)
+    «Y hoy… le vas a pedir un café.»
+    Y@0:04.8  hoy@0:05.0  le@0:05.8  vas@0:06.0  a@0:06.3  pedir@0:06.4  un@0:06.7  café.@0:06.8
+
+V03  0:07.4 → 0:08.8  (1.4 s)   silencio después: 0.3 s (hasta 0:09.1)
+    «¿Cómo se lo explicarías?»
+    ¿Cómo@0:07.4  se@0:07.8  lo@0:07.9  explicarías?@0:08.1
+
+V04  0:09.1 → 0:12.2  (3.1 s)   silencio después: 2.6 s (hasta 0:14.8)
+    «A ver… ¡Robot! Prepara café.»
+    A@0:09.1  ver...@0:09.4  ¡Robot!@0:10.2  Prepara@0:11.2  café.@0:11.7
+
+V05  0:14.8 → 0:18.3  (3.5 s)   silencio después: 2.0 s (hasta 0:20.3)
+    «No, no, no… ¡prepararte tú no! ¡El café!»
+    No,@0:14.9  no,@0:15.2  no.@0:15.5  Prepararte@0:15.9  tú@0:16.7  no.@0:16.9  El@0:17.4  café.@0:17.6
+
+V06  0:20.3 → 0:24.4  (4.0 s)   silencio después: 0.3 s (hasta 0:24.7)
+    «Bueno… técnicamente, eso sí es café.»
+    Bueno,@0:20.9  técnicamente@0:21.9  eso@0:23.1  sí@0:23.4  es@0:23.7  café.@0:23.9
+
+V07  0:24.7 → 0:34.5  (9.8 s)   silencio después: 0.6 s (hasta 0:35.1)
+    «Y el robot no está fallando. Hizo exactamente lo que entendió de mi orden. Si quiero un café de verdad, no me basta con una orden… necesito darle un algoritmo.»
+    Y@0:24.7  el@0:24.8  robot@0:25.0  no@0:25.4  está@0:25.6  fallando.@0:25.8  Hizo@0:26.6  exactamente@0:27.0  lo@0:27.7  que@0:27.9  entendió@0:28.0  de@0:28.4  mi@0:28.6  orden.@0:28.7  Si@0:29.3  quiero@0:29.5  un@0:29.8  café@0:29.9  de@0:30.3  verdad,@0:30.4  no@0:30.9  me@0:31.0  basta@0:31.3  con@0:31.7  una@0:31.9  orden.@0:32.1  Necesito@0:32.7  darle@0:33.3  un@0:33.8  algoritmo.@0:33.9
+
+N01  0:35.1 → 0:38.6  (3.5 s)   silencio después: 1.9 s (hasta 0:40.5)
+    «Y quédate hasta el final… porque te voy a dejar un reto.»
+    Y@0:35.1  quédate@0:35.2  hasta@0:35.8  el@0:36.0  final@0:36.3  porque@0:36.8  te@0:37.1  voy@0:37.4  a@0:37.7  dejar@0:37.7  un@0:38.0  reto.@0:38.2
+
+===== B2 · 0:40.0 → 1:32.5 (52.5 s) =====
+
+V08  0:40.5 → 0:47.4  (6.9 s)   silencio después: 0.3 s (hasta 0:47.7)
+    «Un algoritmo es una secuencia ordenada y finita de pasos, que permite resolver un problema o realizar una tarea.»
+    Un@0:40.5  algoritmo@0:40.7  es@0:41.4  una@0:41.5  secuencia@0:41.7  ordenada@0:42.4  y@0:42.9  finita@0:43.2  de@0:43.6  pasos,@0:43.8  que@0:44.4  permite@0:44.6  resolver@0:45.0  un@0:45.5  problema@0:45.6  o@0:46.0  realizar@0:46.2  una@0:46.6  tarea.@0:46.9
+
+V09  0:47.7 → 0:50.7  (3.1 s)   silencio después: 0.2 s (hasta 0:50.9)
+    «Suena muy formal, ¿verdad? Vamos por partes.»
+    Suena@0:47.7  muy@0:48.3  formal,@0:48.5  ¿verdad?@0:49.0  Vamos@0:49.8  por@0:50.1  partes.@0:50.4
+
+V10  0:50.9 → 0:57.4  (6.5 s)   silencio después: 0.3 s (hasta 0:57.7)
+    «Primero, los pasos: cada acción, una por una. Tomar. Verter. Revolver.»
+    Primero,@0:50.9  los@0:51.7  pasos.@0:51.9  Cada@0:52.6  acción@0:53.0  una@0:53.6  por@0:54.0  una.@0:54.2  Tomar.@0:54.8  Verter.@0:55.7  Revolver.@0:56.6
+
+V11  0:57.7 → 1:03.0  (5.3 s)   silencio después: 0.2 s (hasta 1:03.2)
+    «Esos pasos forman una secuencia: van uno detrás de otro, como los vagones de un tren.»
+    Esos@0:57.7  pasos@0:58.1  forman@0:58.5  una@0:58.9  secuencia.@0:59.1  Van@0:59.9  uno@1:00.3  detrás@1:00.6  de@1:01.0  otro,@1:01.2  como@1:01.6  los@1:01.8  vagones@1:02.0  de@1:02.4  un@1:02.5  tren.@1:02.6
+
+V12  1:03.2 → 1:09.7  (6.5 s)   silencio después: 1.6 s (hasta 1:11.3)
+    «Y el orden importa muchísimo. Mira lo que pasa si el robot vierte el agua… antes de tener la taza.»
+    Y@1:03.2  el@1:03.4  orden@1:03.6  importa@1:04.0  muchísimo.@1:04.6  Mira@1:05.4  lo@1:05.8  que@1:05.9  pasa@1:06.0  si@1:06.3  el@1:06.4  robot@1:06.5  vierte@1:06.9  el@1:07.4  agua@1:07.5  antes@1:08.1  de@1:08.6  tener@1:08.7  la@1:09.0  taza.@1:09.2
+
+V13  1:11.3 → 1:12.1  (0.8 s)   silencio después: 0.5 s (hasta 1:12.6)
+    «Exacto.»
+    Exacto.@1:11.3
+
+V14  1:12.6 → 1:20.2  (7.6 s)   silencio después: 2.2 s (hasta 1:22.4)
+    «Por último, es finita: un algoritmo tiene que terminar. Si le digo «revuelve»… y nunca le digo cuándo parar…»
+    Por@1:12.6  último,@1:12.8  es@1:13.4  finita.@1:13.6  Un@1:14.5  algoritmo@1:14.6  tiene@1:15.3  que@1:15.6  terminar.@1:15.8  Si@1:16.5  le@1:16.7  digo@1:16.8  revuelve@1:17.3  y@1:18.3  nunca@1:18.5  le@1:18.8  digo@1:19.0  cuándo@1:19.3  parar.@1:19.7
+
+V15  1:22.4 → 1:25.1  (2.7 s)   silencio después: 1.2 s (hasta 1:26.3)
+    «¡Ya, ya, para, para!»
+    Ya,@1:22.9  ya,@1:23.4  para,@1:24.0  para.@1:24.5
+
+V16  1:26.3 → 1:31.3  (5.0 s)   silencio después: 1.7 s (hasta 1:33.0)
+    «Pasos, en secuencia, en orden y con un final. Eso es un algoritmo.»
+    Pasos.@1:26.3  En@1:27.1  secuencia,@1:27.2  en@1:28.0  orden@1:28.3  y@1:28.7  con@1:28.9  un@1:29.1  final.@1:29.4  Eso@1:30.0  es@1:30.3  un@1:30.5  algoritmo.@1:30.7
+
+===== B3 · 1:32.5 → 2:10.0 (37.5 s) =====
+
+V17  1:33.0 → 1:37.4  (4.4 s)   silencio después: 0.2 s (hasta 1:37.6)
+    «Y aunque la palabra suene a computadoras, tú usas algoritmos todos los días.»
+    Y@1:33.0  aunque@1:33.1  la@1:33.4  palabra@1:33.5  suene@1:33.8  a@1:34.2  computadoras,@1:34.3  tú@1:35.2  usas@1:35.4  algoritmos@1:35.8  todos@1:36.6  los@1:36.9  días.@1:37.0
+
+V18  1:37.6 → 1:42.9  (5.2 s)   silencio después: 0.3 s (hasta 1:43.2)
+    «Cuando sigues una receta: ingredientes, pasos y, al final, el plato servido.»
+    Cuando@1:37.6  sigues@1:37.9  una@1:38.4  receta,@1:38.5  ingredientes,@1:39.3  pasos@1:40.3  y@1:40.8  al@1:41.0  final@1:41.3  el@1:41.6  plato@1:41.9  servido.@1:42.3
+
+V19  1:43.2 → 1:49.7  (6.5 s)   silencio después: 0.3 s (hasta 1:50.0)
+    «Cuando resuelves una suma: primero las unidades, luego las decenas… ¡y no te olvides de lo que llevas!»
+    Cuando@1:43.2  resuelves@1:43.5  una@1:44.1  suma,@1:44.3  primero@1:44.9  las@1:45.3  unidades,@1:45.5  luego@1:46.4  las@1:46.7  decenas,@1:46.9  y@1:47.8  no@1:48.0  te@1:48.1  olvides@1:48.4  de@1:48.8  lo@1:48.9  que@1:49.0  llevas.@1:49.2
+
+V20  1:50.0 → 1:56.2  (6.2 s)   silencio después: 0.3 s (hasta 1:56.5)
+    «Cuando alguien te explica cómo llegar a un lugar: dos cuadras derecho, giras a la izquierda… y llegaste.»
+    Cuando@1:50.0  alguien@1:50.3  te@1:50.6  explica@1:50.7  cómo@1:51.3  llegar@1:51.5  a@1:51.9  un@1:52.0  lugar.@1:52.1  Dos@1:52.6  cuadras@1:52.9  derecho,@1:53.3  giras@1:53.9  a@1:54.3  la@1:54.4  izquierda.@1:54.5  y@1:55.3  llegaste.@1:55.5
+
+V21  1:56.5 → 2:03.7  (7.2 s)   silencio después: 0.5 s (hasta 2:04.2)
+    «Incluso una máquina expendedora: eliges el producto, pagas y, si el dinero alcanza… sale tu paquete.»
+    Incluso@1:56.5  una@1:57.0  máquina@1:57.3  expendedora.@1:57.7  Eliges@1:58.7  el@1:59.3  producto,@1:59.4  pagas@2:00.1  y,@2:00.8  si@2:01.1  el@2:01.3  dinero@2:01.4  alcanza,@2:01.9  sale@2:02.6  tu@2:03.1  paquete.@2:03.2
+
+V22  2:04.2 → 2:09.1  (4.9 s)   silencio después: 1.4 s (hasta 2:10.5)
+    «Todos tienen pasos ordenados y un final. Ahora sí, volvamos a nuestro café.»
+    Todos@2:04.2  tienen@2:04.5  pasos@2:04.9  ordenados@2:05.2  y@2:05.9  un@2:06.1  final.@2:06.3  Ahora@2:06.9  sí,@2:07.3  volvamos@2:07.8  a@2:08.3  nuestro@2:08.4  café.@2:08.6
+
+===== B4 · 2:10.0 → 3:18.0 (68.0 s) =====
+
+V23  2:10.5 → 2:14.6  (4.1 s)   silencio después: 0.3 s (hasta 2:14.9)
+    «Primer intento. Esta vez le doy al robot un algoritmo completo.»
+    Primer@2:10.5  intento.@2:10.9  Esta@2:11.8  vez@2:12.1  le@2:12.3  doy@2:12.4  al@2:12.7  robot@2:12.9  un@2:13.2  algoritmo@2:13.4  completo.@2:14.0
+
+V24  2:14.9 → 2:20.4  (5.5 s)   silencio después: 1.3 s (hasta 2:21.7)
+    «Tiene un inicio, cuatro pasos y un fin. Se ve razonable, ¿no? Veamos qué hace.»
+    Tiene@2:14.9  un@2:15.2  inicio,@2:15.3  cuatro@2:16.0  pasos@2:16.4  y@2:17.0  un@2:17.1  fin.@2:17.3  Se@2:17.9  ve@2:18.2  razonable,@2:18.3  ¿no?@2:18.9  Veamos@2:19.3  qué@2:19.9  hace.@2:20.1
+
+V25  2:21.7 → 2:22.8  (1.0 s)   silencio después: 1.6 s (hasta 2:24.4)
+    «Dos cucharadas.»
+    Dos@2:21.7  cucharadas.@2:22.0
+
+V26  2:24.4 → 2:25.5  (1.2 s)   silencio después: 1.0 s (hasta 2:26.5)
+    «Cien mililitros.»
+    Cien@2:24.4  mililitros.@2:24.7
+
+V27  2:26.5 → 2:28.9  (2.3 s)   silencio después: 2.4 s (hasta 2:31.3)
+    «Muy bien. Hasta aquí, perfecto.»
+    Muy@2:26.5  bien,@2:26.8  hasta@2:27.3  aquí,@2:27.7  perfecto.@2:28.2
+
+V28  2:31.3 → 2:35.3  (4.0 s)   silencio después: 4.2 s (hasta 2:39.5)
+    «Espera… ¿qué estás…? ¡No, no, no! ¡En el piso no!»
+    Espera,@2:31.3  ¿qué@2:32.0  estás?@2:32.5  ¡No,@2:33.0  no,@2:33.4  no!@2:33.6  ¡En@2:34.0  el@2:34.2  piso@2:34.4  no!@2:34.8
+
+V29  2:39.5 → 2:43.0  (3.5 s)   silencio después: 0.3 s (hasta 2:43.3)
+    «…Gracias. Muy… ilustrativo.»
+    Gracias.@2:40.0  Muy@2:41.2  ilustrativo.@2:41.9
+
+V30  2:43.3 → 2:49.9  (6.6 s)   silencio después: 0.3 s (hasta 2:50.2)
+    «Ahora, ojo con esto: eso sigue siendo un algoritmo. Tiene pasos, tiene orden y termina.»
+    Ahora,@2:43.3  ojo@2:43.9  con@2:44.3  esto.@2:44.5  Eso@2:45.1  sigue@2:45.6  siendo@2:45.9  un@2:46.3  algoritmo.@2:46.5  Tiene@2:47.3  pasos,@2:47.7  tiene@2:48.3  orden@2:48.6  y@2:49.1  termina.@2:49.3
+
+V31  2:50.2 → 3:01.1  (10.9 s)   silencio después: 0.3 s (hasta 3:01.4)
+    «Lo que pasa es que algunos pasos son muy generales. «Mezclar los ingredientes»… ¿dónde? ¿En qué recipiente? ¿Con qué? Y ya que estamos… ¿no faltaba el agua?»
+    Lo@2:50.2  que@2:50.4  pasa@2:50.6  es@2:50.9  que@2:51.1  algunos@2:51.2  pasos@2:51.7  son@2:52.1  muy@2:52.3  generales.@2:52.6  Mezclar@2:53.5  los@2:54.0  ingredientes.@2:54.3  ¿dónde?@2:55.3  ¿en@2:56.1  qué@2:56.4  recipiente?@2:56.6  ¿con@2:57.4  qué?@2:57.7  Y@2:58.3  ya@2:58.5  que@2:58.7  estamos.@2:59.0  ¿No@2:59.7  faltaba@2:60.0  el@3:00.5  agua?@3:00.6
+
+V32  3:01.4 → 3:09.4  (8.0 s)   silencio después: 0.3 s (hasta 3:09.7)
+    «A una persona quizás le basta con esa instrucción, porque sabe que el café se mezcla en una taza. Pero el robot no sabe lo que tú das por hecho.»
+    A@3:01.4  una@3:01.6  persona@3:01.8  quizás@3:02.1  le@3:02.5  basta@3:02.7  con@3:03.1  esa@3:03.2  instrucción,@3:03.4  porque@3:04.2  sabe@3:04.5  que@3:04.8  el@3:04.9  café@3:05.0  se@3:05.3  mezcla@3:05.4  en@3:05.9  una@3:06.0  taza,@3:06.2  pero@3:06.8  el@3:06.9  robot@3:07.1  no@3:07.6  sabe@3:07.8  lo@3:08.1  que@3:08.2  tú@3:08.4  das@3:08.6  por@3:08.8  hecho.@3:09.0
+
+V33  3:09.7 → 3:16.9  (7.2 s)   silencio después: 1.6 s (hasta 3:18.5)
+    «Un algoritmo puede escribirse con más o con menos detalle. La clave es que ese detalle alcance para quien lo va a ejecutar.»
+    Un@3:09.7  algoritmo@3:09.9  puede@3:10.4  escribirse@3:10.7  con@3:11.3  más@3:11.6  o@3:11.8  con@3:12.0  menos@3:12.1  detalle.@3:12.4  La@3:13.2  clave@3:13.4  es@3:13.8  que@3:14.1  ese@3:14.4  detalle@3:14.6  alcance@3:15.2  para@3:15.7  quien@3:15.9  lo@3:16.1  va@3:16.2  a@3:16.3  ejecutar.@3:16.4
+
+===== B5 · 3:18.0 → 4:56.5 (98.5 s) =====
+
+V34  3:18.5 → 3:22.3  (3.8 s)   silencio después: 0.3 s (hasta 3:22.6)
+    «Segundo intento. Esta vez vamos a ser mucho más precisos.»
+    ¡Segundo@3:18.5  intento!@3:19.1  Esta@3:19.8  vez@3:20.1  vamos@3:20.4  a@3:20.7  ser@3:20.8  mucho@3:21.1  más@3:21.4  precisos.@3:21.6
+
+V35  3:22.6 → 3:27.0  (4.4 s)   silencio después: 0.5 s (hasta 3:27.5)
+    «Paso uno: tomar una taza. Ahora sí, hay dónde servir.»
+    Paso@3:22.6  1.@3:23.0  Tomar@3:23.6  una@3:24.0  taza.@3:24.3  Ahora@3:25.0  sí,@3:25.4  hay@3:25.8  donde@3:26.2  servir.@3:26.6
+
+V36  3:27.5 → 3:32.3  (4.7 s)   silencio después: 0.6 s (hasta 3:32.9)
+    «Dos cucharadas de café… en la taza. Una… y dos.»
+    Dos@3:27.5  cucharadas@3:27.8  de@3:28.4  café@3:28.6  en@3:29.3  la@3:29.5  taza.@3:29.8  Una@3:30.5  y@3:31.4  dos.@3:31.6
+
+V37  3:32.9 → 3:35.8  (2.9 s)   silencio después: 1.8 s (hasta 3:37.6)
+    «Calentamos doscientos mililitros de agua en la tetera…»
+    Calentamos@3:32.9  200@3:33.6  milililitros@3:34.1  de@3:34.6  agua@3:34.8  en@3:35.0  la@3:35.1  tetera.@3:35.2
+
+V38  3:37.6 → 3:41.1  (3.5 s)   silencio después: 0.5 s (hasta 3:41.6)
+    «…y la vertemos en la taza. Sin salpicar, por favor.»
+    Y@3:37.6  la@3:37.7  vertemos@3:37.9  en@3:38.4  la@3:38.5  casa.@3:38.6  Sin@3:39.3  salpicar,@3:39.5  por@3:40.4  favor.@3:40.6
+
+V39  3:41.6 → 3:45.5  (3.9 s)   silencio después: 0.4 s (hasta 3:45.9)
+    «Y ahora viene algo nuevo: el robot nos va a hacer una pregunta.»
+    Y@3:41.6  ahora@3:41.8  viene@3:42.1  algo@3:42.4  nuevo.@3:42.7  El@3:43.3  robot@3:43.4  nos@3:43.9  va@3:44.2  a@3:44.4  hacer@3:44.5  una@3:44.8  pregunta.@3:44.9
+
+V40  3:45.9 → 3:50.2  (4.3 s)   silencio después: 1.4 s (hasta 3:51.6)
+    «Lo que respondamos va a cambiar lo que hace. Primero, digamos que sí.»
+    Lo@3:45.9  que@3:46.1  respondamos@3:46.2  va@3:47.0  a@3:47.2  cambiar@3:47.3  lo@3:47.6  que@3:47.8  hace.@3:47.9  Primero,@3:48.6  digamos@3:49.2  que@3:49.6  sí.@3:49.9
+
+V41  3:51.6 → 3:53.0  (1.4 s)   silencio después: 0.6 s (hasta 3:53.6)
+    «Dos, por favor.»
+    Dos,@3:51.7  por@3:52.3  favor.@3:52.5
+
+V42  3:53.6 → 3:58.7  (5.1 s)   silencio después: 1.4 s (hasta 4:00.1)
+    «Una… dos. Exactamente dos. Ni una más, ni una menos.»
+    Una,@3:53.6  dos.@3:54.5  Exactamente@3:55.3  dos.@3:56.2  Ni@3:56.9  una@3:57.1  más,@3:57.4  ni@3:57.8  una@3:58.0  menos.@3:58.3
+
+V43  4:00.1 → 4:04.7  (4.5 s)   silencio después: 0.4 s (hasta 4:05.1)
+    «Pero retrocedamos un momento. ¿Qué habría pasado si respondíamos que no?»
+    Pero@4:00.1  retrocedamos@4:00.5  un@4:01.4  momento.@4:01.5  ¿Qué@4:02.1  habría@4:02.4  pasado@4:02.8  si@4:03.2  respondí@4:03.4  que@4:04.1  no?@4:04.3
+
+V44  4:05.1 → 4:08.9  (3.8 s)   silencio después: 0.4 s (hasta 4:09.3)
+    «El robot se salta esos pasos y sigue con el resto del algoritmo.»
+    El@4:05.1  robot@4:05.2  se@4:05.6  salca@4:05.7  esos@4:06.3  pasos@4:06.5  y@4:07.0  sigue@4:07.1  con@4:07.5  el@4:07.7  resto@4:07.7  del@4:08.0  algoritmo.@4:08.2
+
+V45  4:09.3 → 4:14.2  (4.9 s)   silencio después: 1.3 s (hasta 4:15.5)
+    «Mismo algoritmo, dos caminos distintos. Todo depende de una respuesta.»
+    Mismo@4:09.4  algoritmo,@4:09.7  dos@4:10.6  caminos.@4:10.8  Todo@4:12.2  depende@4:12.5  de@4:13.1  una@4:13.3  respuesta.@4:13.5
+
+V46  4:15.5 → 4:19.6  (4.1 s)   silencio después: 0.4 s (hasta 4:20.0)
+    «Sigamos con el camino del azúcar. Ahora, cien mililitros de leche.»
+    Sigamos@4:15.5  con@4:16.0  el@4:16.1  camino@4:16.2  del@4:16.6  azúcar.@4:16.7  Ahora@4:17.5  100@4:18.0  mililitros@4:18.4  de@4:19.0  leche.@4:19.2
+
+V47  4:20.0 → 4:22.3  (2.3 s)   silencio después: 1.0 s (hasta 4:23.3)
+    «Toma una cuchara… y revuelve.»
+    Toma@4:20.0  una@4:20.4  cuchara@4:20.5  y@4:21.3  revuelve.@4:21.6
+
+V48  4:23.3 → 4:31.1  (7.8 s)   silencio después: 0.5 s (hasta 4:31.6)
+    «Deja la cuchara sobre la mesa. Sí, hasta eso hay que decirlo. Si no, a lo mejor se queda con la cuchara en la mano para siempre.»
+    Deja@4:23.3  la@4:23.6  cuchara@4:23.7  sobre@4:24.2  la@4:24.5  mesa.@4:24.6  Sí,@4:25.1  hasta@4:25.7  eso@4:26.1  hay@4:26.4  que@4:26.5  decirlo.@4:26.7  Si@4:27.6  no,@4:27.9  a@4:28.2  lo@4:28.4  mejor@4:28.5  se@4:28.7  queda@4:28.9  con@4:29.2  la@4:29.3  cuchara@4:29.4  en@4:29.9  la@4:30.0  mano@4:30.2  para@4:30.4  siempre.@4:30.6
+
+V49  4:31.6 → 4:34.0  (2.4 s)   silencio después: 0.9 s (hasta 4:34.9)
+    «Y, por último… servir el café.»
+    Y@4:31.6  por@4:31.9  último,@4:32.1  servir@4:32.9  el@4:33.5  café.@4:33.6
+
+V50  4:34.9 → 4:37.2  (2.3 s)   silencio después: 0.8 s (hasta 4:38.0)
+    «Mmm… ¡ahora sí!»
+    Mmm.@4:35.0  ¡Ahora@4:36.0  sí!@4:36.5
+
+V51  4:38.0 → 4:45.7  (7.7 s)   silencio después: 0.3 s (hasta 4:46.0)
+    «Fíjate en la diferencia. Los dos son algoritmos, pero el segundo dice qué usar, cuánto, dónde… y en qué orden.»
+    Fíjate@4:38.0  en@4:38.5  la@4:38.5  diferencia.@4:38.7  Los@4:39.5  dos@4:39.7  son@4:40.0  algoritmos,@4:40.2  pero@4:41.1  el@4:41.3  segundo@4:41.4  dice@4:41.8  qué@4:42.2  usar,@4:42.5  cuánto,@4:43.2  dónde@4:44.0  y@4:44.5  en@4:44.8  qué@4:45.0  orden.@4:45.2
+
+V52  4:46.0 → 4:55.3  (9.2 s)   silencio después: 1.7 s (hasta 4:57.0)
+    «Para este robot, ese era el nivel de detalle necesario. Las instrucciones no tienen que ser larguísimas: tienen que ser lo bastante claras para quien las ejecuta.»
+    Para@4:46.0  este@4:46.3  robot,@4:46.6  ese@4:47.2  era@4:47.5  el@4:47.7  nivel@4:47.8  de@4:48.1  detalle@4:48.3  necesario.@4:48.7  Las@4:49.5  instrucciones@4:49.7  no@4:50.5  tienen@4:50.7  que@4:51.1  ser@4:51.2  larguísimas,@4:51.4  tienen@4:52.3  que@4:52.6  serlo@4:52.8  bastante@4:53.2  claras@4:53.6  para@4:54.0  quien@4:54.3  las@4:54.5  ejecuta.@4:54.6
+
+===== B6 · 4:56.5 → 5:55.5 (59.0 s) =====
+
+V53  4:57.0 → 5:02.2  (5.2 s)   silencio después: 0.3 s (hasta 5:02.5)
+    «Y esto nos lleva a las computadoras, porque una computadora se parece mucho a nuestro robot.»
+    Y@4:57.0  esto@4:57.1  nos@4:57.4  lleva@4:57.5  a@4:57.9  las@4:58.0  computadoras,@4:58.2  porque@4:59.1  una@4:59.4  computadora@4:59.7  se@5:00.3  parece@5:00.5  mucho@5:01.0  a@5:01.2  nuestro@5:01.4  robot.@5:01.7
+
+V54  5:02.5 → 5:08.4  (5.9 s)   silencio después: 0.3 s (hasta 5:08.7)
+    «Cuando un algoritmo se escribe en un lenguaje que la computadora puede ejecutar, se convierte en un programa.»
+    Cuando@5:02.5  un@5:02.8  algoritmo@5:02.9  se@5:03.5  escribe@5:03.6  en@5:04.1  un@5:04.2  lenguaje@5:04.3  que@5:04.7  la@5:04.9  computadora@5:05.0  puede@5:05.7  ejecutar,@5:06.0  se@5:06.8  convierte@5:06.9  en@5:07.5  un@5:07.8  programa.@5:07.9
+
+V55  5:08.7 → 5:16.1  (7.4 s)   silencio después: 0.3 s (hasta 5:16.4)
+    «La computadora toma la primera instrucción, la ejecuta, pasa a la siguiente… y así, paso a paso, hasta el final.»
+    La@5:08.7  computadora@5:09.0  toma@5:09.5  la@5:09.9  primera@5:10.1  instrucción,@5:10.4  la@5:11.2  ejecuta,@5:11.4  pasa@5:12.1  a@5:12.6  la@5:12.7  siguiente@5:12.8  y@5:13.5  así,@5:13.8  paso@5:14.4  a@5:14.7  paso,@5:14.9  hasta@5:15.3  el@5:15.6  final.@5:15.7
+
+V56  5:16.4 → 5:23.9  (7.4 s)   silencio después: 0.3 s (hasta 5:24.2)
+    «No se salta pasos porque le parezcan obvios, ni completa lo que olvidaste. Sigue las reglas que definieron quienes la programaron.»
+    No@5:16.4  se@5:16.6  salta@5:16.8  pasos@5:17.2  porque@5:17.5  le@5:17.8  parezcan@5:17.9  obvios,@5:18.4  ni@5:19.1  completa@5:19.2  lo@5:19.8  que@5:19.9  olvidaste.@5:20.1  Sigue@5:21.0  las@5:21.4  reglas@5:21.5  que@5:21.9  definieron@5:22.1  quienes@5:22.7  la@5:23.0  programaron.@5:23.2
+
+V57  5:24.2 → 5:29.6  (5.5 s)   silencio después: 1.3 s (hasta 5:30.9)
+    «Por eso decimos que una computadora no hace lo que queremos… hace lo que le indicamos.»
+    Por@5:24.2  eso@5:24.4  decimos@5:24.6  que@5:25.1  una@5:25.3  computadora@5:25.4  no@5:26.2  hace@5:26.4  lo@5:26.8  que@5:26.9  queremos,@5:27.1  hace@5:27.9  lo@5:28.3  que@5:28.5  le@5:28.6  indicamos.@5:28.8
+
+V58  5:30.9 → 5:39.7  (8.8 s)   silencio después: 0.3 s (hasta 5:40.0)
+    «Hoy existen sistemas que interpretan lo que escribimos con mucha más flexibilidad. Pero incluso ellos funcionan con instrucciones y reglas que alguien diseñó.»
+    Hoy@5:30.9  existen@5:31.2  sistemas@5:31.7  que@5:32.0  interpretan@5:32.2  lo@5:32.8  que@5:32.9  escribimos@5:33.0  con@5:33.7  mucha@5:33.9  más@5:34.2  flexibilidad,@5:34.4  pero@5:35.5  incluso@5:35.7  ellos@5:36.2  funcionan@5:36.6  con@5:37.1  instrucción@5:37.3  y@5:37.9  reglas@5:38.0  que@5:38.5  alguien@5:38.7  diseñó.@5:39.1
+
+V59  5:40.0 → 5:51.6  (11.6 s)   silencio después: 0.3 s (hasta 5:51.9)
+    «Y en los algoritmos vas a ver tres ideas una y otra vez: secuencias, pasos uno tras otro; decisiones, como la del azúcar; y repeticiones, como revolver varias veces.»
+    Y@5:40.0  en@5:40.1  los@5:40.2  algoritmos@5:40.4  vas@5:41.0  a@5:41.3  ver@5:41.4  tres@5:41.6  ideas@5:41.9  una@5:42.4  y@5:42.7  otra@5:43.0  vez.@5:43.3  Secuencias,@5:43.9  pasos@5:44.9  uno@5:45.3  tras@5:45.7  otro.@5:45.9  Decisiones,@5:46.6  como@5:47.5  la@5:47.7  del@5:47.9  azúcar.@5:48.1  Y@5:48.7  repeticiones,@5:49.0  como@5:49.9  revolver@5:50.2  varias@5:50.9  veces.@5:51.3
+
+V60  5:51.9 → 5:54.4  (2.6 s)   silencio después: 1.6 s (hasta 5:56.0)
+    «Las veremos con calma en las próximas lecciones.»
+    Las@5:51.9  veremos@5:52.1  con@5:52.5  calma@5:52.7  en@5:53.1  las@5:53.2  próximas@5:53.3  lecciones.@5:53.8
+
+===== B7 · 5:55.5 → 6:41.6 (46.1 s) =====
+
+V61  5:56.0 → 6:02.1  (6.1 s)   silencio después: 0.3 s (hasta 6:02.4)
+    «Repasemos. Un algoritmo es una secuencia ordenada y finita de pasos para resolver un problema.»
+    Repasemos.@5:56.0  Un@5:57.0  algoritmo@5:57.3  es@5:57.9  una@5:58.1  secuencia@5:58.3  ordenada@5:58.9  y@5:59.6  finita@5:59.7  de@6:00.1  pasos@6:00.3  para@6:00.7  resolver@6:01.0  un@6:01.5  problema.@6:01.6
+
+V62  6:02.4 → 6:09.4  (6.9 s)   silencio después: 0.3 s (hasta 6:09.7)
+    «Lo usas todos los días, puede tener más o menos detalle, y ese detalle tiene que ser el adecuado para quien lo ejecuta.»
+    Lo@6:02.4  usas@6:02.7  todos@6:03.1  los@6:03.4  días,@6:03.5  puede@6:04.1  tener@6:04.4  más@6:04.8  o@6:05.0  menos@6:05.2  detalle,@6:05.5  y@6:06.1  ese@6:06.3  detalle@6:06.6  tiene@6:07.0  que@6:07.2  ser@6:07.4  el@6:07.5  adecuado@6:07.7  para@6:08.3  quien@6:08.4  lo@6:08.7  ejecuta.@6:08.8
+
+V63  6:09.7 → 6:17.7  (8.1 s)   silencio después: 0.7 s (hasta 6:18.4)
+    «Así que recuerda: antes de enseñarle a una computadora a resolver un problema… primero debemos aprender a describir cómo resolverlo.»
+    Así@6:09.7  que@6:10.0  recuerda,@6:10.1  antes@6:10.9  de@6:11.2  enseñarle@6:11.4  a@6:12.0  una@6:12.2  computadora@6:12.3  a@6:12.9  resolver@6:13.1  un@6:13.6  problema,@6:13.8  primero@6:14.5  debemos@6:14.9  aprender@6:15.4  a@6:15.8  describir@6:16.0  cómo@6:16.6  resolverlo.@6:16.9
+
+N02  6:18.4 → 6:23.3  (4.8 s)   silencio después: 0.4 s (hasta 6:23.7)
+    «¡Y ahora te toca a ti! Escribe en los comentarios el algoritmo para preparar un sándwich.»
+    ¡Y@6:18.4  ahora@6:18.7  te@6:18.9  toca@6:19.0  a@6:19.4  ti!@6:19.5  Escribe@6:20.0  en@6:20.5  los@6:20.6  comentarios@6:20.7  el@6:21.2  algoritmo@6:21.4  para@6:21.9  preparar@6:22.1  un@6:22.5  sándwich.@6:22.7
+
+N03  6:23.7 → 6:28.8  (5.2 s)   silencio después: 1.4 s (hasta 6:30.2)
+    «Pero ojo… lo va a ejecutar nuestro robot. Así que no des nada por hecho.»
+    Pero@6:23.7  ojo,@6:24.0  lo@6:24.7  va@6:24.9  a@6:25.1  ejecutar@6:25.2  nuestro@6:25.7  robot.@6:26.1  Así@6:26.8  que@6:27.1  no@6:27.3  des@6:27.6  nada@6:28.0  por@6:28.3  hecho.@6:28.4
+
+V64  6:30.2 → 6:36.1  (5.9 s)   silencio después: 5.5 s (hasta 6:41.6)
+    «¡Nos vemos en la próxima lección! Y tú… ¡ni se te ocurra limpiar ese piso sin un algoritmo!»
+    Nos@6:30.2  vemos@6:30.5  en@6:30.9  la@6:31.0  próxima@6:31.2  lección.@6:31.6  Y@6:32.3  tú,@6:32.7  ni@6:33.2  se@6:33.5  te@6:33.6  ocurra@6:33.8  limpiar@6:34.3  ese@6:34.7  piso@6:34.9  sin@6:35.1  un@6:35.3  algoritmo.@6:35.4
+
+DURACIÓN TOTAL: 6:41.6 (12048 fotogramas)

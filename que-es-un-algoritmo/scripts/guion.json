@@ -1,0 +1,489 @@
+{
+ "nota": "Guion maestro del video. `tts` = texto exacto enviado a ElevenLabs (con etiquetas); `sub` = subtítulo; `gap` = segundos de acción sin voz después de la locución. El orden de esta lista es el orden del montaje. Tras cambiar algo: python3 scripts/build_vo.py",
+ "voz": {
+  "nombre": "Ivonny",
+  "voice_id": "dMeBcNV5QVbfDqzti5Jl",
+  "modelo": "eleven_v4"
+ },
+ "rate": 1.08,
+ "lead": {
+  "b1": 0.5,
+  "b2": 0.5,
+  "b3": 0.5,
+  "b4": 0.5,
+  "b5": 0.5,
+  "b6": 0.5,
+  "b7": 0.5
+ },
+ "lineas": [
+  {
+   "id": "V01",
+   "b": "b1",
+   "gap": 0.25,
+   "tts": "[curious] Imagina que tienes un robot que hace todo lo que le pides... TODO.",
+   "sub": "Imagina que tienes un robot que hace todo lo que le pides… Todo."
+  },
+  {
+   "id": "V02",
+   "b": "b1",
+   "gap": 0.2,
+   "tts": "Y hoy... le vas a pedir un café.",
+   "sub": "Y hoy… le vas a pedir un café."
+  },
+  {
+   "id": "V03",
+   "b": "b1",
+   "gap": 0.35,
+   "tts": "[curious] ¿Cómo se lo explicarías?",
+   "sub": "¿Cómo se lo explicarías?"
+  },
+  {
+   "id": "V04",
+   "b": "b1",
+   "gap": 2.6,
+   "tts": "A ver... [excited] ¡Robot! Prepara café.",
+   "sub": "A ver… ¡Robot! Prepara café."
+  },
+  {
+   "id": "V05",
+   "b": "b1",
+   "gap": 2.0,
+   "tts": "[surprised] No, no, no... ¡prepararte TÚ no! ¡El café!",
+   "sub": "No, no, no… ¡prepararte tú no! ¡El café!"
+  },
+  {
+   "id": "V06",
+   "b": "b1",
+   "gap": 0.3,
+   "tts": "[sighs] Bueno... técnicamente, eso sí es café.",
+   "sub": "Bueno… técnicamente, eso sí es café."
+  },
+  {
+   "id": "V07",
+   "b": "b1",
+   "gap": 0.6,
+   "tts": "Y el robot no está fallando. Hizo exactamente lo que entendió de mi orden. Si quiero un café de verdad, no me basta con una orden... necesito darle un algoritmo.",
+   "sub": "Y el robot no está fallando. Hizo exactamente lo que entendió de mi orden. Si quiero un café de verdad, no me basta con una orden… necesito darle un algoritmo."
+  },
+  {
+   "id": "N01",
+   "b": "b1",
+   "gap": 1.0,
+   "tts": "[playfully] Y quédate hasta el final... porque te voy a dejar un reto.",
+   "sub": "Y quédate hasta el final… porque te voy a dejar un reto."
+  },
+  {
+   "id": "V08",
+   "b": "b2",
+   "gap": 0.3,
+   "tts": "Un algoritmo es una secuencia ordenada y finita de pasos, que permite resolver un problema o realizar una tarea.",
+   "sub": "Un algoritmo es una secuencia ordenada y finita de pasos, que permite resolver un problema o realizar una tarea."
+  },
+  {
+   "id": "V09",
+   "b": "b2",
+   "gap": 0.2,
+   "tts": "[playfully] Suena muy formal, ¿verdad? Vamos por partes.",
+   "sub": "Suena muy formal, ¿verdad? Vamos por partes."
+  },
+  {
+   "id": "V10",
+   "b": "b2",
+   "gap": 0.25,
+   "tts": "Primero, los pasos: cada acción, una por una. Tomar. Verter. Revolver.",
+   "sub": "Primero, los pasos: cada acción, una por una. Tomar. Verter. Revolver."
+  },
+  {
+   "id": "V11",
+   "b": "b2",
+   "gap": 0.25,
+   "tts": "Esos pasos forman una secuencia: van uno detrás de otro, como los vagones de un tren.",
+   "sub": "Esos pasos forman una secuencia: van uno detrás de otro, como los vagones de un tren."
+  },
+  {
+   "id": "V12",
+   "b": "b2",
+   "gap": 1.6,
+   "tts": "Y el orden importa muchísimo. Mira lo que pasa si el robot vierte el agua... antes de tener la taza.",
+   "sub": "Y el orden importa muchísimo. Mira lo que pasa si el robot vierte el agua… antes de tener la taza."
+  },
+  {
+   "id": "V13",
+   "b": "b2",
+   "gap": 0.5,
+   "tts": "[deadpan] Exacto.",
+   "sub": "Exacto."
+  },
+  {
+   "id": "V14",
+   "b": "b2",
+   "gap": 2.2,
+   "tts": "Por último, es finita: un algoritmo tiene que terminar. Si le digo \"revuelve\"... y nunca le digo cuándo parar...",
+   "sub": "Por último, es finita: un algoritmo tiene que terminar. Si le digo «revuelve»… y nunca le digo cuándo parar…"
+  },
+  {
+   "id": "V15",
+   "b": "b2",
+   "gap": 1.2,
+   "tts": "[laughs] ¡Ya, ya, para, para!",
+   "sub": "¡Ya, ya, para, para!"
+  },
+  {
+   "id": "V16",
+   "b": "b2",
+   "gap": 0.7,
+   "tts": "Pasos, en secuencia, en orden y con un final. Eso es un algoritmo.",
+   "sub": "Pasos, en secuencia, en orden y con un final. Eso es un algoritmo."
+  },
+  {
+   "id": "V17",
+   "b": "b3",
+   "gap": 0.25,
+   "tts": "Y aunque la palabra suene a computadoras, tú usas algoritmos todos los días.",
+   "sub": "Y aunque la palabra suene a computadoras, tú usas algoritmos todos los días."
+  },
+  {
+   "id": "V18",
+   "b": "b3",
+   "gap": 0.3,
+   "tts": "Cuando sigues una receta: ingredientes, pasos y, al final, el plato servido.",
+   "sub": "Cuando sigues una receta: ingredientes, pasos y, al final, el plato servido."
+  },
+  {
+   "id": "V19",
+   "b": "b3",
+   "gap": 0.3,
+   "tts": "Cuando resuelves una suma: primero las unidades, luego las decenas... [playfully] ¡y no te olvides de lo que llevas!",
+   "sub": "Cuando resuelves una suma: primero las unidades, luego las decenas… ¡y no te olvides de lo que llevas!"
+  },
+  {
+   "id": "V20",
+   "b": "b3",
+   "gap": 0.3,
+   "tts": "Cuando alguien te explica cómo llegar a un lugar: dos cuadras derecho, giras a la izquierda... y llegaste.",
+   "sub": "Cuando alguien te explica cómo llegar a un lugar: dos cuadras derecho, giras a la izquierda… y llegaste."
+  },
+  {
+   "id": "V21",
+   "b": "b3",
+   "gap": 0.5,
+   "tts": "Incluso una máquina expendedora: eliges el producto, pagas y, si el dinero alcanza... sale tu paquete.",
+   "sub": "Incluso una máquina expendedora: eliges el producto, pagas y, si el dinero alcanza… sale tu paquete."
+  },
+  {
+   "id": "V22",
+   "b": "b3",
+   "gap": 0.6,
+   "tts": "Todos tienen pasos ordenados y un final. [excited] Ahora sí, volvamos a nuestro café.",
+   "sub": "Todos tienen pasos ordenados y un final. Ahora sí, volvamos a nuestro café."
+  },
+  {
+   "id": "V23",
+   "b": "b4",
+   "gap": 0.3,
+   "tts": "Primer intento. Esta vez le doy al robot un algoritmo completo.",
+   "sub": "Primer intento. Esta vez le doy al robot un algoritmo completo."
+  },
+  {
+   "id": "V24",
+   "b": "b4",
+   "gap": 1.3,
+   "tts": "Tiene un inicio, cuatro pasos y un fin. Se ve razonable, ¿no? Veamos qué hace.",
+   "sub": "Tiene un inicio, cuatro pasos y un fin. Se ve razonable, ¿no? Veamos qué hace."
+  },
+  {
+   "id": "V25",
+   "b": "b4",
+   "gap": 1.6,
+   "tts": "Dos cucharadas.",
+   "sub": "Dos cucharadas."
+  },
+  {
+   "id": "V26",
+   "b": "b4",
+   "gap": 1.0,
+   "tts": "Cien mililitros.",
+   "sub": "Cien mililitros."
+  },
+  {
+   "id": "V27",
+   "b": "b4",
+   "gap": 2.4,
+   "tts": "Muy bien. Hasta aquí, perfecto.",
+   "sub": "Muy bien. Hasta aquí, perfecto."
+  },
+  {
+   "id": "V28",
+   "b": "b4",
+   "gap": 4.2,
+   "tts": "Espera... ¿qué estás...? [surprised] ¡No, no, no! ¡En el piso no!",
+   "sub": "Espera… ¿qué estás…? ¡No, no, no! ¡En el piso no!"
+  },
+  {
+   "id": "V29",
+   "b": "b4",
+   "gap": 0.3,
+   "tts": "[sighs] ...Gracias. Muy... ilustrativo.",
+   "sub": "…Gracias. Muy… ilustrativo."
+  },
+  {
+   "id": "V30",
+   "b": "b4",
+   "gap": 0.3,
+   "tts": "Ahora, ojo con esto: eso SIGUE siendo un algoritmo. Tiene pasos, tiene orden y termina.",
+   "sub": "Ahora, ojo con esto: eso sigue siendo un algoritmo. Tiene pasos, tiene orden y termina."
+  },
+  {
+   "id": "V31",
+   "b": "b4",
+   "gap": 0.3,
+   "tts": "Lo que pasa es que algunos pasos son muy generales. \"Mezclar los ingredientes\"... ¿dónde? ¿En qué recipiente? ¿Con qué? [curious] Y ya que estamos... ¿no faltaba el agua?",
+   "sub": "Lo que pasa es que algunos pasos son muy generales. «Mezclar los ingredientes»… ¿dónde? ¿En qué recipiente? ¿Con qué? Y ya que estamos… ¿no faltaba el agua?"
+  },
+  {
+   "id": "V32",
+   "b": "b4",
+   "gap": 0.3,
+   "tts": "A una persona quizás le basta con esa instrucción, porque sabe que el café se mezcla en una taza. Pero el robot no sabe lo que tú das por hecho.",
+   "sub": "A una persona quizás le basta con esa instrucción, porque sabe que el café se mezcla en una taza. Pero el robot no sabe lo que tú das por hecho."
+  },
+  {
+   "id": "V33",
+   "b": "b4",
+   "gap": 0.7,
+   "tts": "Un algoritmo puede escribirse con más o con menos detalle. La clave es que ese detalle alcance para quien lo va a ejecutar.",
+   "sub": "Un algoritmo puede escribirse con más o con menos detalle. La clave es que ese detalle alcance para quien lo va a ejecutar."
+  },
+  {
+   "id": "V34",
+   "b": "b5",
+   "gap": 0.3,
+   "tts": "[excited] Segundo intento. Esta vez vamos a ser mucho más precisos.",
+   "sub": "Segundo intento. Esta vez vamos a ser mucho más precisos."
+  },
+  {
+   "id": "V35",
+   "b": "b5",
+   "gap": 0.5,
+   "tts": "Paso uno: tomar una taza. Ahora sí, hay dónde servir.",
+   "sub": "Paso uno: tomar una taza. Ahora sí, hay dónde servir."
+  },
+  {
+   "id": "V36",
+   "b": "b5",
+   "gap": 0.6,
+   "tts": "Dos cucharadas de café... en la taza. Una... y dos.",
+   "sub": "Dos cucharadas de café… en la taza. Una… y dos."
+  },
+  {
+   "id": "V37",
+   "b": "b5",
+   "gap": 1.8,
+   "tts": "Calentamos doscientos mililitros de agua en la tetera...",
+   "sub": "Calentamos doscientos mililitros de agua en la tetera…"
+  },
+  {
+   "id": "V38",
+   "b": "b5",
+   "gap": 0.5,
+   "tts": "...y la vertemos en la taza. [playfully] Sin salpicar, por favor.",
+   "sub": "…y la vertemos en la taza. Sin salpicar, por favor."
+  },
+  {
+   "id": "V39",
+   "b": "b5",
+   "gap": 0.4,
+   "tts": "Y ahora viene algo nuevo: el robot nos va a hacer una pregunta.",
+   "sub": "Y ahora viene algo nuevo: el robot nos va a hacer una pregunta."
+  },
+  {
+   "id": "V40",
+   "b": "b5",
+   "gap": 1.4,
+   "tts": "Lo que respondamos va a cambiar lo que hace. Primero, digamos que sí.",
+   "sub": "Lo que respondamos va a cambiar lo que hace. Primero, digamos que sí."
+  },
+  {
+   "id": "V41",
+   "b": "b5",
+   "gap": 0.6,
+   "tts": "Dos, por favor.",
+   "sub": "Dos, por favor."
+  },
+  {
+   "id": "V42",
+   "b": "b5",
+   "gap": 1.4,
+   "tts": "Una... dos. Exactamente dos. Ni una más, ni una menos.",
+   "sub": "Una… dos. Exactamente dos. Ni una más, ni una menos."
+  },
+  {
+   "id": "V43",
+   "b": "b5",
+   "gap": 0.4,
+   "tts": "Pero retrocedamos un momento. [curious] ¿Qué habría pasado si respondíamos que NO?",
+   "sub": "Pero retrocedamos un momento. ¿Qué habría pasado si respondíamos que no?"
+  },
+  {
+   "id": "V44",
+   "b": "b5",
+   "gap": 0.4,
+   "tts": "El robot se salta esos pasos y sigue con el resto del algoritmo.",
+   "sub": "El robot se salta esos pasos y sigue con el resto del algoritmo."
+  },
+  {
+   "id": "V45",
+   "b": "b5",
+   "gap": 1.3,
+   "tts": "Mismo algoritmo, dos caminos distintos. Todo depende de una respuesta.",
+   "sub": "Mismo algoritmo, dos caminos distintos. Todo depende de una respuesta."
+  },
+  {
+   "id": "V46",
+   "b": "b5",
+   "gap": 0.4,
+   "tts": "Sigamos con el camino del azúcar. Ahora, cien mililitros de leche.",
+   "sub": "Sigamos con el camino del azúcar. Ahora, cien mililitros de leche."
+  },
+  {
+   "id": "V47",
+   "b": "b5",
+   "gap": 1.0,
+   "tts": "Toma una cuchara... y revuelve.",
+   "sub": "Toma una cuchara… y revuelve."
+  },
+  {
+   "id": "V48",
+   "b": "b5",
+   "gap": 0.5,
+   "tts": "Deja la cuchara sobre la mesa. Sí, hasta eso hay que decirlo. [laughs softly] Si no, a lo mejor se queda con la cuchara en la mano para siempre.",
+   "sub": "Deja la cuchara sobre la mesa. Sí, hasta eso hay que decirlo. Si no, a lo mejor se queda con la cuchara en la mano para siempre."
+  },
+  {
+   "id": "V49",
+   "b": "b5",
+   "gap": 0.9,
+   "tts": "Y, por último... servir el café.",
+   "sub": "Y, por último… servir el café."
+  },
+  {
+   "id": "V50",
+   "b": "b5",
+   "gap": 0.8,
+   "tts": "Mmm... [happy] ¡ahora sí!",
+   "sub": "Mmm… ¡ahora sí!"
+  },
+  {
+   "id": "V51",
+   "b": "b5",
+   "gap": 0.3,
+   "tts": "Fíjate en la diferencia. Los dos son algoritmos, pero el segundo dice qué usar, cuánto, dónde... y en qué orden.",
+   "sub": "Fíjate en la diferencia. Los dos son algoritmos, pero el segundo dice qué usar, cuánto, dónde… y en qué orden."
+  },
+  {
+   "id": "V52",
+   "b": "b5",
+   "gap": 0.8,
+   "tts": "Para este robot, ese era el nivel de detalle necesario. Las instrucciones no tienen que ser larguísimas: tienen que ser lo bastante claras para quien las ejecuta.",
+   "sub": "Para este robot, ese era el nivel de detalle necesario. Las instrucciones no tienen que ser larguísimas: tienen que ser lo bastante claras para quien las ejecuta."
+  },
+  {
+   "id": "V53",
+   "b": "b6",
+   "gap": 0.3,
+   "tts": "Y esto nos lleva a las computadoras, porque una computadora se parece mucho a nuestro robot.",
+   "sub": "Y esto nos lleva a las computadoras, porque una computadora se parece mucho a nuestro robot."
+  },
+  {
+   "id": "V54",
+   "b": "b6",
+   "gap": 0.3,
+   "tts": "Cuando un algoritmo se escribe en un lenguaje que la computadora puede ejecutar, se convierte en un programa.",
+   "sub": "Cuando un algoritmo se escribe en un lenguaje que la computadora puede ejecutar, se convierte en un programa."
+  },
+  {
+   "id": "V55",
+   "b": "b6",
+   "gap": 0.3,
+   "tts": "La computadora toma la primera instrucción, la ejecuta, pasa a la siguiente... y así, paso a paso, hasta el final.",
+   "sub": "La computadora toma la primera instrucción, la ejecuta, pasa a la siguiente… y así, paso a paso, hasta el final."
+  },
+  {
+   "id": "V56",
+   "b": "b6",
+   "gap": 0.3,
+   "tts": "No se salta pasos porque le parezcan obvios, ni completa lo que olvidaste. Sigue las reglas que definieron quienes la programaron.",
+   "sub": "No se salta pasos porque le parezcan obvios, ni completa lo que olvidaste. Sigue las reglas que definieron quienes la programaron."
+  },
+  {
+   "id": "V57",
+   "b": "b6",
+   "gap": 1.3,
+   "tts": "Por eso decimos que una computadora no hace lo que queremos... hace lo que le indicamos.",
+   "sub": "Por eso decimos que una computadora no hace lo que queremos… hace lo que le indicamos."
+  },
+  {
+   "id": "V58",
+   "b": "b6",
+   "gap": 0.3,
+   "tts": "Hoy existen sistemas que interpretan lo que escribimos con mucha más flexibilidad. Pero incluso ellos funcionan con instrucciones y reglas que alguien diseñó.",
+   "sub": "Hoy existen sistemas que interpretan lo que escribimos con mucha más flexibilidad. Pero incluso ellos funcionan con instrucciones y reglas que alguien diseñó."
+  },
+  {
+   "id": "V59",
+   "b": "b6",
+   "gap": 0.3,
+   "tts": "Y en los algoritmos vas a ver tres ideas una y otra vez: secuencias, pasos uno tras otro; decisiones, como la del azúcar; y repeticiones, como revolver varias veces.",
+   "sub": "Y en los algoritmos vas a ver tres ideas una y otra vez: secuencias, pasos uno tras otro; decisiones, como la del azúcar; y repeticiones, como revolver varias veces."
+  },
+  {
+   "id": "V60",
+   "b": "b6",
+   "gap": 0.8,
+   "tts": "[warmly] Las veremos con calma en las próximas lecciones.",
+   "sub": "Las veremos con calma en las próximas lecciones."
+  },
+  {
+   "id": "V61",
+   "b": "b7",
+   "gap": 0.3,
+   "tts": "Repasemos. Un algoritmo es una secuencia ordenada y finita de pasos para resolver un problema.",
+   "sub": "Repasemos. Un algoritmo es una secuencia ordenada y finita de pasos para resolver un problema."
+  },
+  {
+   "id": "V62",
+   "b": "b7",
+   "gap": 0.3,
+   "tts": "Lo usas todos los días, puede tener más o menos detalle, y ese detalle tiene que ser el adecuado para quien lo ejecuta.",
+   "sub": "Lo usas todos los días, puede tener más o menos detalle, y ese detalle tiene que ser el adecuado para quien lo ejecuta."
+  },
+  {
+   "id": "V63",
+   "b": "b7",
+   "gap": 0.7,
+   "tts": "Así que recuerda: antes de enseñarle a una computadora a resolver un problema... primero debemos aprender a describir cómo resolverlo.",
+   "sub": "Así que recuerda: antes de enseñarle a una computadora a resolver un problema… primero debemos aprender a describir cómo resolverlo."
+  },
+  {
+   "id": "N02",
+   "b": "b7",
+   "gap": 0.4,
+   "tts": "[excited] ¡Y ahora te toca a ti! Escribe en los comentarios el algoritmo para preparar un sándwich.",
+   "sub": "¡Y ahora te toca a ti! Escribe en los comentarios el algoritmo para preparar un sándwich."
+  },
+  {
+   "id": "N03",
+   "b": "b7",
+   "gap": 1.4,
+   "tts": "[playfully] Pero ojo... lo va a ejecutar nuestro robot. Así que no des nada por hecho.",
+   "sub": "Pero ojo… lo va a ejecutar nuestro robot. Así que no des nada por hecho."
+  },
+  {
+   "id": "V64",
+   "b": "b7",
+   "gap": 5.5,
+   "tts": "[excited] ¡Nos vemos en la próxima lección! [playfully] Y tú... ¡ni se te ocurra limpiar ese piso sin un algoritmo!",
+   "sub": "¡Nos vemos en la próxima lección! Y tú… ¡ni se te ocurra limpiar ese piso sin un algoritmo!"
+  }
+ ]
+}

@@ -186,3 +186,103 @@ save("unstack", sq(730 - 400 * tt / 0.14, tt, 0.5) * np.exp(-tt / 0.05), -12)
 # rebote cómico tras el remate
 tt = t(0.5)
 save("boing", tri(180 + 260 * np.abs(np.sin(2 * np.pi * 7 * tt)) * np.exp(-tt / 0.2), tt) * np.exp(-tt / 0.22), -9)
+
+# ------------------------------------------------------------------ efectos añadidos para «¿Qué es un algoritmo?»
+# (se agregan al final: no alteran la secuencia aleatoria ni el sonido de los anteriores)
+rng2 = np.random.default_rng(23)
+
+def put(dst, x, j):
+    k = min(len(x), len(dst) - j); dst[j:j + k] += x[:k]
+
+# claqueta de cine: golpe seco de madera
+tt = t(0.15)
+cl = filt(rng2.standard_normal(len(tt)), "band", [1200, 5000]) * np.exp(-tt / 0.008)
+cl += np.sin(2 * np.pi * (900 * np.exp(-tt / 0.02) + 380) * tt) * np.exp(-tt / 0.025) * 0.8
+cl += np.sin(2 * np.pi * 220 * tt) * np.exp(-tt / 0.03) * 0.4
+save("clap", cl, -4)
+
+# salpicadura: ruido filtrado con barrido descendente y burbujas
+tt = t(0.5); n = rng2.standard_normal(len(tt)); out = np.zeros(len(tt))
+for c in range(20):
+    a, b = c * len(tt) // 20, (c + 1) * len(tt) // 20
+    fc = 6500 * (0.25 ** (c / 19))
+    out[a:b] = filt(n, "band", [fc * 0.6, min(fc * 1.6, 20000)])[a:b]
+env = np.minimum(1, tt / 0.01) * np.exp(-tt / 0.16)
+sp = out * env
+for k in range(5):
+    i = int((0.04 + 0.07 * k + rng2.random() * 0.03) * SR); g = t(0.06); f0 = 500 + 400 * rng2.random()
+    bub = np.sin(2 * np.pi * np.cumsum(f0 * (1 + 3 * g / 0.06)) / SR) * np.exp(-g / 0.02) * 0.25
+    sp[i:i + len(g)] += bub
+save("splash", sp, -6)
+
+# chorro de líquido: ruido de banda cuyo tono sube al llenarse la taza
+tt = t(1.0); n = rng2.standard_normal(len(tt)); out = np.zeros(len(tt))
+for c in range(25):
+    a, b = c * len(tt) // 25, (c + 1) * len(tt) // 25
+    fc = 700 + 1700 * (c / 24)
+    out[a:b] = filt(n, "band", [fc * 0.7, fc * 1.4])[a:b]
+fill = np.sin(2 * np.pi * np.cumsum(220 + 520 * (tt / 1.0) ** 1.5) / SR) * 0.18
+wob = 1 + 0.25 * np.sin(2 * np.pi * 23 * tt)
+save("pour", (out * wob + fill) * np.minimum(1, tt / 0.04) * np.minimum(1, (1.0 - tt) / 0.08), -6)
+
+# silbido de tetera: agudo, con vibrato, que sube
+tt = t(0.9)
+f = (2100 + 900 * (tt / 0.9)) * (1 + 0.012 * np.sin(2 * np.pi * 7 * tt))
+wh = np.sin(2 * np.pi * np.cumsum(f) / SR) + 0.25 * np.sin(2 * np.pi * np.cumsum(f * 2) / SR)
+wh += filt(rng2.standard_normal(len(tt)), "band", [3000, 6500]) * 0.25
+save("whistle", wh * np.minimum(1, tt / 0.06) * np.minimum(1, (0.9 - tt) / 0.12), -8)
+
+# rebobinado de cinta: chirrido que baja de tono con modulación rápida
+tt = t(0.8)
+f = 3200 * np.exp(-tt / 0.8 * 1.7) + 300
+rw = sq(f * (1 + 0.18 * np.sin(2 * np.pi * 38 * tt)), tt, 0.3) * 0.5
+rw += filt(rng2.standard_normal(len(tt)), "band", [1500, 6000]) * (0.5 + 0.5 * np.sin(2 * np.pi * 55 * tt)) * 0.35
+save("rewind", filt(rw, "low", 7000) * np.minimum(1, tt / 0.02) * np.minimum(1, (0.8 - tt) / 0.1), -9)
+
+# fanfarria de 8 bits: cuatro notas ascendentes en onda cuadrada
+fa = np.zeros(int(0.9 * SR))
+for i, (m, d) in enumerate([(67, 0.12), (72, 0.12), (76, 0.12), (79, 0.5)]):
+    j = int((i * 0.14) * SR); g = t(d + 0.08); fq = 440 * 2 ** ((m - 69) / 12)
+    e = np.minimum(1, g / 0.004) * np.where(g < d, 1.0, np.exp(-(g - d) / 0.03)) * (np.exp(-g / 0.5) if i == 3 else 1)
+    x = (sq(fq, g, 0.5) * 0.6 + sq(fq * 2, g, 0.25) * 0.2) * e
+    k = min(len(x), len(fa) - j); fa[j:j + k] += x[:k]
+save("fanfare", fa[: int(0.8 * SR)] * np.minimum(1, (0.8 - t(0.8)) / 0.05), -10)
+
+# cucharita en la taza: tres «tin» metálicos
+st = np.zeros(int(0.5 * SR))
+for i, (fq, a) in enumerate([(3150, 1.0), (3520, 0.8), (3000, 0.9)]):
+    g = t(0.2); j = int((0.02 + i * 0.15) * SR)
+    x = (np.sin(2 * np.pi * fq * g) + 0.5 * np.sin(2 * np.pi * fq * 2.76 * g) + 0.3 * np.sin(2 * np.pi * fq * 5.4 * g)) * np.exp(-g / 0.05)
+    put(st, x * a, j)
+save("stir", st, -9)
+
+# algo pequeño que cae: tono que baja rápido
+tt = t(0.2)
+save("plop", np.sin(2 * np.pi * np.cumsum(900 * np.exp(-tt / 0.03) + 150) / SR) * np.exp(-tt / 0.05) * np.minimum(1, tt / 0.002), -8)
+
+# brillo: arpegio agudo de campanitas
+sk = np.zeros(int(0.5 * SR))
+for i, m in enumerate([84, 88, 91, 96, 100]):
+    g = t(0.3); fq = 440 * 2 ** ((m - 69) / 12)
+    x = np.sin(2 * np.pi * fq * g + 0.8 * np.sin(2 * np.pi * fq * 3 * g) * np.exp(-g / 0.05)) * np.exp(-g / 0.09)
+    j = int(i * 0.05 * SR); put(sk, x * (0.6 + 0.1 * i), j)
+save("sparkle", sk, -10)
+
+# motor del brazo del robot: zumbido que sube y baja
+tt = t(0.45)
+f = 140 + 160 * np.sin(np.pi * tt / 0.45)
+sv = tri(f, tt) * 0.6 + sq(f * 2.01, tt, 0.25) * 0.2
+sv += filt(rng2.standard_normal(len(tt)), "band", [1500, 4000]) * 0.08 * np.sin(np.pi * tt / 0.45)
+save("servo", filt(sv, "low", 3500) * np.sin(np.pi * tt / 0.45) ** 0.6 * (1 + 0.2 * np.sin(2 * np.pi * 30 * tt)), -9)
+
+# confirmación ✓: dos notas agudas limpias
+ck = np.zeros(int(0.18 * SR))
+for i, fq in enumerate([1318.5, 1975.5]):
+    g = t(0.12); j = int(i * 0.06 * SR)
+    put(ck, (np.sin(2 * np.pi * fq * g) + 0.2 * np.sin(2 * np.pi * fq * 2 * g)) * np.exp(-g / 0.05) * np.minimum(1, g / 0.003), j)
+save("check", ck, -9)
+
+# mareo: tono que oscila y decae
+tt = t(0.9)
+f = 440 + 160 * np.sin(2 * np.pi * 5 * tt) * np.exp(-tt / 0.5) - 120 * tt
+save("wobble", np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt / 0.4) * np.minimum(1, tt / 0.01) * np.minimum(1, (0.9 - tt) / 0.05), -9)

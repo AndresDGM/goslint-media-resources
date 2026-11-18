@@ -144,8 +144,8 @@ const CUP_SHELF_X = SHELF_X0 + 300;
 const BAG_PT: [number, number] = [BAG_X, TABLE_Y - 72];
 const JUG_PT: [number, number] = [JUG_X, TABLE_Y - 66];
 /** Manos con las cosas levantadas y sobre el piso al verter. */
-const HOLD_F: [number, number] = [1010, 640];
-const HOLD_B: [number, number] = [760, 640];
+const HOLD_F: [number, number] = [1045, 700];
+const HOLD_B: [number, number] = [715, 700];
 const POUR_F: [number, number] = [1030, 690];
 const POUR_B: [number, number] = [745, 690];
 const TIP_BAG = 150;
@@ -674,17 +674,15 @@ const Explica: React.FC = () => {
 			{/* tres mini tarjetas: tiene pasos, tiene orden y termina */}
 			{minis.map((m, i) => (
 				<In key={m.label} at={T.tiene + i * 3} out={T.v31 + 8 + i * 2} x={1636} y={130 + i * 240} from="right" exit="right" impact={false}>
-					<div style={{transform: f >= m.at ? `scale(${1 + 0.12 * Math.max(0, 1 - (f - m.at) / 8)})` : undefined}}>
+					<div style={{background: 'rgba(7,8,7,0.97)', transform: f >= m.at ? `scale(${1 + 0.12 * Math.max(0, 1 - (f - m.at) / 8)})` : undefined}}>
 						<ConceptCard icon={m.icon} label={m.label} on={f >= m.at} size={0.9} />
 					</div>
 				</In>
 			))}
-			<Stamp x={CARD2_X + (CARD_W * CARD2_S) / 2} y={CARD2_Y + (CARD_H * CARD2_S) / 2} at={T.algo30} out={T.v31 + 6} size={72} />
-			<Hit at={T.algo30} x={CARD2_X + (CARD_W * CARD2_S) / 2} y={CARD2_Y + (CARD_H * CARD2_S) / 2} big />
 			{/* V31: «los ingredientes» = café + leche, bajo la línea enorme */}
-			<PopIn at={T.ingred} x={870} y={480}><CoffeeBag scale={7} /></PopIn>
+			<PopIn at={T.ingred} x={870} y={480}><CoffeeBag scale={10} /></PopIn>
 			<PopIn at={T.ingred + 3} x={960} y={455}><div style={{fontFamily: MONO, fontWeight: 800, fontSize: 64, color: C.green}}>+</div></PopIn>
-			<PopIn at={T.ingred + 6} x={1050} y={480}><MilkJug scale={7} /></PopIn>
+			<PopIn at={T.ingred + 6} x={1050} y={480}><MilkJug scale={10} /></PopIn>
 			{/* las preguntas; en «Y ya que estamos» se apagan un poco para dar paso a la última */}
 			<div style={{position: 'absolute', inset: 0, opacity: 1 - 0.45 * tween(f, T.y31, T.y31 + 8)}}>
 				<Tag x={720} y={575} at={T.donde} rot={-4} size={64}>¿DÓNDE?</Tag>
@@ -867,6 +865,12 @@ export const B4: React.FC = () => {
 			{enCocina && <Explica />}
 			{enCocina && <AlgCard />}
 			{enCocina && <BigLine />}
+			{f >= T.v30 && f < T.v32 && (
+				<>
+					<Stamp x={CARD2_X + (CARD_W * CARD2_S) / 2} y={CARD2_Y + (CARD_H * CARD2_S) / 2} at={T.algo30} out={T.v31 + 6} size={72} />
+					<Hit at={T.algo30} x={CARD2_X + (CARD_W * CARD2_S) / 2} y={CARD2_Y + (CARD_H * CARD2_S) / 2} big />
+				</>
+			)}
 			{enCocina && <Memoria />}
 			{/* globos del robot (en pantalla) */}
 			<Say at={T.e24 + 2} out={T.dos + 6} text="¿CANTIDAD DE CAFÉ?" color={C.amber} dx={120} minX={720} />

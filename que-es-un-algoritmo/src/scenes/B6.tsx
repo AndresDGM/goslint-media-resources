@@ -501,7 +501,7 @@ const RobotRecuerdo: React.FC = () => (
 
 const Progr: React.FC<{x: number; y: number; at: number}> = ({x, y, at: t0}) => {
 	const f = useCurrentFrame();
-	if (f < t0) return null;
+	if (f < t0) return <div style={{position: 'absolute', left: x - 110, top: y, opacity: 0.18}}>{pxs(PROG, 10)}</div>;
 	const p = pop(f, t0, 10, 260, 0.55);
 	return (
 		<div style={{position: 'absolute', left: x - 110, top: y, transform: `translateY(${(1 - p) * -200}px) scale(${0.5 + 0.5 * p})`, opacity: Math.min(1, p * 2)}}>
@@ -545,15 +545,15 @@ const Programadores: React.FC = () => {
 			<Suelo />
 			<Vee x={230} acts={[[T.sigue, 'explicar'], [T.programaron, 'celebrar']] as [number, VeeAct][]} />
 			{/* reglas */}
-			{f >= T.reglas56 && (
-				<div style={{position: 'absolute', left: 430, top: 400, width: 560, padding: '18px 26px', boxSizing: 'border-box', background: 'rgba(12,16,14,0.96)', border: `4px solid ${C.green}`, boxShadow: `0 0 36px ${C.green}44`, transform: `scale(${0.6 + 0.4 * pop(f, T.reglas56, 11, 240, 0.6)})`, transformOrigin: '0 50%'}}>
+			{f >= T.sigue && (
+				<div style={{position: 'absolute', left: 430, top: 400, width: 560, padding: '18px 26px', boxSizing: 'border-box', background: 'rgba(12,16,14,0.96)', border: `4px solid ${C.green}`, boxShadow: `0 0 36px ${C.green}44`, overflow: 'hidden', transform: `scale(${0.6 + 0.4 * pop(f, T.sigue, 11, 240, 0.6)})`, transformOrigin: '0 50%'}}>
 					<div style={{fontFamily: MONO, fontWeight: 800, fontSize: 40, color: C.green, marginBottom: 6}}>REGLAS</div>
-					{regla(0, 'Orden fijo', T.reglas56 + 2)}
-					{regla(1, 'Sin saltos', T.definieron - 2)}
-					{regla(2, 'Solo lo escrito', T.definieron + 8)}
+					{regla(0, 'Orden fijo', T.sigue + 3)}
+					{regla(1, 'Sin saltos', T.reglas56 + 2)}
+					{regla(2, 'Solo lo escrito', T.definieron + 2)}
 				</div>
 			)}
-			<Pc x={1380} top={480} s={0.84} appear={T.reglas56 - 2}>
+			<Pc x={1380} top={480} s={0.84} appear={SW.iris + 4}>
 				<div style={{position: 'absolute', left: 30, top: 24, width: 592, height: 340, border: `2px solid ${C.green}`, boxSizing: 'border-box', padding: 16, fontFamily: MONO, fontWeight: 800, fontSize: 22, color: C.green}}>
 					programa
 					{[0.8, 0.55, 0.7, 0.4, 0.62, 0.5, 0.75].map((w, i) => <div key={i} style={{marginTop: 14, height: 12, width: `${w * 100}%`, background: i % 2 ? C.text : C.green, opacity: 0.8}} />)}
@@ -696,7 +696,7 @@ const Asistente: React.FC = () => {
 	const lid = tween(f, T.incluso, T.incluso + 16, 0, 1, inOutCubic);
 	const reglas = [['SI pide → responder', T.instruccion], ['REGLA: ser claro', T.reglas58], ['REGLA: no inventar', T.alguien - 6]] as [string, number][];
 	return (
-		<div style={{position: 'absolute', left: 640, top: 290, width: 920, height: 560, transform: `scale(${0.5 + 0.5 * pp})`, opacity: Math.min(1, pp * 2), transformOrigin: '50% 100%'}}>
+		<div style={{position: 'absolute', left: 640, top: 320, width: 920, height: 560, transform: `scale(${(0.5 + 0.5 * pp) * 1.1})`, opacity: Math.min(1, pp * 2), transformOrigin: '50% 100%'}}>
 			{/* interior */}
 			<div style={{position: 'absolute', inset: 0, background: '#0B0F0D', border: `4px solid ${C.amber}`, boxSizing: 'border-box', boxShadow: `0 0 40px ${C.amber}33`, overflow: 'hidden'}}>
 				<div style={{position: 'absolute', left: 50, top: 150, transform: `rotate(${f * 4}deg)`}}>{pxs(ENG_V, 14)}</div>
@@ -731,7 +731,7 @@ const FraseCentral: React.FC = () => {
 
 const Oscuro: React.FC = () => {
 	const f = useCurrentFrame();
-	const sale = tween(f, T.v58, T.v58 + 12, 0, 1, inCubic);
+	const sale = tween(f, T.v58 - 14, T.v58 - 2, 0, 1, inCubic);
 	const [sx, sy] = shake(f, T.queremos + 11, 14, 10);
 	const [sx2, sy2] = shake(f, T.indicamos, 12, 10);
 	return (
@@ -752,19 +752,19 @@ const Oscuro: React.FC = () => {
 					] as [number, VeeAct][]}
 				/>
 				{/* monitor de la idea */}
-				<Pc x={1450} top={110} s={0.8} appear={T.computadora57} dy={-sale * 700}>
+				<Pc x={1450} top={110} s={0.8} appear={T.v57 + 4} dy={-sale * 700}>
 					<PantallaRechazo />
 				</Pc>
-				<Tag x={800} y={240} at={T.decimos + 2} out={T.computadora57 - 2} color={C.green} size={54}>IDEA CLAVE</Tag>
+				<Tag x={800} y={240} at={T.v57 + 3} out={T.computadora57 + 8} color={C.green} size={54}>IDEA CLAVE</Tag>
 				<Pensamiento />
 				<FraseCentral />
 				{f >= T.sistemas && <Asistente />}
 				{f >= T.alguien && (
-					<div style={{position: 'absolute', left: 1580, top: 560, transform: `translateY(${(1 - pop(f, T.alguien, 10, 220, 0.6)) * 280}px)`}}>
+					<div style={{position: 'absolute', left: 1650, top: 560, transform: `translateY(${(1 - pop(f, T.alguien, 10, 220, 0.6)) * 280}px)`}}>
 						{pxs(PROG, 11)}
 					</div>
 				)}
-				<Tag x={1390} y={180} at={T.v58 + 6} out={T.sistemas + 30} color={C.blue} size={50}>HOY</Tag>
+				<Tag x={560} y={165} at={T.v58 + 6} out={T.sistemas + 30} color={C.blue} size={50}>HOY</Tag>
 				<Hit at={T.queremos + 11} x={1175} y={290} />
 				<Hit at={T.indicamos + 2} x={BOX_X + 15 * 50.4 + 227} y={800} big />
 				<Shockwave at={T.indicamos + 2} x={960} y={780} size={1500} />
@@ -899,6 +899,12 @@ const Ideas: React.FC = () => {
 			{f >= T.otra && f < out + 8 && <Tag x={1500} y={880} at={T.otra} out={out} color={C.amber} size={46}>OTRA VEZ</Tag>}
 			<SpeedLines at={T.tres} len={9} mode="radial" x={760} y={520} count={20} color={C.green} />
 			<Shockwave at={T.tres + 3} x={760} y={520} size={1400} />
+			{/* huecos de las tres tarjetas (llenan el cuadro hasta que cae cada una) */}
+			{([[90, T.secuencias, '1'], [700, T.decisiones, '2'], [1310, T.repeticiones, '3']] as [number, number, string][]).map(([gx, gt, gn]) =>
+				f >= out && f < gt ? (
+					<div key={gn} style={{position: 'absolute', left: gx, top: 110, width: 520, height: 560, boxSizing: 'border-box', border: `5px dashed ${C.line2}`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: MONO, fontWeight: 800, fontSize: 260, color: 'rgba(233,238,234,0.12)'}}>{gn}</div>
+				) : null
+			)}
 			{/* las tres tarjetas */}
 			<div style={{position: 'absolute', inset: 0, transform: `translate(${sx}px, ${sy}px)`, opacity: f >= T.proximas ? 0.85 : 1}}>
 				<TarjetaIdea x={90} t0={T.secuencias} color={C.green} titulo="SECUENCIA" num="1"><Secuencia /></TarjetaIdea>
@@ -1043,7 +1049,7 @@ export const sfxB6: Sfx[] = [
 	// V57
 	s(T.v57 - 7, 'whoosh', 0.35),
 	s(T.decimos + 2, 'pop', 0.3),
-	s(T.computadora57, 'land', 0.35),
+	s(T.v57 + 4, 'land', 0.35),
 	s(T.no57, 'typing', 0.28),
 	s(T.lo1, 'pop', 0.3),
 	s(T.queremos, 'whoosh', 0.28),

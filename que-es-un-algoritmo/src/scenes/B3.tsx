@@ -376,13 +376,13 @@ const Intro: React.FC = () => {
 			</div>
 			{/* todos los días */}
 			<Slam at={T.todos17} x={290} y={160} from={2.6} rot={-4}>
-				<div style={{fontFamily: SANS, fontWeight: 900, fontSize: 118, lineHeight: 1, color: C.white, letterSpacing: '-0.04em'}}>TODOS</div>
+				<div style={{fontFamily: SANS, fontWeight: 900, fontSize: 100, lineHeight: 1, color: C.white, letterSpacing: '-0.04em'}}>TODOS</div>
 			</Slam>
 			<Slam at={T.los17} x={290} y={285} from={2.6} rot={3}>
-				<div style={{fontFamily: SANS, fontWeight: 900, fontSize: 118, lineHeight: 1, color: C.white, letterSpacing: '-0.04em'}}>LOS</div>
+				<div style={{fontFamily: SANS, fontWeight: 900, fontSize: 100, lineHeight: 1, color: C.white, letterSpacing: '-0.04em'}}>LOS</div>
 			</Slam>
 			<Slam at={T.dias17} x={290} y={410} from={2.6} rot={-3}>
-				<div style={{fontFamily: SANS, fontWeight: 900, fontSize: 118, lineHeight: 1, color: C.green, letterSpacing: '-0.04em'}}>DÍAS</div>
+				<div style={{fontFamily: SANS, fontWeight: 900, fontSize: 100, lineHeight: 1, color: C.green, letterSpacing: '-0.04em'}}>DÍAS</div>
 			</Slam>
 			{ICONS.map((ic, i) => {
 				const t = i < 2 ? T.todos17 + 3 + i * 6 : T.dias17 + (i - 2) * 6;
@@ -611,8 +611,8 @@ const Suma: React.FC = () => {
 					<div style={{position: 'absolute', left: COL_T - 135, top: ROW_R - 100, width: 2 * 135 + (COL_U - COL_T), height: 200, boxSizing: 'border-box', border: `8px solid ${C.green}`, boxShadow: `0 0 50px ${C.green}88`, transform: `scale(${0.9 + 0.1 * pop(f, T.llevas, 9, 300, 0.5)})`, opacity: Math.min(1, (f - T.llevas + 1) / 3)}} />
 				)}
 				{/* notas de suma parcial */}
-				<Dig x={1090} y={ROW_1} ch="7+8=15" at={T.unidades} size={72} color={C.text} />
-				<Dig x={1090} y={ROW_2} ch="4+3+1=8" at={T.decenas} size={72} color={C.text} />
+				<div style={{opacity: f >= T.no19 - 2 && f < T.llevas ? 0 : 1}}><Dig x={1060} y={ROW_1} ch="7+8=15" at={T.unidades} size={62} color={C.text} />
+				<Dig x={1060} y={ROW_2} ch="4+3+1=8" at={T.decenas} size={62} color={C.text} /></div>
 				{f >= T.unidades && f < T.unidades + 12 && <div style={{position: 'absolute', left: 1166 - 30, top: ROW_1 - 40, width: 60, height: 80, background: C.amber, opacity: 0.0}} />}
 				{/* el 1 que se lleva */}
 				{flying && <Dig x={fx} y={fy} ch="1" color={C.amber} size={120} sc={1 + 0.4 * Math.sin(k * Math.PI)} glow={C.amber} />}
@@ -819,9 +819,9 @@ const Maquina: React.FC = () => {
 			<PCam
 				shots={[
 					[B0, 1, 655, 395],
-					[T.eliges, 1.25, 480, 360],
-					[T.pagas, 1.3, 640, 360, 14],
-					[T.si21, 1.4, 760, 300, 40],
+					[T.eliges, 1.25, 680, 360],
+					[T.pagas, 1.3, 700, 360, 14],
+					[T.si21, 1.4, 780, 300, 40],
 					[T.sale, 1.0, 655, 395, 12],
 					[T.paquete - 6, 1.25, 640, 560, 18],
 				]}
@@ -876,7 +876,7 @@ const Maquina: React.FC = () => {
 					</div>
 				)}
 				{/* pantalla grande */}
-				<div style={{position: 'absolute', left: 720, top: 40, width: 560, height: 420, boxSizing: 'border-box', background: '#0B0F0D', border: `10px solid ${scrCol}`, boxShadow: `0 0 ${state === 'alcanza' ? 70 : 40}px ${scrCol}77, inset 0 0 60px ${scrCol}22`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', transform: `scale(${state === 'alcanza' ? 1 + 0.025 * Math.sin(f / 3) : 1})`}}>
+				<div style={{position: 'absolute', left: 690, top: 40, width: 520, height: 420, boxSizing: 'border-box', background: '#0B0F0D', border: `10px solid ${scrCol}`, boxShadow: `0 0 ${state === 'alcanza' ? 70 : 40}px ${scrCol}77, inset 0 0 60px ${scrCol}22`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', transform: `scale(${state === 'alcanza' ? 1 + 0.025 * Math.sin(f / 3) : 1})`}}>
 					<div style={{position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(0deg, rgba(255,255,255,0.045) 0 2px, transparent 2px 6px)'}} />
 					{state === 'elige' && <div style={{fontFamily: MONO, fontWeight: 800, fontSize: 84, color: C.dim, opacity: blink ? 1 : 0.4}}>ELIGE_</div>}
 					{state === 'b2' && <div style={{fontFamily: MONO, fontWeight: 800, fontSize: 250, lineHeight: 1, color: C.white, transform: `scale(${0.5 + 0.5 * pop(f, tB2, 9, 300, 0.5)})`}}>B2</div>}
@@ -886,7 +886,7 @@ const Maquina: React.FC = () => {
 							<div style={{fontFamily: MONO, fontWeight: 800, fontSize: 110, color: C.blue}}>PAGO</div>
 						</div>
 					)}
-					{state === 'alcanza' && <div style={{fontFamily: MONO, fontWeight: 800, fontSize: 88, color: C.amber, opacity: blink ? 1 : 0.18, textShadow: `0 0 30px ${C.amber}`}}>¿ALCANZA?</div>}
+					{state === 'alcanza' && <div style={{fontFamily: MONO, fontWeight: 800, fontSize: 80, color: C.amber, opacity: blink ? 1 : 0.18, textShadow: `0 0 30px ${C.amber}`}}>¿ALCANZA?</div>}
 					{state === 'ok' && <div style={{fontFamily: MONO, fontWeight: 800, fontSize: 300, lineHeight: 1, color: C.green, textShadow: `0 0 50px ${C.green}`, transform: `scale(${0.4 + 0.6 * pop(f, T.sale, 8, 300, 0.5)})`}}>✓</div>}
 				</div>
 				{/* robot que asoma por abajo */}
@@ -1006,7 +1006,7 @@ export const B3: React.FC = () => {
 			<Seg a={CUT.r} b={CUT.s}>
 				<Titulo a={CUT.r + 8} text="RECETA" />
 				<Pasos a={CUT.r + 10} items={[['INGREDIENTES', T.ing], ['PASOS', T.pasos18], ['PLATO SERVIDO', T.plato]]} />
-				<Marco a={CUT.r + 6} shakes={[T.ing + 11, T.ing + 21, T.ing + 31, T.plato]}>
+				<Marco a={CUT.r + 2} shakes={[T.ing + 11, T.ing + 21, T.ing + 31, T.plato]}>
 					<Receta />
 				</Marco>
 			</Seg>
@@ -1014,7 +1014,7 @@ export const B3: React.FC = () => {
 			<Seg a={CUT.s} b={CUT.ru}>
 				<Titulo a={CUT.s + 8} text="SUMA" />
 				<Pasos a={CUT.s + 10} items={[['UNIDADES', T.unidades], ['DECENAS', T.decenas], ['LO QUE LLEVAS', T.llevas]]} />
-				<Marco a={CUT.s + 6} shakes={[T.unidades + 8, T.unidades + 26, T.decenas + 10, T.llevas]}>
+				<Marco a={CUT.s + 2} shakes={[T.unidades + 8, T.unidades + 26, T.decenas + 10, T.llevas]}>
 					<Suma />
 				</Marco>
 			</Seg>
@@ -1030,7 +1030,7 @@ export const B3: React.FC = () => {
 			<Seg a={CUT.m} b={CUT.mo}>
 				<Titulo a={CUT.m + 8} text="MÁQUINA" />
 				<Pasos a={CUT.m + 10} items={[['ELIGES', T.producto], ['PAGAS', T.pagas], ['TU PAQUETE', T.paquete]]} />
-				<Marco a={CUT.m + 6} shakes={[T.producto, T.pagas + 14, T.sale, T.paquete]}>
+				<Marco a={CUT.m + 2} shakes={[T.producto, T.pagas + 14, T.sale, T.paquete]}>
 					<Maquina />
 				</Marco>
 			</Seg>
@@ -1046,7 +1046,6 @@ export const B3: React.FC = () => {
 
 /** Transiciones de impacto y remates (todo en coordenadas de pantalla, fuera de los paneles). */
 const Overlays: React.FC = () => {
-	const f = useCurrentFrame();
 	return (
 		<>
 			{/* cortes entre ejemplos */}
@@ -1076,7 +1075,6 @@ const Overlays: React.FC = () => {
 			{/* V22 */}
 			<Hit at={T.volvamos} x={1220} y={510} big />
 			<SpeedLines at={T.volvamos} len={10} mode="radial" x={1220} y={510} />
-			{f >= B1 - 2 && <CutFlash at={B1 - 2} len={2} max={0.0} />}
 		</>
 	);
 };

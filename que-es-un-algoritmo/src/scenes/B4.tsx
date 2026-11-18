@@ -731,9 +731,9 @@ const Partida: React.FC = () => {
 				<Slam at={T.persona} x={480} y={140}><div style={{fontFamily: SANS, fontWeight: 800, fontSize: 88, color: C.white, letterSpacing: '-0.02em'}}>PERSONA</div></Slam>
 				{/* la persona (grande); en «sabe» da un saltito y le brilla la idea */}
 				<div style={{position: 'absolute', inset: 0, transform: `translateY(${-Math.sin(Math.min(1, Math.max(0, (f - T.sabe) / 12)) * Math.PI) * 40}px)`}}>
-					<PopIn at={T.v32 + 2} x={300} y={940}><PixelSprite buf={PERSONA} scale={14} /></PopIn>
+					<PopIn at={T.v32 + 2} x={300} y={950}><PixelSprite buf={PERSONA} scale={18} /></PopIn>
 				</div>
-				{f >= T.sabe && f < T.sabe + 30 && <PixelBurst f={f} at={T.sabe} x={300} y={470} count={18} power={14} colors={[C.amber, '#FFFFFF', C.green]} seed={3} grid={10} />}
+				{f >= T.sabe && f < T.sabe + 30 && <PixelBurst f={f} at={T.sabe} x={300} y={560} count={18} power={14} colors={[C.amber, '#FFFFFF', C.green]} seed={3} grid={10} />}
 				<Nube x={400} y={210} w={530} h={290} at={T.basta} tail={[400, 452]}>
 					<div style={{position: 'absolute', left: 0, right: 0, top: 22, textAlign: 'center', fontFamily: MONO, fontWeight: 800, fontSize: 42, color: C.bg}}>MEZCLAR</div>
 				</Nube>
@@ -745,7 +745,7 @@ const Partida: React.FC = () => {
 			{/* lado derecho */}
 			<div style={{opacity: rightOn}}>
 				<Slam at={T.persona + 6} x={1440} y={140}><div style={{fontFamily: SANS, fontWeight: 800, fontSize: 88, color: C.white, letterSpacing: '-0.02em'}}>ROBOT</div></Slam>
-				<Robot x={1650} y={940} scale={12} flip pose={robotPose} face={robotFace} chest={f >= T.robot32 ? '?' : undefined} chestColor={C.amber} look={f >= T.robot32 && f < T.no32 ? [0, -1] : [0, 0]} hops={[T.pero + 2]} />
+				<Robot x={1650} y={950} scale={15} flip pose={robotPose} face={robotFace} chest={f >= T.robot32 ? '?' : undefined} chestColor={C.amber} look={f >= T.robot32 && f < T.no32 ? [0, -1] : [0, 0]} hops={[T.pero + 2]} />
 				<Nube x={1000} y={210} w={530} h={290} at={T.pero} tail={[1590, 452]} dim>
 					{f >= T.robot32 && (
 						<div style={{position: 'absolute', left: 0, right: 0, top: 104, textAlign: 'center', fontFamily: MONO, fontWeight: 800, fontSize: 56, color: C.amber, transform: `scale(${pop(f, T.robot32, 9, 300, 0.5)})`}}>MEZCLAR ???</div>
@@ -763,7 +763,7 @@ const Partida: React.FC = () => {
 };
 
 /** Deslizador de V33 (propio: el del kit pone las marcas encima de los rótulos y es pequeño). */
-const SL = {x0: 470, x1: 1810, y: 620};
+const SL = {x0: 470, x1: 1810, y: 660};
 const SL_W = SL.x1 - SL.x0;
 const slX = (k: number) => SL.x0 + SL_W * k;
 const POS_ROBOT = 0.8;
